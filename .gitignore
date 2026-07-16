@@ -1,21 +1,20 @@
-# Environment files (never commit real secrets)
-.env
-frontend/.env
-backend/.env
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-# Node (frontend)
-frontend/node_modules/
-frontend/dist/
+# Run and deploy your AI Studio app
 
-# Python (backend)
-backend/__pycache__/
-backend/venv/
-backend/.venv/
-*.pyc
+This contains everything you need to run your app locally.
 
-# Database
-backend/*.db
+View your app in AI Studio: https://ai.studio/apps/90a41778-c297-46d4-abc7-c044a1322bb8
 
-# OS/editor junk
-.DS_Store
-.vscode/
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
