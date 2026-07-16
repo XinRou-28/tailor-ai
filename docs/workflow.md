@@ -12,7 +12,6 @@ Read `product.md`, `contract.md`, `frontend.md`, `backend.md` first (all four li
 | **Person 1** | Repo Setup (Day 1 only — unavailable from Day 2 onward) | Repo setup **only** | — (not available) | — (not available) |
 | **Person 2/3** | Frontend + Backend Engineers | Person 2: Screens 1–2. Person 3: dataset, catalog, stub API | Person 2: Screens 3–5. Person 3: real model + engines + routes. **Both share the Integration Checkpoint and deployment**, split as noted below | Both share final regression, polish, and submission logistics |
 
-**Important change from the earlier draft:** Person 1 is only around for Day 1 repo setup — after that they're busy with something else and not available. Everything that was previously "Person 1's" job from Day 2 onward (running the integration checkpoint, deployment, final regression, submission) now falls to Person 2 and Person 3 together — split naturally along the lines of what each of them already owns (Person 3 deploys the backend since they built it, Person 2 deploys the frontend for the same reason), with the integration checkpoint itself done jointly since it needs both sides in the room anyway.
 
 ---
 
