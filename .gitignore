@@ -1,0 +1,21 @@
+# Environment files (never commit real secrets)
+.env
+frontend/.env
+backend/.env
+
+# Node (frontend)
+frontend/node_modules/
+frontend/dist/
+
+# Python (backend)
+backend/__pycache__/
+backend/venv/
+backend/.venv/
+*.pyc
+
+# Database
+backend/*.db
+
+# OS/editor junk
+.DS_Store
+.vscode/
