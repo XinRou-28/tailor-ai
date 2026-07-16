@@ -70,6 +70,7 @@ tailor-ai/
 - Person 2 and Person 3 sync directly (Person 1 is not part of this or any later sync). Demo current state to each other: mock-driven frontend, stub-then-real backend.
 - Read `contract.md` Section 0 out loud against Person 2's `types.ts` and Person 3's Pydantic models — confirm zero drift on Day 1 before it compounds.
 - Merge everything to `dev`.
+- Then do the `dev` → `main` merge (GitHub → Pull Requests → New PR → base: `main`, compare: `dev` → Create → Merge).
 
 ---
 
@@ -99,7 +100,7 @@ This is the explicit integration step for the whole build — spelled out here, 
 3. Person 3 walks through any mismatches flagged during the morning's self-checks first, confirming each is fixed; Person 2 does the same for anything they flagged.
 4. Then both walk the full user journey live, together at one screen: **Portfolio List → click ABC Company → Drilldown (health score 35, confidence 0.68, agent-flipped reason, "offer onboarding support," csm_review tier) → Digest (ABC Company appears) → Approve → Insights.**
 5. Any new mismatch found here: check `contract.md` first. Fix in the backend serializer if it's a naming/shape issue — frontend should never patch around a backend inconsistency.
-6. Once the full click-through is clean, merge to `dev`, tag `integration-checkpoint-1`.
+6. Once the full click-through is clean, merge to `dev`, tag `integration-checkpoint-1`., then merge `dev` → `main` the same way (GitHub PR, base `main` / compare `dev`).
 
 ### Person 3 (Deployment — backend) — Hour 5 to 6
 
@@ -121,7 +122,7 @@ Polish the Account Drilldown screen specifically (loading states, the score → 
 
 - Full run-through against the **deployed** URLs (not localhost) — this is the second, separate integration pass, catching CORS/env issues a full day before the recording.
 - Confirm the ABC Company example still renders identically to the local version.
-- **End of Day 2:** merge to `dev`, tag `integration-checkpoint-2`.
+- **End of Day 2:** merge to `dev`, tag `integration-checkpoint-2`. then merge `dev` → `main` (same GitHub PR method).
 
 ---
 
