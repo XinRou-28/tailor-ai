@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import LandingLogo from "./LandingLogo";
 
 interface NavbarProps {
-  onLoginClick: () => void;
-  onGetStartedClick: () => void;
+  setCurrentView: (view: string) => void;
 }
 
-export default function Navbar({ onLoginClick, onGetStartedClick }: NavbarProps) {
+export default function Navbar({ setCurrentView }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -14,13 +14,7 @@ export default function Navbar({ onLoginClick, onGetStartedClick }: NavbarProps)
       <div className="flex justify-between items-center h-16 px-lg max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center gap-sm">
-          <span 
-            className="material-symbols-outlined text-secondary" 
-            style={{ fontVariationSettings: '"FILL" 1' }}
-            id="navbar-logo-icon"
-          >
-            architecture
-          </span>
+          <LandingLogo />
           <span className="text-title-lg font-headline-md font-bold text-on-surface" id="navbar-logo-text">
             Tailor AI
           </span>
@@ -34,25 +28,12 @@ export default function Navbar({ onLoginClick, onGetStartedClick }: NavbarProps)
           <a href="#features" className="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md py-1" id="nav-features">
             Features
           </a>
-          <a href="#case-studies" className="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md py-1" id="nav-cases">
-            Case Studies
-          </a>
-          <a href="#pricing" className="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md py-1" id="nav-pricing">
-            Pricing
-          </a>
         </nav>
 
         {/* Action Buttons */}
         <div className="flex items-center gap-md">
-          <button 
-            onClick={onLoginClick}
-            className="hidden sm:block text-on-surface hover:text-secondary transition-all font-body-md text-body-md cursor-pointer"
-            id="nav-login-btn"
-          >
-            Login
-          </button>
-          <button 
-            onClick={onGetStartedClick}
+          <button
+            onClick={() => setCurrentView("dashboard")}
             className="bg-primary text-on-primary px-md py-sm rounded-lg hover:opacity-90 transition-all font-body-md text-body-md font-semibold cursor-pointer"
             id="nav-get-started-btn"
           >
@@ -74,43 +55,23 @@ export default function Navbar({ onLoginClick, onGetStartedClick }: NavbarProps)
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-surface border-b border-outline-variant px-lg py-md flex flex-col gap-md" id="mobile-dropdown">
-          <a 
-            href="#" 
-            onClick={() => setMobileMenuOpen(false)} 
+          <a
+            href="#"
+            onClick={() => setMobileMenuOpen(false)}
             className="text-primary font-semibold font-body-md text-body-md py-1"
           >
             Platform
           </a>
-          <a 
-            href="#features" 
-            onClick={() => setMobileMenuOpen(false)} 
+          <a
+            href="#features"
+            onClick={() => setMobileMenuOpen(false)}
             className="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md py-1"
           >
             Features
           </a>
-          <a 
-            href="#case-studies" 
-            onClick={() => setMobileMenuOpen(false)} 
-            className="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md py-1"
-          >
-            Case Studies
-          </a>
-          <a 
-            href="#pricing" 
-            onClick={() => setMobileMenuOpen(false)} 
-            className="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md py-1"
-          >
-            Pricing
-          </a>
           <div className="flex flex-col gap-sm pt-sm border-t border-outline-variant/30">
-            <button 
-              onClick={() => { setMobileMenuOpen(false); onLoginClick(); }}
-              className="text-left text-on-surface hover:text-secondary py-2 font-body-md text-body-md"
-            >
-              Login
-            </button>
-            <button 
-              onClick={() => { setMobileMenuOpen(false); onGetStartedClick(); }}
+            <button
+              onClick={() => { setMobileMenuOpen(false); setCurrentView("dashboard"); }}
               className="bg-primary text-on-primary px-md py-sm rounded-lg hover:opacity-90 transition-all font-body-md text-body-md font-semibold text-center"
             >
               Get Started

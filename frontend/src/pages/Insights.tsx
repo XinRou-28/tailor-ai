@@ -68,24 +68,8 @@ const dataByRange: Record<string, RangeData> = {
 export default function Insights() {
   const [timeRange, setTimeRange] = useState<"7d" | "30d" | "90d">("30d");
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-  
-  // Strategy actions state
-  const [strategyApplied, setStrategyApplied] = useState(false);
-  const [isApplying, setIsApplying] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
-
-  // Modals state
-  const [showForecastModal, setShowForecastModal] = useState(false);
-  const [showCustomizeModal, setShowCustomizeModal] = useState(false);
   const [selectedPattern, setSelectedPattern] = useState<string | null>(null);
-
-  // Editable Standing Fix details
-  const [standingFix, setStandingFix] = useState({
-    targetTier: "Enterprise",
-    enableDay: 1,
-    inviteDay: 7,
-    status: "Active"
-  });
 
   const activeData = dataByRange[timeRange];
 
@@ -96,33 +80,12 @@ export default function Insights() {
     }, 4000);
   };
 
-  const handleApplyStrategy = () => {
-    if (strategyApplied) {
-      setStrategyApplied(false);
-      triggerToast("Onboarding fix strategy deactivated company-wide.");
-      return;
-    }
-    
-    setIsApplying(true);
-    setTimeout(() => {
-      setIsApplying(false);
-      setStrategyApplied(true);
-      triggerToast(`Strategy deployed: Auto-enable 'Advanced Dashboards' on Day ${standingFix.enableDay} and CSM concierge invite on Day ${standingFix.inviteDay} is now active.`);
-    }, 800);
-  };
-
   const handleExport = () => {
     setIsExporting(true);
     setTimeout(() => {
       setIsExporting(false);
       triggerToast("Insights report exported successfully in CSV format.");
     }, 1200);
-  };
-
-  const handleSaveCustomize = (e: FormEvent) => {
-    e.preventDefault();
-    setShowCustomizeModal(false);
-    triggerToast("Enterprise Onboarding Fix standing parameters updated.");
   };
 
   // Mock interactive drilldowns for bottom detail list rows
@@ -362,21 +325,13 @@ export default function Insights() {
           </div>
 
           {/* AI Pulse Card */}
-          <div className="bg-primary-container text-white rounded-xl p-4 md:p-5 shadow-lg flex-1 min-h-[190px] relative overflow-hidden flex flex-col justify-between">
-            <div className="relative z-10">
+          <div className="bg-primary-container text-white rounded-xl p-4 md:p-5 shadow-lg flex-1 relative overflow-hidden flex flex-col">
+            <div className="relative z-10 flex-1 flex flex-col justify-center">
               <span className="material-symbols-outlined text-secondary-fixed-dim mb-2 text-lg" data-icon="auto_awesome">auto_awesome</span>
               <h4 className="text-xs font-bold text-white tracking-tight uppercase mb-2">AI Pulse</h4>
-              <p className="text-[11px] text-indigo-100/80 leading-normal mb-3">
-                "The correlation between <strong>Advanced Analytics</strong> usage and <strong>LTV expansion</strong> is strengthening. Current patterns suggest a {activeData.pulseValue} recovery opportunity if the {standingFix.targetTier} onboarding flow is modified."
+              <p className="text-[11px] text-indigo-100/80 leading-normal">
+                Pattern detected: Advanced Analytics adoption is the strongest signal across at-risk Enterprise accounts. Recommended focus area for retention strategy.
               </p>
-            </div>
-            <div className="relative z-10 mt-auto">
-              <button
-                onClick={() => setShowForecastModal(true)}
-                className="w-full bg-secondary text-on-primary px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all active:scale-95 hover:bg-opacity-90 cursor-pointer"
-              >
-                View Forecast Model
-              </button>
             </div>
             <div className="absolute inset-0 opacity-10 pointer-events-none">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_#645efb_0%,_transparent_50%)]"></div>
@@ -395,312 +350,21 @@ export default function Insights() {
                 <span className="material-symbols-outlined !text-[13px]">bolt</span>
                 PATTERN → STRATEGY
               </div>
-              <h3 className="text-base font-bold text-white tracking-tight mb-1.5">Mandatory Enterprise Onboarding Fix</h3>
+              <h3 className="text-base font-bold text-white tracking-tight mb-1.5">Enterprise Onboarding Insights</h3>
               <p className="text-xs text-indigo-100/80 leading-normal">
-                Based on account behavior in the last {timeRange === "7d" ? "7" : timeRange === "30d" ? "30" : "90"} days, we recommend a standing fix for the {standingFix.targetTier} tier: Auto-enable 'Advanced Dashboards' on day {standingFix.enableDay} and trigger a CSM concierge invite if unused by day {standingFix.inviteDay}.
+                Based on account behavior in the last {timeRange === "7d" ? "7" : timeRange === "30d" ? "30" : "90"} days, focusing on Advanced Analytics adoption and onboarding completion shows the highest correlation with retention and expansion.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-              <button
-                onClick={handleApplyStrategy}
-                disabled={isApplying}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all active:scale-95 cursor-pointer text-center flex items-center justify-center gap-1 min-w-[130px] ${
-                  strategyApplied
-                    ? "bg-green-600 text-white"
-                    : "bg-white text-primary hover:bg-surface-container"
-                }`}
-              >
-                {isApplying ? (
-                  <span className="material-symbols-outlined animate-spin text-sm">sync</span>
-                ) : strategyApplied ? (
-                  <>
-                    <span className="material-symbols-outlined text-xs">check_circle</span> Active
-                  </>
-                ) : (
-                  "Apply Strategy"
-                )}
-              </button>
-              <button
-                onClick={() => setShowCustomizeModal(true)}
-                className="border border-outline-variant text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold hover:bg-white/10 transition-all cursor-pointer text-center"
-              >
-                Customize Actions
-              </button>
-            </div>
-          </div>
-          
-          {/* Detail Row List - Matching Dashboard Card Sub-styles */}
-          <div className="bg-white/5 border-t border-white/10">
-            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
-              
-              <div
-                onClick={() => setSelectedPattern("Advanced Analytics unused")}
-                className="px-5 py-3 flex items-center justify-between hover:bg-white/5 transition-colors cursor-pointer group"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-secondary-fixed-dim text-lg font-extrabold">{activeData.analyticsCount}</span>
-                  <span className="text-primary-fixed/80 text-[10px] font-bold uppercase tracking-wider">Advanced Analytics unused</span>
-                </div>
-                <span className="material-symbols-outlined text-primary-fixed group-hover:translate-x-1 transition-transform !text-[16px]">arrow_forward</span>
-              </div>
-
-              <div
-                onClick={() => setSelectedPattern("Partial Onboarding completion")}
-                className="px-5 py-3 flex items-center justify-between hover:bg-white/5 transition-colors cursor-pointer group"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-secondary-fixed-dim text-lg font-extrabold">{activeData.onboardingCount}</span>
-                  <span className="text-primary-fixed/80 text-[10px] font-bold uppercase tracking-wider">Partial Onboarding completion</span>
-                </div>
-                <span className="material-symbols-outlined text-primary-fixed group-hover:translate-x-1 transition-transform !text-[16px]">arrow_forward</span>
-              </div>
-
-              <div
-                onClick={() => setSelectedPattern("Missing core integrations")}
-                className="px-5 py-3 flex items-center justify-between hover:bg-white/5 transition-colors cursor-pointer group"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-secondary-fixed-dim text-lg font-extrabold">{activeData.integrationsCount}</span>
-                  <span className="text-primary-fixed/80 text-[10px] font-bold uppercase tracking-wider">Missing core integrations</span>
-                </div>
-                <span className="material-symbols-outlined text-primary-fixed group-hover:translate-x-1 transition-transform !text-[16px]">arrow_forward</span>
-              </div>
-
+            <div className="flex-shrink-0">
+              <span className="text-xs text-indigo-100/80 italic">Suggested next step</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 1. View Forecast Model Modal */}
-      <AnimatePresence>
-        {showForecastModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-white border border-outline-variant rounded-2xl w-full max-w-2xl p-5 md:p-6 shadow-2xl overflow-hidden"
-            >
-              <div className="flex justify-between items-center border-b border-outline-variant/60 pb-3 mb-4">
-                <div>
-                  <h3 className="text-base font-bold text-gray-900 tracking-tight">Predictive Churn Forecast Model</h3>
-                  <p className="text-[11px] text-gray-500">LTV Expansion opportunities vs. active onboarding intervention triggers.</p>
-                </div>
-                <button
-                  onClick={() => setShowForecastModal(false)}
-                  className="material-symbols-outlined text-on-surface-variant hover:text-error p-1 rounded-full hover:bg-slate-100 transition-colors cursor-pointer"
-                >
-                  close
-                </button>
-              </div>
+      {/* 1. View Forecast Model Modal - Removed as per requirements */}
 
-              {/* Dynamic Interactive SVG Area Chart */}
-              <div className="mb-4 bg-slate-50 border border-outline-variant/40 rounded-xl p-4">
-                <div className="flex justify-between items-center mb-2 text-[10px] text-on-surface-variant">
-                  <span className="font-bold flex items-center gap-1">
-                    <span className="w-2.5 h-2.5 rounded-full bg-secondary inline-block"></span> Active Concierge (Projected)
-                  </span>
-                  <span className="font-bold flex items-center gap-1">
-                    <span className="w-2.5 h-2.5 rounded bg-gray-400 inline-block border-t-2 border-dashed border-gray-600"></span> Unassisted (Baseline)
-                  </span>
-                </div>
-                
-                <div className="relative h-64 w-full">
-                  <svg className="w-full h-full" viewBox="0 0 600 240">
-                    {/* Grids */}
-                    <line x1="50" y1="20" x2="550" y2="20" stroke="#e5e7eb" strokeWidth="1" />
-                    <line x1="50" y1="70" x2="550" y2="70" stroke="#e5e7eb" strokeWidth="1" />
-                    <line x1="50" y1="120" x2="550" y2="120" stroke="#e5e7eb" strokeWidth="1" />
-                    <line x1="50" y1="170" x2="550" y2="170" stroke="#e5e7eb" strokeWidth="1" />
-                    <line x1="50" y1="220" x2="550" y2="220" stroke="#d1d5db" strokeWidth="1.5" />
-
-                    {/* Chart Gradient Area */}
-                    <defs>
-                      <linearGradient id="gradient-area" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#4b41e1" stopOpacity="0.25"/>
-                        <stop offset="100%" stopColor="#4b41e1" stopOpacity="0.00"/>
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M 50,180 L 150,150 L 250,90 L 350,50 L 450,35 L 550,30 L 550,220 L 50,220 Z"
-                      fill="url(#gradient-area)"
-                    />
-
-                    {/* Baseline dashed path */}
-                    <path
-                      d="M 50,180 L 150,190 L 250,205 L 350,210 L 450,215 L 550,218"
-                      fill="none"
-                      stroke="#9ca3af"
-                      strokeWidth="2"
-                      strokeDasharray="4 4"
-                    />
-
-                    {/* Projected active path */}
-                    <path
-                      d="M 50,180 L 150,150 L 250,90 L 350,50 L 450,35 L 550,30"
-                      fill="none"
-                      stroke="#4b41e1"
-                      strokeWidth="3.5"
-                    />
-
-                    {/* Markers */}
-                    <circle cx="50" cy="180" r="5" fill="#4b41e1" stroke="#ffffff" strokeWidth="1.5" />
-                    <circle cx="150" cy="150" r="5" fill="#4b41e1" stroke="#ffffff" strokeWidth="1.5" />
-                    <circle cx="250" cy="90" r="5" fill="#4b41e1" stroke="#ffffff" strokeWidth="1.5" />
-                    <circle cx="350" cy="50" r="5" fill="#4b41e1" stroke="#ffffff" strokeWidth="1.5" />
-                    <circle cx="450" cy="35" r="5" fill="#4b41e1" stroke="#ffffff" strokeWidth="1.5" />
-                    <circle cx="550" cy="30" r="5" fill="#4b41e1" stroke="#ffffff" strokeWidth="1.5" />
-
-                    {/* Labels */}
-                    <text x="50" y="235" fontSize="10" textAnchor="middle" fill="#6b7280" fontWeight="bold">Jul (Start)</text>
-                    <text x="150" y="235" fontSize="10" textAnchor="middle" fill="#6b7280">Aug</text>
-                    <text x="250" y="235" fontSize="10" textAnchor="middle" fill="#6b7280">Sep</text>
-                    <text x="350" y="235" fontSize="10" textAnchor="middle" fill="#6b7280">Oct</text>
-                    <text x="450" y="235" fontSize="10" textAnchor="middle" fill="#6b7280">Nov</text>
-                    <text x="550" y="235" fontSize="10" textAnchor="middle" fill="#6b7280" fontWeight="bold">Dec (End)</text>
-
-                    {/* Value indicators */}
-                    <text x="560" y="32" fontSize="11" fill="#4b41e1" fontWeight="bold">92%</text>
-                    <text x="560" y="222" fontSize="11" fill="#9ca3af">18%</text>
-                  </svg>
-                </div>
-              </div>
-
-              <div className="p-3.5 bg-surface-container-low rounded-lg border-l-2 border-secondary text-xs mb-4">
-                <span className="font-bold text-gray-900 block mb-0.5">Impact Highlight</span>
-                <p className="text-[11px] text-gray-600 leading-normal">
-                  Modifying the Enterprise onboarding strategy triggers a predicted <strong className="text-secondary font-bold">42% lift in renewal conversions</strong>. Real-time cohort modeling values this intervention at approximately <strong className="text-primary font-bold">{activeData.pulseValue} in recovered ARR</strong> over the next two billing quarters.
-                </p>
-              </div>
-
-              <div className="flex justify-end">
-                <button
-                  onClick={() => setShowForecastModal(false)}
-                  className="px-3.5 py-1.5 bg-primary text-on-primary font-semibold text-xs rounded-lg hover:bg-opacity-90 transition-all cursor-pointer"
-                >
-                  Acknowledge Forecast
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
-
-      {/* 2. Customize Actions Modal */}
-      <AnimatePresence>
-        {showCustomizeModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-white border border-outline-variant rounded-2xl w-full max-w-md p-5 shadow-2xl overflow-hidden"
-            >
-              <div className="flex justify-between items-center border-b border-outline-variant/60 pb-3 mb-4">
-                <h3 className="text-base font-bold text-gray-900 tracking-tight">Customize Intervention Rules</h3>
-                <button
-                  onClick={() => setShowCustomizeModal(false)}
-                  className="material-symbols-outlined text-on-surface-variant hover:text-error p-1 rounded-full hover:bg-slate-100 transition-colors cursor-pointer"
-                >
-                  close
-                </button>
-              </div>
-              <form onSubmit={handleSaveCustomize} className="flex flex-col gap-3.5 text-sm">
-                <div>
-                  <label className="block text-[9px] font-bold uppercase tracking-wider text-gray-500 mb-1">Target Account Tier</label>
-                  <select
-                    value={standingFix.targetTier}
-                    onChange={(e) => setStandingFix({ ...standingFix, targetTier: e.target.value })}
-                    className="w-full px-3 py-1.5 bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary/20 transition-all outline-none text-xs"
-                  >
-                    <option value="Enterprise">Enterprise</option>
-                    <option value="Enterprise Plus">Enterprise Plus</option>
-                    <option value="Pro Tier">Pro Tier</option>
-                    <option value="All Accounts">All Accounts</option>
-                  </select>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-[9px] font-bold uppercase tracking-wider text-gray-500 mb-1">Enable Dashboards</label>
-                    <div className="flex items-center gap-2">
-                      <span className="text-[11px] text-gray-400 font-bold">Day</span>
-                      <input
-                        type="number"
-                        required
-                        min={1}
-                        max={14}
-                        value={standingFix.enableDay}
-                        onChange={(e) => setStandingFix({ ...standingFix, enableDay: parseInt(e.target.value) || 1 })}
-                        className="w-full px-3 py-1.5 bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary/20 transition-all outline-none text-xs"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-[9px] font-bold uppercase tracking-wider text-gray-500 mb-1">CSM Concierge Invite</label>
-                    <div className="flex items-center gap-2">
-                      <span className="text-[11px] text-gray-400 font-bold">Day</span>
-                      <input
-                        type="number"
-                        required
-                        min={2}
-                        max={30}
-                        value={standingFix.inviteDay}
-                        onChange={(e) => setStandingFix({ ...standingFix, inviteDay: parseInt(e.target.value) || 7 })}
-                        className="w-full px-3 py-1.5 bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary/20 transition-all outline-none text-xs"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-[9px] font-bold uppercase tracking-wider text-gray-500 mb-1">Strategy Active Status</label>
-                  <div className="flex items-center gap-3 mt-1">
-                    <button
-                      type="button"
-                      onClick={() => setStandingFix({ ...standingFix, status: "Active" })}
-                      className={`flex-1 py-1.5 rounded-lg text-xs font-semibold border transition-colors ${
-                        standingFix.status === "Active"
-                          ? "bg-secondary text-white border-secondary"
-                          : "bg-surface-container-lowest text-on-surface-variant border-outline-variant hover:bg-slate-50"
-                      }`}
-                    >
-                      Active
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setStandingFix({ ...standingFix, status: "Paused" })}
-                      className={`flex-1 py-1.5 rounded-lg text-xs font-semibold border transition-colors ${
-                        standingFix.status === "Paused"
-                          ? "bg-secondary text-white border-secondary"
-                          : "bg-surface-container-lowest text-on-surface-variant border-outline-variant hover:bg-slate-50"
-                      }`}
-                    >
-                      Paused
-                    </button>
-                  </div>
-                </div>
-
-                <div className="flex gap-2 justify-end mt-4 pt-3 border-t border-outline-variant">
-                  <button
-                    type="button"
-                    onClick={() => setShowCustomizeModal(false)}
-                    className="px-3.5 py-1.5 border border-outline text-primary font-semibold text-xs rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-3.5 py-1.5 bg-primary text-on-primary font-semibold text-xs rounded-lg hover:bg-opacity-90 transition-colors cursor-pointer"
-                  >
-                    Save Changes
-                  </button>
-                </div>
-              </form>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+      {/* 2. Customize Actions Modal - Removed as per requirements */}
 
       {/* 3. Bottom Detail Rows Drilldown Modal */}
       <AnimatePresence>
@@ -710,7 +374,7 @@ export default function Insights() {
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-white border border-outline-variant rounded-2xl w-full max-w-lg p-5 shadow-2xl overflow-hidden"
+              className="glass-card border border-white/30 rounded-2xl w-full max-w-lg p-5 shadow-2xl overflow-hidden"
             >
               <div className="flex justify-between items-center border-b border-outline-variant/60 pb-3 mb-4">
                 <div>

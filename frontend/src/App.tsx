@@ -7,7 +7,6 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
-import Modal from "./components/Modal";
 
 // Internal layout imports
 import Sidebar from "./components/Sidebar";
@@ -16,12 +15,11 @@ import DashboardTopBar from "./components/DashboardTopBar";
 // Internal pages imports
 import Dashboard from "./pages/Dashboard";
 import Customers from "./pages/Customers";
-import DailyDigest from "./pages/DailyDigest";
 import CustomerDetails from "./pages/CustomerDetails";
 import Insights from "./pages/Insights";
 import Settings from "./pages/Settings";
 
-type ActiveView = "homepage" | "dashboard" | "customers" | "digest" | "details" | "insights" | "settings";
+type ActiveView = "homepage" | "dashboard" | "customers" | "details" | "insights" | "settings";
 
 export default function App() {
   const [currentView, setCurrentView] = useState<ActiveView>("homepage");
@@ -48,11 +46,12 @@ export default function App() {
   const renderDashboardContent = () => {
     switch (currentView) {
       case "dashboard":
-        return <Dashboard searchQuery={searchQuery} />;
+        return <Dashboard searchQuery={searchQuery} onTabChange={(tab) => {
+          setSearchQuery("");
+          setCurrentView(tab as ActiveView);
+        }} />;
       case "customers":
         return <Customers searchQuery={searchQuery} onNavigate={setCurrentView} />;
-      case "digest":
-        return <DailyDigest />;
       case "details":
         return <CustomerDetails />;
       case "insights":
@@ -67,38 +66,30 @@ export default function App() {
   // If we are in homepage, render static marketing site
   if (currentView === "homepage") {
     return (
-      <div className="min-h-screen bg-surface font-body-md text-on-surface flex flex-col justify-between" id="app-root-wrapper">
+      <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white font-body-md text-on-surface flex flex-col justify-between" id="app-root-wrapper">
         {/* Navbar Container */}
-        <Navbar 
-          onLoginClick={() => handleOpenModal("login")} 
-          onGetStartedClick={() => handleOpenModal("get_started")} 
+        <Navbar
+          setCurrentView={setCurrentView}
         />
 
         {/* Main Content Area */}
         <main className="flex-grow" id="app-main-content">
-          <Homepage 
-            onGetStartedClick={() => setCurrentView("dashboard")}
+          <Homepage
             onWatchDemoClick={() => handleOpenModal("demo")}
+            setCurrentView={setCurrentView}
           />
         </main>
 
         {/* Footer Container */}
         <Footer />
 
-        {/* Popups & Dialogs Portal */}
-        <Modal 
-          isOpen={modalOpen} 
-          onClose={handleCloseModal} 
-          type={modalType} 
-          onSubmitSuccess={handleModalSubmit}
-        />
-      </div>
+        </div>
     );
   }
 
   // Otherwise, render full screen Dashboard layout with sidebar navigation
   return (
-    <div className="flex h-screen overflow-hidden bg-background font-body-md" id="app-workspace-wrapper">
+    <div className="flex h-screen overflow-hidden bg-gradient-to-br from-indigo-50 to-white font-body-md" id="app-workspace-wrapper">
       {/* Sidebar Navigation */}
       <Sidebar 
         activeTab={currentView} 
@@ -110,9 +101,9 @@ export default function App() {
       />
 
       {/* Main Content Canvas */}
-      <main className="flex-1 flex flex-col overflow-hidden bg-gray-50 relative" id="workspace-main-canvas">
+      <main className="flex-1 flex flex-col overflow-hidden bg-white/80 relative" id="workspace-main-canvas">
         {/* Dashboard Top Navigation Bar */}
-        <DashboardTopBar 
+        <DashboardTopBar
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
           userEmail="peishing1103@gmail.com"
@@ -120,18 +111,11 @@ export default function App() {
         />
 
         {/* Dynamic page contents */}
-        <div className="flex-1 overflow-y-auto p-5 lg:p-6 bg-gray-50">
+        <div className="flex-1 overflow-y-auto p-5 lg:p-6 bg-white/60">
           {renderDashboardContent()}
         </div>
       </main>
 
-      {/* Secondary confirmation trigger for simulator inside Modal context */}
-      <Modal 
-        isOpen={modalOpen} 
-        onClose={handleCloseModal} 
-        type={modalType} 
-        onSubmitSuccess={handleModalSubmit}
-      />
     </div>
   );
 }

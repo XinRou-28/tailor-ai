@@ -2,60 +2,48 @@ import { useState } from "react";
 import { motion } from "motion/react";
 
 interface HomepageProps {
-  onGetStartedClick: () => void;
   onWatchDemoClick: () => void;
+  setCurrentView: (view: string) => void;
 }
 
-type TriggerType = "usage_drop" | "feature_fatigue" | "billing_issue" | "new_admin";
+type TriggerType = "onboarding_drop" | "feature_unneeded" | "limit_exceeded" | "technical_issue";
 
-export default function Homepage({ onGetStartedClick, onWatchDemoClick }: HomepageProps) {
+export default function Homepage({ onWatchDemoClick, setCurrentView }: HomepageProps) {
   // Value Recovery Sandbox State
-  const [activeTrigger, setActiveTrigger] = useState<TriggerType>("usage_drop");
+  const [activeTrigger, setActiveTrigger] = useState<TriggerType>("onboarding_drop");
   
   // Trust Layer Confidence State
   const [confidenceLevel, setConfidenceLevel] = useState<"high" | "low">("high");
 
   // Trigger configurations for interactive Value Recovery preview
   const triggerConfigs = {
-    usage_drop: {
-      analyze: "Analyze: Usage Drop (50% WoW)",
-      predict: "Predict: Core Friction Point",
-      action: "Action: Trigger Inline Help",
+    onboarding_drop: {
+      analyze: "Advanced Analytics Unused",
+      predict: "Onboarding Difficulty",
+      action: "Offer Onboarding Support",
       icon: "rocket_launch",
-      confidence: "98%",
-      badge: "Auto",
-      badgeBg: "bg-[#e2f5e9] text-[#1e4620]",
-      description: "Classify why value is dropping and recommend the matching fix. We analyze over 50 behavioral signals to identify the exact friction points."
+      description: "Tailor AI doesn't just predict churn; it recovers value. By analyzing customer usage drops against your existing plan catalog, our engine recommends the precise intervention needed—whether that's onboarding support, a capacity upgrade, or safely right-sizing an account."
     },
-    feature_fatigue: {
-      analyze: "Analyze: Feature Fatigue Detected",
-      predict: "Predict: User Overwhelm Risk",
-      action: "Action: Custom Workspace Trim",
+    feature_unneeded: {
+      analyze: "Add-on feature abandoned",
+      predict: "Feature no longer needed",
+      action: "Downgrade (Drop add-on)",
       icon: "tune",
-      confidence: "94%",
-      badge: "Auto",
-      badgeBg: "bg-[#e2f5e9] text-[#1e4620]",
-      description: "Understand which features are causing noise. Guide users back to core value streams by temporarily hiding unused premium complexity."
+      description: "Tailor AI doesn't just predict churn; it recovers value. By analyzing customer usage drops against your existing plan catalog, our engine recommends the precise intervention needed—whether that's onboarding support, a capacity upgrade, or safely right-sizing an account."
     },
-    billing_issue: {
-      analyze: "Analyze: Card Expiry Near",
-      predict: "Predict: Involuntary Churn",
-      action: "Action: Grace Period & Smart Banner",
+    limit_exceeded: {
+      analyze: "API/Storage limits repeatedly hit",
+      predict: "Capacity needs expanding",
+      action: "Upgrade specific capacity",
       icon: "credit_card",
-      confidence: "99%",
-      badge: "Instant",
-      badgeBg: "bg-[#e2f5e9] text-[#1e4620]",
-      description: "Analyze passive subscription risk. Automatically deploy customized, non-intrusive renewal nudges and configure elegant payment grace windows."
+      description: "Tailor AI doesn't just predict churn; it recovers value. By analyzing customer usage drops against your existing plan catalog, our engine recommends the precise intervention needed—whether that's onboarding support, a capacity upgrade, or safely right-sizing an account."
     },
-    new_admin: {
-      analyze: "Analyze: New Workspace Admin",
-      predict: "Predict: Adoption Expansion Opportunity",
-      action: "Action: Trigger 1:1 Guided Setup",
+    technical_issue: {
+      analyze: "Unresolved support tickets",
+      predict: "Technical/Support friction",
+      action: "Route directly to Support",
       icon: "group",
-      confidence: "87%",
-      badge: "Review",
-      badgeBg: "bg-[#fef3c7] text-[#92400e]",
-      description: "Identify key changes in account ownership or team leadership. Proactively launch high-touch guided experiences for newly-appointed decision makers."
+      description: "Tailor AI doesn't just predict churn; it recovers value. By analyzing customer usage drops against your existing plan catalog, our engine recommends the precise intervention needed—whether that's onboarding support, a capacity upgrade, or safely right-sizing an account."
     }
   };
 
@@ -66,7 +54,7 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
         <div className="absolute top-0 right-0 -z-10 w-[800px] h-[800px] bg-indigo-600/15 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/4"></div>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 max-w-7xl mx-auto px-6 py-20">
           <motion.div 
-            className="flex-1 flex flex-col items-start gap-6 relative z-10 max-w-2xl"
+            className="flex-1 flex flex-col items-start gap-6 relative z-10 max-w-3xl"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -75,28 +63,20 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
               <span className="material-symbols-outlined text-[16px]">bolt</span>
               AI-DRIVEN OPTIMIZATION
             </div>
-            <h1 className="font-display-lg text-display-lg text-primary tracking-tight">
-              Subscription Intelligence <br />that fits your business.
+            <h1 className="font-display-lg text-display-lg text-primary tracking-tight leading-tight">
+              AI Subscription Intelligence,<br />
+              Tailored to Fit Your Business.
             </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-              Tailor AI helps you understand why customers lose value and recommends the perfect intervention — not just a generic downgrade or cancellation path.
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+              Spot mismatched subscriptions before customers churn. Tailor AI identifies changing needs and instantly recommends the exact intervention to keep your customers engaged.
             </p>
             <div className="flex flex-wrap items-center gap-4 mt-4">
-              <button 
-                onClick={onGetStartedClick}
+              <button
+                onClick={() => setCurrentView("dashboard")}
                 className="bg-secondary text-white px-6 py-3 rounded-lg text-sm font-semibold hover:translate-y-[-2px] transition-all shadow-lg shadow-secondary/20 cursor-pointer"
                 id="hero-get-started"
               >
                 Get Started
-              </button>
-              <button 
-                onClick={() => alert("Watch Demo video coming soon!")}
-                className="flex items-center gap-2 px-6 py-3 rounded-lg border border-gray-300 text-gray-700 font-semibold hover:bg-gray-50 transition-colors cursor-pointer"
-              >
-                <svg className="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-                Watch Demo
               </button>
             </div>
 
@@ -265,34 +245,13 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="bg-surface-container-low py-xl" id="social-proof-section">
-        <div className="max-w-7xl mx-auto px-lg">
-          <p className="text-center text-label-md text-on-primary-container font-semibold uppercase tracking-widest mb-lg">
-            Trusted by ProjectFlow and leading B2B SaaS companies
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-spine-gap opacity-60 grayscale hover:grayscale-0 transition-all">
-            <div className="flex items-center gap-xs font-headline-md text-primary">
-              <span className="material-symbols-outlined text-primary">lan</span> ProjectFlow
-            </div>
-            <div className="flex items-center gap-xs font-headline-md text-primary">
-              <span className="material-symbols-outlined text-primary">auto_graph</span> CloudScale
-            </div>
-            <div className="flex items-center gap-xs font-headline-md text-primary">
-              <span className="material-symbols-outlined text-primary">stream</span> DataNexus
-            </div>
-            <div className="flex items-center gap-xs font-headline-md text-primary">
-              <span className="material-symbols-outlined text-primary">hub</span> Velocity
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Value Proposition / Bento Grid */}
 
       {/* Value Proposition / Bento Grid */}
       <section className="py-xxl max-w-7xl mx-auto px-lg" id="features">
         <div className="text-center mb-xxl">
           <h2 className="font-headline-lg text-headline-lg text-primary mb-md">Beyond Churn Prediction</h2>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
             Traditional churn metrics only tell you what's already happened. Tailor AI looks at the "Value Gap" to intervene before it's too late.
           </p>
         </div>
@@ -320,7 +279,7 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
               <div className="mt-md">
                 <p className="text-[11px] font-bold text-on-primary-container tracking-wider uppercase mb-sm">Interactive Sandbox Trigger:</p>
                 <div className="flex flex-wrap gap-xs">
-                  {(["usage_drop", "feature_fatigue", "billing_issue", "new_admin"] as TriggerType[]).map((trig) => (
+                  {(["onboarding_drop", "feature_unneeded", "limit_exceeded", "technical_issue"] as TriggerType[]).map((trig) => (
                     <button
                       key={trig}
                       onClick={() => setActiveTrigger(trig)}
@@ -336,14 +295,6 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
                 </div>
               </div>
 
-              <div className="mt-xl flex items-center gap-md">
-                <span className={`${triggerConfigs[activeTrigger].badgeBg} text-label-md px-sm py-xs rounded uppercase font-bold`}>
-                  {triggerConfigs[activeTrigger].badge}
-                </span>
-                <span className="text-secondary font-semibold font-body-md">
-                  Confidence: {triggerConfigs[activeTrigger].confidence}
-                </span>
-              </div>
             </div>
             
             <div className="md:w-1/2 w-full h-full min-h-[200px] bg-surface-container rounded-lg border border-outline-variant p-md flex flex-col gap-sm justify-center">
@@ -367,22 +318,22 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
             </div>
           </motion.div>
 
-          {/* Card 2: Investigation Agent */}
-          <motion.div 
+          {/* Card 2: Safe AI Communication */}
+          <motion.div
             className="md:col-span-4 glass-card rounded-xl p-xl flex flex-col justify-between"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            id="investigation-agent-card"
+            id="safe-ai-communication-card"
           >
             <div>
               <div className="bg-surface-container p-md rounded-full w-fit mb-md">
-                <span className="material-symbols-outlined text-primary text-3xl">search_check</span>
+                <span className="material-symbols-outlined text-primary text-3xl">chat</span>
               </div>
-              <h3 className="font-headline-md text-headline-md text-primary mb-sm">Investigation Agent</h3>
+              <h3 className="font-headline-md text-headline-md text-primary mb-sm">Safe AI Communication</h3>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                A narrow, honest agent that disambiguates complex cases. It asks questions when data is messy, bypassing the classic hallucination issues common in other systems.
+                Tailor AI automatically writes clear, friendly messages to your customers. It only uses your real pricing plans, guaranteeing it will never invent or guess a fake price.
               </p>
             </div>
             <div className="mt-xl pt-lg border-t border-outline-variant">
@@ -409,7 +360,7 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
                 </div>
                 <h3 className="font-headline-md text-headline-md text-primary mb-sm">Trust-Based Decision Layer</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-lg">
-                  Confidence-tiered automation that knows when to act and when to ask. Define your guardrails and let Tailor AI handle the rest.
+                  AI shouldn't make every decision alone. Tailor AI acts automatically only when confidence is high. If confidence is low, or if the account has high business stakes, it safely routes the recommendation to a human for review.
                 </p>
                 
                 {/* Confidence Level Selector */}
@@ -425,7 +376,7 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
                       }`}
                     >
                       <div className="text-[#1e4620] font-bold text-label-md mb-xs">HIGH CONFIDENCE</div>
-                      <div className="text-body-md text-on-surface-variant">Auto-Applied intervention</div>
+                      <div className="text-body-md text-on-surface-variant">Auto Applied Intervention</div>
                     </button>
                     <button
                       onClick={() => setConfidenceLevel("low")}
@@ -436,7 +387,7 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
                       }`}
                     >
                       <div className="text-[#854d0e] font-bold text-label-md mb-xs">LOW CONFIDENCE</div>
-                      <div className="text-body-md text-on-surface-variant">Escalated to human review</div>
+                      <div className="text-body-md text-on-surface-variant">Routes to Human Review</div>
                     </button>
                   </div>
                 </div>
@@ -447,12 +398,12 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
                 <div className="decision-spine space-y-md">
                   <div className="relative flex items-center gap-md z-10">
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold transition-colors ${confidenceLevel === "high" ? "bg-secondary" : "bg-orange-500"}`}>
-                      {confidenceLevel === "high" ? "95" : "62"}
+                      {confidenceLevel === "high" ? "92" : "45"}
                     </div>
                     <div className="bg-white/10 p-md rounded flex-1 backdrop-blur-sm border border-white/10">
-                      <p className="text-label-md font-bold text-white uppercase">Subscription Score</p>
+                      <p className="text-label-md font-bold text-white uppercase">Confidence Score</p>
                       <p className="text-body-md opacity-80">
-                        {confidenceLevel === "high" ? "Severe usage drop detected" : "Slight decrease in active workspace seats"}
+                        {confidenceLevel === "high" ? "High certainty & low business risk" : "Low certainty requires human oversight"}
                       </p>
                     </div>
                   </div>
@@ -462,9 +413,9 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
                       <span className="material-symbols-outlined text-[16px] text-primary">psychology</span>
                     </div>
                     <div className="p-sm bg-white/5 rounded-lg text-body-md italic border border-white/5 text-white/90">
-                      {confidenceLevel === "high" 
-                        ? '"Reason: Clear pattern match with feature fatigue. Recommended trigger sequence is 98% confident."'
-                        : '"Reason: Behavior pattern is ambiguous. Could represent normal summer slowdown or risk of admin churn."'
+                      {confidenceLevel === "high"
+                        ? '"Reason: Model confidence is >85% and no near-term contract renewal is pending. Safe to execute without human intervention."'
+                        : '"Reason: Model confidence is <50%. The behavioral pattern is ambiguous and requires manual investigation before any plan changes are recommended."'
                       }
                     </div>
                   </div>
@@ -480,9 +431,9 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
                         {confidenceLevel === "high" ? "Recommendation (Auto-Action)" : "Recommendation (Human Review)"}
                       </p>
                       <p className="text-body-md font-semibold text-white">
-                        {confidenceLevel === "high" 
-                          ? "Trigger 1:1 Guided Onboarding with App Nudges"
-                          : "Flag for Client Success Outreach & Schedule Review Call"
+                        {confidenceLevel === "high"
+                          ? "Action: Auto-send email to customer recommending dropping the unused Extra Storage add-on."
+                          : "Action: Route for manual CSM investigation."
                         }
                       </p>
                     </div>
@@ -501,22 +452,16 @@ export default function Homepage({ onGetStartedClick, onWatchDemoClick }: Homepa
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-on-tertiary-container blur-[150px] translate-x-1/2 translate-y-1/2"></div>
         </div>
         <div className="max-w-4xl mx-auto px-lg text-center relative z-10">
-          <h2 className="font-display-lg text-headline-lg text-white mb-lg">Ready to master your subscription value?</h2>
+          <h2 className="font-display-lg text-headline-lg text-white mb-lg">Tailor every subscription to fit.</h2>
           <p className="font-body-lg text-body-lg text-on-primary-container mb-xl">
-            Join dozens of B2B leaders who turned subscription anxiety into operational mastery.
+            Move beyond churn probability scores. Pinpoint exactly why usage is dropping and deploy the perfect intervention to recover lost value.
           </p>
           <div className="flex flex-col sm:flex-row gap-md justify-center">
-            <button 
-              onClick={onGetStartedClick}
+            <button
+              onClick={() => setCurrentView("dashboard")}
               className="bg-on-secondary-container text-primary font-bold px-xxl py-md rounded-xl hover:scale-105 transition-transform cursor-pointer"
             >
               Get Started Free
-            </button>
-            <button 
-              onClick={onGetStartedClick}
-              className="bg-white/10 text-white font-bold px-xxl py-md rounded-xl hover:bg-white/20 transition-colors border border-white/20 cursor-pointer"
-            >
-              Talk to Sales
             </button>
           </div>
         </div>

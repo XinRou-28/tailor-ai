@@ -142,6 +142,12 @@
   font-weight: 700;
 }
 
+/* Glass card text legibility */
+.glass-card .text-on-surface-variant,
+.glass-card .text-on-surface {
+  color: #0b1c30; /* Use solid dark color for better contrast */
+}
+
 /* Custom CSS Classes */
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -214,9 +220,10 @@
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes float {

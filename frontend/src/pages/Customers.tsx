@@ -26,8 +26,6 @@ export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
   // Toast / notification state
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Bottom Revenue Leakage section state
-  const [showLeakageCard, setShowLeakageCard] = useState(true);
 
   // Selected filter tab: "All" | "High Risk" | "Medium Risk" | "Low Risk"
   const [riskFilter, setRiskFilter] = useState<"All" | "High Risk" | "Medium Risk" | "Low Risk">("All");
@@ -305,45 +303,6 @@ export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
         </div>
       </div>
 
-      {/* Decision Spine Focus: Intelligence Insights */}
-      {showLeakageCard && (
-        <div className="w-full bg-[#1c1c21] rounded-xl p-5 flex flex-col md:flex-row items-center gap-5 mt-1 shadow-sm border border-gray-800">
-          {/* Left Section (Circular Metric) */}
-          <div className="w-16 h-16 rounded-full flex flex-col items-center justify-center relative border-4 border-gray-700 flex-shrink-0">
-            <div className="absolute top-0 right-0 w-3 h-3 bg-[#ff5722] rounded-full border border-[#1c1c21]"></div>
-            <span className="text-white text-xl font-extrabold leading-none">12</span>
-            <span className="text-[9px] text-gray-400 font-bold uppercase tracking-wider mt-0.5">Critical</span>
-          </div>
-          {/* Middle Section (Text) */}
-          <div className="flex-1 flex flex-col gap-1 text-left">
-            <h4 className="text-white text-sm font-bold">Revenue Leakage Found</h4>
-            <p className="text-gray-400 text-xs leading-relaxed">
-              12 Professional-tier customers haven't used their expanded seat allotment in 60+ days — an estimated $14.2k annual ARR loss from perceived low value.
-            </p>
-          </div>
-          {/* Right Section (Buttons) */}
-          <div className="flex flex-col gap-2 w-full md:w-48">
-            <button 
-              onClick={() => {
-                triggerToast("Strategy 'Automate Seat Replacement' applied successfully to 12 leakage points.");
-                setShowLeakageCard(false);
-              }}
-              className="w-full bg-indigo-600 text-white rounded-lg py-2 text-xs font-semibold hover:bg-opacity-90 transition-all cursor-pointer text-center"
-            >
-              Apply Strategy
-            </button>
-            <button 
-              onClick={() => {
-                triggerToast("Leakage alert dismissed.");
-                setShowLeakageCard(false);
-              }}
-              className="w-full bg-transparent border border-gray-600 text-gray-300 rounded-lg py-2 text-xs font-semibold hover:bg-white/5 transition-all cursor-pointer text-center"
-            >
-              Dismiss
-            </button>
-          </div>
-        </div>
-      )}
 
       {/* Dashboard Summary Grid (Quick Insights) */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -428,7 +387,7 @@ export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
       </div>
 
       {/* Data Table Container */}
-      <div className="bg-white border border-gray-200/80 rounded-xl overflow-hidden shadow-sm">
+      <div className="glass-card border border-white/30 rounded-xl overflow-hidden shadow-sm">
         <div className="overflow-x-auto custom-scrollbar">
           <table className="w-full text-left border-collapse">
             <thead>

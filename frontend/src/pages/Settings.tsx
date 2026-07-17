@@ -11,7 +11,7 @@ export default function Settings() {
         <p className="text-on-surface-variant font-body-lg max-w-3xl">Configure your subscription intelligence algorithms, confidence bounds, and notifications.</p>
       </div>
 
-      <div className="max-w-3xl bg-white border border-[#e5e7eb] rounded-xl p-xl shadow-sm space-y-lg">
+      <div className="max-w-3xl glass-card border border-white/30 rounded-xl p-xl shadow-sm space-y-lg">
         {/* Threshold setting */}
         <div>
           <h3 className="font-title-lg text-title-lg text-primary mb-xs">Intervention Limits</h3>

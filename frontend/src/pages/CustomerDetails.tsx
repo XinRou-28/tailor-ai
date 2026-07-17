@@ -1,15 +1,14 @@
-import { useState, FormEvent } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function CustomerDetails() {
   // Page Action state
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-  
+
   // Interactive variables
   const [isApproved, setIsApproved] = useState(false);
   const [isDeclined, setIsDeclined] = useState(false);
   const [showLogs, setShowLogs] = useState(false);
-  const [showManageModal, setShowManageModal] = useState(false);
 
   // Editable customer data fields
   const [customerData, setCustomerData] = useState({
@@ -19,6 +18,11 @@ export default function CustomerDetails() {
     renewalInDays: 12,
     healthScore: 35,
     aiConfidence: 68,
+    automationTier: "csm_review", // Can be: "auto_send", "csm_review", or "manual_investigation"
+    decision: {
+      rationale: "High revenue account with renewal approaching, but low feature adoption detected",
+      decided_at: "2026-07-16T09:30:00Z" // This field may not exist in current mock data
+    },
     outreachEmail: `Hi Sarah,
 
 I noticed you haven't been able to fully dive into the Advanced Analytics module since your upgrade.
@@ -49,12 +53,6 @@ Mei Chen`,
     setIsDeclined(true);
     setIsApproved(false);
     triggerToast(`Recommendation declined. Internal audit status updated to Ignored.`);
-  };
-
-  const handleSaveManage = (e: FormEvent) => {
-    e.preventDefault();
-    setShowManageModal(false);
-    triggerToast("Customer profile details successfully updated.");
   };
 
   // Log simulation records
@@ -117,12 +115,6 @@ Mei Chen`,
             >
               {showLogs ? "Hide Logs" : "View Logs"}
             </button>
-            <button
-              onClick={() => setShowManageModal(true)}
-              className="px-3.5 py-1.5 bg-primary text-on-primary font-semibold rounded-lg hover:bg-opacity-90 transition-all active:scale-95 flex items-center gap-1 text-xs cursor-pointer"
-            >
-              <span className="material-symbols-outlined !text-[14px]">edit</span> Manage Account
-            </button>
           </div>
         </div>
       </section>
@@ -134,7 +126,7 @@ Mei Chen`,
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="mb-5 overflow-hidden bg-white border border-outline-variant rounded-xl shadow-sm p-4 flex flex-col gap-2"
+            className="mb-5 overflow-hidden glass-card border border-white/30 rounded-xl shadow-sm p-4 flex flex-col gap-2"
           >
             <div className="flex justify-between items-center border-b border-outline-variant/40 pb-2">
               <h3 className="font-bold text-primary flex items-center gap-1 text-sm">
@@ -157,12 +149,14 @@ Mei Chen`,
         )}
       </AnimatePresence>
 
-      <div className="grid grid-cols-12 gap-5">
-        {/* Decision Spine Left: Score & Reasons */}
-        <div className="col-span-12 lg:col-span-7 flex flex-col gap-5">
-          
-          {/* 2. Health & Confidence */}
-          <div className="bg-surface-container-lowest border border-outline-variant p-5 rounded-xl transition-all hover:border-primary/20">
+      {/* Vertical Timeline Layout */}
+      <div className="space-y-8">
+        {/* Timeline Item 1: Health Score & Risk */}
+        <div className="relative pl-8 border-l-2 border-gray-200">
+          <div className="absolute -left-[26px] top-0 w-5 h-5 bg-primary rounded-full border-4 border-white flex items-center justify-center">
+            <span className="material-symbols-outlined text-white !text-[14px]">monitor_heart</span>
+          </div>
+          <div className="bg-surface-container-lowest border border-outline-variant p-5 rounded-xl shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-sm font-bold text-gray-900 tracking-tight">Customer Health Score</h3>
               <span className="bg-error-container text-on-error-container px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider">
@@ -214,8 +208,13 @@ Mei Chen`,
               </div>
             </div>
           </div>
+        </div>
 
-          {/* 3. AI Explanation & Reason Path */}
+        {/* Timeline Item 2: AI Causal Analysis */}
+        <div className="relative pl-8 border-l-2 border-gray-200">
+          <div className="absolute -left-[26px] top-0 w-5 h-5 bg-primary rounded-full border-4 border-white flex items-center justify-center">
+            <span className="material-symbols-outlined text-white !text-[14px]">psychology</span>
+          </div>
           <div className="flex flex-col gap-3">
             <h3 className="text-sm font-bold text-gray-900 flex items-center gap-2 mb-1">
               <span className="material-symbols-outlined text-secondary !text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
@@ -224,11 +223,9 @@ Mei Chen`,
               AI Causal Analysis
             </h3>
             <div className="relative space-y-3 pl-4 border-l-2 border-gray-100 ml-2.5 py-0.5">
-              
-              {/* Reason Item 1 */}
               <div className="relative">
                 <div className="absolute -left-[21px] top-1.5 w-2.5 h-2.5 bg-error rounded-full border border-white"></div>
-                <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-xl shadow-sm hover:shadow transition-shadow">
+                <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex justify-between items-start mb-2">
                     <span className="text-sm font-bold text-indigo-600">01</span>
                     <span className="bg-red-50 text-red-700 border border-red-100 px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider">
@@ -241,11 +238,9 @@ Mei Chen`,
                   </p>
                 </div>
               </div>
-
-              {/* Reason Item 2 */}
               <div className="relative">
                 <div className="absolute -left-[21px] top-1.5 w-2.5 h-2.5 bg-error rounded-full border border-white"></div>
-                <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-xl shadow-sm hover:shadow transition-shadow">
+                <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex justify-between items-start mb-2">
                     <span className="text-sm font-bold text-indigo-600">02</span>
                   </div>
@@ -255,11 +250,9 @@ Mei Chen`,
                   </p>
                 </div>
               </div>
-
-              {/* Refinement Agent Note */}
               <div className="relative">
                 <div className="absolute -left-[21px] top-1.5 w-2.5 h-2.5 bg-indigo-500 rounded-full border border-white"></div>
-                <div className="bg-secondary-container/5 border border-secondary/20 p-4 rounded-xl shadow-sm flex gap-3">
+                <div className="bg-secondary-container/5 border border-secondary/20 p-4 rounded-xl shadow-sm flex gap-3 hover:shadow-md transition-shadow">
                   <span className="material-symbols-outlined text-secondary !text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                     smart_toy
                   </span>
@@ -273,18 +266,16 @@ Mei Chen`,
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
-
-
         </div>
 
-        {/* Right Side: Recommendation & Decisions */}
-        <div className="col-span-12 lg:col-span-5 flex flex-col gap-5">
-          
-          {/* 5. Recommendation */}
-          <div className="bg-primary p-5 rounded-xl text-on-primary shadow-lg">
+        {/* Timeline Item 3: AI Recommendation */}
+        <div className="relative pl-8 border-l-2 border-gray-200">
+          <div className="absolute -left-[26px] top-0 w-5 h-5 bg-primary rounded-full border-4 border-white flex items-center justify-center">
+            <span className="material-symbols-outlined text-white !text-[14px]">bolt</span>
+          </div>
+          <div className="bg-primary p-5 rounded-xl text-on-primary shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-center gap-2 mb-3">
               <span className="material-symbols-outlined text-yellow-300 !text-[18px]">bolt</span>
               <h3 className="text-sm font-bold text-white tracking-tight">AI Recommendation</h3>
@@ -295,42 +286,132 @@ Mei Chen`,
             <p className="text-xs text-indigo-100/80 mb-4 leading-normal">
               The customer is high risk due to technical friction, not budget constraints. A downgrade offer would likely trigger an exit. Focus on integration success.
             </p>
-            <div className="flex items-center gap-1.5 text-xs font-bold bg-white/10 px-2 py-1 rounded-md w-fit">
-              <span className="material-symbols-outlined !text-[13px]">auto_awesome</span>
-              <span className="tracking-wide">Predicted Renewal Lift: +42%</span>
-            </div>
           </div>
+        </div>
 
-          {/* 7. Communication Preview */}
-          <div className="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm flex flex-col">
-            <div className="bg-surface-container-high px-4 py-2.5 border-b border-outline-variant flex justify-between items-center">
-              <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Preview: Client Outreach</span>
-              <span className="bg-indigo-50 text-indigo-700 border border-indigo-100 px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider">
-                AUTO-GEN
-              </span>
+        {/* Timeline Item 4: Automation Decision - Conditional based on automationTier */}
+        {customerData.automationTier === "manual_investigation" ? (
+          <div className="relative pl-8 border-l-2 border-gray-200">
+            <div className="absolute -left-[26px] top-0 w-5 h-5 bg-primary rounded-full border-4 border-white flex items-center justify-center">
+              <span className="material-symbols-outlined text-white !text-[14px]">smart_toy</span>
             </div>
-            <div className="p-4 bg-surface-container-lowest flex-1">
-              <div className="mb-3">
-                <div className="text-[9px] text-gray-400 mb-0.5 font-bold uppercase tracking-wider">TO: Sarah Jenkins (CTO)</div>
-                <div className="font-bold text-gray-900 text-sm">Subject: Unlocking your Enterprise Value</div>
+            <div className="bg-surface-container-lowest border border-outline-variant p-5 rounded-xl shadow-sm">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-sm font-bold text-gray-900">Automation Decision</h3>
+                <span className="bg-surface-variant text-on-surface-variant px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider">
+                  MANUAL REVIEW REQUIRED
+                </span>
               </div>
-              <div className="font-body-md text-on-surface-variant space-y-sm">
-                <textarea
-                  className="w-full h-44 bg-transparent border-none focus:ring-0 p-0 text-xs leading-relaxed text-on-surface-variant resize-none outline-none font-sans"
-                  value={customerData.outreachEmail}
-                  onChange={(e) => setCustomerData({ ...customerData, outreachEmail: e.target.value })}
-                  placeholder="Review automatic communication draft..."
-                />
-              </div>
-              <p className="text-[11px] text-gray-400 mt-1.5 italic select-none">
-                ✏️ Email content can be directly edited or reviewed prior to sending.
+              <p className="text-xs text-gray-500 mb-3">
+                Confidence too low for an automated recommendation — manual investigation needed
+              </p>
+              <p className="text-xs text-gray-600 italic">
+                {customerData.decision?.rationale || "This account requires human review due to complex risk factors."}
               </p>
             </div>
           </div>
+        ) : (
+          <div className="relative pl-8 border-l-2 border-gray-200">
+            <div className="absolute -left-[26px] top-0 w-5 h-5 bg-primary rounded-full border-4 border-white flex items-center justify-center">
+              <span className="material-symbols-outlined text-white !text-[14px]">smart_toy</span>
+            </div>
+            <div className={`glass-card border rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow ${customerData.healthScore >= 70 ? 'border-green-200' : customerData.healthScore >= 40 ? 'border-amber-200' : 'border-red-200'}`}>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-sm font-bold text-gray-900">Automation Decision</h3>
+                <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider ${customerData.automationTier === "auto_send" ? 'bg-green-100 text-green-800' : 'bg-amber-100 text-amber-800'}`}>
+                  {customerData.automationTier === "auto_send" ? 'AUTO-SENT' : 'NEEDS YOUR APPROVAL'}
+                </span>
+              </div>
+              <p className="text-xs text-gray-500 mb-3">
+                This intervention is time-sensitive due to the {customerData.renewalInDays}-day renewal window.
+              </p>
+              {customerData.automationTier === "auto_send" ? (
+                <div className="mb-3">
+                  <p className="text-xs text-green-600 font-medium">
+                    <span className="material-symbols-outlined !text-[14px] text-green-500">check_circle</span>
+                    Auto-Sent on {customerData.decision?.decided_at ? new Date(customerData.decision.decided_at).toLocaleString() : "[timestamp not available]"}
+                  </p>
+                </div>
+              ) : null}
+              <div className="flex gap-2">
+                <button
+                  onClick={handleApprove}
+                  disabled={isApproved || customerData.automationTier === "auto_send"}
+                  className={`px-3 py-1.5 text-white font-semibold rounded-lg hover:opacity-90 transition-all active:scale-[0.98] flex items-center justify-center gap-1 shadow-md text-xs cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${customerData.healthScore >= 70 ? 'bg-green-600 hover:bg-green-500' : customerData.healthScore >= 40 ? 'bg-amber-600 hover:bg-amber-500' : 'bg-red-600 hover:bg-red-500'}`}
+                >
+                  <span className="material-symbols-outlined !text-[13px]">send</span>
+                  {isApproved ? "Approved & Sent" : "Approve & Send"}
+                </button>
+                <button
+                  onClick={handleDecline}
+                  disabled={isDeclined || customerData.automationTier === "auto_send"}
+                  className="px-3 py-1.5 bg-transparent border border-slate-300 text-slate-600 hover:bg-slate-100 font-semibold rounded-lg transition-all active:scale-[0.98] text-xs cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isDeclined ? "Logic Ignored" : "Decline & Ignore"}
+                </button>
+              </div>
+              {(isApproved || isDeclined) && (
+                <button
+                  onClick={() => {
+                    setIsApproved(false);
+                    setIsDeclined(false);
+                    triggerToast("Decision reset. Re-analyzing client outreach pipeline...");
+                  }}
+                  className="text-xs text-indigo-400 underline hover:text-indigo-300 cursor-pointer mt-2"
+                >
+                  Reset Action State
+                </button>
+              )}
+            </div>
+          </div>
+        )}
 
-
-
-        </div>
+        {/* Timeline Item 5: Client Outreach Preview - Conditional based on automationTier */}
+        {customerData.automationTier !== "manual_investigation" && (
+          <div className="relative pl-8 border-l-2 border-gray-200">
+            <div className="absolute -left-[26px] top-0 w-5 h-5 bg-primary rounded-full border-4 border-white flex items-center justify-center">
+              <span className="material-symbols-outlined text-white !text-[14px]">mail</span>
+            </div>
+            <div className="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm flex flex-col hover:shadow-md transition-shadow">
+              <div className="bg-surface-container-high px-4 py-2.5 border-b border-outline-variant flex justify-between items-center">
+                <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Preview: Client Outreach</span>
+                <span className={`px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider ${customerData.automationTier === "auto_send" ? 'bg-green-100 text-green-800' : 'bg-indigo-50 text-indigo-700 border border-indigo-100'}`}>
+                  {customerData.automationTier === "auto_send" ? 'SENT' : 'DRAFT'}
+                </span>
+              </div>
+              <div className="p-4 bg-surface-container-lowest flex-1">
+                <div className="mb-3">
+                  <div className="text-[9px] text-gray-400 mb-0.5 font-bold uppercase tracking-wider">TO: Sarah Jenkins (CTO)</div>
+                  <div className="font-bold text-gray-900 text-sm">Subject: Unlocking your Enterprise Value</div>
+                </div>
+                <div className="font-body-md text-on-surface-variant space-y-sm">
+                  {customerData.automationTier === "auto_send" ? (
+                    <div className="w-full h-44 overflow-y-auto text-xs leading-relaxed text-on-surface-variant font-sans border border-gray-200 rounded p-2 bg-white">
+                      {customerData.outreachEmail}
+                    </div>
+                  ) : (
+                    <textarea
+                      className="w-full h-44 bg-transparent border-none focus:ring-0 p-0 text-xs leading-relaxed text-on-surface-variant resize-none outline-none font-sans"
+                      value={customerData.outreachEmail}
+                      onChange={(e) => setCustomerData({ ...customerData, outreachEmail: e.target.value })}
+                      placeholder="Review automatic communication draft..."
+                      disabled={customerData.automationTier === "auto_send"}
+                    />
+                  )}
+                </div>
+                {customerData.automationTier === "auto_send" ? (
+                  <p className="text-[11px] text-gray-400 mt-1.5 italic select-none">
+                    📤 This email was automatically sent on {customerData.decision?.decided_at ? new Date(customerData.decision.decided_at).toLocaleString() : "[timestamp not available]"}
+                  </p>
+                ) : (
+                  <p className="text-[11px] text-gray-400 mt-1.5 italic select-none">
+                    ✏️ Email content can be directly edited or reviewed prior to sending.
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Contextual Footer */}
@@ -346,174 +427,80 @@ Mei Chen`,
         </div>
       </footer>
 
-      {/* Sticky Bottom Human Decision Bar */}
-      <div className="sticky bottom-0 left-0 w-full bg-[#0f172a] py-3.5 px-6 flex justify-between items-center z-50 mt-8 rounded-b-xl shadow-2xl">
-        <div className="flex items-center gap-3 text-left">
-          <span className={`material-symbols-outlined !text-[20px] ${
-            isApproved ? "text-green-400" : isDeclined ? "text-red-400" : "text-indigo-400"
-          }`} style={{ fontVariationSettings: "'FILL' 1" }}>
-            {isApproved ? "check_circle" : isDeclined ? "cancel" : "feedback"}
-          </span>
-          <div className="flex flex-col">
-            <h3 className="text-xs font-bold text-white">Human Decision Needed</h3>
-            <div className="flex items-center gap-2 text-[10px] text-slate-400">
-              <span className="text-slate-100 font-semibold">
-                Status:{" "}
-                {isApproved ? (
-                  <span className="text-green-400">Approved &amp; Outreach Sent</span>
-                ) : isDeclined ? (
-                  <span className="text-red-400">Logic Declined</span>
-                ) : (
-                  <span className="text-slate-300">Awaiting your approval</span>
-                )}
-              </span>
-              <span>•</span>
-              <span className="italic text-slate-400">
-                "This intervention is time-sensitive due to the {customerData.renewalInDays}-day renewal window."
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-3">
-          {isApproved ? (
-            <div className="bg-green-950/50 text-green-300 py-1.5 px-3 rounded-lg flex items-center gap-2 border border-green-800 text-xs">
-              <span className="material-symbols-outlined !text-[13px]">check_circle</span>
-              <span className="font-bold">Outreach Email dispatched successfully.</span>
-            </div>
-          ) : (
-            <button
-              onClick={handleApprove}
-              className="py-1.5 px-3.5 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-all active:scale-[0.98] flex items-center justify-center gap-1.5 shadow-md text-xs cursor-pointer"
-            >
-              <span className="material-symbols-outlined !text-[13px]">send</span>
-              Approve &amp; Send Outreach
-            </button>
-          )}
-
-          <button
-            disabled={isDeclined}
-            onClick={handleDecline}
-            className="py-1.5 px-3.5 bg-transparent border border-slate-600 text-slate-300 hover:bg-slate-800 font-semibold rounded-lg transition-all active:scale-[0.98] text-xs cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {isDeclined ? "Logic Ignored" : "Decline & Ignore Recommendation"}
-          </button>
-          
-          {(isApproved || isDeclined) && (
-            <button
-              onClick={() => {
-                setIsApproved(false);
-                setIsDeclined(false);
-                triggerToast("Decision reset. Re-analyzing client outreach pipeline...");
-              }}
-              className="text-xs text-indigo-400 underline hover:text-indigo-300 cursor-pointer"
-            >
-              Reset Action State
-            </button>
-          )}
-        </div>
-      </div>
-
-      {/* 1. Account Management Modal Dialog */}
-      <AnimatePresence>
-        {showManageModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-white border border-outline-variant rounded-2xl w-full max-w-md p-lg shadow-2xl overflow-hidden"
-            >
-              <div className="flex justify-between items-center border-b border-outline-variant pb-md mb-md">
-                <h3 className="font-headline-md text-title-lg text-primary font-bold">Manage Account Profile</h3>
-                <button
-                  onClick={() => setShowManageModal(false)}
-                  className="material-symbols-outlined text-on-surface-variant hover:text-error p-1 rounded-full hover:bg-slate-100 transition-colors cursor-pointer"
-                >
-                  close
-                </button>
+      {/* Sticky Bottom Human Decision Bar - Conditional based on automationTier */}
+      {customerData.automationTier !== "manual_investigation" && (
+        <div className="sticky bottom-0 left-0 w-full bg-[#0f172a] py-3.5 px-6 flex justify-between items-center z-50 mt-8 rounded-b-xl shadow-2xl">
+          <div className="flex items-center gap-3 text-left">
+            <span className={`material-symbols-outlined !text-[20px] ${
+              isApproved ? "text-green-400" : isDeclined ? "text-red-400" : "text-indigo-400"
+            }`} style={{ fontVariationSettings: "'FILL' 1" }}>
+              {isApproved ? "check_circle" : isDeclined ? "cancel" : "feedback"}
+            </span>
+            <div className="flex flex-col">
+              <h3 className="text-xs font-bold text-white">
+                {customerData.automationTier === "auto_send" ? "Automated Action Taken" : "Human Decision Needed"}
+              </h3>
+              <div className="flex items-center gap-2 text-[10px] text-slate-400">
+                <span className="text-slate-100 font-semibold">
+                  Status: {" "}
+                  {isApproved ? (
+                    <span className="text-green-400">Approved & Outreach Sent</span>
+                  ) : isDeclined ? (
+                    <span className="text-red-400">Logic Declined</span>
+                  ) : customerData.automationTier === "auto_send" ? (
+                    <span className="text-green-400">Auto-Sent on {customerData.decision?.decided_at ? new Date(customerData.decision.decided_at).toLocaleString() : "[timestamp not available]"}</span>
+                  ) : (
+                    <span className="text-slate-300">Awaiting your approval</span>
+                  )}
+                </span>
+                <span>•</span>
+                <span className="italic text-slate-400">
+                  "This intervention is time-sensitive due to the {customerData.renewalInDays}-day renewal window."
+                </span>
               </div>
-              <form onSubmit={handleSaveManage} className="flex flex-col gap-md text-sm">
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Company Name</label>
-                  <input
-                    type="text"
-                    required
-                    value={customerData.name}
-                    onChange={(e) => setCustomerData({ ...customerData, name: e.target.value })}
-                    className="w-full px-3 py-2 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-secondary/20 transition-all outline-none"
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-md">
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Subscription Plan</label>
-                    <select
-                      value={customerData.plan}
-                      onChange={(e) => setCustomerData({ ...customerData, plan: e.target.value })}
-                      className="w-full px-3 py-2 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-secondary/20 transition-all outline-none"
-                    >
-                      <option value="Enterprise Plan">Enterprise Plan</option>
-                      <option value="Enterprise Plus">Enterprise Plus</option>
-                      <option value="Professional Tier">Professional Tier</option>
-                      <option value="Custom Scale Plan">Custom Scale Plan</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Pricing / Rate</label>
-                    <input
-                      type="text"
-                      required
-                      value={customerData.price}
-                      onChange={(e) => setCustomerData({ ...customerData, price: e.target.value })}
-                      className="w-full px-3 py-2 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-secondary/20 transition-all outline-none"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-md">
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Days to Renewal</label>
-                    <input
-                      type="number"
-                      required
-                      min={1}
-                      value={customerData.renewalInDays}
-                      onChange={(e) => setCustomerData({ ...customerData, renewalInDays: parseInt(e.target.value) || 12 })}
-                      className="w-full px-3 py-2 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-secondary/20 transition-all outline-none"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Customer Health</label>
-                    <input
-                      type="number"
-                      required
-                      min={0}
-                      max={100}
-                      value={customerData.healthScore}
-                      onChange={(e) => setCustomerData({ ...customerData, healthScore: parseInt(e.target.value) || 35 })}
-                      className="w-full px-3 py-2 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-secondary/20 transition-all outline-none"
-                    />
-                  </div>
-                </div>
-                <div className="flex gap-sm justify-end mt-md pt-md border-t border-outline-variant">
-                  <button
-                    type="button"
-                    onClick={() => setShowManageModal(false)}
-                    className="px-md py-2 border border-outline text-primary font-bold rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-md py-2 bg-primary text-on-primary font-bold rounded-lg hover:bg-opacity-90 transition-colors cursor-pointer"
-                  >
-                    Save Changes
-                  </button>
-                </div>
-              </form>
-            </motion.div>
+            </div>
           </div>
-        )}
-      </AnimatePresence>
+
+          <div className="flex items-center gap-3">
+            {isApproved || customerData.automationTier === "auto_send" ? (
+              <div className="bg-green-950/50 text-green-300 py-1.5 px-3 rounded-lg flex items-center gap-2 border border-green-800 text-xs">
+                <span className="material-symbols-outlined !text-[13px]">check_circle</span>
+                <span className="font-bold">Outreach Email dispatched successfully.</span>
+              </div>
+            ) : (
+              <button
+                onClick={handleApprove}
+                disabled={customerData.automationTier === "auto_send"}
+                className="py-1.5 px-3.5 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-500 transition-all active:scale-[0.98] flex items-center justify-center gap-1.5 shadow-md text-xs cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <span className="material-symbols-outlined !text-[13px]">send</span>
+                Approve & Send Outreach
+              </button>
+            )}
+
+            <button
+              disabled={isDeclined || customerData.automationTier === "auto_send"}
+              onClick={handleDecline}
+              className="py-1.5 px-3.5 bg-transparent border border-slate-600 text-slate-300 hover:bg-slate-800 font-semibold rounded-lg transition-all active:scale-[0.98] text-xs cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isDeclined ? "Logic Ignored" : "Decline & Ignore Recommendation"}
+            </button>
+
+            {(isApproved || isDeclined) && (
+              <button
+                onClick={() => {
+                  setIsApproved(false);
+                  setIsDeclined(false);
+                  triggerToast("Decision reset. Re-analyzing client outreach pipeline...");
+                }}
+                className="text-xs text-indigo-400 underline hover:text-indigo-300 cursor-pointer"
+              >
+                Reset Action State
+              </button>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

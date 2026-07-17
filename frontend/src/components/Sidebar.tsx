@@ -8,7 +8,6 @@ export default function Sidebar({ activeTab, onTabChange, onLogout }: SidebarPro
   const navItems = [
     { id: "dashboard", label: "Dashboard", icon: "dashboard" },
     { id: "customers", label: "Customers", icon: "group" },
-    { id: "digest", label: "Digest", icon: "fact_check" },
     { id: "details", label: "Customer Detail", icon: "person_search" },
     { id: "insights", label: "Insights", icon: "analytics" },
   ];

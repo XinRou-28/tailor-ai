@@ -12,14 +12,17 @@ export default function Modal({ isOpen, onClose, type, onSubmitSuccess }: ModalP
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          {/* Backdrop */}
+        <div
+          style={{ position: 'fixed', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 9999 }}
+          className="p-4"
+        >
+          {/* Backdrop (click to close) */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-primary/60 backdrop-blur-sm"
+            className="fixed inset-0 cursor-pointer"
           />
 
           {/* Modal Container */}
@@ -40,61 +43,53 @@ export default function Modal({ isOpen, onClose, type, onSubmitSuccess }: ModalP
 
             {/* Modal Body depending on Type */}
             {type === "login" && (
-              <div id="modal-login">
+              <div id="modal-login" className="w-full max-w-md bg-white p-8 rounded-xl">
                 <div className="flex items-center gap-sm mb-lg">
                   <span className="material-symbols-outlined text-secondary" style={{ fontVariationSettings: '"FILL" 1' }}>architecture</span>
                   <span className="text-title-lg font-headline-md font-bold text-on-surface">Tailor AI</span>
                 </div>
-                
+
                 <h3 className="text-headline-md font-headline-md text-primary mb-xs">Welcome back</h3>
                 <p className="text-body-md text-on-surface-variant mb-lg">Sign in to manage your subscription intelligence dashboard.</p>
-                
-                <form 
-                  onSubmit={(e) => { 
-                    e.preventDefault(); 
-                    alert("Interactive Login simulation successful!"); 
+
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    alert("Interactive Login simulation successful!");
                     if (onSubmitSuccess) {
                       onSubmitSuccess();
                     } else {
                       onClose();
                     }
-                  }} 
-                  className="space-y-md"
+                  }}
+                  className="space-y-lg mt-lg"
                 >
-                  <div>
-                    <label className="block text-label-md text-on-surface-variant mb-xs font-semibold">Email Address</label>
-                    <input 
-                      type="email" 
-                      required 
-                      defaultValue="peishing1103@gmail.com"
-                      className="w-full px-md py-sm bg-surface-container border border-outline-variant rounded-xl text-body-md focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary"
-                      placeholder="you@company.com" 
+                  <div className="space-y-xs">
+                    <label className="block text-label-md text-on-surface-variant font-semibold">Username</label>
+                    <input
+                      type="text"
+                      required
+                      defaultValue="demo@tailorai.com"
+                      className="w-full px-md py-md bg-surface-container border border-outline-variant rounded-xl text-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary"
+                      placeholder="username"
                     />
                   </div>
-                  <div>
-                    <label className="block text-label-md text-on-surface-variant mb-xs font-semibold">Password</label>
-                    <input 
-                      type="password" 
-                      required 
-                      defaultValue="••••••••••••"
-                      className="w-full px-md py-sm bg-surface-container border border-outline-variant rounded-xl text-body-md focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary"
-                      placeholder="••••••••" 
+                  <div className="space-y-xs">
+                    <label className="block text-label-md text-on-surface-variant font-semibold">Password</label>
+                    <input
+                      type="password"
+                      required
+                      defaultValue="••••••••"
+                      className="w-full px-md py-md bg-surface-container border border-outline-variant rounded-xl text-body-md focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary"
+                      placeholder="••••••••"
                     />
-                  </div>
-                  
-                  <div className="flex items-center justify-between pt-sm">
-                    <label className="flex items-center gap-xs text-[13px] text-on-surface-variant">
-                      <input type="checkbox" defaultChecked className="rounded border-outline-variant text-secondary focus:ring-secondary" />
-                      Remember me
-                    </label>
-                    <a href="#" className="text-[13px] text-secondary hover:underline">Forgot password?</a>
                   </div>
 
-                  <button 
-                    type="submit" 
-                    className="w-full bg-primary text-on-primary font-bold py-md rounded-xl hover:opacity-95 transition-opacity mt-lg cursor-pointer"
+                  <button
+                    type="submit"
+                    className="w-full bg-primary text-on-primary font-bold py-lg rounded-xl hover:opacity-95 transition-opacity mt-xl cursor-pointer text-body-lg shadow-md"
                   >
-                    Sign In
+                    Sign In as Demo User
                   </button>
                 </form>
               </div>
