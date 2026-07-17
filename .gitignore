@@ -57,13 +57,8 @@ Thumbs.db
 # Testing
 *.spec.ts
 
-# Lock files (can be committed but often excluded)
-package-lock.json
-pnpm-lock.yaml
-
 # Frontend specific
 frontend/node_modules/
-frontend/package-lock.json
 
 # Claude IDE
 .claude/
