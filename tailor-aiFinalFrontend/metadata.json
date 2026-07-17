@@ -1,0 +1,6 @@
+{
+  "name": "Tailor AI",
+  "description": "Subscription Intelligence platform that fits your business, optimizing and recovering subscription value.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
