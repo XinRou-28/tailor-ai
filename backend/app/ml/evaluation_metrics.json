@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.6775,
+  "precision": 0.6147064716489682,
+  "recall": 0.4744694913909729,
+  "f1_score": 0.43051297286591406,
+  "confusion_matrix": [
+    [
+      40,
+      0,
+      52
+    ],
+    [
+      34,
+      2,
+      161
+    ],
+    [
+      10,
+      1,
+      500
+    ]
+  ],
+  "class_labels": [
+    "churned",
+    "downgraded",
+    "renewed"
+  ]
+}

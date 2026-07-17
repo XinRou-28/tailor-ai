@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pandas
+faker
+scikit-learn
+xgboost
+numpy
+pydantic
+python-dotenv
+openai
+pytest
+httpx
+sqlalchemy
+matplotlib
