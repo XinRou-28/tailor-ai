@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-error-container: #93000a;
+  --color-outline-variant: #c5c6cd;
+  --color-tertiary-container: #002c42;
+  --color-tertiary-fixed: #c9e6ff;
+  --color-on-tertiary: #ffffff;
+  --color-on-background: #0b1c30;
+  --color-primary-container: #1e293b;
+  --color-on-secondary-fixed: #0f0069;
+  --color-surface-variant: #d3e4fe;
+  --color-on-primary: #ffffff;
+  --color-secondary: #4b41e1;
+  --color-outline: #75777d;
+  --color-on-primary-fixed: #111c2d;
+  --color-primary-fixed: #d8e3fb;
+  --color-inverse-on-surface: #eaf1ff;
+  --color-surface-container-highest: #d3e4fe;
+  --color-on-primary-fixed-variant: #3c475a;
+  --color-on-surface: #0b1c30;
+  --color-primary: #091426;
+  --color-on-tertiary-container: #0099d9;
+  --color-on-secondary: #ffffff;
+  --color-surface-container: #e5eeff;
+  --color-inverse-primary: #bcc7de;
+  --color-secondary-fixed-dim: #c3c0ff;
+  --color-surface-container-low: #eff4ff;
+  --color-surface-bright: #f8f9ff;
+  --color-on-primary-container: #8590a6;
+  --color-surface-dim: #cbdbf5;
+  --color-background: #f8f9ff;
+  --color-surface-tint: #545f73;
+  --color-surface-container-high: #dce9ff;
+  --color-on-tertiary-fixed: #001e2f;
+  --color-on-secondary-container: #fffbff;
+  --color-error: #ba1a1a;
+  --color-secondary-fixed: #e2dfff;
+  --color-secondary-container: #645efb;
+  --color-error-container: #ffdad6;
+  --color-tertiary-fixed-dim: #89ceff;
+  --color-primary-fixed-dim: #bcc7de;
+  --color-on-tertiary-fixed-variant: #004c6e;
+  --color-surface: #f8f9ff;
+  --color-on-error: #ffffff;
+  --color-inverse-surface: #213145;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface-variant: #45474c;
+  --color-on-secondary-fixed-variant: #3323cc;
+  --color-tertiary: #001624;
+
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  --spacing-spine-gap: 64px;
+  --spacing-lg: 24px;
+  --spacing-md: 16px;
+  --spacing-xxl: 48px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-unit: 4px;
+  --spacing-container-padding: 24px;
+  --spacing-xl: 32px;
+}
+
+/* Map fonts and styling utilities exactly according to Tailwind config */
+@utility font-headline-lg-mobile {
+  font-family: "Manrope", sans-serif;
+}
+@utility text-headline-lg-mobile {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+@utility font-headline-md {
+  font-family: "Manrope", sans-serif;
+}
+@utility text-headline-md {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+@utility font-body-md {
+  font-family: "Inter", sans-serif;
+}
+@utility text-body-md {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+@utility font-title-lg {
+  font-family: "Inter", sans-serif;
+}
+@utility text-title-lg {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+@utility font-body-lg {
+  font-family: "Inter", sans-serif;
+}
+@utility text-body-lg {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+@utility font-label-md {
+  font-family: "Inter", sans-serif;
+}
+@utility text-label-md {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+@utility font-headline-lg {
+  font-family: "Manrope", sans-serif;
+}
+@utility text-headline-lg {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+@utility font-mono-md {
+  font-family: "Inter", sans-serif;
+}
+@utility text-mono-md {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+@utility font-display-lg {
+  font-family: "Manrope", sans-serif;
+}
+@utility text-display-lg {
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* Glass card text legibility */
+.glass-card .text-on-surface-variant,
+.glass-card .text-on-surface {
+  color: #0b1c30; /* Use solid dark color for better contrast */
+}
+
+/* Custom CSS Classes */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.decision-spine {
+  position: relative;
+}
+
+.decision-spine::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #cbd5e1;
+  z-index: 0;
+}
+
+.decision-spine-border {
+  position: relative;
+}
+
+.decision-spine-border::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e2e8f0;
+  z-index: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.progress-ring {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.fab-menu-transition {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fab-menu-hidden {
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+  pointer-events: none;
+}
+
+.fab-menu-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
