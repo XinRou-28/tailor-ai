@@ -16,7 +16,7 @@ from app.models.schemas import Account as AccountSchema  # noqa: E402
 from app.models.schemas import AccountDetail, ScoreResult  # noqa: E402
 from app.models.scoring_model import score  # noqa: E402
 from app.features.copy_generation import generate_customer_copy
-
+from datetime import datetime
 
 def load_account(customer_id: str) -> AccountRecord:
     session = SessionLocal()
@@ -47,14 +47,35 @@ def _score_with_optional_investigation(account: AccountRecord) -> ScoreResult:
 
 
 def _to_account_schema(account: AccountRecord) -> AccountSchema:
+
+    renewal_days = None
+
+    if account.contract_renewal_date:
+        renewal_date = datetime.fromisoformat(
+            account.contract_renewal_date
+        )
+
+        renewal_days = (
+            renewal_date.date() - datetime.utcnow().date()
+        ).days
+
+
     return AccountSchema(
         customer_id=account.customer_id,
         company_name=account.company_name,
+
+        customer_contact=account.customer_contact,
+        contact_email=account.contact_email,
+
         current_plan=account.current_plan,
+
         seats_purchased=account.seats_purchased,
         seats_active=account.seats_active,
+
         monthly_revenue=account.monthly_revenue,
         contract_renewal_date=account.contract_renewal_date,
+
+        renewal_in_days=renewal_days,
     )
 
 

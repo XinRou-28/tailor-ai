@@ -1,21 +1,29 @@
-# Environment files (never commit real secrets)
-.env
-frontend/.env
-backend/.env
-
-# Node (frontend)
-frontend/node_modules/
-frontend/dist/
-
-# Python (backend)
-backend/__pycache__/
-backend/venv/
-backend/.venv/
-*.pyc
-
-# Database
-backend/*.db
-
-# OS/editor junk
+# Frontend
+node_modules/
+build/
+dist/
+coverage/
 .DS_Store
+*.log
+.env*
+!.env.example
+
+
+# Backend
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+
+
+# IDE
 .vscode/
+.idea/
+
+
+# OS
+Thumbs.db

@@ -1,5 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import {
+ getCustomerDetail,
+ transformCustomerDetail,
+ CustomerViewModel
+} from "../api/customer";
+
 
 export default function CustomerDetails() {
   // Page Action state
@@ -11,29 +17,23 @@ export default function CustomerDetails() {
   const [showLogs, setShowLogs] = useState(false);
 
   // Editable customer data fields
-  const [customerData, setCustomerData] = useState({
-    name: "ABC Company",
-    plan: "Enterprise Plan",
-    price: "$299/mo",
-    renewalInDays: 12,
-    healthScore: 35,
-    aiConfidence: 68,
-    automationTier: "csm_review", // Can be: "auto_send", "csm_review", or "manual_investigation"
-    decision: {
-      rationale: "High revenue account with renewal approaching, but low feature adoption detected",
-      decided_at: "2026-07-16T09:30:00Z" // This field may not exist in current mock data
-    },
-    outreachEmail: `Hi Sarah,
+  const [customerData,setCustomerData] = useState<CustomerViewModel | null>(null);
 
-I noticed you haven't been able to fully dive into the Advanced Analytics module since your upgrade.
+    useEffect(() => {
 
-I've cleared some time for our lead engineer to walk your team through the SSO setup and dashboard customization personally. We want to ensure you're seeing the full ROI of the Enterprise tier.
+    async function loadCustomer(){
 
-Are you free Tuesday at 10 AM?
+        const data = await getCustomerDetail("acc_0011");
 
-Best,
-Mei Chen`,
-  });
+        const viewModel = transformCustomerDetail(data);
+
+        setCustomerData(viewModel);
+
+    }
+
+    loadCustomer();
+
+},[]);
 
   const triggerToast = (msg: string) => {
     setToastMessage(msg);
@@ -46,7 +46,9 @@ Mei Chen`,
     if (isApproved) return;
     setIsApproved(true);
     setIsDeclined(false);
-    triggerToast(`Success: Custom outreach sent to Sarah Jenkins (Sarah.Jenkins@abccompany.com)!`);
+    triggerToast(
+`Success: Custom outreach sent to ${customerData.customerContact} (${customerData.contactEmail})!
+`);
   };
 
   const handleDecline = () => {

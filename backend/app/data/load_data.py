@@ -16,6 +16,8 @@ CSV_PATH = CURRENT_FILE.with_name("projectflow_dataset.csv")
 ACCOUNT_COLUMNS = [
     "customer_id",
     "company_name",
+    "customer_contact",
+    "contact_email",
     "current_plan",
     "seats_purchased",
     "seats_active",

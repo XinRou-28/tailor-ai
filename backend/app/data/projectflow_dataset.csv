@@ -1,801 +1,801 @@
-customer_id,company_name,current_plan,seats_purchased,seats_active,advanced_analytics_used,api_calls_used,storage_used_gb,login_frequency_30d,login_frequency_60d,support_tickets_open,support_tickets_resolved,support_sentiment_score,payment_delay_days,contract_renewal_date,monthly_revenue,actual_outcome
-acc_0001,ABC Company,Enterprise,100,38,0,16800,142,18,52,3,1,0.22,18,2026-08-03,299,churned
-acc_0002,"Rodriguez, Figueroa and Sanchez",Professional,43,38,1,4984,11,23,26,0,0,0.728,1,2026-09-09,99,renewed
-acc_0003,Doyle Ltd,Professional,45,34,1,4445,28,29,29,0,0,0.76,2,2026-08-27,99,renewed
-acc_0004,"Mcclain, Miller and Henderson",Starter,11,7,0,370,2,10,11,0,0,0.87,0,2026-09-21,29,renewed
-acc_0005,Davis and Sons,Enterprise,123,44,1,12290,45,136,287,6,1,0.412,12,2026-08-23,299,churned
-acc_0006,"Guzman, Hoffman and Baldwin",Starter,5,1,0,1648,3,6,12,2,2,0.219,25,2026-09-01,29,churned
-acc_0007,"Gardner, Robinson and Lawrence",Professional,37,14,0,1970,13,11,21,3,2,0.337,31,2026-09-24,99,churned
-acc_0008,Blake and Sons,Starter,11,11,0,541,4,14,14,0,0,0.785,4,2026-12-06,29,renewed
-acc_0009,"Henderson, Ramirez and Lewis",Starter,9,5,1,217,3,5,10,3,2,0.666,6,2026-08-18,29,renewed
-acc_0010,Garcia-James,Starter,6,2,0,1703,3,3,4,2,2,0.435,23,2026-08-02,29,churned
-acc_0011,Abbott-Munoz,Professional,37,28,0,7958,15,63,61,0,0,0.83,1,2026-11-08,99,renewed
-acc_0012,Blair PLC,Starter,13,10,1,7,2,4,7,0,0,0.738,0,2026-12-03,29,renewed
-acc_0013,Dudley Group,Professional,38,36,0,7378,25,44,46,0,0,0.93,1,2026-10-09,99,renewed
-acc_0014,Arnold Ltd,Starter,11,6,0,1764,1,6,14,3,0,0.048,20,2026-09-15,29,churned
-acc_0015,"Mcclure, Ward and Lee",Professional,21,11,0,4079,17,22,63,3,0,0.408,23,2026-09-22,99,churned
-acc_0016,Williams and Sons,Starter,12,10,0,569,2,9,10,0,0,0.892,3,2026-09-11,29,renewed
-acc_0017,Galloway-Wyatt,Professional,36,27,0,5551,9,14,15,0,0,0.941,0,2026-08-30,99,renewed
-acc_0018,James Group,Professional,36,30,0,3548,36,14,17,1,0,0.906,1,2026-11-08,99,renewed
-acc_0019,"Flowers, Martin and Kelly",Professional,23,5,0,2272,9,8,12,2,2,0.138,30,2026-08-28,99,churned
-acc_0020,"Adams, Zuniga and Wong",Enterprise,119,99,1,66419,101,269,325,3,2,0.511,3,2026-09-02,299,renewed
-acc_0021,"Reid, Ferguson and Sanchez",Starter,5,3,0,283,2,8,8,0,0,0.731,2,2026-11-17,29,renewed
-acc_0022,Gray-Mayo,Professional,31,31,0,5036,29,51,56,0,0,0.731,2,2026-11-10,99,renewed
-acc_0023,"Watts, Robinson and Nguyen",Starter,8,4,0,362,7,11,10,1,0,0.77,2,2026-11-07,29,renewed
-acc_0024,Perez Inc,Enterprise,124,24,0,10740,150,126,191,4,2,0.439,37,2026-08-21,299,churned
-acc_0025,Morales-Jones,Professional,40,36,0,8675,21,17,16,0,0,0.859,0,2026-10-28,99,renewed
-acc_0026,"Walter, Edwards and Rios",Starter,13,9,0,590,1,16,15,1,1,0.769,0,2026-12-11,29,renewed
-acc_0027,Wilkerson-Day,Professional,41,17,0,2887,11,15,24,6,4,0.135,27,2026-09-13,99,downgraded
-acc_0028,Baker and Sons,Professional,25,22,0,7702,21,50,54,1,0,0.799,1,2026-10-10,99,renewed
-acc_0029,"Hoffman, Baker and Richards",Starter,13,13,0,240,2,15,15,0,0,0.895,1,2026-08-20,29,renewed
-acc_0030,"Ross, Robinson and Bright",Professional,42,19,0,1251,9,14,38,2,1,0.289,8,2026-08-14,99,renewed
-acc_0031,"Snyder, Campos and Callahan",Professional,34,34,1,5888,29,65,66,1,0,0.802,3,2026-11-18,99,renewed
-acc_0032,Burton Ltd,Professional,40,26,0,1561,12,27,29,2,1,0.52,6,2026-10-07,99,downgraded
-acc_0033,Carlson-Cruz,Starter,13,12,0,211,2,4,7,0,0,0.937,3,2026-08-15,29,renewed
-acc_0034,"Ferrell, Rice and Maddox",Starter,8,8,0,446,1,11,10,1,0,0.846,3,2026-09-05,29,renewed
-acc_0035,Frazier Inc,Enterprise,105,59,0,33166,100,139,256,5,3,0.08,24,2026-09-19,299,downgraded
-acc_0036,"Dyer, Potter and Mack",Professional,35,25,0,2543,29,68,65,0,0,0.967,1,2026-08-18,99,renewed
-acc_0037,Rodriguez-Graham,Starter,8,8,0,377,3,5,6,0,0,0.764,4,2026-08-28,29,renewed
-acc_0038,Smith-Bowen,Enterprise,104,92,1,63397,308,270,247,0,0,0.746,2,2026-10-22,299,renewed
-acc_0039,"Baker, Mason and White",Starter,10,10,0,445,3,11,10,1,0,0.766,4,2026-10-09,29,renewed
-acc_0040,Harrell LLC,Professional,44,38,0,6610,26,15,17,1,1,0.807,3,2026-09-11,99,renewed
-acc_0041,"Romero, Gonzalez and Brooks",Starter,8,5,0,416,1,8,8,1,0,0.847,1,2026-11-24,29,churned
-acc_0042,Ryan PLC,Starter,13,11,0,563,2,13,14,1,0,0.806,3,2026-09-13,29,downgraded
-acc_0043,George Group,Starter,12,10,0,537,3,14,15,0,0,0.875,0,2026-09-30,29,downgraded
-acc_0044,Rodriguez LLC,Starter,7,7,0,502,4,4,4,1,0,0.747,0,2026-10-10,29,renewed
-acc_0045,Allen-Allen,Enterprise,104,92,1,25538,288,124,113,1,1,0.759,4,2026-08-30,299,renewed
-acc_0046,"Arroyo, Miller and Tucker",Starter,9,7,0,123,3,10,12,1,1,0.656,13,2026-10-18,29,renewed
-acc_0047,Spence PLC,Professional,42,39,0,2415,24,13,16,1,1,0.795,2,2026-09-13,99,renewed
-acc_0048,Anderson Group,Professional,40,23,0,6993,31,20,24,2,0,0.43,4,2026-11-02,99,renewed
-acc_0049,"Martin, Rose and Obrien",Enterprise,132,129,0,27309,271,206,210,1,0,0.61,3,2026-08-26,299,renewed
-acc_0050,Hickman Ltd,Professional,28,14,0,3249,1,9,13,4,3,0.287,36,2026-09-16,99,downgraded
-acc_0051,"Harris, Collins and Carney",Professional,25,23,1,5470,22,30,33,0,0,0.892,3,2026-09-24,99,renewed
-acc_0052,"Brooks, Lam and Hayes",Starter,11,5,0,740,1,4,4,3,0,0.662,9,2026-11-04,29,downgraded
-acc_0053,Walker LLC,Starter,8,6,1,14,1,14,15,0,0,0.864,0,2026-08-30,29,renewed
-acc_0054,Chapman and Sons,Starter,12,3,0,296,1,6,15,3,3,0.169,40,2026-09-14,29,churned
-acc_0055,"Robinson, Jones and Welch",Professional,41,36,0,5147,36,49,58,1,0,0.846,2,2026-12-04,99,downgraded
-acc_0056,Jones Inc,Professional,35,31,0,6580,21,55,61,1,1,0.933,1,2026-10-18,99,renewed
-acc_0057,Jones-Young,Starter,7,6,0,158,3,5,5,1,0,0.739,2,2026-08-25,29,renewed
-acc_0058,"Washington, Ryan and Cummings",Enterprise,131,57,0,5381,17,103,217,3,3,0.278,26,2026-08-04,299,renewed
-acc_0059,"Johnston, Sanchez and Kennedy",Professional,45,32,1,4673,16,29,31,1,1,0.758,4,2026-09-06,99,downgraded
-acc_0060,Lee-Davis,Enterprise,116,84,1,10603,137,254,353,3,2,0.638,6,2026-08-08,299,renewed
-acc_0061,Gomez-Jenkins,Starter,9,5,0,989,7,9,10,3,1,0.445,8,2026-10-11,29,renewed
-acc_0062,"Brown, Valdez and Lucas",Professional,41,41,0,2523,36,39,37,1,1,0.878,3,2026-11-25,99,renewed
-acc_0063,Powell LLC,Professional,24,12,0,5685,31,51,58,1,0,0.53,9,2026-10-31,99,downgraded
-acc_0064,Wright and Sons,Enterprise,123,121,1,39986,276,150,157,1,0,0.763,3,2026-08-29,299,renewed
-acc_0065,"West, Henderson and Ramirez",Starter,13,8,0,808,1,11,14,1,0,0.306,10,2026-09-15,29,downgraded
-acc_0066,Baxter Inc,Professional,20,17,1,5423,18,30,35,2,0,0.672,12,2026-09-06,99,renewed
-acc_0067,Morton-Chase,Starter,13,10,0,379,1,8,11,1,1,0.894,4,2026-11-06,29,downgraded
-acc_0068,Williams PLC,Professional,34,27,1,2855,32,16,14,1,1,0.898,4,2026-09-19,99,downgraded
-acc_0069,Novak and Sons,Starter,5,1,0,498,2,6,14,3,3,0.435,44,2026-08-18,29,churned
-acc_0070,Russell Group,Enterprise,109,86,0,74701,235,379,360,0,0,0.629,0,2026-11-24,299,renewed
-acc_0071,Hancock Inc,Professional,43,31,0,7334,21,19,20,1,1,0.853,0,2026-08-20,99,renewed
-acc_0072,Gray Group,Enterprise,125,87,1,41499,267,50,70,1,0,0.682,3,2026-10-15,299,downgraded
-acc_0073,House-Glover,Starter,13,8,0,881,3,12,15,1,1,0.442,13,2026-09-23,29,downgraded
-acc_0074,Henderson-Bernard,Starter,10,9,0,156,2,11,10,0,0,0.899,3,2026-08-25,29,downgraded
-acc_0075,"Stanley, Tucker and Lee",Starter,13,8,0,841,5,9,12,2,0,0.549,12,2026-08-05,29,renewed
-acc_0076,Novak PLC,Professional,23,21,0,4625,36,24,25,0,0,0.918,4,2026-11-21,99,renewed
-acc_0077,"Daniels, Adkins and Brown",Professional,25,16,0,3240,25,37,54,1,1,0.443,2,2026-10-10,99,renewed
-acc_0078,"Woods, Calhoun and Schmidt",Starter,11,8,0,757,3,6,5,3,3,0.531,7,2026-08-05,29,downgraded
-acc_0079,Yu Inc,Professional,34,30,0,7182,17,36,40,0,0,0.75,3,2026-11-09,99,renewed
-acc_0080,Jones Inc 80,Professional,26,20,1,4110,30,44,50,1,1,0.751,3,2026-10-02,99,renewed
-acc_0081,"Hensley, Powell and David",Starter,5,4,0,79,0,8,9,1,0,0.944,4,2026-11-04,29,renewed
-acc_0082,"Sanchez, Wheeler and Harvey",Starter,10,7,0,108,2,12,13,1,1,0.783,4,2026-12-04,29,renewed
-acc_0083,Sandoval-Cunningham,Starter,8,7,0,151,1,11,12,1,1,0.781,1,2026-10-31,29,downgraded
-acc_0084,Donovan-Harris,Professional,44,40,0,8299,23,58,52,1,0,0.867,4,2026-10-10,99,downgraded
-acc_0085,"Edwards, Baker and Anderson",Starter,12,11,0,377,1,3,4,0,0,0.936,0,2026-10-28,29,renewed
-acc_0086,"Evans, Stewart and Walton",Professional,39,22,0,4035,11,32,63,2,0,0.198,29,2026-08-14,99,churned
-acc_0087,Smith PLC,Professional,29,11,0,1619,7,26,51,2,1,0.263,29,2026-09-10,99,downgraded
-acc_0088,"Ferrell, Jones and Lewis",Professional,24,16,0,5756,14,19,21,3,3,0.678,4,2026-09-07,99,renewed
-acc_0089,Anderson-Bailey,Professional,41,37,0,6625,12,51,56,1,0,0.852,0,2026-09-11,99,renewed
-acc_0090,Suarez LLC,Professional,23,16,0,7984,27,22,21,1,1,0.881,4,2026-09-07,99,renewed
-acc_0091,Moore-Bass,Professional,43,27,0,5426,33,26,40,2,2,0.616,14,2026-10-06,99,churned
-acc_0092,"Turner, Riggs and Roman",Enterprise,128,90,0,59994,296,141,154,1,1,0.611,8,2026-11-09,299,renewed
-acc_0093,"Smith, Montoya and Evans",Enterprise,154,143,1,40814,377,240,245,1,1,0.918,2,2026-10-09,299,downgraded
-acc_0094,"Garcia, Humphrey and Baker",Enterprise,123,74,1,15243,161,62,68,1,0,0.494,7,2026-11-08,299,downgraded
-acc_0095,Newton and Sons,Starter,5,1,0,441,0,4,6,6,2,0.367,43,2026-08-06,29,renewed
-acc_0096,Campbell-Clark,Starter,6,5,0,16,2,14,14,0,0,0.884,4,2026-10-08,29,churned
-acc_0097,Harris-Walters,Starter,6,6,0,519,2,11,14,1,1,0.864,3,2026-10-03,29,renewed
-acc_0098,Wagner-King,Starter,6,6,0,340,3,9,9,1,1,0.755,2,2026-11-22,29,renewed
-acc_0099,Davis Group,Enterprise,129,94,1,24891,164,110,124,1,0,0.772,0,2026-10-04,299,renewed
-acc_0100,Williams-Cook,Professional,21,21,0,4003,33,24,24,1,0,0.928,3,2026-09-27,99,renewed
-acc_0101,Walsh LLC,Professional,33,24,1,8767,20,49,45,1,1,0.767,2,2026-09-25,99,renewed
-acc_0102,Figueroa PLC,Starter,10,8,0,562,8,11,15,1,1,0.669,14,2026-10-23,29,renewed
-acc_0103,"Patterson, Smith and Jones",Starter,12,5,0,483,1,2,4,2,1,0.727,7,2026-10-10,29,churned
-acc_0104,"Mckee, Gardner and Davenport",Starter,13,11,0,285,2,12,11,0,0,0.785,0,2026-10-20,29,renewed
-acc_0105,"Tran, Jordan and Williams",Professional,42,37,0,3095,15,36,40,1,1,0.739,1,2026-11-10,99,renewed
-acc_0106,Nolan-Flynn,Enterprise,154,83,0,69580,256,290,336,2,0,0.668,14,2026-08-27,299,downgraded
-acc_0107,Nolan and Sons,Starter,12,12,0,88,1,4,4,1,0,0.737,3,2026-10-06,29,renewed
-acc_0108,"Wright, Garcia and Deleon",Starter,7,2,0,264,2,6,11,2,0,0.27,11,2026-08-30,29,churned
-acc_0109,Dickson-Brady,Starter,9,5,0,1128,4,11,12,2,0,0.515,12,2026-10-06,29,downgraded
-acc_0110,Hancock and Sons,Professional,39,28,0,5086,32,19,22,1,1,0.747,2,2026-10-20,99,renewed
-acc_0111,Johnson-Doyle,Starter,13,11,0,309,2,14,13,1,0,0.846,3,2026-11-11,29,downgraded
-acc_0112,Patton-Jenkins,Starter,10,9,0,133,4,10,13,0,0,0.918,4,2026-10-13,29,downgraded
-acc_0113,"Shields, Cochran and Adams",Starter,7,6,0,320,3,10,10,1,0,0.769,1,2026-12-05,29,renewed
-acc_0114,"Rodriguez, Brennan and Garrison",Starter,5,2,0,1726,1,3,7,4,0,0.288,38,2026-08-05,29,churned
-acc_0115,Gonzalez Group,Enterprise,135,76,1,28542,154,211,242,3,1,0.562,9,2026-11-12,299,renewed
-acc_0116,Torres-Pope,Professional,37,31,0,3513,31,41,37,0,0,0.852,4,2026-09-01,99,renewed
-acc_0117,Walker Ltd,Enterprise,120,96,0,62689,193,282,318,1,0,0.819,4,2026-10-26,299,renewed
-acc_0118,Ross LLC,Enterprise,146,145,1,53322,108,277,268,0,0,0.971,4,2026-10-15,299,downgraded
-acc_0119,Rasmussen LLC,Professional,38,29,0,1137,9,20,21,2,0,0.532,4,2026-08-25,99,renewed
-acc_0120,May-Ross,Professional,36,9,0,4192,10,42,59,4,3,0.29,32,2026-09-04,99,downgraded
-acc_0121,"Rivera, Johnson and Wiley",Professional,26,7,0,1464,5,39,63,4,3,0.494,27,2026-09-23,99,downgraded
-acc_0122,White-Estes,Starter,13,5,0,808,3,4,8,4,4,0.44,17,2026-08-02,29,downgraded
-acc_0123,Johnson-Carlson,Starter,13,11,0,600,1,8,7,0,0,0.782,0,2026-08-27,29,renewed
-acc_0124,Chandler-Edwards,Professional,25,24,0,8012,32,15,12,1,0,0.844,1,2026-11-05,99,downgraded
-acc_0125,"Joyce, Wilson and Lam",Professional,25,18,0,2274,33,43,59,2,2,0.686,8,2026-11-02,99,renewed
-acc_0126,Scott Ltd,Enterprise,121,39,0,25317,84,105,345,6,3,0.231,16,2026-08-16,299,downgraded
-acc_0127,Smith-Frost,Starter,9,5,0,830,1,11,15,2,2,0.747,10,2026-09-19,29,renewed
-acc_0128,"Mcdaniel, Bentley and Mclaughlin",Starter,12,10,0,309,3,5,7,0,0,0.871,4,2026-09-30,29,renewed
-acc_0129,Diaz Inc,Starter,9,6,0,302,2,10,10,0,0,0.816,1,2026-09-03,29,renewed
-acc_0130,"Mccall, Hanson and Alvarado",Enterprise,152,122,1,66902,300,309,296,1,0,0.875,0,2026-12-10,299,renewed
-acc_0131,Cortez LLC,Starter,13,12,0,210,1,13,13,0,0,0.906,3,2026-08-22,29,renewed
-acc_0132,"Parker, Ortiz and Powell",Professional,20,17,0,2219,16,36,41,0,0,0.777,0,2026-11-12,99,downgraded
-acc_0133,Spencer-Lee,Enterprise,149,34,0,37045,135,96,296,4,1,0.284,34,2026-09-09,299,churned
-acc_0134,"Bentley, Byrd and Orr",Professional,37,23,1,6276,20,44,53,1,0,0.494,2,2026-09-27,99,renewed
-acc_0135,"Carroll, Sullivan and Bass",Professional,26,19,1,6557,8,29,27,0,0,0.88,0,2026-08-27,99,renewed
-acc_0136,Mitchell-Jordan,Starter,8,4,0,115,5,7,7,1,0,0.459,6,2026-10-11,29,renewed
-acc_0137,"Lawson, Morris and Ramos",Professional,33,27,0,5874,16,22,21,1,0,0.874,1,2026-09-28,99,renewed
-acc_0138,"Lewis, Kennedy and Santana",Professional,25,20,0,7157,23,28,38,1,0,0.426,13,2026-08-06,99,downgraded
-acc_0139,"Jackson, Miller and Robertson",Enterprise,105,104,1,46491,259,158,179,0,0,0.859,1,2026-11-09,299,renewed
-acc_0140,"Harvey, Davis and Crane",Starter,12,9,0,340,3,15,13,0,0,0.799,0,2026-08-30,29,renewed
-acc_0141,Chambers and Sons,Professional,37,16,0,1784,13,34,57,4,2,0.315,30,2026-09-24,99,downgraded
-acc_0142,Hernandez Inc,Enterprise,126,62,1,24216,213,193,218,3,0,0.461,6,2026-09-05,299,downgraded
-acc_0143,Riggs PLC,Starter,10,9,0,500,3,12,11,1,1,0.971,3,2026-11-24,29,renewed
-acc_0144,Gibson Ltd,Starter,13,9,0,76,3,13,12,0,0,0.966,0,2026-11-30,29,renewed
-acc_0145,"Lee, Horton and Snyder",Starter,12,11,0,544,0,9,11,0,0,0.863,0,2026-09-20,29,churned
-acc_0146,Hernandez Ltd,Enterprise,109,67,1,43824,104,129,146,2,2,0.742,6,2026-09-15,299,renewed
-acc_0147,Stafford Inc,Professional,40,38,0,2817,35,33,31,1,1,0.819,4,2026-08-16,99,renewed
-acc_0148,Robinson-Brock,Starter,6,3,0,470,3,6,9,5,3,0.173,44,2026-08-01,29,downgraded
-acc_0149,"Holmes, Williams and Wright",Starter,8,6,0,407,2,8,6,0,0,0.962,2,2026-11-29,29,renewed
-acc_0150,Bryant Group,Professional,43,31,0,8630,22,55,59,0,0,0.734,3,2026-10-31,99,renewed
-acc_0151,"Schmidt, Hansen and Stewart",Enterprise,128,123,1,58500,175,75,70,1,1,0.818,1,2026-11-02,299,renewed
-acc_0152,Salazar-Ball,Starter,11,9,0,93,1,10,10,1,0,0.721,2,2026-09-18,29,downgraded
-acc_0153,"Simmons, Meadows and Griffin",Starter,10,7,1,332,2,12,12,1,0,0.945,0,2026-11-22,29,downgraded
-acc_0154,Manning Group,Enterprise,110,27,0,12340,54,257,347,5,3,0.144,18,2026-08-30,299,downgraded
-acc_0155,Green-Wright,Starter,12,8,0,6,1,13,14,1,0,0.967,2,2026-09-26,29,renewed
-acc_0156,"Ramirez, Strickland and Washington",Enterprise,112,83,0,71973,160,172,208,3,0,0.807,6,2026-10-11,299,renewed
-acc_0157,Hill Inc,Starter,13,10,0,563,2,8,9,0,0,0.727,3,2026-09-21,29,renewed
-acc_0158,"Mitchell, Nelson and Flores",Starter,8,3,0,1464,2,9,14,2,1,0.266,32,2026-09-22,29,downgraded
-acc_0159,"Miller, Hernandez and Reyes",Professional,31,16,0,2393,17,26,38,2,2,0.361,13,2026-09-06,99,churned
-acc_0160,Mccarthy Inc,Professional,45,38,0,2850,11,54,53,0,0,0.778,4,2026-10-04,99,renewed
-acc_0161,Russell-Daniels,Professional,22,11,0,6293,29,9,13,2,2,0.446,7,2026-10-04,99,downgraded
-acc_0162,Brown-Wall,Professional,42,31,1,4464,8,31,32,0,0,0.748,1,2026-09-04,99,renewed
-acc_0163,Stein-Silva,Starter,11,10,0,202,1,14,14,1,1,0.837,3,2026-09-11,29,downgraded
-acc_0164,"Smith, Gilmore and Johnston",Professional,31,19,0,1826,10,13,18,3,1,0.582,9,2026-10-14,99,downgraded
-acc_0165,Smith-Bell,Starter,9,6,0,320,2,11,11,0,0,0.751,2,2026-11-11,29,downgraded
-acc_0166,Castaneda-Ashley,Starter,7,5,0,591,1,7,10,2,0,0.459,7,2026-08-05,29,renewed
-acc_0167,Medina-Navarro,Enterprise,131,120,1,49431,317,228,251,0,0,0.938,3,2026-08-18,299,renewed
-acc_0168,"Hurst, Freeman and Nelson",Starter,12,12,0,586,2,6,8,1,1,0.75,4,2026-11-15,29,renewed
-acc_0169,Johnson-Rogers,Starter,5,4,0,89,1,16,14,0,0,0.834,0,2026-11-17,29,renewed
-acc_0170,"Yates, Ramsey and Pittman",Starter,8,3,0,1090,4,6,6,1,0,0.518,10,2026-10-28,29,renewed
-acc_0171,Hooper PLC,Professional,44,20,0,4170,16,30,55,3,2,0.382,16,2026-09-02,99,renewed
-acc_0172,Meadows PLC,Professional,32,22,0,6760,7,39,48,3,1,0.723,8,2026-10-26,99,renewed
-acc_0173,"Alvarado, Miller and Patterson",Starter,6,3,0,1300,4,3,4,2,0,0.292,30,2026-08-19,29,renewed
-acc_0174,White-Green,Enterprise,136,128,1,81014,361,187,200,0,0,0.918,0,2026-08-30,299,renewed
-acc_0175,Lewis-Murphy,Starter,7,7,0,280,2,10,10,1,1,0.744,2,2026-11-08,29,renewed
-acc_0176,Ramirez-Bean,Starter,6,6,0,218,1,15,15,0,0,0.844,1,2026-08-16,29,renewed
-acc_0177,King-Miller,Enterprise,105,24,1,15791,27,60,122,3,2,0.132,32,2026-07-24,299,downgraded
-acc_0178,Curry Inc,Starter,12,9,0,102,1,12,15,1,0,0.756,0,2026-09-24,29,renewed
-acc_0179,Walker-Jones,Starter,5,4,0,420,7,10,13,1,0,0.517,10,2026-09-05,29,renewed
-acc_0180,"Williams, Johnson and Wright",Professional,39,20,0,8088,20,24,36,1,0,0.714,7,2026-10-10,99,renewed
-acc_0181,Howell and Sons,Professional,20,16,0,8289,14,58,61,1,0,0.967,3,2026-11-12,99,renewed
-acc_0182,Wells Inc,Professional,26,20,0,4778,23,14,17,1,0,0.885,0,2026-12-01,99,renewed
-acc_0183,"Gould, Marshall and Scott",Starter,7,1,0,281,0,5,13,5,3,0.309,18,2026-08-25,29,churned
-acc_0184,Jackson-Lawson,Starter,11,7,1,538,4,5,5,3,3,0.599,11,2026-10-01,29,renewed
-acc_0185,"Higgins, Strickland and Martin",Starter,6,4,0,2,2,8,9,0,0,0.731,0,2026-09-30,29,renewed
-acc_0186,Rodriguez-Johnson,Starter,11,2,0,852,1,9,12,4,4,0.483,28,2026-09-08,29,churned
-acc_0187,Johnston-Odonnell,Professional,22,22,0,7305,41,43,45,1,1,0.801,0,2026-09-09,99,renewed
-acc_0188,Sanders-Espinoza,Professional,44,27,0,4962,26,26,35,1,0,0.634,4,2026-08-02,99,renewed
-acc_0189,Vargas Ltd,Starter,9,4,0,487,1,6,9,1,0,0.576,2,2026-08-10,29,churned
-acc_0190,Garcia LLC,Starter,6,3,0,1679,0,4,9,6,6,0.174,45,2026-08-08,29,churned
-acc_0191,"Burke, Martinez and Riggs",Starter,12,10,0,207,1,17,15,0,0,0.755,4,2026-09-05,29,renewed
-acc_0192,Reed Group,Starter,6,4,0,311,1,6,7,0,0,0.935,4,2026-12-02,29,renewed
-acc_0193,"Wood, Hunter and Peterson",Starter,7,5,0,463,3,10,12,0,0,0.865,4,2026-08-28,29,renewed
-acc_0194,Short-Garcia,Starter,10,7,0,265,2,6,7,0,0,0.959,0,2026-12-08,29,renewed
-acc_0195,Reid-Poole,Enterprise,103,79,0,50588,346,240,224,0,0,0.788,3,2026-10-08,299,downgraded
-acc_0196,"Hernandez, Thompson and Boyd",Starter,8,7,0,563,2,4,6,1,0,0.845,0,2026-10-07,29,downgraded
-acc_0197,"Nelson, Morton and Medina",Enterprise,150,130,0,73574,236,341,333,1,0,0.689,4,2026-09-07,299,churned
-acc_0198,Marshall-Petersen,Professional,36,30,0,8797,31,29,29,0,0,0.973,0,2026-10-22,99,renewed
-acc_0199,"Adams, Christian and Rivas",Enterprise,124,111,0,87441,390,187,167,1,0,0.645,1,2026-08-18,299,renewed
-acc_0200,Ramirez Group,Starter,12,12,0,502,2,8,7,0,0,0.73,0,2026-10-21,29,renewed
-acc_0201,Christensen PLC,Starter,10,4,0,290,0,9,9,2,2,0.725,10,2026-09-15,29,renewed
-acc_0202,"Barnett, Rogers and Snyder",Professional,33,27,1,4532,29,23,32,3,1,0.533,13,2026-08-27,99,renewed
-acc_0203,White-Lewis,Enterprise,160,159,1,47845,438,213,205,0,0,0.979,4,2026-09-24,299,renewed
-acc_0204,Peterson-Beard,Enterprise,115,104,1,33080,410,308,309,1,0,0.95,0,2026-09-17,299,downgraded
-acc_0205,"Beard, Peters and Black",Professional,43,36,0,8038,37,60,58,1,0,0.848,3,2026-11-29,99,renewed
-acc_0206,Miller Ltd,Enterprise,102,66,1,26777,54,118,138,1,0,0.444,7,2026-08-19,299,renewed
-acc_0207,Freeman-Chang,Professional,42,7,0,2849,8,19,50,3,3,0.267,35,2026-09-03,99,churned
-acc_0208,"Alvarez, Joseph and West",Starter,9,5,0,804,1,13,15,1,1,0.64,9,2026-09-14,29,churned
-acc_0209,Davis and Sons 209,Starter,7,5,1,167,2,8,11,2,1,0.599,3,2026-09-28,29,renewed
-acc_0210,Holt-Torres,Professional,25,25,0,5102,11,22,23,0,0,0.788,2,2026-11-12,99,renewed
-acc_0211,"Wood, Tran and Cooper",Starter,11,11,0,548,2,12,13,0,0,0.899,3,2026-08-25,29,renewed
-acc_0212,"Pierce, Bell and Chavez",Enterprise,139,109,1,71974,114,322,319,0,0,0.765,1,2026-08-20,299,renewed
-acc_0213,King-Martinez,Enterprise,158,117,1,58720,105,147,130,1,1,0.864,2,2026-11-12,299,renewed
-acc_0214,Stewart Ltd,Professional,23,17,0,2866,24,20,21,1,0,0.794,4,2026-10-03,99,renewed
-acc_0215,"Tapia, Vaughn and Lee",Professional,42,36,0,8071,9,32,37,0,0,0.806,1,2026-12-07,99,renewed
-acc_0216,"Washington, Hardy and Bray",Starter,8,4,0,907,2,10,11,2,0,0.625,7,2026-09-21,29,renewed
-acc_0217,"Carlson, Hooper and Wall",Starter,10,7,0,162,2,12,10,1,1,0.737,4,2026-12-01,29,renewed
-acc_0218,Perez-White,Professional,34,24,0,6850,34,27,24,1,1,0.791,3,2026-08-18,99,renewed
-acc_0219,Erickson and Sons,Professional,25,22,0,6746,32,47,42,0,0,0.794,3,2026-11-22,99,renewed
-acc_0220,Williams-Brown,Enterprise,155,123,1,53831,404,164,192,3,2,0.599,4,2026-10-14,299,renewed
-acc_0221,Terry-Martinez,Starter,11,8,0,940,7,16,15,2,0,0.506,9,2026-10-04,29,renewed
-acc_0222,Garcia-Smith,Starter,13,13,0,305,3,16,14,0,0,0.898,3,2026-11-04,29,renewed
-acc_0223,Harrison-Alexander,Starter,8,3,0,827,5,12,14,1,1,0.677,12,2026-10-21,29,renewed
-acc_0224,Sheppard LLC,Starter,8,3,0,455,2,5,15,4,0,0.302,38,2026-08-13,29,downgraded
-acc_0225,Wilson-Jones,Enterprise,135,108,1,81373,352,106,120,1,1,0.89,1,2026-12-04,299,renewed
-acc_0226,Jones-Soto,Professional,21,21,1,6030,32,27,30,0,0,0.881,3,2026-10-02,99,renewed
-acc_0227,Hernandez PLC,Starter,12,3,0,1465,1,2,7,5,3,0.079,13,2026-08-14,29,churned
-acc_0228,Miller-Wright,Starter,6,4,0,439,2,6,6,1,1,0.825,3,2026-10-22,29,downgraded
-acc_0229,"Duran, Obrien and Gibbs",Starter,8,6,0,352,2,10,12,1,0,0.801,0,2026-08-23,29,renewed
-acc_0230,Rowe Group,Starter,7,6,0,501,3,14,13,0,0,0.813,1,2026-09-13,29,renewed
-acc_0231,Kerr-Evans,Enterprise,141,103,1,64261,188,267,313,0,0,0.921,4,2026-08-28,299,renewed
-acc_0232,"Branch, Torres and Oliver",Starter,7,3,0,19,5,6,10,1,0,0.526,12,2026-10-17,29,downgraded
-acc_0233,"Choi, Garcia and Farmer",Starter,6,5,0,409,2,11,15,1,0,0.627,10,2026-10-28,29,renewed
-acc_0234,"Clark, Guerrero and Moore",Starter,5,3,0,113,2,18,15,0,0,0.937,3,2026-10-19,29,downgraded
-acc_0235,Arnold and Sons,Professional,34,6,0,981,2,26,41,4,2,0.097,26,2026-08-06,99,churned
-acc_0236,Ortiz Ltd,Professional,34,33,0,7038,19,59,54,0,0,0.817,2,2026-10-05,99,renewed
-acc_0237,"Harrison, Johnson and Roberts",Starter,6,4,0,60,2,11,10,0,0,0.975,1,2026-10-15,29,renewed
-acc_0238,Warner-Gibson,Professional,43,32,0,5421,21,33,34,0,0,0.951,3,2026-11-06,99,renewed
-acc_0239,"Hall, Baker and Moody",Professional,41,29,1,5989,21,43,48,3,2,0.66,8,2026-09-29,99,renewed
-acc_0240,"Guerrero, Peck and Coleman",Professional,20,19,0,5536,41,52,47,0,0,0.842,3,2026-10-16,99,renewed
-acc_0241,"Walker, Hernandez and Baker",Starter,8,5,0,586,2,12,12,1,0,0.837,3,2026-10-17,29,renewed
-acc_0242,Jones and Sons,Starter,9,7,0,467,2,8,12,0,0,0.967,2,2026-09-26,29,renewed
-acc_0243,Larson-Holloway,Professional,41,32,1,4543,8,58,57,1,1,0.885,2,2026-12-07,99,downgraded
-acc_0244,Gonzales-Harrison,Starter,6,5,0,390,2,3,5,2,2,0.701,3,2026-10-19,29,renewed
-acc_0245,Lyons-Bender,Professional,35,16,0,1352,20,43,54,2,0,0.793,11,2026-11-06,99,renewed
-acc_0246,"Fernandez, Kim and George",Starter,10,10,0,254,2,5,6,1,0,0.791,2,2026-09-01,29,downgraded
-acc_0247,Navarro-Munoz,Professional,42,24,0,1083,14,35,65,4,3,0.275,26,2026-08-14,99,downgraded
-acc_0248,Davis Ltd,Professional,41,40,0,7135,24,30,34,1,1,0.939,2,2026-08-28,99,churned
-acc_0249,"Matthews, Smith and Hubbard",Starter,7,3,0,604,5,6,6,1,0,0.386,10,2026-11-11,29,renewed
-acc_0250,Johnston-Hines,Professional,27,20,0,6791,31,22,26,1,0,0.521,12,2026-09-17,99,renewed
-acc_0251,Ruiz Ltd,Professional,39,32,0,7608,36,12,15,2,0,0.696,12,2026-10-07,99,renewed
-acc_0252,Moon-White,Starter,7,3,0,244,5,6,11,2,0,0.458,8,2026-09-01,29,churned
-acc_0253,"Graham, Olsen and Costa",Professional,30,30,1,8353,11,55,57,1,0,0.88,2,2026-11-23,99,renewed
-acc_0254,Bailey-Cook,Professional,37,18,0,1162,2,33,62,4,2,0.094,29,2026-08-19,99,renewed
-acc_0255,"Garcia, Martin and Jenkins",Professional,41,34,1,8169,21,62,60,0,0,0.88,4,2026-12-06,99,renewed
-acc_0256,Roberts-Landry,Enterprise,133,75,1,20897,170,158,331,2,1,0.224,39,2026-08-16,299,downgraded
-acc_0257,"Johnson, Miller and King",Starter,8,6,0,434,3,13,12,1,1,0.937,1,2026-11-10,29,downgraded
-acc_0258,Cordova Group,Professional,22,18,0,4890,35,12,15,1,0,0.837,3,2026-10-03,99,renewed
-acc_0259,"Bryan, Smith and Booth",Professional,22,15,1,1769,33,51,60,3,3,0.73,6,2026-09-04,99,renewed
-acc_0260,Gutierrez-Lopez,Starter,11,11,0,147,2,10,11,0,0,0.797,2,2026-08-20,29,churned
-acc_0261,Dean-Jimenez,Professional,43,35,0,8177,14,33,31,0,0,0.941,1,2026-11-01,99,renewed
-acc_0262,Wolf-Harris,Starter,13,12,0,74,3,6,4,1,1,0.796,0,2026-11-15,29,renewed
-acc_0263,"Anderson, Roberts and Gilmore",Enterprise,157,125,1,51742,171,179,175,0,0,0.88,2,2026-09-24,299,renewed
-acc_0264,Martinez-Dudley,Starter,10,8,0,339,2,17,15,1,0,0.948,3,2026-09-23,29,renewed
-acc_0265,"Lloyd, Mckinney and Collins",Starter,13,7,0,156,2,7,8,3,3,0.606,2,2026-11-11,29,renewed
-acc_0266,Tran Inc,Starter,13,9,0,304,5,10,12,3,1,0.554,5,2026-08-16,29,renewed
-acc_0267,Gay Inc,Professional,39,38,0,5593,15,52,54,0,0,0.836,1,2026-08-20,99,renewed
-acc_0268,Valentine-Holland,Professional,45,37,0,8258,19,14,14,1,1,0.949,0,2026-10-20,99,renewed
-acc_0269,Jimenez Ltd,Starter,10,8,0,159,6,9,13,1,0,0.617,8,2026-09-13,29,renewed
-acc_0270,Hicks-Hill,Starter,7,3,0,575,1,4,4,1,0,0.489,4,2026-10-15,29,renewed
-acc_0271,Baird-Sanchez,Starter,12,9,0,420,2,14,15,0,0,0.726,0,2026-11-03,29,renewed
-acc_0272,"Thomas, Lee and Greene",Enterprise,136,98,1,70046,333,132,147,0,0,0.934,0,2026-10-14,299,renewed
-acc_0273,"Suarez, Shields and Hill",Starter,13,8,0,701,1,12,13,3,3,0.787,11,2026-08-28,29,renewed
-acc_0274,Morgan-French,Starter,6,4,0,39,2,13,12,0,0,0.948,4,2026-11-07,29,downgraded
-acc_0275,Hoover-Campbell,Professional,33,20,0,6057,30,57,61,2,1,0.58,14,2026-09-12,99,renewed
-acc_0276,Monroe-Carpenter,Professional,44,28,0,1607,31,15,18,2,1,0.651,10,2026-08-23,99,churned
-acc_0277,"Burns, Hernandez and Ryan",Professional,42,42,0,4590,21,43,45,1,0,0.76,4,2026-10-08,99,renewed
-acc_0278,Cook-Hines,Professional,35,8,0,2464,7,12,25,6,4,0.112,27,2026-09-11,99,downgraded
-acc_0279,Gibson-Morris,Enterprise,106,63,0,60505,197,249,283,3,3,0.736,11,2026-08-19,299,renewed
-acc_0280,Pollard and Sons,Professional,22,14,0,1580,11,39,42,2,0,0.416,8,2026-10-21,99,renewed
-acc_0281,"Reyes, Chase and Jenkins",Professional,20,12,0,7747,29,58,64,1,1,0.618,5,2026-10-16,99,downgraded
-acc_0282,Garner-Thornton,Starter,11,9,0,415,2,3,6,0,0,0.872,4,2026-10-24,29,renewed
-acc_0283,Hughes-Alvarado,Enterprise,129,48,0,12086,104,88,196,6,6,0.179,14,2026-08-29,299,downgraded
-acc_0284,"Pollard, Simpson and Johnson",Starter,12,11,0,249,2,12,12,1,1,0.917,3,2026-08-29,29,renewed
-acc_0285,"Sanford, Rivera and Garcia",Starter,10,8,0,539,5,10,15,2,0,0.404,3,2026-11-02,29,renewed
-acc_0286,Garcia-Lozano,Starter,7,2,0,408,1,4,9,4,3,0.103,23,2026-08-17,29,downgraded
-acc_0287,Bowen Group,Enterprise,142,133,1,72440,300,125,116,1,0,0.861,0,2026-09-24,299,renewed
-acc_0288,"Booker, Jones and Harrington",Enterprise,132,40,0,29105,75,210,306,5,2,0.136,41,2026-07-27,299,downgraded
-acc_0289,Morgan-Schwartz,Starter,5,2,0,777,5,4,5,2,0,0.544,7,2026-09-01,29,downgraded
-acc_0290,"Miller, Murphy and Craig",Starter,8,8,0,381,3,9,9,1,0,0.815,3,2026-10-27,29,downgraded
-acc_0291,"James, Stewart and Higgins",Professional,32,26,0,8530,12,27,29,0,0,0.759,0,2026-09-01,99,renewed
-acc_0292,Brennan-Johnson,Enterprise,136,100,1,67575,194,317,304,1,1,0.736,2,2026-11-18,299,renewed
-acc_0293,Young Ltd,Starter,10,8,0,551,2,8,8,1,0,0.765,2,2026-10-19,29,renewed
-acc_0294,Bright-Francis,Professional,25,14,0,1615,17,14,30,5,5,0.278,44,2026-08-12,99,churned
-acc_0295,Good-Hodges,Starter,12,7,0,1066,5,12,13,1,1,0.806,8,2026-08-01,29,downgraded
-acc_0296,"Brennan, Wallace and Benson",Starter,6,4,0,484,0,14,15,1,1,0.863,0,2026-09-17,29,renewed
-acc_0297,Williams Inc,Starter,7,2,0,349,2,2,7,4,1,0.013,30,2026-08-26,29,churned
-acc_0298,Howard-Jordan,Starter,11,5,0,1093,2,7,13,5,1,0.136,30,2026-08-03,29,churned
-acc_0299,Schmidt PLC,Starter,7,6,0,547,1,4,4,1,0,0.722,3,2026-11-21,29,renewed
-acc_0300,"Sparks, Jackson and Miller",Starter,11,10,0,399,1,6,9,1,1,0.935,1,2026-11-03,29,renewed
-acc_0301,Harvey-Allen,Professional,37,14,0,3628,7,36,55,2,0,0.16,26,2026-09-18,99,downgraded
-acc_0302,"Thomas, Murray and King",Professional,23,20,1,6920,17,15,15,0,0,0.909,1,2026-10-17,99,renewed
-acc_0303,Estrada-Nolan,Starter,10,4,0,299,6,7,9,2,2,0.424,14,2026-10-07,29,downgraded
-acc_0304,Santana-Byrd,Starter,8,4,0,907,3,1,4,3,0,0.189,10,2026-08-04,29,downgraded
-acc_0305,Jones LLC,Enterprise,146,107,1,58272,294,223,214,1,1,0.752,3,2026-12-06,299,downgraded
-acc_0306,"Evans, Hayden and Vaughn",Professional,28,14,0,3377,3,15,39,6,0,0.004,10,2026-09-21,99,churned
-acc_0307,Bruce-Gonzalez,Starter,5,2,0,315,2,6,11,1,1,0.595,14,2026-09-30,29,churned
-acc_0308,Castaneda-Rodriguez,Enterprise,124,81,1,26107,261,246,279,2,0,0.417,13,2026-09-05,299,renewed
-acc_0309,Armstrong-Andrews,Professional,39,36,0,5705,14,33,32,1,0,0.837,2,2026-11-22,99,renewed
-acc_0310,"Phillips, Spence and Barrett",Starter,6,6,0,396,4,9,9,0,0,0.769,3,2026-10-06,29,renewed
-acc_0311,Smith-Grimes,Starter,6,5,1,32,1,4,6,1,0,0.868,3,2026-09-30,29,renewed
-acc_0312,"Beltran, Lozano and Mcgee",Professional,22,22,0,2600,38,58,53,1,1,0.865,3,2026-11-01,99,renewed
-acc_0313,Parsons-Hall,Starter,8,8,0,538,1,8,7,0,0,0.891,4,2026-08-28,29,renewed
-acc_0314,Robinson-Lee,Professional,25,20,1,3446,20,35,39,2,1,0.466,11,2026-09-08,99,renewed
-acc_0315,Byrd-Le,Enterprise,115,56,1,16052,107,135,275,4,1,0.242,24,2026-09-11,299,churned
-acc_0316,"Becker, Taylor and Davis",Starter,9,7,0,322,1,7,6,0,0,0.726,2,2026-10-12,29,renewed
-acc_0317,"Lucas, Parker and Alexander",Starter,11,11,0,79,4,6,7,0,0,0.908,3,2026-12-08,29,renewed
-acc_0318,"Diaz, Anderson and Browning",Professional,32,6,0,3895,13,16,31,5,5,0.227,35,2026-08-21,99,downgraded
-acc_0319,Burgess-Thompson,Enterprise,120,55,0,14373,104,145,250,2,0,0.387,17,2026-09-11,299,renewed
-acc_0320,Buchanan LLC,Professional,24,22,0,5971,11,33,39,1,1,0.733,3,2026-10-18,99,renewed
-acc_0321,"Shaw, Nelson and Martin",Professional,26,20,0,6333,27,19,24,2,1,0.503,3,2026-09-09,99,renewed
-acc_0322,Coffey-Phillips,Professional,39,38,0,4211,10,33,35,1,1,0.977,4,2026-08-20,99,renewed
-acc_0323,Brock-Mcdonald,Starter,5,2,0,302,6,12,15,1,0,0.665,6,2026-10-26,29,renewed
-acc_0324,Taylor and Sons,Starter,13,11,0,144,2,14,15,1,1,0.901,0,2026-09-05,29,downgraded
-acc_0325,"Ramsey, Whitney and Coffey",Starter,11,7,1,737,5,9,11,2,0,0.663,2,2026-09-17,29,renewed
-acc_0326,"Diaz, Gibbs and Smith",Starter,6,1,0,937,0,3,9,2,2,0.247,9,2026-08-31,29,downgraded
-acc_0327,"Martinez, Richardson and Curry",Starter,13,11,0,263,3,8,9,1,1,0.948,0,2026-09-27,29,renewed
-acc_0328,Richards-Carson,Professional,27,25,0,3208,17,53,55,1,0,0.972,4,2026-08-31,99,downgraded
-acc_0329,Rodriguez-Hall,Starter,13,10,0,148,2,6,6,0,0,0.891,4,2026-10-25,29,renewed
-acc_0330,Harvey PLC,Professional,33,29,0,7121,18,24,21,0,0,0.934,2,2026-08-31,99,downgraded
-acc_0331,Herman-Walker,Professional,27,22,0,1576,7,35,48,3,0,0.628,4,2026-10-29,99,renewed
-acc_0332,Reid Group,Starter,5,4,1,227,3,5,6,0,0,0.913,1,2026-12-11,29,renewed
-acc_0333,"Turner, Ortiz and Taylor",Starter,5,4,0,779,6,11,11,3,3,0.702,8,2026-10-04,29,downgraded
-acc_0334,Torres Group,Professional,43,8,0,2312,10,19,27,3,1,0.357,11,2026-09-11,99,renewed
-acc_0335,Davis PLC,Professional,36,27,1,6464,21,27,30,0,0,0.744,4,2026-10-28,99,renewed
-acc_0336,Price LLC,Professional,42,33,0,2795,33,37,40,0,0,0.804,1,2026-11-13,99,renewed
-acc_0337,"Avery, Horton and Fernandez",Starter,13,12,0,174,1,12,12,0,0,0.957,4,2026-09-06,29,renewed
-acc_0338,"Newton, Moore and Perry",Starter,7,5,0,259,0,11,11,1,1,0.723,3,2026-12-05,29,renewed
-acc_0339,Bass PLC,Starter,8,5,0,1141,4,7,11,1,1,0.744,5,2026-08-17,29,downgraded
-acc_0340,Crosby-Ramirez,Starter,6,4,0,182,1,13,13,0,0,0.762,2,2026-10-28,29,renewed
-acc_0341,"Wood, Ramos and Sampson",Starter,13,6,0,275,2,9,10,2,0,0.351,6,2026-09-20,29,renewed
-acc_0342,Garcia-Jennings,Professional,22,17,0,5384,30,42,58,2,1,0.631,13,2026-10-15,99,renewed
-acc_0343,"Winters, Newman and Brown",Starter,12,11,0,238,3,7,6,0,0,0.904,1,2026-10-13,29,renewed
-acc_0344,Lopez-Martinez,Starter,13,7,0,1311,1,6,10,4,4,0.169,26,2026-08-30,29,downgraded
-acc_0345,Davis-Lewis,Starter,5,3,0,346,1,9,9,1,1,0.96,3,2026-09-01,29,renewed
-acc_0346,"Harper, Smith and Buchanan",Professional,43,8,0,1467,14,18,33,6,2,0.319,28,2026-08-18,99,churned
-acc_0347,Zhang PLC,Starter,5,2,0,1283,3,5,5,6,2,0.315,18,2026-08-15,29,downgraded
-acc_0348,Jones PLC,Enterprise,105,81,1,33874,362,187,216,1,0,0.748,6,2026-08-21,299,downgraded
-acc_0349,Willis and Sons,Professional,36,19,0,7696,10,37,40,2,1,0.708,10,2026-08-17,99,renewed
-acc_0350,Schroeder-Kramer,Starter,11,6,0,237,3,2,6,6,0,0.002,10,2026-09-03,29,churned
-acc_0351,"Smith, Garrison and Thomas",Starter,8,7,0,293,1,6,8,1,1,0.792,2,2026-09-03,29,downgraded
-acc_0352,Fernandez and Sons,Starter,10,3,0,1442,0,2,5,3,2,0.434,44,2026-08-31,29,churned
-acc_0353,Guerrero Inc,Starter,11,7,1,401,1,11,11,1,0,0.767,4,2026-09-26,29,renewed
-acc_0354,Smith and Sons,Professional,22,17,0,3250,9,50,60,2,1,0.671,14,2026-08-28,99,renewed
-acc_0355,"Morris, Thompson and Williams",Starter,10,3,0,61,1,3,9,4,1,0.029,15,2026-08-13,29,churned
-acc_0356,"Fisher, Wilson and Brown",Starter,10,7,0,545,3,11,10,1,1,0.84,4,2026-09-15,29,renewed
-acc_0357,Strickland-Palmer,Enterprise,136,118,0,37586,256,336,357,1,1,0.772,0,2026-10-30,299,renewed
-acc_0358,Hayes and Sons,Professional,39,30,0,5676,17,24,37,1,1,0.326,5,2026-11-03,99,churned
-acc_0359,"Williams, Logan and Camacho",Starter,10,9,0,311,2,12,13,1,1,0.959,3,2026-08-16,29,renewed
-acc_0360,"Turner, Schneider and Johnson",Professional,21,3,0,3500,12,10,15,2,2,0.238,26,2026-09-11,99,downgraded
-acc_0361,Boone-Simmons,Professional,26,26,0,8301,23,25,25,1,1,0.938,1,2026-08-16,99,downgraded
-acc_0362,Henry Group,Starter,7,5,0,933,6,10,10,3,0,0.775,13,2026-10-17,29,downgraded
-acc_0363,Lam LLC,Professional,20,18,0,7024,25,32,34,1,0,0.905,2,2026-08-19,99,renewed
-acc_0364,"Hernandez, Martinez and Weber",Professional,36,29,0,2716,21,53,56,0,0,0.951,0,2026-11-17,99,renewed
-acc_0365,"Kelley, Nguyen and Vang",Professional,30,22,1,4399,31,39,49,3,1,0.615,9,2026-09-21,99,renewed
-acc_0366,"Phillips, Wagner and Jordan",Enterprise,136,113,1,53228,101,323,360,1,1,0.764,0,2026-10-16,299,downgraded
-acc_0367,"Wilson, Pena and Rich",Professional,28,5,0,2654,13,9,20,5,3,0.4,17,2026-08-14,99,downgraded
-acc_0368,"Le, Lewis and Hayes",Professional,24,19,1,7168,32,14,14,0,0,0.827,3,2026-11-04,99,downgraded
-acc_0369,Gutierrez Group,Professional,25,11,0,1475,7,10,28,3,0,0.328,42,2026-09-10,99,churned
-acc_0370,Perry-Davis,Starter,13,7,0,199,4,3,11,5,1,0.404,30,2026-08-26,29,churned
-acc_0371,Edwards-Scott,Starter,8,6,0,184,2,10,10,0,0,0.801,0,2026-10-06,29,downgraded
-acc_0372,Mcdaniel Group,Starter,6,4,1,222,3,6,8,0,0,0.967,0,2026-08-31,29,renewed
-acc_0373,Davis Inc,Professional,28,17,0,7787,18,22,23,2,0,0.668,6,2026-10-23,99,renewed
-acc_0374,Reynolds Ltd,Starter,5,4,0,271,3,3,4,1,1,0.766,0,2026-10-04,29,downgraded
-acc_0375,"Watson, Anderson and Brown",Professional,34,28,1,2681,11,27,25,1,1,0.869,2,2026-09-03,99,renewed
-acc_0376,"Hoffman, Santiago and Jenkins",Starter,5,5,0,502,3,7,6,0,0,0.844,3,2026-10-03,29,renewed
-acc_0377,"Pugh, Henderson and Moon",Enterprise,103,94,1,64706,418,238,238,0,0,0.815,2,2026-11-21,299,renewed
-acc_0378,Schmitt PLC,Starter,6,6,0,498,3,14,14,0,0,0.742,3,2026-09-08,29,churned
-acc_0379,Bell-Lane,Enterprise,153,138,1,23083,404,317,331,0,0,0.808,2,2026-09-11,299,renewed
-acc_0380,Moore Group,Professional,22,15,0,5426,29,46,46,0,0,0.725,4,2026-11-06,99,downgraded
-acc_0381,Boone LLC,Starter,6,4,0,225,1,4,5,1,0,0.736,1,2026-11-29,29,renewed
-acc_0382,"Richardson, Farmer and Andrews",Professional,45,35,0,6114,30,54,48,1,1,0.807,0,2026-10-07,99,downgraded
-acc_0383,Bruce-Villegas,Starter,11,8,0,498,0,10,13,0,0,0.741,0,2026-11-06,29,renewed
-acc_0384,"Austin, Day and Johnson",Starter,9,7,0,357,3,11,11,3,2,0.656,2,2026-10-29,29,renewed
-acc_0385,"Gallegos, Adams and White",Enterprise,112,60,1,72758,337,206,233,3,2,0.66,14,2026-09-27,299,renewed
-acc_0386,"Farmer, Dorsey and Bell",Professional,35,32,0,6622,14,55,62,1,1,0.731,2,2026-09-16,99,renewed
-acc_0387,Kane PLC,Enterprise,150,73,1,17457,190,55,81,2,0,0.676,13,2026-10-12,299,renewed
-acc_0388,"Morales, Thomas and Schultz",Starter,11,6,0,451,3,3,5,2,2,0.331,11,2026-09-23,29,churned
-acc_0389,Davis PLC 389,Enterprise,122,104,1,30395,147,118,124,1,1,0.9,0,2026-12-02,299,renewed
-acc_0390,Bennett Group,Starter,7,5,0,470,7,6,8,2,2,0.336,10,2026-10-13,29,downgraded
-acc_0391,Moore-Collins,Professional,27,21,0,8128,34,25,27,0,0,0.829,0,2026-11-21,99,renewed
-acc_0392,Frank-Bradley,Starter,8,5,0,12,2,17,15,0,0,0.9,3,2026-09-21,29,renewed
-acc_0393,Ware and Sons,Enterprise,147,142,0,52019,105,142,137,0,0,0.801,3,2026-10-13,299,renewed
-acc_0394,Webster Inc,Starter,11,7,1,1110,5,11,15,3,3,0.642,5,2026-10-17,29,renewed
-acc_0395,"Miller, Ramos and Coleman",Professional,32,28,1,2469,23,60,55,0,0,0.815,4,2026-09-26,99,renewed
-acc_0396,"Ramos, Nelson and Fischer",Starter,8,7,0,273,1,16,13,1,1,0.851,3,2026-10-01,29,renewed
-acc_0397,Reed Inc,Professional,29,27,0,7479,30,50,57,0,0,0.966,0,2026-08-25,99,renewed
-acc_0398,Gregory-Watkins,Starter,12,3,0,1066,3,1,6,4,1,0.419,9,2026-08-08,29,churned
-acc_0399,"Estrada, Williams and Foster",Starter,8,5,0,702,3,3,7,2,1,0.575,14,2026-10-13,29,downgraded
-acc_0400,"Brown, Harris and Dougherty",Professional,25,22,0,4654,15,45,48,0,0,0.795,0,2026-10-12,99,renewed
-acc_0401,Duran LLC,Professional,42,40,0,3264,36,25,23,0,0,0.75,2,2026-10-01,99,downgraded
-acc_0402,Wilson-Jimenez,Professional,25,22,0,2364,12,30,34,1,0,0.962,1,2026-08-15,99,renewed
-acc_0403,Thompson-James,Professional,44,40,0,7477,30,31,30,1,1,0.909,3,2026-10-15,99,renewed
-acc_0404,"Hall, Hansen and Barnett",Starter,10,7,0,199,1,10,10,1,1,0.872,1,2026-08-25,29,renewed
-acc_0405,Jones-Hensley,Starter,13,6,0,739,6,8,12,2,1,0.467,13,2026-09-17,29,downgraded
-acc_0406,Graham Group,Starter,12,11,0,295,3,12,12,1,1,0.763,3,2026-10-29,29,renewed
-acc_0407,Atkins PLC,Starter,11,7,0,279,0,15,12,1,1,0.828,4,2026-09-07,29,renewed
-acc_0408,Berry-Mckinney,Starter,13,12,0,2,1,10,8,1,1,0.76,2,2026-11-08,29,renewed
-acc_0409,Roberts-Sullivan,Starter,12,8,0,370,2,5,7,1,0,0.871,4,2026-11-10,29,renewed
-acc_0410,Jackson-Meza,Professional,38,27,0,5242,12,46,48,0,0,0.9,2,2026-09-30,99,renewed
-acc_0411,Collier-Gillespie,Enterprise,112,91,1,61518,304,303,326,1,0,0.763,2,2026-11-10,299,renewed
-acc_0412,Kim Inc,Starter,10,10,0,166,2,4,6,0,0,0.747,1,2026-12-07,29,renewed
-acc_0413,Graham Group 413,Professional,23,10,0,597,8,39,57,5,3,0.44,9,2026-09-07,99,churned
-acc_0414,"Miller, Harrell and Reese",Starter,6,1,0,1421,0,4,9,4,3,0.063,22,2026-08-08,29,renewed
-acc_0415,Cook and Sons,Starter,5,2,0,1051,1,4,4,1,0,0.549,9,2026-08-04,29,downgraded
-acc_0416,Dixon Inc,Professional,25,17,0,2055,5,43,50,3,1,0.713,6,2026-09-13,99,downgraded
-acc_0417,"Hicks, Bullock and Bailey",Professional,44,21,0,6189,20,33,48,3,3,0.705,4,2026-10-30,99,downgraded
-acc_0418,"Mullen, Brewer and Hernandez",Starter,6,4,0,388,3,10,9,0,0,0.83,4,2026-11-20,29,renewed
-acc_0419,Thomas and Sons,Starter,5,3,0,118,1,9,9,1,0,0.82,3,2026-10-24,29,renewed
-acc_0420,Morrison Ltd,Enterprise,100,93,1,28941,257,324,298,0,0,0.834,0,2026-10-05,299,renewed
-acc_0421,Thompson Ltd,Enterprise,121,70,0,73649,222,128,141,3,0,0.452,8,2026-09-03,299,renewed
-acc_0422,Marshall-Elliott,Professional,35,26,0,3932,25,56,63,1,0,0.604,6,2026-08-12,99,downgraded
-acc_0423,"Cole, Glass and Cunningham",Professional,22,22,1,8615,34,13,13,0,0,0.819,2,2026-11-02,99,downgraded
-acc_0424,"Downs, Morris and Maddox",Starter,12,9,0,703,2,8,11,3,3,0.74,10,2026-11-04,29,churned
-acc_0425,Hernandez-Jones,Starter,5,1,0,1350,0,6,9,3,0,0.379,27,2026-08-09,29,downgraded
-acc_0426,Welch-Hogan,Starter,12,8,0,320,4,10,11,2,1,0.613,8,2026-10-13,29,renewed
-acc_0427,"Brown, Romero and Collins",Professional,24,22,0,7097,20,34,32,1,1,0.727,2,2026-09-28,99,renewed
-acc_0428,Johnson-Wood,Starter,6,5,0,173,1,7,7,0,0,0.725,2,2026-12-03,29,renewed
-acc_0429,Jones-Lin,Professional,32,32,0,5978,24,36,42,0,0,0.93,0,2026-10-18,99,renewed
-acc_0430,Gilbert PLC,Professional,45,33,0,5736,32,35,39,1,0,0.795,0,2026-09-12,99,renewed
-acc_0431,Ford-Spencer,Enterprise,151,105,1,23475,200,294,358,2,0,0.734,12,2026-11-09,299,renewed
-acc_0432,"Huang, Cole and Pacheco",Professional,44,39,0,2322,14,27,28,1,1,0.903,1,2026-11-28,99,renewed
-acc_0433,"Lopez, Jacobs and Mason",Professional,38,7,0,1720,9,29,51,4,1,0.065,17,2026-09-01,99,renewed
-acc_0434,Hayes LLC,Enterprise,116,98,1,36076,291,174,191,1,1,0.448,5,2026-11-09,299,renewed
-acc_0435,"Miller, Lucas and Williams",Professional,28,22,1,7411,8,53,53,0,0,0.792,4,2026-10-16,99,renewed
-acc_0436,"Kim, Gonzales and Mills",Starter,11,3,0,184,2,5,8,3,3,0.175,16,2026-08-07,29,downgraded
-acc_0437,Cox LLC,Enterprise,138,31,1,13906,136,132,183,3,0,0.446,32,2026-08-10,299,downgraded
-acc_0438,Ortiz-Morgan,Starter,6,5,0,486,2,11,13,0,0,0.898,2,2026-11-14,29,renewed
-acc_0439,"Williams, Mccoy and Cook",Starter,5,4,0,490,8,5,4,2,0,0.506,8,2026-10-27,29,renewed
-acc_0440,Davis-Gregory,Enterprise,125,106,0,83797,176,304,281,0,0,0.797,2,2026-11-03,299,renewed
-acc_0441,King-York,Enterprise,160,107,0,36532,191,174,195,2,2,0.753,13,2026-11-12,299,downgraded
-acc_0442,"Marks, Cook and Aguilar",Starter,12,8,0,188,2,16,15,0,0,0.884,1,2026-11-03,29,renewed
-acc_0443,Rangel LLC,Professional,44,33,0,6725,32,54,57,1,0,0.926,2,2026-09-01,99,renewed
-acc_0444,"Hale, Myers and Larson",Professional,32,21,0,7411,32,20,24,3,2,0.494,2,2026-08-10,99,renewed
-acc_0445,Collins Group,Starter,7,3,0,348,7,7,10,1,0,0.698,3,2026-11-05,29,renewed
-acc_0446,"Conner, Li and Santiago",Professional,45,29,0,4582,13,38,57,3,2,0.355,5,2026-11-12,99,downgraded
-acc_0447,"Osborn, Gaines and Davis",Professional,27,26,0,4639,41,18,21,0,0,0.898,3,2026-09-01,99,renewed
-acc_0448,"Henderson, Cox and Cox",Enterprise,116,87,1,25877,107,229,251,1,0,0.807,1,2026-12-13,299,renewed
-acc_0449,Bean LLC,Enterprise,119,82,1,18496,259,50,57,3,2,0.775,2,2026-09-01,299,downgraded
-acc_0450,Lee-Cooke,Professional,24,21,0,2491,12,16,17,1,0,0.753,2,2026-12-08,99,renewed
-acc_0451,Jones Inc 451,Professional,43,35,1,2096,34,23,32,3,0,0.658,12,2026-08-05,99,downgraded
-acc_0452,"Wise, Conley and Stephenson",Starter,12,8,0,574,2,7,6,0,0,0.846,3,2026-09-28,29,downgraded
-acc_0453,Stanley PLC,Enterprise,142,139,1,87868,172,283,315,0,0,0.721,4,2026-09-15,299,renewed
-acc_0454,Harper and Sons,Professional,31,14,0,713,16,19,55,2,1,0.142,9,2026-09-22,99,downgraded
-acc_0455,White Ltd,Enterprise,120,93,0,65465,103,51,77,2,2,0.637,6,2026-11-02,299,downgraded
-acc_0456,"Lamb, Martin and Kim",Enterprise,125,95,1,35742,85,139,146,1,1,0.821,3,2026-09-22,299,renewed
-acc_0457,Diaz-Ball,Starter,6,4,0,1002,4,11,14,2,1,0.487,8,2026-10-10,29,renewed
-acc_0458,Bishop-Goodwin,Starter,5,5,0,474,2,5,6,1,1,0.896,1,2026-10-13,29,renewed
-acc_0459,Young-Allen,Enterprise,115,115,1,59523,253,108,120,0,0,0.863,0,2026-08-27,299,renewed
-acc_0460,Mckee-Lee,Professional,23,18,0,2321,12,35,49,2,0,0.565,3,2026-09-06,99,renewed
-acc_0461,"Valentine, Joyce and Murray",Professional,45,26,0,1567,11,49,63,3,3,0.813,6,2026-09-23,99,renewed
-acc_0462,Strickland-Shaw,Starter,12,10,0,369,2,10,11,1,1,0.9,3,2026-09-01,29,churned
-acc_0463,Burch-Montoya,Starter,8,8,0,551,4,3,4,1,1,0.77,2,2026-10-08,29,churned
-acc_0464,"Taylor, Wright and Davidson",Starter,8,6,0,401,1,11,11,0,0,0.733,0,2026-12-01,29,renewed
-acc_0465,Spencer-Garcia,Professional,38,29,0,5920,26,13,14,1,1,0.743,9,2026-10-05,99,churned
-acc_0466,"Rosales, Mitchell and Hines",Professional,35,34,0,4488,42,49,53,0,0,0.901,0,2026-09-08,99,renewed
-acc_0467,Cole-Palmer,Starter,12,9,0,399,3,13,14,1,1,0.97,2,2026-09-10,29,renewed
-acc_0468,Davis-Lozano,Professional,45,34,0,4579,37,15,24,1,1,0.399,10,2026-09-13,99,renewed
-acc_0469,Wilkerson-Arias,Starter,11,7,0,123,2,11,12,1,0,0.866,3,2026-09-29,29,renewed
-acc_0470,Brown-Shaw,Professional,41,30,0,8315,28,73,66,0,0,0.834,3,2026-11-01,99,renewed
-acc_0471,Hughes Inc,Enterprise,155,124,1,32364,342,313,314,1,1,0.796,3,2026-11-05,299,renewed
-acc_0472,Walker-Flores,Enterprise,153,140,1,55331,203,243,267,1,0,0.742,2,2026-11-08,299,renewed
-acc_0473,Combs Ltd,Professional,33,30,0,5606,40,22,20,1,1,0.897,0,2026-08-16,99,renewed
-acc_0474,Moody-Taylor,Professional,21,18,1,6557,31,37,37,0,0,0.887,4,2026-10-05,99,renewed
-acc_0475,Lowery-Kennedy,Professional,28,13,1,872,11,22,32,6,2,0.258,21,2026-09-17,99,renewed
-acc_0476,Blake Group,Enterprise,134,85,1,56188,162,122,156,3,1,0.77,10,2026-08-26,299,downgraded
-acc_0477,Gilbert-Bullock,Professional,37,35,0,7692,18,21,22,0,0,0.799,3,2026-09-17,99,renewed
-acc_0478,Scott and Sons,Starter,5,4,0,241,1,5,5,0,0,0.929,4,2026-09-20,29,renewed
-acc_0479,"Bentley, Lynch and Henderson",Enterprise,120,119,1,76307,307,220,248,0,0,0.814,0,2026-10-06,299,downgraded
-acc_0480,Young-Martinez,Starter,11,5,0,1595,2,4,11,6,3,0.174,24,2026-09-15,29,renewed
-acc_0481,Barnes PLC,Professional,24,11,0,804,12,25,38,2,0,0.39,41,2026-09-19,99,downgraded
-acc_0482,Brown-Copeland,Professional,23,9,0,457,10,9,19,4,2,0.067,31,2026-08-29,99,churned
-acc_0483,Carlson-Smith,Professional,29,23,0,7081,13,17,15,1,1,0.721,4,2026-10-07,99,renewed
-acc_0484,"Andrews, Higgins and Carter",Starter,7,5,0,471,2,9,10,0,0,0.918,3,2026-11-25,29,renewed
-acc_0485,Mendez and Sons,Professional,34,28,0,7915,27,36,33,1,1,0.904,4,2026-10-25,99,downgraded
-acc_0486,"Butler, Beck and Miller",Enterprise,132,96,1,83787,114,365,346,1,1,0.767,0,2026-11-29,299,renewed
-acc_0487,Jones-Fox,Enterprise,155,112,1,33913,177,233,219,1,0,0.726,4,2026-08-26,299,downgraded
-acc_0488,"Hartman, Romero and Smith",Starter,11,8,0,333,0,8,8,1,0,0.767,0,2026-09-24,29,downgraded
-acc_0489,Williams-Hughes,Enterprise,138,136,1,55569,182,126,116,1,1,0.851,0,2026-10-13,299,renewed
-acc_0490,King-Smith,Starter,6,4,0,128,2,3,4,1,1,0.799,3,2026-10-18,29,downgraded
-acc_0491,Cooper Ltd,Enterprise,158,148,1,22066,246,201,180,1,1,0.841,4,2026-08-22,299,renewed
-acc_0492,"Fuller, Ingram and Moss",Professional,26,21,0,3039,36,34,36,3,3,0.468,10,2026-09-06,99,downgraded
-acc_0493,Anderson-Bell,Professional,36,29,1,5945,17,27,29,3,0,0.544,6,2026-09-02,99,renewed
-acc_0494,Li-Thompson,Enterprise,141,101,1,22282,255,215,223,1,0,0.722,1,2026-10-04,299,renewed
-acc_0495,"Marshall, Dominguez and Welch",Professional,34,26,0,8047,9,10,13,2,1,0.458,11,2026-08-21,99,renewed
-acc_0496,Brown Group,Enterprise,114,21,0,26683,134,89,244,2,0,0.312,20,2026-08-30,299,renewed
-acc_0497,Carter Inc,Starter,8,1,0,1681,0,2,4,4,0,0.361,15,2026-09-24,29,churned
-acc_0498,Blackwell LLC,Starter,7,5,0,531,1,11,13,3,1,0.792,5,2026-08-23,29,renewed
-acc_0499,Robertson-Hays,Starter,12,2,0,1312,3,7,13,4,1,0.376,11,2026-08-27,29,churned
-acc_0500,"Kennedy, Johnson and Lucas",Professional,28,26,1,4287,27,15,14,0,0,0.822,2,2026-09-12,99,renewed
-acc_0501,Kelly-Norman,Starter,6,4,0,24,2,5,6,1,1,0.874,2,2026-10-14,29,renewed
-acc_0502,"Rivera, Martinez and Richardson",Starter,12,8,0,592,2,8,7,0,0,0.752,0,2026-12-06,29,renewed
-acc_0503,Paul-Kline,Starter,11,7,0,57,1,10,11,1,0,0.865,2,2026-11-02,29,renewed
-acc_0504,Morgan-Lopez,Starter,11,9,0,695,5,3,4,1,0,0.673,12,2026-10-04,29,renewed
-acc_0505,"Jimenez, Glass and Stone",Starter,7,7,0,363,2,5,5,1,1,0.829,4,2026-09-01,29,renewed
-acc_0506,Acosta Inc,Starter,13,10,0,316,1,15,14,1,1,0.877,2,2026-10-29,29,renewed
-acc_0507,Morrison-Short,Starter,8,6,0,206,2,14,12,0,0,0.924,2,2026-11-11,29,renewed
-acc_0508,"Carter, Garcia and Murphy",Professional,25,19,0,7408,21,34,33,0,0,0.731,1,2026-09-13,99,renewed
-acc_0509,Parker-Morrison,Starter,11,8,0,6,3,11,9,1,1,0.814,0,2026-08-29,29,downgraded
-acc_0510,Jackson-Wallace,Starter,8,5,1,536,1,6,9,3,2,0.702,7,2026-08-21,29,downgraded
-acc_0511,Williams-Berg,Starter,6,5,0,312,3,11,14,1,1,0.839,2,2026-11-25,29,renewed
-acc_0512,Mendez-Graham,Enterprise,112,32,1,27163,97,44,128,3,3,0.14,35,2026-08-16,299,renewed
-acc_0513,"Whitney, Gould and Jones",Starter,13,13,0,214,4,14,14,0,0,0.909,3,2026-10-03,29,renewed
-acc_0514,"Sullivan, Palmer and Brady",Professional,36,36,0,8507,27,39,41,1,1,0.843,4,2026-09-12,99,renewed
-acc_0515,Cisneros and Sons,Professional,31,26,0,3086,25,37,39,1,1,0.742,3,2026-08-20,99,renewed
-acc_0516,"Gregory, Kim and Martinez",Professional,28,26,0,5115,10,37,38,1,1,0.789,0,2026-11-30,99,renewed
-acc_0517,Osborne LLC,Professional,21,19,1,3497,15,22,26,1,1,0.806,2,2026-10-31,99,renewed
-acc_0518,Reyes-Bradley,Enterprise,152,94,1,35944,277,162,188,3,3,0.57,11,2026-09-28,299,renewed
-acc_0519,"Hernandez, Cole and Watson",Enterprise,130,37,0,30351,94,117,171,4,4,0.413,37,2026-08-16,299,downgraded
-acc_0520,Hines-Berry,Enterprise,155,119,1,70695,168,327,340,1,1,0.85,2,2026-10-08,299,renewed
-acc_0521,"Richardson, Edwards and Ramirez",Starter,5,2,0,676,1,8,9,3,0,0.639,14,2026-09-16,29,downgraded
-acc_0522,Johnson and Sons,Starter,9,6,0,566,1,4,5,1,1,0.766,4,2026-09-09,29,downgraded
-acc_0523,Holmes-Mcintyre,Enterprise,133,95,1,78740,129,293,323,0,0,0.827,1,2026-10-07,299,renewed
-acc_0524,Green LLC,Starter,12,3,0,635,2,6,6,5,3,0.338,40,2026-07-23,29,renewed
-acc_0525,"Griffin, Davies and Mitchell",Starter,12,8,0,80,3,6,7,3,0,0.71,6,2026-09-12,29,renewed
-acc_0526,Gonzalez-Taylor,Professional,25,24,0,8211,25,65,63,0,0,0.768,4,2026-08-20,99,renewed
-acc_0527,Hayes Ltd,Enterprise,146,118,1,49144,345,209,204,1,1,0.918,0,2026-08-28,299,renewed
-acc_0528,Osborn-Cochran,Professional,22,22,0,7123,23,22,25,0,0,0.943,3,2026-08-29,99,renewed
-acc_0529,Contreras-Mckinney,Starter,8,6,0,571,1,7,11,1,1,0.753,4,2026-08-21,29,renewed
-acc_0530,"Daniels, Vance and York",Professional,34,29,0,6915,13,50,60,0,0,0.952,4,2026-08-21,99,renewed
-acc_0531,"Mckinney, Graves and Thompson",Enterprise,103,87,1,59627,65,92,107,2,2,0.722,5,2026-08-24,299,downgraded
-acc_0532,Hicks-Martinez,Starter,6,3,0,342,0,4,7,2,1,0.019,40,2026-08-16,29,downgraded
-acc_0533,Conner and Sons,Enterprise,111,79,1,42871,195,166,173,0,0,0.821,3,2026-11-27,299,renewed
-acc_0534,Johnson-Spencer,Professional,23,18,0,2825,15,41,38,0,0,0.804,3,2026-11-04,99,renewed
-acc_0535,Mcdonald-Bird,Professional,38,20,0,2798,8,9,16,2,2,0.182,45,2026-08-07,99,downgraded
-acc_0536,Salazar Inc,Professional,26,14,0,5654,15,11,15,3,0,0.5,13,2026-11-01,99,renewed
-acc_0537,Parker Ltd,Starter,9,6,0,339,1,4,4,0,0,0.809,1,2026-11-10,29,renewed
-acc_0538,"Mendoza, Jenkins and Ortiz",Starter,12,2,1,106,3,3,6,3,2,0.279,17,2026-08-14,29,downgraded
-acc_0539,"Jones, Compton and Day",Enterprise,110,31,0,9139,50,38,95,6,3,0.11,26,2026-08-17,299,churned
-acc_0540,Owens-Holmes,Professional,33,31,0,5060,30,41,37,0,0,0.761,3,2026-12-02,99,downgraded
-acc_0541,Humphrey PLC,Enterprise,129,111,1,46759,226,337,338,1,1,0.878,0,2026-10-14,299,downgraded
-acc_0542,"Matthews, Saunders and Anderson",Enterprise,160,140,0,46627,393,266,246,0,0,0.727,4,2026-12-10,299,downgraded
-acc_0543,"Bartlett, Brown and Martinez",Enterprise,122,119,1,63908,346,196,185,1,0,0.816,0,2026-09-15,299,renewed
-acc_0544,Torres and Sons,Starter,7,4,0,301,4,10,14,3,2,0.507,11,2026-07-31,29,churned
-acc_0545,Donovan-Perez,Starter,13,7,0,339,6,12,15,3,1,0.748,6,2026-10-02,29,renewed
-acc_0546,"Jacobson, Singleton and King",Professional,22,16,0,7326,26,36,38,1,1,0.81,1,2026-10-04,99,renewed
-acc_0547,"Huber, Hill and Weber",Starter,13,12,0,441,3,3,5,0,0,0.764,2,2026-10-16,29,downgraded
-acc_0548,"Ferguson, Shaw and Jackson",Enterprise,151,120,1,81550,154,159,150,0,0,0.826,4,2026-09-21,299,downgraded
-acc_0549,"Moore, Hopkins and Le",Starter,6,4,0,7,0,6,7,0,0,0.893,0,2026-11-24,29,churned
-acc_0550,"Morgan, Bradshaw and Williams",Professional,33,10,0,3771,7,28,43,4,1,0.52,23,2026-07-30,99,renewed
-acc_0551,Miller Ltd 551,Enterprise,108,52,0,65833,224,170,260,1,0,0.417,13,2026-09-25,299,downgraded
-acc_0552,"Baker, Clark and Armstrong",Professional,30,21,0,7964,26,21,24,1,1,0.972,2,2026-10-16,99,renewed
-acc_0553,"Fowler, Jimenez and Burton",Professional,23,22,0,3487,19,43,42,0,0,0.757,4,2026-11-24,99,downgraded
-acc_0554,May-Turner,Enterprise,107,49,1,11383,120,217,294,2,1,0.173,13,2026-07-26,299,downgraded
-acc_0555,Ballard Ltd,Enterprise,160,43,0,35111,119,109,167,2,0,0.359,39,2026-08-20,299,renewed
-acc_0556,Evans-Jones,Professional,43,32,0,6691,27,32,36,1,1,0.806,8,2026-09-01,99,downgraded
-acc_0557,Moore Group 557,Starter,10,8,0,389,3,8,7,1,1,0.87,0,2026-10-22,29,downgraded
-acc_0558,Marshall-Peterson,Starter,8,5,0,551,1,17,14,0,0,0.942,2,2026-10-17,29,renewed
-acc_0559,Edwards Ltd,Starter,13,9,0,587,1,14,15,1,0,0.844,1,2026-10-02,29,downgraded
-acc_0560,Gross-Valencia,Enterprise,155,122,1,70008,326,178,170,0,0,0.798,1,2026-10-08,299,renewed
-acc_0561,Anderson-Wood,Enterprise,159,88,1,45209,253,250,325,3,3,0.441,7,2026-10-28,299,renewed
-acc_0562,"Rodriguez, Allen and Martinez",Professional,26,21,1,2260,29,40,42,0,0,0.909,4,2026-10-08,99,renewed
-acc_0563,Wright-Davis,Starter,13,11,1,152,2,9,11,0,0,0.883,3,2026-09-14,29,renewed
-acc_0564,Dougherty-Lin,Starter,6,5,0,782,8,10,15,2,1,0.416,12,2026-07-31,29,churned
-acc_0565,Wright-Grimes,Starter,12,10,0,96,2,11,12,1,0,0.927,1,2026-11-12,29,renewed
-acc_0566,Li PLC,Professional,42,30,0,7595,19,54,62,1,1,0.924,4,2026-11-30,99,renewed
-acc_0567,"Edwards, Hines and Jimenez",Professional,23,13,0,6040,30,40,60,2,2,0.302,9,2026-08-04,99,churned
-acc_0568,"Owens, Koch and Jimenez",Starter,9,8,0,175,3,2,4,0,0,0.83,0,2026-10-20,29,renewed
-acc_0569,Landry PLC,Starter,10,8,0,45,2,11,11,0,0,0.782,1,2026-09-11,29,renewed
-acc_0570,Levy-Lewis,Professional,37,30,0,6488,15,20,20,0,0,0.762,3,2026-10-08,99,renewed
-acc_0571,Williams-Campbell,Starter,8,7,0,523,2,10,8,0,0,0.877,3,2026-10-09,29,renewed
-acc_0572,"Khan, Pena and Ruiz",Enterprise,104,84,1,45946,266,300,327,0,0,0.807,2,2026-08-16,299,downgraded
-acc_0573,"Smith, Rodriguez and Anderson",Enterprise,119,116,1,45027,131,129,118,1,1,0.869,2,2026-09-05,299,renewed
-acc_0574,Luna-Gallagher,Professional,39,34,0,3041,23,61,55,0,0,0.722,4,2026-10-02,99,renewed
-acc_0575,Williams-Williams,Starter,11,6,0,898,2,6,9,6,4,0.514,37,2026-09-15,29,downgraded
-acc_0576,"Lee, Tran and Jones",Professional,33,17,0,651,7,22,52,2,2,0.035,23,2026-07-30,99,churned
-acc_0577,"Cole, Pierce and Bryan",Starter,13,7,0,1019,0,5,4,2,1,0.307,42,2026-08-16,29,renewed
-acc_0578,"Becker, Wilson and Hester",Professional,41,20,0,7993,22,50,59,3,2,0.683,14,2026-08-21,99,downgraded
-acc_0579,Brooks-Hatfield,Enterprise,107,87,1,38484,348,300,271,1,0,0.86,0,2026-09-21,299,renewed
-acc_0580,"Mcmillan, Fischer and Gonzalez",Starter,13,6,0,999,6,8,8,3,0,0.424,2,2026-09-10,29,renewed
-acc_0581,"Morales, Williams and Williams",Starter,12,9,0,526,1,10,10,0,0,0.954,3,2026-09-03,29,renewed
-acc_0582,"Cook, Wells and Bryant",Starter,9,6,0,449,3,8,9,1,1,0.762,2,2026-12-06,29,renewed
-acc_0583,"Barry, Taylor and Velazquez",Starter,5,3,0,490,2,8,10,0,0,0.97,2,2026-10-24,29,renewed
-acc_0584,Martin-Ewing,Professional,43,43,0,3067,39,66,61,0,0,0.969,0,2026-10-18,99,churned
-acc_0585,"Kirby, Wheeler and Romero",Professional,33,30,0,5407,18,44,39,0,0,0.918,1,2026-09-19,99,renewed
-acc_0586,"Patel, Erickson and Evans",Enterprise,151,33,0,20481,124,111,274,3,2,0.08,45,2026-08-08,299,churned
-acc_0587,Richardson Ltd,Starter,5,4,0,313,1,4,4,0,0,0.902,1,2026-10-15,29,downgraded
-acc_0588,Whitney PLC,Starter,11,8,0,48,1,7,9,0,0,0.767,0,2026-09-20,29,renewed
-acc_0589,Robles-Swanson,Enterprise,106,97,1,58416,96,275,306,1,0,0.944,2,2026-11-22,299,renewed
-acc_0590,"Soto, Carlson and Baker",Professional,24,18,0,8590,9,45,49,0,0,0.95,1,2026-08-24,99,renewed
-acc_0591,"Patton, Parsons and Lane",Professional,21,16,0,5833,13,57,60,1,0,0.786,4,2026-11-03,99,renewed
-acc_0592,"Williams, Castillo and Warren",Enterprise,117,92,1,85082,163,302,312,1,0,0.736,1,2026-10-22,299,renewed
-acc_0593,"Harvey, Randall and Hernandez",Enterprise,138,116,1,22237,146,264,251,0,0,0.869,4,2026-11-13,299,renewed
-acc_0594,"Allen, Armstrong and Graves",Starter,5,1,0,1309,1,4,8,3,1,0.065,25,2026-07-29,29,churned
-acc_0595,Smith LLC,Starter,10,6,0,1124,1,4,4,2,0,0.511,4,2026-09-05,29,renewed
-acc_0596,Hernandez-Vaughn,Starter,9,4,0,1194,4,7,7,3,0,0.445,13,2026-10-21,29,renewed
-acc_0597,Shaw-Carr,Professional,38,28,0,6458,32,27,40,3,0,0.365,5,2026-09-15,99,churned
-acc_0598,Salas-Fitzgerald,Professional,35,27,1,2338,26,64,64,1,1,0.762,1,2026-09-02,99,downgraded
-acc_0599,Thornton PLC,Starter,5,1,0,42,1,5,5,2,2,0.128,8,2026-08-02,29,downgraded
-acc_0600,Hoffman Ltd,Enterprise,147,122,1,55454,188,54,59,3,0,0.485,9,2026-11-11,299,downgraded
-acc_0601,Fox-Edwards,Starter,5,3,0,303,1,12,15,0,0,0.747,3,2026-08-18,29,renewed
-acc_0602,Stevens PLC,Starter,6,5,0,112,1,13,14,1,1,0.778,2,2026-09-26,29,downgraded
-acc_0603,Payne-Lowe,Enterprise,138,35,0,8227,121,92,132,6,0,0.374,27,2026-09-05,299,renewed
-acc_0604,"Becker, Lara and Baker",Starter,6,4,0,152,3,9,8,1,1,0.922,1,2026-10-11,29,renewed
-acc_0605,Lee-Wright,Professional,24,18,0,3041,17,41,48,1,0,0.92,2,2026-10-15,99,renewed
-acc_0606,"Evans, David and Hendrix",Starter,13,9,0,1008,4,12,14,2,2,0.624,5,2026-10-12,29,renewed
-acc_0607,Bush-Vaughn,Professional,20,12,1,1124,33,24,26,1,1,0.635,4,2026-09-12,99,renewed
-acc_0608,Stewart-Bailey,Enterprise,159,134,0,23539,222,199,290,1,1,0.394,13,2026-10-27,299,renewed
-acc_0609,"Hill, Martinez and Rhodes",Starter,6,5,0,161,3,8,9,0,0,0.728,2,2026-08-24,29,churned
-acc_0610,Huang-Foster,Enterprise,144,122,1,69688,228,313,295,1,1,0.835,0,2026-08-22,299,renewed
-acc_0611,Blevins-Ballard,Starter,12,9,0,528,6,3,4,2,0,0.786,10,2026-08-28,29,renewed
-acc_0612,Williams-Moses,Starter,5,1,0,1684,1,4,6,6,0,0.328,43,2026-09-20,29,downgraded
-acc_0613,Reed Group 613,Professional,26,22,0,2713,11,16,15,0,0,0.877,2,2026-09-04,99,renewed
-acc_0614,"Scott, Mendoza and Harris",Starter,5,2,0,1167,2,6,8,2,2,0.637,11,2026-08-05,29,downgraded
-acc_0615,"Nelson, Hoffman and Nelson",Enterprise,120,111,1,86274,334,190,199,1,0,0.903,0,2026-10-18,299,downgraded
-acc_0616,Gilbert PLC 616,Enterprise,102,82,0,67036,127,252,250,0,0,0.62,0,2026-11-10,299,renewed
-acc_0617,Sanchez Ltd,Professional,36,30,0,3065,21,52,45,1,1,0.796,4,2026-11-22,99,renewed
-acc_0618,"Perez, Hall and Garcia",Starter,6,1,0,1782,0,4,6,5,5,0.216,13,2026-09-01,29,churned
-acc_0619,Love-Garcia,Starter,12,10,0,262,3,7,9,0,0,0.918,3,2026-10-16,29,churned
-acc_0620,Smith PLC 620,Enterprise,139,120,1,67025,202,131,121,0,0,0.852,2,2026-11-24,299,renewed
-acc_0621,Russell Group 621,Enterprise,154,114,1,79694,144,219,203,1,0,0.894,2,2026-10-22,299,renewed
-acc_0622,Santos-Avila,Professional,30,22,1,8776,17,40,37,0,0,0.846,3,2026-08-19,99,renewed
-acc_0623,Morris-Brewer,Enterprise,124,92,1,45858,349,311,345,0,0,0.832,3,2026-12-04,299,churned
-acc_0624,Pearson and Sons,Professional,32,24,1,6900,16,19,23,0,0,0.947,4,2026-11-29,99,downgraded
-acc_0625,"Rodgers, Jefferson and Johnson",Enterprise,126,120,1,67462,258,228,207,1,0,0.762,3,2026-08-16,299,renewed
-acc_0626,Butler and Sons,Enterprise,152,129,1,81169,89,367,351,1,1,0.963,3,2026-11-09,299,renewed
-acc_0627,Osborn Group,Professional,40,37,0,3642,12,65,65,0,0,0.975,3,2026-09-28,99,downgraded
-acc_0628,Lopez-Curry,Starter,9,4,1,933,5,10,9,2,0,0.574,7,2026-09-22,29,renewed
-acc_0629,Mcdowell-Smith,Professional,25,24,0,7777,22,34,39,1,1,0.899,3,2026-11-26,99,renewed
-acc_0630,"Morrison, Hebert and Rogers",Starter,13,9,0,515,2,5,5,1,0,0.871,0,2026-09-12,29,renewed
-acc_0631,Hays-Daniels,Professional,34,30,0,6456,37,20,19,0,0,0.924,3,2026-09-12,99,renewed
-acc_0632,Small-Anderson,Starter,11,5,1,314,0,8,10,3,1,0.632,10,2026-09-10,29,downgraded
-acc_0633,"Mcdonald, Lee and Rodriguez",Professional,21,21,0,5032,43,36,37,0,0,0.964,3,2026-10-20,99,downgraded
-acc_0634,Simon Ltd,Starter,9,5,0,417,6,4,5,2,2,0.339,2,2026-10-18,29,renewed
-acc_0635,Higgins-Smith,Starter,7,4,1,733,4,4,5,1,0,0.478,12,2026-08-23,29,renewed
-acc_0636,Gibbs-Bradley,Starter,7,5,0,1186,0,8,8,2,0,0.764,3,2026-08-14,29,downgraded
-acc_0637,Thompson Ltd 637,Starter,8,4,0,1629,0,5,11,5,0,0.01,12,2026-08-18,29,downgraded
-acc_0638,Wilcox-Robertson,Starter,7,7,1,32,3,5,6,1,0,0.75,2,2026-10-30,29,renewed
-acc_0639,Morales Inc,Starter,13,10,0,442,6,7,7,1,1,0.764,3,2026-09-09,29,downgraded
-acc_0640,Holden Group,Starter,10,8,0,956,6,5,8,2,0,0.613,9,2026-09-19,29,renewed
-acc_0641,Boyle-Smith,Starter,9,7,0,499,3,15,15,1,0,0.833,3,2026-09-24,29,renewed
-acc_0642,Young-Molina,Professional,34,26,0,8523,33,37,35,1,0,0.786,3,2026-08-18,99,downgraded
-acc_0643,Turner-Sharp,Enterprise,123,97,1,30072,304,160,180,1,1,0.803,0,2026-10-26,299,renewed
-acc_0644,Green LLC 644,Enterprise,117,88,1,64653,245,156,163,1,0,0.897,3,2026-09-09,299,churned
-acc_0645,"Young, Contreras and Marshall",Professional,30,30,1,6004,23,16,19,0,0,0.794,4,2026-08-31,99,renewed
-acc_0646,Sullivan PLC,Starter,12,2,1,850,3,2,4,4,2,0.398,25,2026-08-02,29,downgraded
-acc_0647,"Carrillo, Vaughn and Fowler",Starter,6,4,0,210,7,13,15,1,1,0.412,2,2026-08-12,29,renewed
-acc_0648,Richardson-Walker,Enterprise,123,93,0,70016,393,71,100,1,1,0.665,6,2026-08-05,299,renewed
-acc_0649,Mendoza Group,Starter,7,7,0,129,2,9,10,1,0,0.803,1,2026-08-30,29,renewed
-acc_0650,"Zhang, Brooks and Miles",Starter,8,5,0,303,1,7,8,0,0,0.905,2,2026-08-24,29,downgraded
-acc_0651,Todd-Pham,Professional,23,21,1,6097,15,44,41,1,0,0.857,2,2026-09-03,99,renewed
-acc_0652,Gill Ltd,Starter,13,10,0,192,3,13,10,0,0,0.738,3,2026-11-05,29,downgraded
-acc_0653,"Marks, Miller and Griffin",Professional,20,17,1,5187,28,13,13,0,0,0.789,4,2026-09-11,99,downgraded
-acc_0654,"Cox, Stark and Rodriguez",Professional,32,29,1,3450,15,25,29,1,0,0.766,2,2026-11-10,99,churned
-acc_0655,"Leach, Harris and Herrera",Starter,13,9,0,414,1,4,4,0,0,0.822,0,2026-09-10,29,downgraded
-acc_0656,Murphy PLC,Starter,13,11,0,625,6,8,8,1,1,0.758,13,2026-09-08,29,renewed
-acc_0657,Wilson-Harris,Starter,5,3,0,78,3,5,4,1,0,0.764,0,2026-08-15,29,renewed
-acc_0658,"Burns, Nolan and Griffin",Starter,8,6,0,96,2,15,13,1,0,0.746,2,2026-09-28,29,renewed
-acc_0659,Chavez PLC,Starter,10,10,0,531,1,5,4,0,0,0.909,0,2026-11-07,29,renewed
-acc_0660,Bryant-Brown,Starter,6,4,0,386,3,17,15,1,1,0.886,2,2026-12-09,29,renewed
-acc_0661,Chambers-Parker,Enterprise,133,116,1,30115,349,188,196,1,0,0.927,4,2026-08-16,299,renewed
-acc_0662,Foster Inc,Professional,29,27,0,7478,18,27,30,0,0,0.724,0,2026-10-29,99,downgraded
-acc_0663,"Robinson, Jones and Henderson",Professional,31,26,0,5513,32,59,65,0,0,0.969,4,2026-09-18,99,downgraded
-acc_0664,"Brown, Mcknight and Michael",Professional,31,25,0,6404,31,32,30,1,0,0.83,0,2026-09-23,99,downgraded
-acc_0665,Andersen Group,Starter,7,4,0,616,2,5,6,6,1,0.214,27,2026-08-15,29,downgraded
-acc_0666,Mitchell and Sons,Enterprise,143,124,1,50226,232,250,281,1,1,0.829,3,2026-08-18,299,renewed
-acc_0667,Cannon Ltd,Starter,10,5,0,1158,4,8,8,2,2,0.769,2,2026-09-19,29,renewed
-acc_0668,"Stuart, Brooks and Vance",Professional,40,22,1,1706,14,51,65,3,1,0.522,9,2026-08-06,99,downgraded
-acc_0669,Kane-Knox,Professional,43,37,1,8107,12,57,56,1,0,0.886,1,2026-12-12,99,churned
-acc_0670,Miller-Brandt,Professional,36,18,0,1751,12,7,12,2,1,0.31,10,2026-08-06,99,renewed
-acc_0671,"Anderson, Dalton and Wilson",Starter,12,12,0,149,1,8,7,0,0,0.885,1,2026-10-19,29,renewed
-acc_0672,"Long, Anderson and Irwin",Professional,31,26,0,6804,20,49,54,1,1,0.748,3,2026-09-20,99,renewed
-acc_0673,Avila LLC,Professional,34,24,0,4541,34,50,53,1,1,0.756,3,2026-09-29,99,renewed
-acc_0674,Nunez-Stephens,Enterprise,141,110,1,69467,181,353,323,1,0,0.808,1,2026-08-23,299,renewed
-acc_0675,"Gray, Hall and Murray",Professional,36,35,0,3054,28,51,54,1,0,0.804,4,2026-08-20,99,churned
-acc_0676,Hill Ltd,Professional,44,34,0,7536,36,46,43,0,0,0.91,1,2026-12-07,99,renewed
-acc_0677,Johnson Ltd,Enterprise,104,46,0,24107,134,58,183,4,4,0.37,19,2026-09-18,299,downgraded
-acc_0678,Mendez-Mayer,Enterprise,114,94,1,50648,302,166,184,0,0,0.857,1,2026-11-08,299,downgraded
-acc_0679,Allen Inc,Starter,10,8,0,540,2,9,10,1,0,0.849,1,2026-11-02,29,renewed
-acc_0680,Wheeler Group,Enterprise,108,84,1,17576,162,195,247,3,1,0.497,11,2026-08-01,299,renewed
-acc_0681,"Powers, Brennan and Sanchez",Enterprise,118,25,0,11400,97,97,238,4,1,0.228,40,2026-07-30,299,churned
-acc_0682,Morales and Sons,Enterprise,126,76,1,67055,107,177,189,3,1,0.425,5,2026-11-03,299,renewed
-acc_0683,"Robinson, Shields and Brown",Enterprise,148,108,1,26670,179,300,343,0,0,0.828,4,2026-09-18,299,renewed
-acc_0684,"Holder, Young and Hendricks",Starter,8,5,0,26,3,8,9,1,1,0.921,1,2026-10-15,29,downgraded
-acc_0685,"Flores, Harper and Chambers",Professional,23,16,1,3487,16,31,39,1,1,0.786,5,2026-10-13,99,churned
-acc_0686,Young-Walter,Starter,5,4,0,116,2,11,12,2,2,0.432,4,2026-09-04,29,churned
-acc_0687,"Boyd, Gutierrez and Hill",Starter,6,2,0,1113,1,4,8,3,1,0.386,13,2026-08-27,29,downgraded
-acc_0688,"Fry, Hobbs and Buck",Starter,10,7,0,420,0,13,14,1,0,0.903,4,2026-09-10,29,renewed
-acc_0689,"Shelton, Peters and Williams",Enterprise,152,118,1,37516,90,314,338,0,0,0.834,3,2026-11-30,299,churned
-acc_0690,David-Powers,Starter,11,10,0,391,0,4,5,0,0,0.82,0,2026-09-07,29,renewed
-acc_0691,"Flores, Butler and Hernandez",Professional,39,28,0,7579,35,39,60,1,1,0.64,11,2026-09-11,99,renewed
-acc_0692,White-Medina,Professional,37,18,0,3936,17,39,59,5,2,0.206,42,2026-08-25,99,churned
-acc_0693,Atkinson LLC,Starter,9,4,0,1111,7,7,6,2,2,0.524,11,2026-10-16,29,renewed
-acc_0694,"Thomas, Ford and Brown",Starter,10,9,0,454,3,11,13,0,0,0.84,3,2026-09-29,29,renewed
-acc_0695,Faulkner-Grant,Enterprise,120,90,1,39028,206,81,95,1,1,0.925,2,2026-11-03,299,downgraded
-acc_0696,Price LLC 696,Enterprise,128,98,1,45556,166,52,74,2,1,0.396,13,2026-08-01,299,renewed
-acc_0697,Rivera Inc,Enterprise,128,99,1,37640,227,182,175,1,1,0.805,2,2026-10-08,299,renewed
-acc_0698,Boone-Davis,Starter,10,10,0,301,4,11,9,1,1,0.882,1,2026-12-12,29,downgraded
-acc_0699,"Calderon, Williams and Bennett",Professional,36,34,0,8403,33,29,32,0,0,0.818,4,2026-11-20,99,renewed
-acc_0700,"Morrison, Russo and Lopez",Starter,13,12,0,124,2,8,7,0,0,0.94,4,2026-10-21,29,renewed
-acc_0701,"Ramsey, Hansen and Mendoza",Starter,10,8,0,118,2,6,7,1,0,0.9,3,2026-09-29,29,renewed
-acc_0702,Turner-Stout,Starter,7,7,0,417,1,7,7,1,0,0.895,1,2026-09-24,29,downgraded
-acc_0703,Giles Ltd,Starter,7,6,0,123,0,10,11,1,1,0.829,4,2026-12-04,29,churned
-acc_0704,Burgess Group,Starter,11,8,0,823,3,6,6,3,1,0.693,5,2026-08-14,29,renewed
-acc_0705,Dominguez Ltd,Enterprise,147,127,1,82104,381,114,110,1,0,0.884,3,2026-09-01,299,renewed
-acc_0706,Sanders and Sons,Professional,38,27,0,5708,17,38,44,1,0,0.559,9,2026-11-05,99,downgraded
-acc_0707,"Morris, Campbell and Owens",Starter,11,9,0,326,1,12,12,0,0,0.917,1,2026-10-20,29,renewed
-acc_0708,"Howard, Green and Hunt",Enterprise,128,106,1,41039,346,130,139,0,0,0.959,4,2026-09-19,299,downgraded
-acc_0709,Owens-Lang,Starter,13,10,1,13,7,4,4,2,2,0.605,2,2026-09-04,29,renewed
-acc_0710,"Harrison, Franco and Rocha",Professional,42,23,0,4133,17,52,65,2,0,0.51,4,2026-10-23,99,downgraded
-acc_0711,Edwards-Williams,Starter,10,9,0,525,2,14,15,1,1,0.895,0,2026-08-27,29,renewed
-acc_0712,Figueroa Inc,Professional,40,38,0,3103,9,60,54,0,0,0.818,1,2026-09-03,99,renewed
-acc_0713,Tran-Silva,Starter,8,5,0,502,2,14,14,0,0,0.865,1,2026-11-11,29,renewed
-acc_0714,"Butler, Hernandez and Rivera",Starter,9,5,0,993,6,9,11,2,0,0.606,12,2026-09-13,29,renewed
-acc_0715,Hudson-Sanchez,Starter,8,8,0,475,1,9,8,1,0,0.969,0,2026-08-31,29,renewed
-acc_0716,"Pena, Cohen and Scott",Professional,28,21,1,7169,12,31,38,2,1,0.572,10,2026-10-24,99,renewed
-acc_0717,Levy-May,Starter,10,7,0,419,1,3,4,0,0,0.778,1,2026-11-01,29,renewed
-acc_0718,Murray-Oconnor,Professional,30,26,0,5849,32,65,63,0,0,0.89,4,2026-09-09,99,renewed
-acc_0719,Jackson-Cortez,Enterprise,121,113,0,70400,165,213,203,0,0,0.844,0,2026-10-04,299,renewed
-acc_0720,White-Preston,Starter,9,6,0,386,3,13,14,1,1,0.89,1,2026-08-24,29,renewed
-acc_0721,"Bernard, Warren and Combs",Professional,24,12,0,6746,26,40,59,2,1,0.382,11,2026-09-22,99,downgraded
-acc_0722,Landry Ltd,Starter,11,9,0,227,2,9,8,1,0,0.971,4,2026-12-09,29,renewed
-acc_0723,Duran Group,Professional,37,37,0,3678,13,64,58,0,0,0.974,3,2026-10-15,99,renewed
-acc_0724,Kirby and Sons,Professional,35,34,1,3132,18,17,17,0,0,0.88,3,2026-10-17,99,renewed
-acc_0725,Mann Inc,Starter,5,4,0,575,2,9,9,1,0,0.927,4,2026-09-14,29,renewed
-acc_0726,Wagner LLC,Professional,42,31,1,7195,18,61,58,0,0,0.762,0,2026-12-04,99,renewed
-acc_0727,Williamson Ltd,Starter,13,12,0,303,2,11,12,1,0,0.751,2,2026-12-06,29,renewed
-acc_0728,"Durham, Hopkins and Smith",Professional,31,30,0,5315,30,26,25,0,0,0.775,2,2026-11-14,99,renewed
-acc_0729,"Arnold, Smith and Moreno",Starter,8,6,1,550,2,6,5,0,0,0.839,0,2026-09-04,29,downgraded
-acc_0730,Nichols-Mitchell,Professional,33,14,0,1732,12,7,12,6,2,0.337,24,2026-08-17,99,churned
-acc_0731,"Li, Craig and Drake",Starter,13,10,0,784,5,6,8,3,1,0.439,14,2026-11-10,29,renewed
-acc_0732,Rodriguez Inc,Professional,22,12,0,942,4,6,12,2,2,0.385,28,2026-09-17,99,downgraded
-acc_0733,"Hernandez, Lee and Fox",Professional,32,30,0,7735,21,29,27,0,0,0.802,0,2026-11-29,99,renewed
-acc_0734,Adams-Sanders,Starter,13,12,0,182,3,16,15,1,0,0.727,2,2026-10-08,29,renewed
-acc_0735,Chung-Stevens,Professional,20,6,0,2351,8,26,36,4,4,0.082,27,2026-08-24,99,downgraded
-acc_0736,Branch and Sons,Starter,9,8,1,585,2,14,14,1,0,0.934,3,2026-10-14,29,renewed
-acc_0737,Sutton-Abbott,Professional,24,19,0,3068,33,29,35,0,0,0.829,0,2026-11-13,99,downgraded
-acc_0738,"Frey, Santos and Johnson",Starter,10,9,0,173,3,8,7,1,1,0.955,4,2026-10-05,29,renewed
-acc_0739,Gray-Tran,Professional,22,17,0,4018,20,54,60,1,1,0.772,4,2026-11-18,99,renewed
-acc_0740,Walsh Ltd,Enterprise,144,108,1,52558,243,115,115,0,0,0.75,0,2026-09-24,299,renewed
-acc_0741,Miller Group,Enterprise,156,120,1,29775,384,148,166,3,2,0.686,5,2026-09-07,299,downgraded
-acc_0742,"Mueller, Knight and Hodge",Professional,28,23,0,4146,13,28,32,0,0,0.901,2,2026-10-28,99,renewed
-acc_0743,Jacobson Inc,Professional,38,33,1,5953,13,60,55,1,0,0.978,3,2026-09-27,99,renewed
-acc_0744,Lewis Ltd,Professional,26,19,1,7683,14,15,17,1,0,0.617,12,2026-08-16,99,renewed
-acc_0745,"Alvarez, Williams and Jones",Starter,10,7,0,486,1,3,4,0,0,0.807,0,2026-09-04,29,renewed
-acc_0746,Lam-Elliott,Starter,11,10,0,258,3,12,11,1,0,0.908,4,2026-10-05,29,renewed
-acc_0747,White LLC,Enterprise,117,57,0,3993,82,200,314,6,1,0.305,27,2026-08-17,299,renewed
-acc_0748,Ali PLC,Professional,29,22,0,5227,31,66,62,0,0,0.763,0,2026-09-22,99,renewed
-acc_0749,Goodwin Ltd,Starter,10,1,0,705,1,6,15,5,0,0.044,43,2026-09-21,29,churned
-acc_0750,Hickman-Evans,Enterprise,159,84,1,31016,165,91,104,3,0,0.519,12,2026-10-14,299,renewed
-acc_0751,"Allen, Davenport and Price",Starter,7,5,0,348,1,12,13,1,1,0.85,0,2026-09-13,29,downgraded
-acc_0752,"Rivera, Campos and Taylor",Starter,7,6,0,492,1,8,9,0,0,0.729,3,2026-11-10,29,renewed
-acc_0753,"Ramsey, Mason and Mccann",Starter,5,2,0,1176,2,10,15,2,2,0.613,12,2026-09-30,29,downgraded
-acc_0754,Davis and Sons 754,Professional,39,35,0,7354,25,33,39,1,1,0.905,4,2026-09-06,99,renewed
-acc_0755,Peterson PLC,Professional,42,39,0,5598,17,20,21,1,1,0.88,3,2026-09-20,99,churned
-acc_0756,"Sanders, Ayala and Johnson",Enterprise,118,85,1,33796,236,210,244,1,0,0.813,0,2026-11-04,299,churned
-acc_0757,Bowers-Hayes,Starter,6,3,0,1010,5,7,10,2,1,0.581,6,2026-10-26,29,downgraded
-acc_0758,Kelly Group,Enterprise,120,44,1,24205,17,233,323,5,1,0.398,14,2026-08-02,299,renewed
-acc_0759,Lopez-Willis,Professional,40,39,0,7723,40,24,23,0,0,0.833,0,2026-11-01,99,renewed
-acc_0760,Miller-Montgomery,Enterprise,159,141,1,67464,176,262,246,0,0,0.768,4,2026-11-09,299,renewed
-acc_0761,Marquez Inc,Starter,10,7,0,18,1,13,14,0,0,0.904,1,2026-11-14,29,renewed
-acc_0762,Moore-Dawson,Professional,20,16,0,4486,17,46,46,1,1,0.836,3,2026-11-12,99,downgraded
-acc_0763,"Moore, Price and Ward",Starter,13,11,0,542,1,15,13,1,0,0.816,2,2026-10-13,29,churned
-acc_0764,Smith LLC 764,Professional,44,35,0,5438,24,37,39,0,0,0.781,4,2026-12-01,99,downgraded
-acc_0765,Ward-Nelson,Starter,11,11,0,222,2,6,8,1,0,0.829,4,2026-09-30,29,renewed
-acc_0766,Miller Group 766,Professional,32,18,0,4587,30,43,52,1,1,0.595,9,2026-09-19,99,renewed
-acc_0767,Hawkins-Hunt,Professional,38,37,1,4960,24,23,23,0,0,0.769,0,2026-11-02,99,renewed
-acc_0768,Johnson LLC,Starter,12,8,0,23,3,3,4,0,0,0.913,3,2026-10-01,29,renewed
-acc_0769,"Davis, George and Nguyen",Starter,5,3,0,470,2,7,7,1,1,0.784,4,2026-09-06,29,renewed
-acc_0770,Smith-Gutierrez,Professional,27,26,0,2660,34,35,33,1,0,0.915,3,2026-11-23,99,renewed
-acc_0771,Hardy PLC,Starter,5,3,0,122,3,10,13,3,3,0.423,8,2026-09-14,29,downgraded
-acc_0772,Armstrong and Sons,Enterprise,148,123,0,60861,279,91,118,2,0,0.703,7,2026-09-11,299,downgraded
-acc_0773,"James, Taylor and Turner",Starter,12,9,0,350,2,9,9,1,0,0.797,3,2026-09-17,29,renewed
-acc_0774,Thomas-Jackson,Professional,38,23,0,3223,25,19,30,3,1,0.601,11,2026-09-28,99,renewed
-acc_0775,Fisher-Washington,Professional,32,27,0,2384,27,20,20,0,0,0.775,2,2026-09-30,99,renewed
-acc_0776,Ward and Sons,Professional,40,11,0,2254,10,26,51,5,0,0.23,32,2026-09-22,99,churned
-acc_0777,"Weber, Wheeler and Gonzalez",Enterprise,109,95,1,70098,278,253,230,1,0,0.751,1,2026-10-26,299,renewed
-acc_0778,Taylor Inc,Enterprise,123,101,1,50246,73,293,323,1,0,0.8,10,2026-10-08,299,renewed
-acc_0779,Cook-Oliver,Enterprise,115,98,1,34057,329,72,83,0,0,0.963,1,2026-08-20,299,renewed
-acc_0780,Alexander-Jordan,Starter,7,7,0,212,2,17,15,1,0,0.779,4,2026-10-22,29,renewed
-acc_0781,"Mccann, Taylor and Flores",Starter,8,3,0,440,4,6,11,3,3,0.551,6,2026-10-12,29,downgraded
-acc_0782,"Harris, Edwards and Oconnell",Enterprise,148,100,1,26174,352,121,154,2,0,0.571,6,2026-08-21,299,renewed
-acc_0783,Carter-Neal,Professional,28,28,0,6331,28,30,28,1,1,0.749,1,2026-12-07,99,renewed
-acc_0784,Faulkner-Casey,Professional,34,29,1,5754,28,35,39,0,0,0.767,0,2026-10-18,99,renewed
-acc_0785,Bennett-Velasquez,Professional,30,23,0,4815,13,52,51,0,0,0.765,1,2026-10-14,99,renewed
-acc_0786,Diaz-Frederick,Professional,29,18,0,3419,9,20,28,2,1,0.449,13,2026-09-07,99,downgraded
-acc_0787,Vargas PLC,Starter,7,6,0,19,3,9,10,0,0,0.933,1,2026-11-29,29,renewed
-acc_0788,Maldonado PLC,Starter,13,9,0,218,6,10,12,2,0,0.331,4,2026-09-29,29,renewed
-acc_0789,Benton Group,Professional,42,22,0,4149,6,45,61,2,2,0.338,11,2026-09-04,99,downgraded
-acc_0790,"Clark, Salinas and Guerra",Starter,11,2,0,1207,3,4,6,6,6,0.131,20,2026-08-23,29,downgraded
-acc_0791,Fuentes Group,Professional,44,23,1,6069,30,51,64,2,0,0.71,7,2026-08-26,99,downgraded
-acc_0792,"Porter, Schultz and Allen",Professional,39,39,0,3125,43,54,55,1,0,0.887,3,2026-08-21,99,renewed
-acc_0793,"Moore, Henderson and Bennett",Starter,13,4,0,1007,2,6,13,2,0,0.124,29,2026-08-03,29,renewed
-acc_0794,Ewing-Mendoza,Professional,34,33,0,3459,32,72,66,1,0,0.739,3,2026-12-06,99,renewed
-acc_0795,Ferguson-Mclean,Professional,44,34,0,3910,36,36,53,2,2,0.423,11,2026-07-31,99,churned
-acc_0796,"Barnes, Johnson and Schmitt",Starter,8,7,0,590,3,14,14,0,0,0.76,1,2026-08-27,29,churned
-acc_0797,"Woodard, Herrera and Little",Professional,30,8,0,1086,11,29,46,3,2,0.152,25,2026-09-06,99,churned
-acc_0798,Rodriguez and Sons,Enterprise,154,74,0,4712,48,86,247,3,0,0.193,20,2026-08-07,299,churned
-acc_0799,"Ortega, Jackson and Salazar",Starter,12,6,0,648,1,2,5,2,0,0.263,21,2026-09-22,29,downgraded
-acc_0800,"Terrell, Byrd and Ross",Starter,10,9,0,66,3,8,10,0,0,0.833,2,2026-11-05,29,renewed
+customer_id,company_name,customer_contact,contact_email,current_plan,seats_purchased,seats_active,advanced_analytics_used,api_calls_used,storage_used_gb,login_frequency_30d,login_frequency_60d,support_tickets_open,support_tickets_resolved,support_sentiment_score,payment_delay_days,contract_renewal_date,monthly_revenue,actual_outcome
+acc_0001,ABC Company,Sarah Jenkins,sarah.jenkins@abccompany.com,Enterprise,100,38,0,16800,142,18,52,3,1,0.22,18,2026-08-03,299,churned
+acc_0002,"Rodriguez, Figueroa and Sanchez",Brian Yang,brian.yang@example.com,Professional,43,38,1,4984,11,23,26,0,0,0.728,1,2026-09-09,99,renewed
+acc_0003,"Miller, Henderson and Johnson",Jonathan Johnson,jonathan.johnson@example.com,Professional,45,34,1,4445,28,29,29,0,0,0.76,2,2026-08-27,99,renewed
+acc_0004,Baldwin Ltd,Connie Lawrence,connie.lawrence@example.com,Starter,11,7,0,370,2,10,11,0,0,0.87,0,2026-09-21,29,renewed
+acc_0005,Blake and Sons,Gina Moore,gina.moore@example.com,Enterprise,123,44,1,12290,45,136,287,6,1,0.412,12,2026-08-23,299,churned
+acc_0006,Garcia-James,Gregory Baker,gregory.baker@example.com,Starter,5,1,0,1648,3,6,12,2,2,0.219,25,2026-09-01,29,churned
+acc_0007,Blair PLC,Thomas Miller,thomas.miller@example.com,Professional,37,14,0,1970,13,11,21,3,2,0.337,31,2026-09-24,99,churned
+acc_0008,Calderon-Montgomery,Laura Bush,laura.bush@example.com,Starter,11,11,0,541,4,14,14,0,0,0.785,4,2026-12-06,29,renewed
+acc_0009,Stanley LLC,Dr. Sharon James,dr..sharon.james@example.com,Starter,9,5,1,217,3,5,10,3,2,0.666,6,2026-08-18,29,renewed
+acc_0010,Reid-Diaz,Daniel Adams,daniel.adams@example.com,Starter,6,2,0,1703,3,3,4,2,2,0.435,23,2026-08-02,29,churned
+acc_0011,"Wong, Lynch and Jackson",Carla Gray,carla.gray@example.com,Professional,37,28,0,7958,15,63,61,0,0,0.83,1,2026-11-08,99,renewed
+acc_0012,"Watts, Robinson and Nguyen",Amy Underwood,amy.underwood@example.com,Starter,13,10,1,7,2,4,7,0,0,0.738,0,2026-12-03,29,renewed
+acc_0013,Morales-Jones,Latoya Robbins,latoya.robbins@example.com,Professional,38,36,0,7378,25,44,46,0,0,0.93,1,2026-10-09,99,renewed
+acc_0014,Rios Group,Maria Thomas,maria.thomas@example.com,Starter,11,6,0,1764,1,6,14,3,0,0.048,20,2026-09-15,29,churned
+acc_0015,Wright PLC,Nicole Patterson,nicole.patterson@example.com,Professional,21,11,0,4079,17,22,63,3,0,0.408,23,2026-09-22,99,churned
+acc_0016,"Ross, Robinson and Bright",Ann Williams,ann.williams@example.com,Starter,12,10,0,569,2,9,10,0,0,0.892,3,2026-09-11,29,renewed
+acc_0017,Hernandez and Sons,Jennifer Brown,jennifer.brown@example.com,Professional,36,27,0,5551,9,14,15,0,0,0.941,0,2026-08-30,99,renewed
+acc_0018,Carlson-Mcdonald,Juan Dunlap,juan.dunlap@example.com,Professional,36,30,0,3548,36,14,17,1,0,0.906,1,2026-11-08,99,renewed
+acc_0019,"Le, Maldonado and Herrera",Martin Rodriguez,martin.rodriguez@example.com,Professional,23,5,0,2272,9,8,12,2,2,0.138,30,2026-08-28,99,churned
+acc_0020,Moore-Smith,Michelle Stanton,michelle.stanton@example.com,Enterprise,119,99,1,66419,101,269,325,3,2,0.511,3,2026-09-02,299,renewed
+acc_0021,Romero Inc,Elizabeth Fowler,elizabeth.fowler@example.com,Starter,5,3,0,283,2,8,8,0,0,0.731,2,2026-11-17,29,renewed
+acc_0022,"Gonzalez, Brooks and Martin",Tammy Sellers,tammy.sellers@example.com,Professional,31,31,0,5036,29,51,56,0,0,0.731,2,2026-11-10,99,renewed
+acc_0023,"Nguyen, Smith and Hickman",Sandra Parker,sandra.parker@example.com,Starter,8,4,0,362,7,11,10,1,0,0.77,2,2026-11-07,29,renewed
+acc_0024,Allen PLC,Angelica Tucker,angelica.tucker@example.com,Enterprise,124,24,0,10740,150,126,191,4,2,0.439,37,2026-08-21,299,churned
+acc_0025,Spence PLC,Betty Alvarez,betty.alvarez@example.com,Professional,40,36,0,8675,21,17,16,0,0,0.859,0,2026-10-28,99,renewed
+acc_0026,"Martin, Rose and Obrien",Tanya Campos,tanya.campos@example.com,Starter,13,9,0,590,1,16,15,1,1,0.769,0,2026-12-11,29,renewed
+acc_0027,"Harris, Collins and Carney",Jessica Holmes,jessica.holmes@example.com,Professional,41,17,0,2887,11,15,24,6,4,0.135,27,2026-09-13,99,downgraded
+acc_0028,Wright Inc,Kevin Hall,kevin.hall@example.com,Professional,25,22,0,7702,21,50,54,1,0,0.799,1,2026-10-10,99,renewed
+acc_0029,Smith Ltd,Crystal Whitehead,crystal.whitehead@example.com,Starter,13,13,0,240,2,15,15,0,0,0.895,1,2026-08-20,29,renewed
+acc_0030,Jones-Young,Cindy Anderson,cindy.anderson@example.com,Professional,42,19,0,1251,9,14,38,2,1,0.289,8,2026-08-14,99,renewed
+acc_0031,"Johnston, Sanchez and Kennedy",Brandon Hopkins,brandon.hopkins@example.com,Professional,34,34,1,5888,29,65,66,1,0,0.802,3,2026-11-18,99,renewed
+acc_0032,Henderson-Owens,Megan Joyce,megan.joyce@example.com,Professional,40,26,0,1561,12,27,29,2,1,0.52,6,2026-10-07,99,downgraded
+acc_0033,Brown Ltd,Scott Wright,scott.wright@example.com,Starter,13,12,0,211,2,4,7,0,0,0.937,3,2026-08-15,29,renewed
+acc_0034,Herrera and Sons,Donald Wright,donald.wright@example.com,Starter,8,8,0,446,1,11,10,1,0,0.846,3,2026-09-05,29,renewed
+acc_0035,Ramos PLC,Matthew Fernandez,matthew.fernandez@example.com,Enterprise,105,59,0,33166,100,139,256,5,3,0.08,24,2026-09-19,299,downgraded
+acc_0036,Novak and Sons,John Lewis,john.lewis@example.com,Professional,35,25,0,2543,29,68,65,0,0,0.967,1,2026-08-18,99,renewed
+acc_0037,Barrera-Martin,James House,james.house@example.com,Starter,8,8,0,377,3,5,6,0,0,0.764,4,2026-08-28,29,renewed
+acc_0038,Mitchell-Horton,Rachel Stanley,rachel.stanley@example.com,Enterprise,104,92,1,63397,308,270,247,0,0,0.746,2,2026-10-22,299,renewed
+acc_0039,Moore-Phillips,Lauren Daniels,lauren.daniels@example.com,Starter,10,10,0,445,3,11,10,1,0,0.766,4,2026-10-09,29,renewed
+acc_0040,"Edwards, Williams and Woods",Kim Brown,kim.brown@example.com,Professional,44,38,0,6610,26,15,17,1,1,0.807,3,2026-09-11,99,renewed
+acc_0041,"Miller, Lopez and Larson",Cynthia Wilson,cynthia.wilson@example.com,Starter,8,5,0,416,1,8,8,1,0,0.847,1,2026-11-24,29,churned
+acc_0042,"Sanchez, Wheeler and Harvey",Kevin Mills,kevin.mills@example.com,Starter,13,11,0,563,2,13,14,1,0,0.806,3,2026-09-13,29,downgraded
+acc_0043,Harris-Moran,James Powers,james.powers@example.com,Starter,12,10,0,537,3,14,15,0,0,0.875,0,2026-09-30,29,downgraded
+acc_0044,Bryant-Hickman,Alexandra Howell,alexandra.howell@example.com,Starter,7,7,0,502,4,4,4,1,0,0.747,0,2026-10-10,29,renewed
+acc_0045,"Ferrell, Jones and Lewis",Timothy Ibarra,timothy.ibarra@example.com,Enterprise,104,92,1,25538,288,124,113,1,1,0.759,4,2026-08-30,299,renewed
+acc_0046,Wood and Sons,Joshua Turner,joshua.turner@example.com,Starter,9,7,0,123,3,10,12,1,1,0.656,13,2026-10-18,29,renewed
+acc_0047,"Rice, Contreras and Spencer",Ashley Humphrey,ashley.humphrey@example.com,Professional,42,39,0,2415,24,13,16,1,1,0.795,2,2026-09-13,99,renewed
+acc_0048,Wilson-Rodriguez,Denise Jacobs,denise.jacobs@example.com,Professional,40,23,0,6993,31,20,24,2,0,0.43,4,2026-11-02,99,renewed
+acc_0049,"Cooper, Watts and Farrell",Danielle Odonnell,danielle.odonnell@example.com,Enterprise,132,129,0,27309,271,206,210,1,0,0.61,3,2026-08-26,299,renewed
+acc_0050,Davis Group,Amanda Cook,amanda.cook@example.com,Professional,28,14,0,3249,1,9,13,4,3,0.287,36,2026-09-16,99,downgraded
+acc_0051,Walsh LLC,Jeremy Thornton,jeremy.thornton@example.com,Professional,25,23,1,5470,22,30,33,0,0,0.892,3,2026-09-24,99,renewed
+acc_0052,"Smith, Jones and Ware",Kimberly Davenport,kimberly.davenport@example.com,Starter,11,5,0,740,1,4,4,3,0,0.662,9,2026-11-04,29,downgraded
+acc_0053,"Tran, Jordan and Williams",Timothy Stanton,timothy.stanton@example.com,Starter,8,6,1,14,1,14,15,0,0,0.864,0,2026-08-30,29,renewed
+acc_0054,Nolan and Sons,Mary Gomez,mary.gomez@example.com,Starter,12,3,0,296,1,6,15,3,3,0.169,40,2026-09-14,29,churned
+acc_0055,"Henson, Russell and Oliver",Timothy Hancock,timothy.hancock@example.com,Professional,41,36,0,5147,36,49,58,1,0,0.846,2,2026-12-04,99,downgraded
+acc_0056,Keith Inc,Tim Patton,tim.patton@example.com,Professional,35,31,0,6580,21,55,61,1,1,0.933,1,2026-10-18,99,renewed
+acc_0057,Pham-Shields,Debra Cobb,debra.cobb@example.com,Starter,7,6,0,158,3,5,5,1,0,0.739,2,2026-08-25,29,renewed
+acc_0058,Reyes Inc,Courtney Velasquez,courtney.velasquez@example.com,Enterprise,131,57,0,5381,17,103,217,3,3,0.278,26,2026-08-04,299,renewed
+acc_0059,Bailey-Hoover,Courtney Keller,courtney.keller@example.com,Professional,45,32,1,4673,16,29,31,1,1,0.758,4,2026-09-06,99,downgraded
+acc_0060,Murphy-Lin,Diana May,diana.may@example.com,Enterprise,116,84,1,10603,137,254,353,3,2,0.638,6,2026-08-08,299,renewed
+acc_0061,Frazier-Anthony,Alexander Wiley,alexander.wiley@example.com,Starter,9,5,0,989,7,9,10,3,1,0.445,8,2026-10-11,29,renewed
+acc_0062,White-Estes,Brian Hamilton,brian.hamilton@example.com,Professional,41,41,0,2523,36,39,37,1,1,0.878,3,2026-11-25,99,renewed
+acc_0063,"Hartman, Graham and Joyce",Steven Lee,steven.lee@example.com,Professional,24,12,0,5685,31,51,58,1,0,0.53,9,2026-10-31,99,downgraded
+acc_0064,Fletcher Inc,Renee Mcdaniel,renee.mcdaniel@example.com,Enterprise,123,121,1,39986,276,150,157,1,0,0.763,3,2026-08-29,299,renewed
+acc_0065,"Mclaughlin, Gonzalez and Reynolds",Tammie Hanson,tammie.hanson@example.com,Starter,13,8,0,808,1,11,14,1,0,0.306,10,2026-09-15,29,downgraded
+acc_0066,"Charles, Cortez and Evans",Jason Powell,jason.powell@example.com,Professional,20,17,1,5423,18,30,35,2,0,0.672,12,2026-09-06,99,renewed
+acc_0067,Spencer-Lee,Jamie Adkins,jamie.adkins@example.com,Starter,13,10,0,379,1,8,11,1,1,0.894,4,2026-11-06,29,downgraded
+acc_0068,Gilbert LLC,Roy Torres,roy.torres@example.com,Professional,34,27,1,2855,32,16,14,1,1,0.898,4,2026-09-19,99,downgraded
+acc_0069,Jordan PLC,Erica Ramos,erica.ramos@example.com,Starter,5,1,0,498,2,6,14,3,3,0.435,44,2026-08-18,29,churned
+acc_0070,"Lewis, Kennedy and Santana",Carolyn Miller,carolyn.miller@example.com,Enterprise,109,86,0,74701,235,379,360,0,0,0.629,0,2026-11-24,299,renewed
+acc_0071,"Beck, Harvey and Davis",Cynthia Collins,cynthia.collins@example.com,Professional,43,31,0,7334,21,19,20,1,1,0.853,0,2026-08-20,99,renewed
+acc_0072,Hernandez Inc,John Atkinson,john.atkinson@example.com,Enterprise,125,87,1,41499,267,50,70,1,0,0.682,3,2026-10-15,299,downgraded
+acc_0073,Gibson Ltd,Michelle Cruz,michelle.cruz@example.com,Starter,13,8,0,881,3,12,15,1,1,0.442,13,2026-09-23,29,downgraded
+acc_0074,Sanchez-Douglas,Paul Carrillo,paul.carrillo@example.com,Starter,10,9,0,156,2,11,10,0,0,0.899,3,2026-08-25,29,downgraded
+acc_0075,Osborne and Sons,Tyler Holmes,tyler.holmes@example.com,Starter,13,8,0,841,5,9,12,2,0,0.549,12,2026-08-05,29,renewed
+acc_0076,Grant Inc,Robert Contreras,robert.contreras@example.com,Professional,23,21,0,4625,36,24,25,0,0,0.918,4,2026-11-21,99,renewed
+acc_0077,"Larson, Dodson and Vance",Michelle Wagner,michelle.wagner@example.com,Professional,25,16,0,3240,25,37,54,1,1,0.443,2,2026-10-10,99,renewed
+acc_0078,"Griffin, Moore and Hensley",Paul Larsen,paul.larsen@example.com,Starter,11,8,0,757,3,6,5,3,3,0.531,7,2026-08-05,29,downgraded
+acc_0079,Cannon-Boyd,Denise Jones,denise.jones@example.com,Professional,34,30,0,7182,17,36,40,0,0,0.75,3,2026-11-09,99,renewed
+acc_0080,Young-Rogers,Angela Hernandez,angela.hernandez@example.com,Professional,26,20,1,4110,30,44,50,1,1,0.751,3,2026-10-02,99,renewed
+acc_0081,Benson-Mccarthy,Jason Daniels,jason.daniels@example.com,Starter,5,4,0,79,0,8,9,1,0,0.944,4,2026-11-04,29,renewed
+acc_0082,Brown-Wall,Randy Shah,randy.shah@example.com,Starter,10,7,0,108,2,12,13,1,1,0.783,4,2026-12-04,29,renewed
+acc_0083,Gates PLC,Aaron Bell,aaron.bell@example.com,Starter,8,7,0,151,1,11,12,1,1,0.781,1,2026-10-31,29,downgraded
+acc_0084,Castaneda-Ashley,Paul Payne,paul.payne@example.com,Professional,44,40,0,8299,23,58,52,1,0,0.867,4,2026-10-10,99,downgraded
+acc_0085,"Hurst, Freeman and Nelson",Mr. Michael Yates,mr..michael.yates@example.com,Starter,12,11,0,377,1,3,4,0,0,0.936,0,2026-10-28,29,renewed
+acc_0086,"Martin, Mcdonald and Anderson",Alyssa Long,alyssa.long@example.com,Professional,39,22,0,4035,11,32,63,2,0,0.198,29,2026-08-14,99,churned
+acc_0087,"Alvarado, Miller and Patterson",Catherine Green,catherine.green@example.com,Professional,29,11,0,1619,7,26,51,2,1,0.263,29,2026-09-10,99,downgraded
+acc_0088,Lewis-Murphy,Jamie Walton,jamie.walton@example.com,Professional,24,16,0,5756,14,19,21,3,3,0.678,4,2026-09-07,99,renewed
+acc_0089,King-Miller,Joshua Cooke,joshua.cooke@example.com,Professional,41,37,0,6625,12,51,56,1,0,0.852,0,2026-09-11,99,renewed
+acc_0090,Walker-Jones,Amanda Johnson,amanda.johnson@example.com,Professional,23,16,0,7984,27,22,21,1,1,0.881,4,2026-09-07,99,renewed
+acc_0091,Gonzalez Inc,Cynthia Wells,cynthia.wells@example.com,Professional,43,27,0,5426,33,26,40,2,2,0.616,14,2026-10-06,99,churned
+acc_0092,Elliott and Sons,David Wood,david.wood@example.com,Enterprise,128,90,0,59994,296,141,154,1,1,0.611,8,2026-11-09,299,renewed
+acc_0093,"Lawson, Adkins and Wilson",Traci Rodriguez,traci.rodriguez@example.com,Enterprise,154,143,1,40814,377,240,245,1,1,0.918,2,2026-10-09,299,downgraded
+acc_0094,Hickman PLC,Tina Sanders,tina.sanders@example.com,Enterprise,123,74,1,15243,161,62,68,1,0,0.494,7,2026-11-08,299,downgraded
+acc_0095,"Gonzalez, Vargas and Rivas",Michael Turner,michael.turner@example.com,Starter,5,1,0,441,0,4,6,6,2,0.367,43,2026-08-06,29,renewed
+acc_0096,"Burke, Martinez and Riggs",Hannah Patterson,hannah.patterson@example.com,Starter,6,5,0,16,2,14,14,0,0,0.884,4,2026-10-08,29,churned
+acc_0097,Jones-Holland,Jason Henry,jason.henry@example.com,Starter,6,6,0,519,2,11,14,1,1,0.864,3,2026-10-03,29,renewed
+acc_0098,Yu-Reid,Michelle Graham,michelle.graham@example.com,Starter,6,6,0,340,3,9,9,1,1,0.755,2,2026-11-22,29,renewed
+acc_0099,"Boyd, Santos and Gilbert",Patricia Marshall,patricia.marshall@example.com,Enterprise,129,94,1,24891,164,110,124,1,0,0.772,0,2026-10-04,299,renewed
+acc_0100,"Vargas, Morris and Sanchez",Diana Hayes,diana.hayes@example.com,Professional,21,21,0,4003,33,24,24,1,0,0.928,3,2026-09-27,99,renewed
+acc_0101,Hudson-Barnett,Johnny Nguyen,johnny.nguyen@example.com,Professional,33,24,1,8767,20,49,45,1,1,0.767,2,2026-09-25,99,renewed
+acc_0102,Lewis-Salinas,Spencer Haynes,spencer.haynes@example.com,Starter,10,8,0,562,8,11,15,1,1,0.669,14,2026-10-23,29,renewed
+acc_0103,Peters-Black,David Russell,david.russell@example.com,Starter,12,5,0,483,1,2,4,2,1,0.727,7,2026-10-10,29,churned
+acc_0104,"Chang, Vaughn and Brewer",Ricky Davis II,ricky.davis.ii@example.com,Starter,13,11,0,285,2,12,11,0,0,0.785,0,2026-10-20,29,renewed
+acc_0105,"Sanchez, Beck and Wood",Hailey Barajas,hailey.barajas@example.com,Professional,42,37,0,3095,15,36,40,1,1,0.739,1,2026-11-10,99,renewed
+acc_0106,"Rivera, Warner and Nelson",Bryan Lee,bryan.lee@example.com,Enterprise,154,83,0,69580,256,290,336,2,0,0.668,14,2026-08-27,299,downgraded
+acc_0107,Newton Ltd,Daniel Washington,daniel.washington@example.com,Starter,12,12,0,88,1,4,4,1,0,0.737,3,2026-10-06,29,renewed
+acc_0108,"Lawrence, Wolf and Carlson",Dr. Elizabeth Ward,dr..elizabeth.ward@example.com,Starter,7,2,0,264,2,6,11,2,0,0.27,11,2026-08-30,29,churned
+acc_0109,Smith-Ferguson,William Tran,william.tran@example.com,Starter,9,5,0,1128,4,11,12,2,0,0.515,12,2026-10-06,29,downgraded
+acc_0110,"Raymond, Little and Mullins",Adam Mitchell,adam.mitchell@example.com,Professional,39,28,0,5086,32,19,22,1,1,0.747,2,2026-10-20,99,renewed
+acc_0111,Alexander-Lopez,Todd Woods,todd.woods@example.com,Starter,13,11,0,309,2,14,13,1,0,0.846,3,2026-11-11,29,downgraded
+acc_0112,Morales Inc,Melissa Hernandez,melissa.hernandez@example.com,Starter,10,9,0,133,4,10,13,0,0,0.918,4,2026-10-13,29,downgraded
+acc_0113,"Avery, Miller and Wright",Jennifer Carlson,jennifer.carlson@example.com,Starter,7,6,0,320,3,10,10,1,0,0.769,1,2026-12-05,29,renewed
+acc_0114,"Perez, Mills and Hayes",Scott Branch,scott.branch@example.com,Starter,5,2,0,1726,1,3,7,4,0,0.288,38,2026-08-05,29,churned
+acc_0115,Carroll-Brown,Annette Farmer,annette.farmer@example.com,Enterprise,135,76,1,28542,154,211,242,3,1,0.562,9,2026-11-12,299,renewed
+acc_0116,"Clark, Guerrero and Moore",Benjamin Smith,benjamin.smith@example.com,Professional,37,31,0,3513,31,41,37,0,0,0.852,4,2026-09-01,99,renewed
+acc_0117,Norris-Harrison,Dwayne Campbell,dwayne.campbell@example.com,Enterprise,120,96,0,62689,193,282,318,1,0,0.819,4,2026-10-26,299,renewed
+acc_0118,Jones-Hall,Rick Lawrence,rick.lawrence@example.com,Enterprise,146,145,1,53322,108,277,268,0,0,0.971,4,2026-10-15,299,downgraded
+acc_0119,Coleman PLC,Chase Baker,chase.baker@example.com,Professional,38,29,0,1137,9,20,21,2,0,0.532,4,2026-08-25,99,renewed
+acc_0120,Jones and Sons,Linda Holloway,linda.holloway@example.com,Professional,36,9,0,4192,10,42,59,4,3,0.29,32,2026-09-04,99,downgraded
+acc_0121,Gonzales-Harrison,James Nelson,james.nelson@example.com,Professional,26,7,0,1464,5,39,63,4,3,0.494,27,2026-09-23,99,downgraded
+acc_0122,"Snyder, Miller and Williams",Frank Wright,frank.wright@example.com,Starter,13,5,0,808,3,4,8,4,4,0.44,17,2026-08-02,29,downgraded
+acc_0123,Perez Ltd,Laura Sampson,laura.sampson@example.com,Starter,13,11,0,600,1,8,7,0,0,0.782,0,2026-08-27,29,renewed
+acc_0124,"Underwood, Johnston and Hines",Joseph Ramos,joseph.ramos@example.com,Professional,25,24,0,8012,32,15,12,1,0,0.844,1,2026-11-05,99,downgraded
+acc_0125,White-Richards,Katherine Davis,katherine.davis@example.com,Professional,25,18,0,2274,33,43,59,2,2,0.686,8,2026-11-02,99,renewed
+acc_0126,Ortiz-Morris,Christopher Jenkins,christopher.jenkins@example.com,Enterprise,121,39,0,25317,84,105,345,6,3,0.231,16,2026-08-16,299,downgraded
+acc_0127,Roberts-Landry,Krista Gibson,krista.gibson@example.com,Starter,9,5,0,830,1,11,15,2,2,0.747,10,2026-09-19,29,renewed
+acc_0128,King-Wilson,Sharon Bryan,sharon.bryan@example.com,Starter,12,10,0,309,3,5,7,0,0,0.871,4,2026-09-30,29,renewed
+acc_0129,Sandoval PLC,Anthony Stone,anthony.stone@example.com,Starter,9,6,0,302,2,10,10,0,0,0.816,1,2026-09-03,29,renewed
+acc_0130,"Avila, Garrett and Wolf",Joshua Pennington,joshua.pennington@example.com,Enterprise,152,122,1,66902,300,309,296,1,0,0.875,0,2026-12-10,299,renewed
+acc_0131,Gilmore-Washington,Mark Lloyd,mark.lloyd@example.com,Starter,13,12,0,210,1,13,13,0,0,0.906,3,2026-08-22,29,renewed
+acc_0132,"Moore, Pierce and Tran",Willie Durham,willie.durham@example.com,Professional,20,17,0,2219,16,36,41,0,0,0.777,0,2026-11-12,99,downgraded
+acc_0133,Valentine-Holland,Timothy Carter,timothy.carter@example.com,Enterprise,149,34,0,37045,135,96,296,4,1,0.284,34,2026-09-09,299,churned
+acc_0134,"Hill, Davenport and Baird",Juan Reyes,juan.reyes@example.com,Professional,37,23,1,6276,20,44,53,1,0,0.494,2,2026-09-27,99,renewed
+acc_0135,"Romero, Suarez and Shields",Richard Perry,richard.perry@example.com,Professional,26,19,1,6557,8,29,27,0,0,0.88,0,2026-08-27,99,renewed
+acc_0136,"Adams, Smith and Barber",Lauren Keller,lauren.keller@example.com,Starter,8,4,0,115,5,7,7,1,0,0.459,6,2026-10-11,29,renewed
+acc_0137,Griffin Group,Juan Daniels,juan.daniels@example.com,Professional,33,27,0,5874,16,22,21,1,0,0.874,1,2026-09-28,99,renewed
+acc_0138,Cantu-Kane,Mrs. Janet Chase,mrs..janet.chase@example.com,Professional,25,20,0,7157,23,28,38,1,0,0.426,13,2026-08-06,99,downgraded
+acc_0139,Williams-Garner,Roberta Hughes,roberta.hughes@example.com,Enterprise,105,104,1,46491,259,158,179,0,0,0.859,1,2026-11-09,299,renewed
+acc_0140,"Sparks, Pearson and Hernandez",Beth Sanford,beth.sanford@example.com,Starter,12,9,0,340,3,15,13,0,0,0.799,0,2026-08-30,29,renewed
+acc_0141,Kane-Sawyer,Joseph Bryant,joseph.bryant@example.com,Professional,37,16,0,1784,13,34,57,4,2,0.315,30,2026-09-24,99,downgraded
+acc_0142,"Thomas, Pitts and Booker",Richard Baker,richard.baker@example.com,Enterprise,126,62,1,24216,213,193,218,3,0,0.461,6,2026-09-05,299,downgraded
+acc_0143,"Schwartz, Santos and Christian",Shannon James,shannon.james@example.com,Starter,10,9,0,500,3,12,11,1,1,0.971,3,2026-11-24,29,renewed
+acc_0144,Sims-Clay,Joshua Williamson II,joshua.williamson.ii@example.com,Starter,13,9,0,76,3,13,12,0,0,0.966,0,2026-11-30,29,renewed
+acc_0145,"Mccall, Bright and Francis",Brett Schultz,brett.schultz@example.com,Starter,12,11,0,544,0,9,11,0,0,0.863,0,2026-09-20,29,churned
+acc_0146,Wallace Ltd,Allen Nguyen,allen.nguyen@example.com,Enterprise,109,67,1,43824,104,129,146,2,2,0.742,6,2026-09-15,299,renewed
+acc_0147,Carter LLC,David Jenkins,david.jenkins@example.com,Professional,40,38,0,2817,35,33,31,1,1,0.819,4,2026-08-16,99,renewed
+acc_0148,"Sparks, Jackson and Miller",Lisa Allen,lisa.allen@example.com,Starter,6,3,0,470,3,6,9,5,3,0.173,44,2026-08-01,29,downgraded
+acc_0149,"Thomas, Murray and King",Adam Ballard,adam.ballard@example.com,Starter,8,6,0,407,2,8,6,0,0,0.962,2,2026-11-29,29,renewed
+acc_0150,Byrd-Moore,Gregory Matthews,gregory.matthews@example.com,Professional,43,31,0,8630,22,55,59,0,0,0.734,3,2026-10-31,99,renewed
+acc_0151,"Hayden, Vaughn and Bryant",Zachary Castaneda,zachary.castaneda@example.com,Enterprise,128,123,1,58500,175,75,70,1,1,0.818,1,2026-11-02,299,renewed
+acc_0152,Young PLC,Edward Lyons,edward.lyons@example.com,Starter,11,9,0,93,1,10,10,1,0,0.721,2,2026-09-18,29,downgraded
+acc_0153,Spence Ltd,Adam Grimes,adam.grimes@example.com,Starter,10,7,1,332,2,12,12,1,0,0.945,0,2026-11-22,29,downgraded
+acc_0154,"Beltran, Lozano and Mcgee",Stephanie Parsons,stephanie.parsons@example.com,Enterprise,110,27,0,12340,54,257,347,5,3,0.144,18,2026-08-30,299,downgraded
+acc_0155,Lawson LLC,Connor King,connor.king@example.com,Starter,12,8,0,6,1,13,14,1,0,0.967,2,2026-09-26,29,renewed
+acc_0156,"Saunders, Becker and Taylor",Mark Williams,mark.williams@example.com,Enterprise,112,83,0,71973,160,172,208,3,0,0.807,6,2026-10-11,299,renewed
+acc_0157,Johnson-Diaz,Theodore Murphy,theodore.murphy@example.com,Starter,13,10,0,563,2,8,9,0,0,0.727,3,2026-09-21,29,renewed
+acc_0158,Thompson-Anderson,Valerie Schmidt,valerie.schmidt@example.com,Starter,8,3,0,1464,2,9,14,2,1,0.266,32,2026-09-22,29,downgraded
+acc_0159,Rivas-Scott,Karen Drake,karen.drake@example.com,Professional,31,16,0,2393,17,26,38,2,2,0.361,13,2026-09-06,99,churned
+acc_0160,"Harrell, Brock and Mcdonald",Paul Perez,paul.perez@example.com,Professional,45,38,0,2850,11,54,53,0,0,0.778,4,2026-10-04,99,renewed
+acc_0161,"Ramsey, Whitney and Coffey",Holly Gibbs,holly.gibbs@example.com,Professional,22,11,0,6293,29,9,13,2,2,0.446,7,2026-10-04,99,downgraded
+acc_0162,Baker Inc,Michael Chambers,michael.chambers@example.com,Professional,42,31,1,4464,8,31,32,0,0,0.748,1,2026-09-04,99,renewed
+acc_0163,"James, Little and Watson",Kaitlyn Harvey,kaitlyn.harvey@example.com,Starter,11,10,0,202,1,14,14,1,1,0.837,3,2026-09-11,29,downgraded
+acc_0164,"Murphy, Bishop and Holland",Julie Haynes,julie.haynes@example.com,Professional,31,19,0,1826,10,13,18,3,1,0.582,9,2026-10-14,99,downgraded
+acc_0165,"Ortiz, Taylor and Shah",Johnathan Davis,johnathan.davis@example.com,Starter,9,6,0,320,2,11,11,0,0,0.751,2,2026-11-11,29,downgraded
+acc_0166,"Taylor, Chavez and Santiago",Theresa Barnes,theresa.barnes@example.com,Starter,7,5,0,591,1,7,10,2,0,0.459,7,2026-08-05,29,renewed
+acc_0167,"Barber, Mcclure and Pena",Lisa Crosby,lisa.crosby@example.com,Enterprise,131,120,1,49431,317,228,251,0,0,0.938,3,2026-08-18,299,renewed
+acc_0168,Johnson-Wood,Trevor Foley,trevor.foley@example.com,Starter,12,12,0,586,2,6,8,1,1,0.75,4,2026-11-15,29,renewed
+acc_0169,Pollard LLC,Vanessa Howard,vanessa.howard@example.com,Starter,5,4,0,89,1,16,14,0,0,0.834,0,2026-11-17,29,renewed
+acc_0170,Hill-Donaldson,Samantha Davis,samantha.davis@example.com,Starter,8,3,0,1090,4,6,6,1,0,0.518,10,2026-10-28,29,renewed
+acc_0171,May PLC,Amber Cook,amber.cook@example.com,Professional,44,20,0,4170,16,30,55,3,2,0.382,16,2026-09-02,99,renewed
+acc_0172,Buchanan and Sons,Phillip Clark,phillip.clark@example.com,Professional,32,22,0,6760,7,39,48,3,1,0.723,8,2026-10-26,99,renewed
+acc_0173,Li and Sons,Charles Lester,charles.lester@example.com,Starter,6,3,0,1300,4,3,4,2,0,0.292,30,2026-08-19,29,renewed
+acc_0174,Ramirez and Sons,Ms. Rebecca Rodriguez,ms..rebecca.rodriguez@example.com,Enterprise,136,128,1,81014,361,187,200,0,0,0.918,0,2026-08-30,299,renewed
+acc_0175,Anderson LLC,Cynthia Morris,cynthia.morris@example.com,Starter,7,7,0,280,2,10,10,1,1,0.744,2,2026-11-08,29,renewed
+acc_0176,Baker and Sons,Kelly Reese,kelly.reese@example.com,Starter,6,6,0,218,1,15,15,0,0,0.844,1,2026-08-16,29,renewed
+acc_0177,West-Cox,Jodi Walker,jodi.walker@example.com,Enterprise,105,24,1,15791,27,60,122,3,2,0.132,32,2026-07-24,299,downgraded
+acc_0178,"Williams, Logan and Camacho",Judith Maynard,judith.maynard@example.com,Starter,12,9,0,102,1,12,15,1,0,0.756,0,2026-09-24,29,renewed
+acc_0179,Lutz Group,Brian Joseph,brian.joseph@example.com,Starter,5,4,0,420,7,10,13,1,0,0.517,10,2026-09-05,29,renewed
+acc_0180,Jones-Miller,Ana Hill,ana.hill@example.com,Professional,39,20,0,8088,20,24,36,1,0,0.714,7,2026-10-10,99,renewed
+acc_0181,"Richards, Joseph and James",Elizabeth Wagner,elizabeth.wagner@example.com,Professional,20,16,0,8289,14,58,61,1,0,0.967,3,2026-11-12,99,renewed
+acc_0182,Garcia-Miles,Marilyn Mack,marilyn.mack@example.com,Professional,26,20,0,4778,23,14,17,1,0,0.885,0,2026-12-01,99,renewed
+acc_0183,"Glenn, Jordan and Beasley",Ronald Ross,ronald.ross@example.com,Starter,7,1,0,281,0,5,13,5,3,0.309,18,2026-08-25,29,churned
+acc_0184,"Davis, Simmons and Ortega",Christian Leblanc,christian.leblanc@example.com,Starter,11,7,1,538,4,5,5,3,3,0.599,11,2026-10-01,29,renewed
+acc_0185,Davis Inc,Brent Rodgers,brent.rodgers@example.com,Starter,6,4,0,2,2,8,9,0,0,0.731,0,2026-09-30,29,renewed
+acc_0186,Hawkins PLC,Kristina Santiago,kristina.santiago@example.com,Starter,11,2,0,852,1,9,12,4,4,0.483,28,2026-09-08,29,churned
+acc_0187,Gomez-Ortega,Shawna Griffith,shawna.griffith@example.com,Professional,22,22,0,7305,41,43,45,1,1,0.801,0,2026-09-09,99,renewed
+acc_0188,Burke-Bell,Christy Douglas,christy.douglas@example.com,Professional,44,27,0,4962,26,26,35,1,0,0.634,4,2026-08-02,99,renewed
+acc_0189,Boone LLC,Holly Farmer,holly.farmer@example.com,Starter,9,4,0,487,1,6,9,1,0,0.576,2,2026-08-10,29,churned
+acc_0190,"Perez, Patterson and Hoffman",Lisa Leonard,lisa.leonard@example.com,Starter,6,3,0,1679,0,4,9,6,6,0.174,45,2026-08-08,29,churned
+acc_0191,"Johnson, Hickman and Gallegos",Christopher Park,christopher.park@example.com,Starter,12,10,0,207,1,17,15,0,0,0.755,4,2026-09-05,29,renewed
+acc_0192,Dorsey-Bell,Charles Sandoval,charles.sandoval@example.com,Starter,6,4,0,311,1,6,7,0,0,0.935,4,2026-12-02,29,renewed
+acc_0193,Thomas Ltd,Anna Moreno,anna.moreno@example.com,Starter,7,5,0,463,3,10,12,0,0,0.865,4,2026-08-28,29,renewed
+acc_0194,Barnes-Peterson,Nathan Frank,nathan.frank@example.com,Starter,10,7,0,265,2,6,7,0,0,0.959,0,2026-12-08,29,renewed
+acc_0195,"Carlson, Ware and Moore",Amber Miller,amber.miller@example.com,Enterprise,103,79,0,50588,346,240,224,0,0,0.788,3,2026-10-08,299,downgraded
+acc_0196,Stanley-Tucker,Donald Fischer,donald.fischer@example.com,Starter,8,7,0,563,2,4,6,1,0,0.845,0,2026-10-07,29,downgraded
+acc_0197,Reed Inc,Michael Tucker,michael.tucker@example.com,Enterprise,150,130,0,73574,236,341,333,1,0,0.689,4,2026-09-07,299,churned
+acc_0198,"Parker, Walker and Joyce",Dan Dougherty,dan.dougherty@example.com,Professional,36,30,0,8797,31,29,29,0,0,0.973,0,2026-10-22,99,renewed
+acc_0199,Duran LLC,Adam Burgess,adam.burgess@example.com,Enterprise,124,111,0,87441,390,187,167,1,0,0.645,1,2026-08-18,299,renewed
+acc_0200,Anderson PLC,Kathryn Whitaker,kathryn.whitaker@example.com,Starter,12,12,0,502,2,8,7,0,0,0.73,0,2026-10-21,29,renewed
+acc_0201,Jones-Hensley,Albert Morse,albert.morse@example.com,Starter,10,4,0,290,0,9,9,2,2,0.725,10,2026-09-15,29,renewed
+acc_0202,Johnston-Berry,Jennifer Wilson,jennifer.wilson@example.com,Professional,33,27,1,4532,29,23,32,3,1,0.533,13,2026-08-27,99,renewed
+acc_0203,Burch and Sons,Lisa Collier,lisa.collier@example.com,Enterprise,160,159,1,47845,438,213,205,0,0,0.979,4,2026-09-24,299,renewed
+acc_0204,Davis-Richard,Kevin Warren,kevin.warren@example.com,Enterprise,115,104,1,33080,410,308,309,1,0,0.95,0,2026-09-17,299,downgraded
+acc_0205,Harrell-Reese,Richard Jones,richard.jones@example.com,Professional,43,36,0,8038,37,60,58,1,0,0.848,3,2026-11-29,99,renewed
+acc_0206,"Wilson, Hicks and Bullock",Nicholas Fuentes,nicholas.fuentes@example.com,Enterprise,102,66,1,26777,54,118,138,1,0,0.444,7,2026-08-19,299,renewed
+acc_0207,Young and Sons,Christopher Hernandez,christopher.hernandez@example.com,Professional,42,7,0,2849,8,19,50,3,3,0.267,35,2026-09-03,99,churned
+acc_0208,"Jones, Bean and Burton",Justin Riley,justin.riley@example.com,Starter,9,5,0,804,1,13,15,1,1,0.64,9,2026-09-14,29,churned
+acc_0209,"Glass, Cunningham and Reid",Sharon Burton,sharon.burton@example.com,Starter,7,5,1,167,2,8,11,2,1,0.599,3,2026-09-28,29,renewed
+acc_0210,Gonzales Group,Eric Hill,eric.hill@example.com,Professional,25,25,0,5102,11,22,23,0,0,0.788,2,2026-11-12,99,renewed
+acc_0211,Bell Inc,Jesse Brown,jesse.brown@example.com,Starter,11,11,0,548,2,12,13,0,0,0.899,3,2026-08-25,29,renewed
+acc_0212,Jones-Lin,Lisa Hunter,lisa.hunter@example.com,Enterprise,139,109,1,71974,114,322,319,0,0,0.765,1,2026-08-20,299,renewed
+acc_0213,Carpenter-Best,Amanda Stout,amanda.stout@example.com,Enterprise,158,117,1,58720,105,147,130,1,1,0.864,2,2026-11-12,299,renewed
+acc_0214,"Pearson, Morris and Alvarez",Antonio Garcia,antonio.garcia@example.com,Professional,23,17,0,2866,24,20,21,1,0,0.794,4,2026-10-03,99,renewed
+acc_0215,Haas-Miller,Amanda Zimmerman,amanda.zimmerman@example.com,Professional,42,36,0,8071,9,32,37,0,0,0.806,1,2026-12-07,99,renewed
+acc_0216,Warren-Bishop,Thomas Hughes,thomas.hughes@example.com,Starter,8,4,0,907,2,10,11,2,0,0.625,7,2026-09-21,29,renewed
+acc_0217,Shelton-Williams,Felicia Rivera,felicia.rivera@example.com,Starter,10,7,0,162,2,12,10,1,1,0.737,4,2026-12-01,29,renewed
+acc_0218,"Gregory, Mitchell and Cummings",Susan Marks,susan.marks@example.com,Professional,34,24,0,6850,34,27,24,1,1,0.791,3,2026-08-18,99,renewed
+acc_0219,Miller-Alvarado,Emily Douglas,emily.douglas@example.com,Professional,25,22,0,6746,32,47,42,0,0,0.794,3,2026-11-22,99,renewed
+acc_0220,"Myers, Larson and Hurley",James Conner,james.conner@example.com,Enterprise,155,123,1,53831,404,164,192,3,2,0.599,4,2026-10-14,299,renewed
+acc_0221,Santiago Ltd,Susan Davis DDS,susan.davis.dds@example.com,Starter,11,8,0,940,7,16,15,2,0,0.506,9,2026-10-04,29,renewed
+acc_0222,"Cox, Cox and White",Travis Tucker,travis.tucker@example.com,Starter,13,13,0,305,3,16,14,0,0,0.898,3,2026-11-04,29,renewed
+acc_0223,Cooke and Sons,Ryan Garcia,ryan.garcia@example.com,Starter,8,3,0,827,5,12,14,1,1,0.677,12,2026-10-21,29,renewed
+acc_0224,"Conley, Stephenson and Johnson",Ralph Anderson,ralph.anderson@example.com,Starter,8,3,0,455,2,5,15,4,0,0.302,38,2026-08-13,29,downgraded
+acc_0225,Moore-White,Lori Orr,lori.orr@example.com,Enterprise,135,108,1,81373,352,106,120,1,1,0.89,1,2026-12-04,299,renewed
+acc_0226,"Kim, Jenkins and Rhodes",Jeremy Mitchell,jeremy.mitchell@example.com,Professional,21,21,1,6030,32,27,30,0,0,0.881,3,2026-10-02,99,renewed
+acc_0227,"Bowers, Young and Allen",Rachel Mckee,rachel.mckee@example.com,Starter,12,3,0,1465,1,2,7,5,3,0.079,13,2026-08-14,29,churned
+acc_0228,Richardson PLC,Mrs. Diane Reyes,mrs..diane.reyes@example.com,Starter,6,4,0,439,2,6,6,1,1,0.825,3,2026-10-22,29,downgraded
+acc_0229,"Barnes, Martin and Gonzalez",Shelley Williams,shelley.williams@example.com,Starter,8,6,0,352,2,10,12,1,0,0.801,0,2026-08-23,29,renewed
+acc_0230,Sawyer-Spencer,Ryan Rosales,ryan.rosales@example.com,Starter,7,6,0,501,3,14,13,0,0,0.813,1,2026-09-13,29,renewed
+acc_0231,Miller-Martin,Jose Guerra,jose.guerra@example.com,Enterprise,141,103,1,64261,188,267,313,0,0,0.921,4,2026-08-28,299,renewed
+acc_0232,Potts and Sons,Stacey Arias,stacey.arias@example.com,Starter,7,3,0,19,5,6,10,1,0,0.526,12,2026-10-17,29,downgraded
+acc_0233,Brown-Shaw,Zachary Brooks,zachary.brooks@example.com,Starter,6,5,0,409,2,11,15,1,0,0.627,10,2026-10-28,29,renewed
+acc_0234,Flores Inc,Marie Moody,marie.moody@example.com,Starter,5,3,0,113,2,18,15,0,0,0.937,3,2026-10-19,29,downgraded
+acc_0235,Johnson Group,Brenda Thornton,brenda.thornton@example.com,Professional,34,6,0,981,2,26,41,4,2,0.097,26,2026-08-06,99,churned
+acc_0236,Gilbert-Bullock,Daniel Hernandez,daniel.hernandez@example.com,Professional,34,33,0,7038,19,59,54,0,0,0.817,2,2026-10-05,99,renewed
+acc_0237,"Lynch, Henderson and Parsons",Bryan Allen,bryan.allen@example.com,Starter,6,4,0,60,2,11,10,0,0,0.975,1,2026-10-15,29,renewed
+acc_0238,"Bauer, Bryant and Rodriguez",Linda Smith,linda.smith@example.com,Professional,43,32,0,5421,21,33,34,0,0,0.951,3,2026-11-06,99,renewed
+acc_0239,"Andrews, Higgins and Carter",Harry Duncan,harry.duncan@example.com,Professional,41,29,1,5989,21,43,48,3,2,0.66,8,2026-09-29,99,renewed
+acc_0240,Beck Inc,Heather Ashley,heather.ashley@example.com,Professional,20,19,0,5536,41,52,47,0,0,0.842,3,2026-10-16,99,renewed
+acc_0241,"Romero, Mcneil and Spencer",John Reid,john.reid@example.com,Starter,8,5,0,586,2,12,12,1,0,0.837,3,2026-10-17,29,renewed
+acc_0242,King-Smith,Haley Quinn,haley.quinn@example.com,Starter,9,7,0,467,2,8,12,0,0,0.967,2,2026-09-26,29,renewed
+acc_0243,"Garcia, Perkins and Sherman",Harold Morgan,harold.morgan@example.com,Professional,41,32,1,4543,8,58,57,1,1,0.885,2,2026-12-07,99,downgraded
+acc_0244,"Thompson, Maxwell and Marshall",Lynn Cain,lynn.cain@example.com,Starter,6,5,0,390,2,3,5,2,2,0.701,3,2026-10-19,29,renewed
+acc_0245,Baldwin Group,Dakota Moody,dakota.moody@example.com,Professional,35,16,0,1352,20,43,54,2,0,0.793,11,2026-11-06,99,renewed
+acc_0246,Stewart LLC,Virginia Daniels,virginia.daniels@example.com,Starter,10,10,0,254,2,5,6,1,0,0.791,2,2026-09-01,29,downgraded
+acc_0247,Johnson-Lucas,Scott Williams,scott.williams@example.com,Professional,42,24,0,1083,14,35,65,4,3,0.275,26,2026-08-14,99,downgraded
+acc_0248,"Rivera, Martinez and Richardson",Natalie Kline,natalie.kline@example.com,Professional,41,40,0,7135,24,30,34,1,1,0.939,2,2026-08-28,99,churned
+acc_0249,Morgan-Lopez,Holly Salinas,holly.salinas@example.com,Starter,7,3,0,604,5,6,6,1,0,0.386,10,2026-11-11,29,renewed
+acc_0250,Owen-Acosta,Lance Short,lance.short@example.com,Professional,27,20,0,6791,31,22,26,1,0,0.521,12,2026-09-17,99,renewed
+acc_0251,"Carter, Garcia and Murphy",Jeremy Robbins,jeremy.robbins@example.com,Professional,39,32,0,7608,36,12,15,2,0,0.696,12,2026-10-07,99,renewed
+acc_0252,Norris LLC,Nicholas Buck,nicholas.buck@example.com,Starter,7,3,0,244,5,6,11,2,0,0.458,8,2026-09-01,29,churned
+acc_0253,"Bolton, Hill and Whitney",Angela Walsh,angela.walsh@example.com,Professional,30,30,1,8353,11,55,57,1,0,0.88,2,2026-11-23,99,renewed
+acc_0254,Palmer-Brady,Andre Allison,andre.allison@example.com,Professional,37,18,0,1162,2,33,62,4,2,0.094,29,2026-08-19,99,renewed
+acc_0255,"Harrington, Johnson and Jones",Holly Reyes,holly.reyes@example.com,Professional,41,34,1,8169,21,62,60,0,0,0.88,4,2026-12-06,99,renewed
+acc_0256,"Johnson, Hernandez and Cole",Jeremy Jones,jeremy.jones@example.com,Enterprise,133,75,1,20897,170,158,331,2,1,0.224,39,2026-08-16,299,downgraded
+acc_0257,Moreno Group,Donald Horne,donald.horne@example.com,Starter,8,6,0,434,3,13,12,1,1,0.937,1,2026-11-10,29,downgraded
+acc_0258,Fitzgerald Group,Susan Wilson,susan.wilson@example.com,Professional,22,18,0,4890,35,12,15,1,0,0.837,3,2026-10-03,99,renewed
+acc_0259,Padilla-Lewis,Melissa Lutz,melissa.lutz@example.com,Professional,22,15,1,1769,33,51,60,3,3,0.73,6,2026-09-04,99,renewed
+acc_0260,Martinez Inc,Steven Wallace,steven.wallace@example.com,Starter,11,11,0,147,2,10,11,0,0,0.797,2,2026-08-20,29,churned
+acc_0261,Cochran LLC,Michelle Pierce,michelle.pierce@example.com,Professional,43,35,0,8177,14,33,31,0,0,0.941,1,2026-11-01,99,renewed
+acc_0262,Vance-York,Tammy Little,tammy.little@example.com,Starter,13,12,0,74,3,6,4,1,1,0.796,0,2026-11-15,29,renewed
+acc_0263,Hicks-Martinez,Charles Tyler,charles.tyler@example.com,Enterprise,157,125,1,51742,171,179,175,0,0,0.88,2,2026-09-24,299,renewed
+acc_0264,Ward PLC,Robert Arnold,robert.arnold@example.com,Starter,10,8,0,339,2,17,15,1,0,0.948,3,2026-09-23,29,renewed
+acc_0265,"Henson, Jones and Sanders",Karen Jenkins,karen.jenkins@example.com,Starter,13,7,0,156,2,7,8,3,3,0.606,2,2026-11-11,29,renewed
+acc_0266,Morrow-Jones,Maria Cole,maria.cole@example.com,Starter,13,9,0,304,5,10,12,3,1,0.554,5,2026-08-16,29,renewed
+acc_0267,"Holmes, Anderson and Calderon",Laurie Saunders,laurie.saunders@example.com,Professional,39,38,0,5593,15,52,54,0,0,0.836,1,2026-08-20,99,renewed
+acc_0268,Reynolds Inc,Kelly Torres,kelly.torres@example.com,Professional,45,37,0,8258,19,14,14,1,1,0.949,0,2026-10-20,99,renewed
+acc_0269,Morris Ltd,Travis Stone,travis.stone@example.com,Starter,10,8,0,159,6,9,13,1,0,0.617,8,2026-09-13,29,renewed
+acc_0270,Singleton-King,Krista Martinez,krista.martinez@example.com,Starter,7,3,0,575,1,4,4,1,0,0.489,4,2026-10-15,29,renewed
+acc_0271,Mendez-Davis,Leslie Carpenter,leslie.carpenter@example.com,Starter,12,9,0,420,2,14,15,0,0,0.726,0,2026-11-03,29,renewed
+acc_0272,Hopkins Ltd,Gail Bradshaw,gail.bradshaw@example.com,Enterprise,136,98,1,70046,333,132,147,0,0,0.934,0,2026-10-14,299,renewed
+acc_0273,Bryan Inc,Travis Wise,travis.wise@example.com,Starter,13,8,0,701,1,12,13,3,3,0.787,11,2026-08-28,29,renewed
+acc_0274,Curtis-Wang,Mark Jimenez,mark.jimenez@example.com,Starter,6,4,0,39,2,13,12,0,0,0.948,4,2026-11-07,29,downgraded
+acc_0275,"Gardner, May and Turner",Robert Sullivan,robert.sullivan@example.com,Professional,33,20,0,6057,30,57,61,2,1,0.58,14,2026-09-12,99,renewed
+acc_0276,Jones-Brown,John Harris,john.harris@example.com,Professional,44,28,0,1607,31,15,18,2,1,0.651,10,2026-08-23,99,churned
+acc_0277,"Thomas, Hensley and Flores",Haley Ross PhD,haley.ross.phd@example.com,Professional,42,42,0,4590,21,43,45,1,0,0.76,4,2026-10-08,99,renewed
+acc_0278,"Hoffman, Flores and Owens",David Davis,david.davis@example.com,Professional,35,8,0,2464,7,12,25,6,4,0.112,27,2026-09-11,99,downgraded
+acc_0279,Dougherty-Lin,Victor Barrera,victor.barrera@example.com,Enterprise,106,63,0,60505,197,249,283,3,3,0.736,11,2026-08-19,299,renewed
+acc_0280,Peck-Griffith,Christopher Ferrell,christopher.ferrell@example.com,Professional,22,14,0,1580,11,39,42,2,0,0.416,8,2026-10-21,99,renewed
+acc_0281,Jimenez-Parker,Tony Wagner,tony.wagner@example.com,Professional,20,12,0,7747,29,58,64,1,1,0.618,5,2026-10-16,99,downgraded
+acc_0282,Lewis LLC,Douglas Harper,douglas.harper@example.com,Starter,11,9,0,415,2,3,6,0,0,0.872,4,2026-10-24,29,renewed
+acc_0283,"Chambers, Mitchell and Smith",Cesar Baker,cesar.baker@example.com,Enterprise,129,48,0,12086,104,88,196,6,6,0.179,14,2026-08-29,299,downgraded
+acc_0284,Gallagher-Diaz,Kelly Lee,kelly.lee@example.com,Starter,12,11,0,249,2,12,12,1,1,0.917,3,2026-08-29,29,renewed
+acc_0285,"Roberts, Hughes and Cole",Samantha Hanson,samantha.hanson@example.com,Starter,10,8,0,539,5,10,15,2,0,0.404,3,2026-11-02,29,renewed
+acc_0286,"Wilson, Hester and Long",Gina Mcmillan,gina.mcmillan@example.com,Starter,7,2,0,408,1,4,9,4,3,0.103,23,2026-08-17,29,downgraded
+acc_0287,Gonzalez PLC,Andrew Williams,andrew.williams@example.com,Enterprise,142,133,1,72440,300,125,116,1,0,0.861,0,2026-09-24,299,renewed
+acc_0288,"Cook, Wells and Bryant",Kaylee Murphy,kaylee.murphy@example.com,Enterprise,132,40,0,29105,75,210,306,5,2,0.136,41,2026-07-27,299,downgraded
+acc_0289,"Flores, Long and Jensen",Linda Romero,linda.romero@example.com,Starter,5,2,0,777,5,4,5,2,0,0.544,7,2026-09-01,29,downgraded
+acc_0290,"Patel, Erickson and Evans",Isabella Nunez,isabella.nunez@example.com,Starter,8,8,0,381,3,9,9,1,0,0.815,3,2026-10-27,29,downgraded
+acc_0291,Silva-Robles,Melissa Johnson,melissa.johnson@example.com,Professional,32,26,0,8530,12,27,29,0,0,0.759,0,2026-09-01,99,renewed
+acc_0292,Baker-Rios,Laura Perez,laura.perez@example.com,Enterprise,136,100,1,67575,194,317,304,1,1,0.736,2,2026-11-18,299,renewed
+acc_0293,Silva and Sons,Michelle Hampton,michelle.hampton@example.com,Starter,10,8,0,551,2,8,8,1,0,0.765,2,2026-10-19,29,renewed
+acc_0294,Hernandez-Becker,Travis Rodriguez,travis.rodriguez@example.com,Professional,25,14,0,1615,17,14,30,5,5,0.278,44,2026-08-12,99,churned
+acc_0295,Alexander Group,Michael Jenkins,michael.jenkins@example.com,Starter,12,7,0,1066,5,12,13,1,1,0.806,8,2026-08-01,29,downgraded
+acc_0296,"Knapp, Salas and Fitzgerald",Charles Clark,charles.clark@example.com,Starter,6,4,0,484,0,14,15,1,1,0.863,0,2026-09-17,29,renewed
+acc_0297,Bolton-Mendoza,Tyler Stevens,tyler.stevens@example.com,Starter,7,2,0,349,2,2,7,4,1,0.013,30,2026-08-26,29,churned
+acc_0298,"Peterson, Gomez and Ingram",Maria Steele,maria.steele@example.com,Starter,11,5,0,1093,2,7,13,5,1,0.136,30,2026-08-03,29,churned
+acc_0299,"Washington, Bernard and Ramirez",Todd Hendrix,todd.hendrix@example.com,Starter,7,6,0,547,1,4,4,1,0,0.722,3,2026-11-21,29,renewed
+acc_0300,Bush-Vaughn,John Castro DVM,john.castro.dvm@example.com,Starter,11,10,0,399,1,6,9,1,1,0.935,1,2026-11-03,29,renewed
+acc_0301,"Hill, Martinez and Rhodes",William Cardenas,william.cardenas@example.com,Professional,37,14,0,3628,7,36,55,2,0,0.16,26,2026-09-18,99,downgraded
+acc_0302,Roberts LLC,Angela Bradshaw,angela.bradshaw@example.com,Professional,23,20,1,6920,17,15,15,0,0,0.909,1,2026-10-17,99,renewed
+acc_0303,"Scott, Mendoza and Harris",Taylor Horton,taylor.horton@example.com,Starter,10,4,0,299,6,7,9,2,2,0.424,14,2026-10-07,29,downgraded
+acc_0304,Rodriguez Ltd,Dana Santiago,dana.santiago@example.com,Starter,8,4,0,907,3,1,4,3,0,0.189,10,2026-08-04,29,downgraded
+acc_0305,"Perez, Hall and Garcia",John Maldonado,john.maldonado@example.com,Enterprise,146,107,1,58272,294,223,214,1,1,0.752,3,2026-12-06,299,downgraded
+acc_0306,Smith PLC,Brooke Delgado,brooke.delgado@example.com,Professional,28,14,0,3377,3,15,39,6,0,0.004,10,2026-09-21,99,churned
+acc_0307,Woods-Gonzalez,Erica Brewer,erica.brewer@example.com,Starter,5,2,0,315,2,6,11,1,1,0.595,14,2026-09-30,29,churned
+acc_0308,Pearson and Sons,Miranda Zuniga,miranda.zuniga@example.com,Enterprise,124,81,1,26107,261,246,279,2,0,0.417,13,2026-09-05,299,renewed
+acc_0309,Butler and Sons,Amanda Huff,amanda.huff@example.com,Professional,39,36,0,5705,14,33,32,1,0,0.837,2,2026-11-22,99,renewed
+acc_0310,Lopez-Curry,Donna Johnson,donna.johnson@example.com,Starter,6,6,0,396,4,9,9,0,0,0.769,3,2026-10-06,29,renewed
+acc_0311,Bradley-Rodriguez,Mrs. Virginia Daniels,mrs..virginia.daniels@example.com,Starter,6,5,1,32,1,4,6,1,0,0.868,3,2026-09-30,29,renewed
+acc_0312,Small-Anderson,Denise Lamb,denise.lamb@example.com,Professional,22,22,0,2600,38,58,53,1,1,0.865,3,2026-11-01,99,renewed
+acc_0313,Martin-Stevens,Cody Doyle,cody.doyle@example.com,Starter,8,8,0,538,1,8,7,0,0,0.891,4,2026-08-28,29,renewed
+acc_0314,Bradley-Todd,Scott Prince,scott.prince@example.com,Professional,25,20,1,3446,20,35,39,2,1,0.466,11,2026-09-08,99,renewed
+acc_0315,Robertson-Miller,Cathy Taylor,cathy.taylor@example.com,Enterprise,115,56,1,16052,107,135,275,4,1,0.242,24,2026-09-11,299,churned
+acc_0316,Boyle-Smith,Jeremy Adams,jeremy.adams@example.com,Starter,9,7,0,322,1,7,6,0,0,0.726,2,2026-10-12,29,renewed
+acc_0317,Turner-Sharp,Matthew Schwartz,matthew.schwartz@example.com,Starter,11,11,0,79,4,6,7,0,0,0.908,3,2026-12-08,29,renewed
+acc_0318,Contreras Group,Jared Shaw,jared.shaw@example.com,Professional,32,6,0,3895,13,16,31,5,5,0.227,35,2026-08-21,99,downgraded
+acc_0319,"Carrillo, Vaughn and Fowler",Holly Walker,holly.walker@example.com,Enterprise,120,55,0,14373,104,145,250,2,0,0.387,17,2026-09-11,299,renewed
+acc_0320,Mendoza Group,Lisa Perry,lisa.perry@example.com,Professional,24,22,0,5971,11,33,39,1,1,0.733,3,2026-10-18,99,renewed
+acc_0321,"Durham, Todd and Pham",Pamela Becker,pamela.becker@example.com,Professional,26,20,0,6333,27,19,24,2,1,0.503,3,2026-09-09,99,renewed
+acc_0322,"Marks, Miller and Griffin",Angela Elliott,angela.elliott@example.com,Professional,39,38,0,4211,10,33,35,1,1,0.977,4,2026-08-20,99,renewed
+acc_0323,Poole PLC,Joshua Martin,joshua.martin@example.com,Starter,5,2,0,302,6,12,15,1,0,0.665,6,2026-10-26,29,renewed
+acc_0324,"Ramos, Frazier and Love",Steven Griffin Jr.,steven.griffin.jr.@example.com,Starter,13,11,0,144,2,14,15,1,1,0.901,0,2026-09-05,29,downgraded
+acc_0325,Palmer Group,Kristin Chambers,kristin.chambers@example.com,Starter,11,7,1,737,5,9,11,2,0,0.663,2,2026-09-17,29,renewed
+acc_0326,Cummings-Foster,Nichole Lane,nichole.lane@example.com,Starter,6,1,0,937,0,3,9,2,2,0.247,9,2026-08-31,29,downgraded
+acc_0327,Henderson Ltd,Zachary Michael,zachary.michael@example.com,Starter,13,11,0,263,3,8,9,1,1,0.948,0,2026-09-27,29,renewed
+acc_0328,Andersen Group,Jason Mack,jason.mack@example.com,Professional,27,25,0,3208,17,53,55,1,0,0.972,4,2026-08-31,99,downgraded
+acc_0329,"Good, Brewer and Fisher",Janet Kane DVM,janet.kane.dvm@example.com,Starter,13,10,0,148,2,6,6,0,0,0.891,4,2026-10-25,29,renewed
+acc_0330,Miller-Brandt,Brandi Dalton,brandi.dalton@example.com,Professional,33,29,0,7121,18,24,21,0,0,0.934,2,2026-08-31,99,downgraded
+acc_0331,White PLC,Cameron Irwin,cameron.irwin@example.com,Professional,27,22,0,1576,7,35,48,3,0,0.628,4,2026-10-29,99,renewed
+acc_0332,Avila LLC,Nathan Coleman,nathan.coleman@example.com,Starter,5,4,1,227,3,5,6,0,0,0.913,1,2026-12-11,29,renewed
+acc_0333,Morrow-Wright,Donald Pineda,donald.pineda@example.com,Starter,5,4,0,779,6,11,11,3,3,0.702,8,2026-10-04,29,downgraded
+acc_0334,"Cannon, Johnson and Keller",Taylor Small,taylor.small@example.com,Professional,43,8,0,2312,10,19,27,3,1,0.357,11,2026-09-11,99,renewed
+acc_0335,Harris Inc,Jill Powers,jill.powers@example.com,Professional,36,27,1,6464,21,27,30,0,0,0.744,4,2026-10-28,99,renewed
+acc_0336,Sanchez Inc,David Robinson,david.robinson@example.com,Professional,42,33,0,2795,33,37,40,0,0,0.804,1,2026-11-13,99,renewed
+acc_0337,Taylor LLC,Thomas Johnston,thomas.johnston@example.com,Starter,13,12,0,174,1,12,12,0,0,0.957,4,2026-09-06,29,renewed
+acc_0338,"Harper, Chambers and Flores",Charles Keller,charles.keller@example.com,Starter,7,5,0,259,0,11,11,1,1,0.723,3,2026-12-05,29,renewed
+acc_0339,Gutierrez LLC,Travis Hobbs,travis.hobbs@example.com,Starter,8,5,0,1141,4,7,11,1,1,0.744,5,2026-08-17,29,downgraded
+acc_0340,Garrett Group,Amber Cooper,amber.cooper@example.com,Starter,6,4,0,182,1,13,13,0,0,0.762,2,2026-10-28,29,renewed
+acc_0341,"Powers, Floyd and Flores",Chase Bennett,chase.bennett@example.com,Starter,13,6,0,275,2,9,10,2,0,0.351,6,2026-09-20,29,renewed
+acc_0342,"Wells, Atkinson and Turner",Renee Melendez,renee.melendez@example.com,Professional,22,17,0,5384,30,42,58,2,1,0.631,13,2026-10-15,99,renewed
+acc_0343,"Gutierrez, Butler and Moreno",David Rivera,david.rivera@example.com,Starter,12,11,0,238,3,7,6,0,0,0.904,1,2026-10-13,29,renewed
+acc_0344,Nielsen LLC,Nathaniel Lee,nathaniel.lee@example.com,Starter,13,7,0,1311,1,6,10,4,4,0.169,26,2026-08-30,29,downgraded
+acc_0345,Bennett-Jacobs,Benjamin Ballard,benjamin.ballard@example.com,Starter,5,3,0,346,1,9,9,1,1,0.96,3,2026-09-01,29,renewed
+acc_0346,"Ramsey, Hansen and Mendoza",Felicia Krueger,felicia.krueger@example.com,Professional,43,8,0,1467,14,18,33,6,2,0.319,28,2026-08-18,99,churned
+acc_0347,Lewis and Sons,Autumn Key,autumn.key@example.com,Starter,5,2,0,1283,3,5,5,6,2,0.315,18,2026-08-15,29,downgraded
+acc_0348,Rocha-Dominguez,Jennifer Allen,jennifer.allen@example.com,Enterprise,105,81,1,33874,362,187,216,1,0,0.748,6,2026-08-21,299,downgraded
+acc_0349,Rowe-James,Heather Green,heather.green@example.com,Professional,36,19,0,7696,10,37,40,2,1,0.708,10,2026-08-17,99,renewed
+acc_0350,"Andrade, Owens and Lang",Pamela Flores,pamela.flores@example.com,Starter,11,6,0,237,3,2,6,6,0,0.002,10,2026-09-03,29,churned
+acc_0351,Wood Group,Sean Figueroa,sean.figueroa@example.com,Starter,8,7,0,293,1,6,8,1,1,0.792,2,2026-09-03,29,downgraded
+acc_0352,Green PLC,Jennifer Hernandez,jennifer.hernandez@example.com,Starter,10,3,0,1442,0,2,5,3,2,0.434,44,2026-08-31,29,churned
+acc_0353,Hall-Hudson,Juan Harding,juan.harding@example.com,Starter,11,7,1,401,1,11,11,1,0,0.767,4,2026-09-26,29,renewed
+acc_0354,Scott-Underwood,Maria Henry,maria.henry@example.com,Professional,22,17,0,3250,9,50,60,2,1,0.671,14,2026-08-28,99,renewed
+acc_0355,Oconnor LLC,Nathan Freeman,nathan.freeman@example.com,Starter,10,3,0,61,1,3,9,4,1,0.029,15,2026-08-13,29,churned
+acc_0356,"Mooney, Bernard and Warren",Angela Meyers,angela.meyers@example.com,Starter,10,7,0,545,3,11,10,1,1,0.84,4,2026-09-15,29,renewed
+acc_0357,Duran Group,Mark Jones,mark.jones@example.com,Enterprise,136,118,0,37586,256,336,357,1,1,0.772,0,2026-10-30,299,renewed
+acc_0358,Smith PLC 358,Antonio Little,antonio.little@example.com,Professional,39,30,0,5676,17,24,37,1,1,0.326,5,2026-11-03,99,churned
+acc_0359,"Durham, Hopkins and Smith",Jennifer Smith,jennifer.smith@example.com,Starter,10,9,0,311,2,12,13,1,1,0.959,3,2026-08-16,29,renewed
+acc_0360,"Hill, Madden and Smith",Megan Drake,megan.drake@example.com,Professional,21,3,0,3500,12,10,15,2,2,0.238,26,2026-09-11,99,downgraded
+acc_0361,Rodriguez Inc,Daisy Harvey,daisy.harvey@example.com,Professional,26,26,0,8301,23,25,25,1,1,0.938,1,2026-08-16,99,downgraded
+acc_0362,Ochoa-Adams,Jake Sullivan,jake.sullivan@example.com,Starter,7,5,0,933,6,10,10,3,0,0.775,13,2026-10-17,29,downgraded
+acc_0363,"Sanchez, Terry and Evans",Angela Frey,angela.frey@example.com,Professional,20,18,0,7024,25,32,34,1,0,0.905,2,2026-08-19,99,renewed
+acc_0364,"Malone, Davis and Gray",Amy Smith,amy.smith@example.com,Professional,36,29,0,2716,21,53,56,0,0,0.951,0,2026-11-17,99,renewed
+acc_0365,Miller Group,Erin Madden,erin.madden@example.com,Professional,30,22,1,4399,31,39,49,3,1,0.615,9,2026-09-21,99,renewed
+acc_0366,Jacobson Inc,Steven Schwartz,steven.schwartz@example.com,Enterprise,136,113,1,53228,101,323,360,1,1,0.764,0,2026-10-16,299,downgraded
+acc_0367,"Alvarez, Williams and Jones",Stephanie Elliott,stephanie.elliott@example.com,Professional,28,5,0,2654,13,9,20,5,3,0.4,17,2026-08-14,99,downgraded
+acc_0368,White LLC,Daniel Thomas,daniel.thomas@example.com,Professional,24,19,1,7168,32,14,14,0,0,0.827,3,2026-11-04,99,downgraded
+acc_0369,"Nicholson, Hickman and Evans",Lacey Atkinson,lacey.atkinson@example.com,Professional,25,11,0,1475,7,10,28,3,0,0.328,42,2026-09-10,99,churned
+acc_0370,"Mosley, Rivera and Campos",William Ramsey,william.ramsey@example.com,Starter,13,7,0,199,4,3,11,5,1,0.404,30,2026-08-26,29,churned
+acc_0371,"Mcgee, Reed and Davis",Billy Jacobs,billy.jacobs@example.com,Starter,8,6,0,184,2,10,10,0,0,0.801,0,2026-10-06,29,downgraded
+acc_0372,"Friedman, Sanders and Ayala",Donald Riddle,donald.riddle@example.com,Starter,6,4,1,222,3,6,8,0,0,0.967,0,2026-08-31,29,renewed
+acc_0373,Perez-Tran,Cody Willis,cody.willis@example.com,Professional,28,17,0,7787,18,22,23,2,0,0.668,6,2026-10-23,99,renewed
+acc_0374,Miller-Montgomery,Michelle Miller,michelle.miller@example.com,Starter,5,4,0,271,3,3,4,1,1,0.766,0,2026-10-04,29,downgraded
+acc_0375,James Ltd,James Ward,james.ward@example.com,Professional,34,28,1,2681,11,27,25,1,1,0.869,2,2026-09-03,99,renewed
+acc_0376,Smith LLC,Philip Garcia,philip.garcia@example.com,Starter,5,5,0,502,3,7,6,0,0,0.844,3,2026-10-03,29,renewed
+acc_0377,Lopez Group,Kayla Garcia,kayla.garcia@example.com,Enterprise,103,94,1,64706,418,238,238,0,0,0.815,2,2026-11-21,299,renewed
+acc_0378,Gomez Inc,Rachel Shields,rachel.shields@example.com,Starter,6,6,0,498,3,14,14,0,0,0.742,3,2026-09-08,29,churned
+acc_0379,Carter Group,Misty Hansen,misty.hansen@example.com,Enterprise,153,138,1,23083,404,317,331,0,0,0.808,2,2026-09-11,299,renewed
+acc_0380,Armstrong and Sons,Caroline Adams,caroline.adams@example.com,Professional,22,15,0,5426,29,46,46,0,0,0.725,4,2026-11-06,99,downgraded
+acc_0381,Snyder-Brown,Jason Washington,jason.washington@example.com,Starter,6,4,0,225,1,4,5,1,0,0.736,1,2026-11-29,29,renewed
+acc_0382,Ward and Sons,Kathleen Jensen,kathleen.jensen@example.com,Professional,45,35,0,6114,30,54,48,1,1,0.807,0,2026-10-07,99,downgraded
+acc_0383,Rodriguez-Torres,Evelyn Oliver,evelyn.oliver@example.com,Starter,11,8,0,498,0,10,13,0,0,0.741,0,2026-11-06,29,renewed
+acc_0384,Alexander-Jordan,Marilyn Wheeler,marilyn.wheeler@example.com,Starter,9,7,0,357,3,11,11,3,2,0.656,2,2026-10-29,29,renewed
+acc_0385,Flores-Valentine,Ernest Oconnell,ernest.oconnell@example.com,Enterprise,112,60,1,72758,337,206,233,3,2,0.66,14,2026-09-27,299,renewed
+acc_0386,Carter-Neal,Kenneth Sanchez MD,kenneth.sanchez.md@example.com,Professional,35,32,0,6622,14,55,62,1,1,0.731,2,2026-09-16,99,renewed
+acc_0387,Diaz-Frederick,Zachary White,zachary.white@example.com,Enterprise,150,73,1,17457,190,55,81,2,0,0.676,13,2026-10-12,299,renewed
+acc_0388,"Johnson, Acosta and Hahn",Robert Guerra,robert.guerra@example.com,Starter,11,6,0,451,3,3,5,2,2,0.331,11,2026-09-23,29,churned
+acc_0389,Fuentes Group,Brenda Turner,brenda.turner@example.com,Enterprise,122,104,1,30395,147,118,124,1,1,0.9,0,2026-12-02,299,renewed
+acc_0390,Hopkins-Espinoza,Angela Ewing,angela.ewing@example.com,Starter,7,5,0,470,7,6,8,2,2,0.336,10,2026-10-13,29,downgraded
+acc_0391,Aguilar-Ferguson,Sheila Barnes,sheila.barnes@example.com,Professional,27,21,0,8128,34,25,27,0,0,0.829,0,2026-11-21,99,renewed
+acc_0392,Gibbs LLC,Robin Wheeler,robin.wheeler@example.com,Starter,8,5,0,12,2,17,15,0,0,0.9,3,2026-09-21,29,renewed
+acc_0393,Rodriguez and Sons,Heather Holland,heather.holland@example.com,Enterprise,147,142,0,52019,105,142,137,0,0,0.801,3,2026-10-13,299,renewed
+acc_0394,Hart Ltd,Jennifer Goodwin,jennifer.goodwin@example.com,Starter,11,7,1,1110,5,11,15,3,3,0.642,5,2026-10-17,29,renewed
+acc_0395,Rodriguez-Garcia,Paul Grant,paul.grant@example.com,Professional,32,28,1,2469,23,60,55,0,0,0.815,4,2026-09-26,99,renewed
+acc_0396,"Johnston, Griffin and Myers",Leah Mason,leah.mason@example.com,Starter,8,7,0,273,1,16,13,1,1,0.851,3,2026-10-01,29,renewed
+acc_0397,Cuevas-Webb,Thomas Miller,thomas.miller@example.com,Professional,29,27,0,7479,30,50,57,0,0,0.966,0,2026-08-25,99,renewed
+acc_0398,"Thomas, Collins and Gibson",John Alvarez,john.alvarez@example.com,Starter,12,3,0,1066,3,1,6,4,1,0.419,9,2026-08-08,29,churned
+acc_0399,Bowen-Chavez,Andrew Page,andrew.page@example.com,Starter,8,5,0,702,3,3,7,2,1,0.575,14,2026-10-13,29,downgraded
+acc_0400,Sweeney Ltd,Robert Spears,robert.spears@example.com,Professional,25,22,0,4654,15,45,48,0,0,0.795,0,2026-10-12,99,renewed
+acc_0401,"Sanchez, Thompson and Moore",Tina Hall,tina.hall@example.com,Professional,42,40,0,3264,36,25,23,0,0,0.75,2,2026-10-01,99,downgraded
+acc_0402,Soto-Lopez,Jennifer Mclaughlin,jennifer.mclaughlin@example.com,Professional,25,22,0,2364,12,30,34,1,0,0.962,1,2026-08-15,99,renewed
+acc_0403,Cole Group,Michael Harris,michael.harris@example.com,Professional,44,40,0,7477,30,31,30,1,1,0.909,3,2026-10-15,99,renewed
+acc_0404,"Stokes, Brown and Garcia",Chelsea Nguyen,chelsea.nguyen@example.com,Starter,10,7,0,199,1,10,10,1,1,0.872,1,2026-08-25,29,renewed
+acc_0405,Wilson-Lambert,Vincent Edwards MD,vincent.edwards.md@example.com,Starter,13,6,0,739,6,8,12,2,1,0.467,13,2026-09-17,29,downgraded
+acc_0406,Matthews-Bailey,Lisa Cervantes,lisa.cervantes@example.com,Starter,12,11,0,295,3,12,12,1,1,0.763,3,2026-10-29,29,renewed
+acc_0407,"Mcbride, Sellers and Lawrence",Emily Allen,emily.allen@example.com,Starter,11,7,0,279,0,15,12,1,1,0.828,4,2026-09-07,29,renewed
+acc_0408,White Ltd,James Carlson,james.carlson@example.com,Starter,13,12,0,2,1,10,8,1,1,0.76,2,2026-11-08,29,renewed
+acc_0409,"Reyes, Lopez and Reid",Maria Cooke,maria.cooke@example.com,Starter,12,8,0,370,2,5,7,1,0,0.871,4,2026-11-10,29,renewed
+acc_0410,"Jackson, Roberts and Lopez",Lisa Glenn,lisa.glenn@example.com,Professional,38,27,0,5242,12,46,48,0,0,0.9,2,2026-09-30,99,renewed
+acc_0411,Washington and Sons,Tracey Wagner,tracey.wagner@example.com,Enterprise,112,91,1,61518,304,303,326,1,0,0.763,2,2026-11-10,299,renewed
+acc_0412,Ortiz-Vasquez,Jill Jackson,jill.jackson@example.com,Starter,10,10,0,166,2,4,6,0,0,0.747,1,2026-12-07,29,renewed
+acc_0413,"Johnson, Juarez and Carter",Joshua Jackson,joshua.jackson@example.com,Professional,23,10,0,597,8,39,57,5,3,0.44,9,2026-09-07,99,churned
+acc_0414,Cunningham-Barton,Jorge Armstrong III,jorge.armstrong.iii@example.com,Starter,6,1,0,1421,0,4,9,4,3,0.063,22,2026-08-08,29,renewed
+acc_0415,"Morrow, Richardson and Carson",Nathan Payne,nathan.payne@example.com,Starter,5,2,0,1051,1,4,4,1,0,0.549,9,2026-08-04,29,downgraded
+acc_0416,Garcia-Greer,Elizabeth Kidd,elizabeth.kidd@example.com,Professional,25,17,0,2055,5,43,50,3,1,0.713,6,2026-09-13,99,downgraded
+acc_0417,Baker-Atkins,Sean Wilson,sean.wilson@example.com,Professional,44,21,0,6189,20,33,48,3,3,0.705,4,2026-10-30,99,downgraded
+acc_0418,Clark Ltd,Heather Page,heather.page@example.com,Starter,6,4,0,388,3,10,9,0,0,0.83,4,2026-11-20,29,renewed
+acc_0419,"Patterson, Jensen and Glover",Renee Hudson,renee.hudson@example.com,Starter,5,3,0,118,1,9,9,1,0,0.82,3,2026-10-24,29,renewed
+acc_0420,"Campbell, Ryan and Morris",Donna Adams,donna.adams@example.com,Enterprise,100,93,1,28941,257,324,298,0,0,0.834,0,2026-10-05,299,renewed
+acc_0421,"Duke, Shelton and Davis",Rachel Sellers,rachel.sellers@example.com,Enterprise,121,70,0,73649,222,128,141,3,0,0.452,8,2026-09-03,299,renewed
+acc_0422,Camacho-Martinez,Danielle Dawson,danielle.dawson@example.com,Professional,35,26,0,3932,25,56,63,1,0,0.604,6,2026-08-12,99,downgraded
+acc_0423,Juarez Ltd,Charles Chen,charles.chen@example.com,Professional,22,22,1,8615,34,13,13,0,0,0.819,2,2026-11-02,99,downgraded
+acc_0424,"Perry, Hayes and Schultz",Anna Robertson,anna.robertson@example.com,Starter,12,9,0,703,2,8,11,3,3,0.74,10,2026-11-04,29,churned
+acc_0425,Neal-Wiley,John Perkins,john.perkins@example.com,Starter,5,1,0,1350,0,6,9,3,0,0.379,27,2026-08-09,29,downgraded
+acc_0426,"Davis, Stanton and Reid",Sarah Flynn,sarah.flynn@example.com,Starter,12,8,0,320,4,10,11,2,1,0.613,8,2026-10-13,29,renewed
+acc_0427,Robinson-Jordan,Derrick Clayton,derrick.clayton@example.com,Professional,24,22,0,7097,20,34,32,1,1,0.727,2,2026-09-28,99,renewed
+acc_0428,Kelley-Anderson,Rachel Shannon,rachel.shannon@example.com,Starter,6,5,0,173,1,7,7,0,0,0.725,2,2026-12-03,29,renewed
+acc_0429,Williams Ltd,Julia Martinez,julia.martinez@example.com,Professional,32,32,0,5978,24,36,42,0,0,0.93,0,2026-10-18,99,renewed
+acc_0430,Alexander Inc,Jessica Forbes DVM,jessica.forbes.dvm@example.com,Professional,45,33,0,5736,32,35,39,1,0,0.795,0,2026-09-12,99,renewed
+acc_0431,"Turner, Baxter and Mcdowell",Isaac Miller,isaac.miller@example.com,Enterprise,151,105,1,23475,200,294,358,2,0,0.734,12,2026-11-09,299,renewed
+acc_0432,"Mckee, Martin and Sanders",Michael Young,michael.young@example.com,Professional,44,39,0,2322,14,27,28,1,1,0.903,1,2026-11-28,99,renewed
+acc_0433,"Davis, Davis and Lewis",Kevin Stone,kevin.stone@example.com,Professional,38,7,0,1720,9,29,51,4,1,0.065,17,2026-09-01,99,renewed
+acc_0434,Smith-Dominguez,Virginia Henderson,virginia.henderson@example.com,Enterprise,116,98,1,36076,291,174,191,1,1,0.448,5,2026-11-09,299,renewed
+acc_0435,Woods and Sons,Nicholas Garcia,nicholas.garcia@example.com,Professional,28,22,1,7411,8,53,53,0,0,0.792,4,2026-10-16,99,renewed
+acc_0436,Richardson-Evans,Robert Baxter,robert.baxter@example.com,Starter,11,3,0,184,2,5,8,3,3,0.175,16,2026-08-07,29,downgraded
+acc_0437,"Haney, Thomas and Moreno",Matthew Alexander,matthew.alexander@example.com,Enterprise,138,31,1,13906,136,132,183,3,0,0.446,32,2026-08-10,299,downgraded
+acc_0438,"Lewis, Goodman and Gillespie",Jessica Robinson,jessica.robinson@example.com,Starter,6,5,0,486,2,11,13,0,0,0.898,2,2026-11-14,29,renewed
+acc_0439,Taylor Inc,Janet Richmond,janet.richmond@example.com,Starter,5,4,0,490,8,5,4,2,0,0.506,8,2026-10-27,29,renewed
+acc_0440,Moody-Wright,Danielle Burke,danielle.burke@example.com,Enterprise,125,106,0,83797,176,304,281,0,0,0.797,2,2026-11-03,299,renewed
+acc_0441,"Lawson, Maxwell and Vaughn",Mary Turner,mary.turner@example.com,Enterprise,160,107,0,36532,191,174,195,2,2,0.753,13,2026-11-12,299,downgraded
+acc_0442,"Lawson, Lopez and Myers",Rachel Leon,rachel.leon@example.com,Starter,12,8,0,188,2,16,15,0,0,0.884,1,2026-11-03,29,renewed
+acc_0443,Simpson Inc,Mark Jones,mark.jones@example.com,Professional,44,33,0,6725,32,54,57,1,0,0.926,2,2026-09-01,99,renewed
+acc_0444,Hatfield LLC,Scott Carroll,scott.carroll@example.com,Professional,32,21,0,7411,32,20,24,3,2,0.494,2,2026-08-10,99,renewed
+acc_0445,Payne-Thompson,William Jones,william.jones@example.com,Starter,7,3,0,348,7,7,10,1,0,0.698,3,2026-11-05,29,renewed
+acc_0446,"Jones, Baker and Williams",Richard Hunter,richard.hunter@example.com,Professional,45,29,0,4582,13,38,57,3,2,0.355,5,2026-11-12,99,downgraded
+acc_0447,"Marquez, Wang and Henderson",Martin Medina,martin.medina@example.com,Professional,27,26,0,4639,41,18,21,0,0,0.898,3,2026-09-01,99,renewed
+acc_0448,Ramirez LLC,Thomas Mccann,thomas.mccann@example.com,Enterprise,116,87,1,25877,107,229,251,1,0,0.807,1,2026-12-13,299,renewed
+acc_0449,Herrera Group,Pamela Santos,pamela.santos@example.com,Enterprise,119,82,1,18496,259,50,57,3,2,0.775,2,2026-09-01,299,downgraded
+acc_0450,"Jones, Hale and Blair",Amy Miller,amy.miller@example.com,Professional,24,21,0,2491,12,16,17,1,0,0.753,2,2026-12-08,99,renewed
+acc_0451,Wilson-Salazar,Maxwell Barrett,maxwell.barrett@example.com,Professional,43,35,1,2096,34,23,32,3,0,0.658,12,2026-08-05,99,downgraded
+acc_0452,Wilson Ltd,Adam Crawford,adam.crawford@example.com,Starter,12,8,0,574,2,7,6,0,0,0.846,3,2026-09-28,29,downgraded
+acc_0453,Mills-Logan,Carol Martinez,carol.martinez@example.com,Enterprise,142,139,1,87868,172,283,315,0,0,0.721,4,2026-09-15,299,renewed
+acc_0454,Quinn-Wilson,Frances Patterson,frances.patterson@example.com,Professional,31,14,0,713,16,19,55,2,1,0.142,9,2026-09-22,99,downgraded
+acc_0455,"Brown, Joseph and Ray",Jesse Ward,jesse.ward@example.com,Enterprise,120,93,0,65465,103,51,77,2,2,0.637,6,2026-11-02,299,downgraded
+acc_0456,Villarreal-Jackson,Raymond Shannon,raymond.shannon@example.com,Enterprise,125,95,1,35742,85,139,146,1,1,0.821,3,2026-09-22,299,renewed
+acc_0457,"Sharp, Perez and Hicks",Scott Sanchez,scott.sanchez@example.com,Starter,6,4,0,1002,4,11,14,2,1,0.487,8,2026-10-10,29,renewed
+acc_0458,Cox-Mora,Tyler Johnson,tyler.johnson@example.com,Starter,5,5,0,474,2,5,6,1,1,0.896,1,2026-10-13,29,renewed
+acc_0459,"Yang, Barnes and Morris",Nathan Nelson,nathan.nelson@example.com,Enterprise,115,115,1,59523,253,108,120,0,0,0.863,0,2026-08-27,299,renewed
+acc_0460,Duncan Inc,Stephanie White,stephanie.white@example.com,Professional,23,18,0,2321,12,35,49,2,0,0.565,3,2026-09-06,99,renewed
+acc_0461,"Jarvis, Finley and Jones",Douglas Kirk,douglas.kirk@example.com,Professional,45,26,0,1567,11,49,63,3,3,0.813,6,2026-09-23,99,renewed
+acc_0462,Miller-Bryant,Eddie Mueller,eddie.mueller@example.com,Starter,12,10,0,369,2,10,11,1,1,0.9,3,2026-09-01,29,churned
+acc_0463,"Dean, Marshall and Vargas",Raymond Gonzalez DVM,raymond.gonzalez.dvm@example.com,Starter,8,8,0,551,4,3,4,1,1,0.77,2,2026-10-08,29,churned
+acc_0464,Hernandez Group,Joshua Fields,joshua.fields@example.com,Starter,8,6,0,401,1,11,11,0,0,0.733,0,2026-12-01,29,renewed
+acc_0465,"Wiley, Tapia and Smith",Sarah Acosta,sarah.acosta@example.com,Professional,38,29,0,5920,26,13,14,1,1,0.743,9,2026-10-05,99,churned
+acc_0466,Harris and Sons,Tyrone Kaufman,tyrone.kaufman@example.com,Professional,35,34,0,4488,42,49,53,0,0,0.901,0,2026-09-08,99,renewed
+acc_0467,Dawson Inc,David Bruce,david.bruce@example.com,Starter,12,9,0,399,3,13,14,1,1,0.97,2,2026-09-10,29,renewed
+acc_0468,Haynes-Watson,Angela Davis,angela.davis@example.com,Professional,45,34,0,4579,37,15,24,1,1,0.399,10,2026-09-13,99,renewed
+acc_0469,Walsh Group,Keith Graham,keith.graham@example.com,Starter,11,7,0,123,2,11,12,1,0,0.866,3,2026-09-29,29,renewed
+acc_0470,Young LLC,Tammy Long,tammy.long@example.com,Professional,41,30,0,8315,28,73,66,0,0,0.834,3,2026-11-01,99,renewed
+acc_0471,"Nguyen, Chavez and Hall",Brandy Carrillo,brandy.carrillo@example.com,Enterprise,155,124,1,32364,342,313,314,1,1,0.796,3,2026-11-05,299,renewed
+acc_0472,Moore and Sons,Erik Martinez,erik.martinez@example.com,Enterprise,153,140,1,55331,203,243,267,1,0,0.742,2,2026-11-08,299,renewed
+acc_0473,Oconnell-Clark,Derek Wilson,derek.wilson@example.com,Professional,33,30,0,5606,40,22,20,1,1,0.897,0,2026-08-16,99,renewed
+acc_0474,Aguirre LLC,Melissa Williams,melissa.williams@example.com,Professional,21,18,1,6557,31,37,37,0,0,0.887,4,2026-10-05,99,renewed
+acc_0475,Hernandez-Dawson,Jennifer Williams,jennifer.williams@example.com,Professional,28,13,1,872,11,22,32,6,2,0.258,21,2026-09-17,99,renewed
+acc_0476,Green-Ewing,Jared Chavez,jared.chavez@example.com,Enterprise,134,85,1,56188,162,122,156,3,1,0.77,10,2026-08-26,299,downgraded
+acc_0477,"Pierce, Davis and Garcia",Barbara Brown,barbara.brown@example.com,Professional,37,35,0,7692,18,21,22,0,0,0.799,3,2026-09-17,99,renewed
+acc_0478,Anderson Group,Mark Newman,mark.newman@example.com,Starter,5,4,0,241,1,5,5,0,0,0.929,4,2026-09-20,29,renewed
+acc_0479,"Willis, Lowery and Jones",Christina Brewer PhD,christina.brewer.phd@example.com,Enterprise,120,119,1,76307,307,220,248,0,0,0.814,0,2026-10-06,299,downgraded
+acc_0480,Stein LLC,Tom Williams,tom.williams@example.com,Starter,11,5,0,1595,2,4,11,6,3,0.174,24,2026-09-15,29,renewed
+acc_0481,"Hamilton, Ramsey and Crawford",Jeffery Gomez,jeffery.gomez@example.com,Professional,24,11,0,804,12,25,38,2,0,0.39,41,2026-09-19,99,downgraded
+acc_0482,Hill Group,Amanda Harvey,amanda.harvey@example.com,Professional,23,9,0,457,10,9,19,4,2,0.067,31,2026-08-29,99,churned
+acc_0483,Holland Group,Juan Brown,juan.brown@example.com,Professional,29,23,0,7081,13,17,15,1,1,0.721,4,2026-10-07,99,renewed
+acc_0484,Reyes-Barnes,Rebecca Wright,rebecca.wright@example.com,Starter,7,5,0,471,2,9,10,0,0,0.918,3,2026-11-25,29,renewed
+acc_0485,"Norton, Mayo and Casey",Joshua Washington,joshua.washington@example.com,Professional,34,28,0,7915,27,36,33,1,1,0.904,4,2026-10-25,99,downgraded
+acc_0486,"Shaw, Price and White",Daniel Huang,daniel.huang@example.com,Enterprise,132,96,1,83787,114,365,346,1,1,0.767,0,2026-11-29,299,renewed
+acc_0487,Brown-Frey,Pamela Key,pamela.key@example.com,Enterprise,155,112,1,33913,177,233,219,1,0,0.726,4,2026-08-26,299,downgraded
+acc_0488,Garcia Ltd,Joseph Moody,joseph.moody@example.com,Starter,11,8,0,333,0,8,8,1,0,0.767,0,2026-09-24,29,downgraded
+acc_0489,"Brown, Davies and Robinson",Rebecca Kelly,rebecca.kelly@example.com,Enterprise,138,136,1,55569,182,126,116,1,1,0.851,0,2026-10-13,299,renewed
+acc_0490,Thompson PLC,Oscar Howard,oscar.howard@example.com,Starter,6,4,0,128,2,3,4,1,1,0.799,3,2026-10-18,29,downgraded
+acc_0491,"Johnson, Haynes and Meza",Kristine Lopez,kristine.lopez@example.com,Enterprise,158,148,1,22066,246,201,180,1,1,0.841,4,2026-08-22,299,renewed
+acc_0492,Weaver-Thompson,Anthony Guzman,anthony.guzman@example.com,Professional,26,21,0,3039,36,34,36,3,3,0.468,10,2026-09-06,99,downgraded
+acc_0493,Fox Inc,Lucas Drake,lucas.drake@example.com,Professional,36,29,1,5945,17,27,29,3,0,0.544,6,2026-09-02,99,renewed
+acc_0494,Love-Sellers,Erica Johnson,erica.johnson@example.com,Enterprise,141,101,1,22282,255,215,223,1,0,0.722,1,2026-10-04,299,renewed
+acc_0495,"Bush, Thomas and Rodriguez",Holly Jones,holly.jones@example.com,Professional,34,26,0,8047,9,10,13,2,1,0.458,11,2026-08-21,99,renewed
+acc_0496,"Mcmahon, Foster and Garcia",Chad Moore,chad.moore@example.com,Enterprise,114,21,0,26683,134,89,244,2,0,0.312,20,2026-08-30,299,renewed
+acc_0497,Conner-Yu,Carrie Novak,carrie.novak@example.com,Starter,8,1,0,1681,0,2,4,4,0,0.361,15,2026-09-24,29,churned
+acc_0498,"Preston, Austin and Kelly",Robin Gray,robin.gray@example.com,Starter,7,5,0,531,1,11,13,3,1,0.792,5,2026-08-23,29,renewed
+acc_0499,"Barker, Anderson and Daniel",Tiffany Myers,tiffany.myers@example.com,Starter,12,2,0,1312,3,7,13,4,1,0.376,11,2026-08-27,29,churned
+acc_0500,"Johnson, Guzman and Mccall",Connie Cunningham,connie.cunningham@example.com,Professional,28,26,1,4287,27,15,14,0,0,0.822,2,2026-09-12,99,renewed
+acc_0501,Taylor-Mcgee,William Jackson,william.jackson@example.com,Starter,6,4,0,24,2,5,6,1,1,0.874,2,2026-10-14,29,renewed
+acc_0502,Underwood Ltd,Stacie Griffin,stacie.griffin@example.com,Starter,12,8,0,592,2,8,7,0,0,0.752,0,2026-12-06,29,renewed
+acc_0503,Clark-Steele,Richard Le,richard.le@example.com,Starter,11,7,0,57,1,10,11,1,0,0.865,2,2026-11-02,29,renewed
+acc_0504,Cruz Ltd,Christopher Gutierrez,christopher.gutierrez@example.com,Starter,11,9,0,695,5,3,4,1,0,0.673,12,2026-10-04,29,renewed
+acc_0505,Bell-Bennett,Rachel Lane,rachel.lane@example.com,Starter,7,7,0,363,2,5,5,1,1,0.829,4,2026-09-01,29,renewed
+acc_0506,"Perez, Hayes and Lloyd",Alejandro Green,alejandro.green@example.com,Starter,13,10,0,316,1,15,14,1,1,0.877,2,2026-10-29,29,renewed
+acc_0507,Jones and Sons 507,Candace Jones,candace.jones@example.com,Starter,8,6,0,206,2,14,12,0,0,0.924,2,2026-11-11,29,renewed
+acc_0508,Morgan PLC,Michele Reynolds,michele.reynolds@example.com,Professional,25,19,0,7408,21,34,33,0,0,0.731,1,2026-09-13,99,renewed
+acc_0509,"Martin, Preston and Moore",Daniel Lee,daniel.lee@example.com,Starter,11,8,0,6,3,11,9,1,1,0.814,0,2026-08-29,29,downgraded
+acc_0510,"Spencer, Frost and Fernandez",Elizabeth Davis,elizabeth.davis@example.com,Starter,8,5,1,536,1,6,9,3,2,0.702,7,2026-08-21,29,downgraded
+acc_0511,Armstrong-Larsen,Isaac Patterson,isaac.patterson@example.com,Starter,6,5,0,312,3,11,14,1,1,0.839,2,2026-11-25,29,renewed
+acc_0512,Colon-Weber,Mr. Daniel Little,mr..daniel.little@example.com,Enterprise,112,32,1,27163,97,44,128,3,3,0.14,35,2026-08-16,299,renewed
+acc_0513,Wells Inc,James Burns,james.burns@example.com,Starter,13,13,0,214,4,14,14,0,0,0.909,3,2026-10-03,29,renewed
+acc_0514,"Baker, May and Hughes",James Lopez,james.lopez@example.com,Professional,36,36,0,8507,27,39,41,1,1,0.843,4,2026-09-12,99,renewed
+acc_0515,Baker Group,Russell Elliott,russell.elliott@example.com,Professional,31,26,0,3086,25,37,39,1,1,0.742,3,2026-08-20,99,renewed
+acc_0516,Goodwin Ltd,Michael Morton,michael.morton@example.com,Professional,28,26,0,5115,10,37,38,1,1,0.789,0,2026-11-30,99,renewed
+acc_0517,Arellano-Lawrence,Sara Cardenas,sara.cardenas@example.com,Professional,21,19,1,3497,15,22,26,1,1,0.806,2,2026-10-31,99,renewed
+acc_0518,Sheppard-Mcdaniel,Laura Young,laura.young@example.com,Enterprise,152,94,1,35944,277,162,188,3,3,0.57,11,2026-09-28,299,renewed
+acc_0519,Miller-Orr,Kathryn Lester,kathryn.lester@example.com,Enterprise,130,37,0,30351,94,117,171,4,4,0.413,37,2026-08-16,299,downgraded
+acc_0520,"Byrd, Oliver and Martinez",Carrie Joyce,carrie.joyce@example.com,Enterprise,155,119,1,70695,168,327,340,1,1,0.85,2,2026-10-08,299,renewed
+acc_0521,Stokes and Sons,Blake Vega,blake.vega@example.com,Starter,5,2,0,676,1,8,9,3,0,0.639,14,2026-09-16,29,downgraded
+acc_0522,Osborn Ltd,Kurt Flores,kurt.flores@example.com,Starter,9,6,0,566,1,4,5,1,1,0.766,4,2026-09-09,29,downgraded
+acc_0523,"Sloan, Jones and Hughes",Gabriel Hill,gabriel.hill@example.com,Enterprise,133,95,1,78740,129,293,323,0,0,0.827,1,2026-10-07,299,renewed
+acc_0524,Stark-Smith,Laurie Harrington,laurie.harrington@example.com,Starter,12,3,0,635,2,6,6,5,3,0.338,40,2026-07-23,29,renewed
+acc_0525,Perry and Sons,Lauren Hanna,lauren.hanna@example.com,Starter,12,8,0,80,3,6,7,3,0,0.71,6,2026-09-12,29,renewed
+acc_0526,Buckley PLC,Rachel Dillon,rachel.dillon@example.com,Professional,25,24,0,8211,25,65,63,0,0,0.768,4,2026-08-20,99,renewed
+acc_0527,Humphrey-Baker,Laura Kennedy,laura.kennedy@example.com,Enterprise,146,118,1,49144,345,209,204,1,1,0.918,0,2026-08-28,299,renewed
+acc_0528,Hill and Sons,Melanie Morales,melanie.morales@example.com,Professional,22,22,0,7123,23,22,25,0,0,0.943,3,2026-08-29,99,renewed
+acc_0529,Preston-Rivera,Patrick Mccall,patrick.mccall@example.com,Starter,8,6,0,571,1,7,11,1,1,0.753,4,2026-08-21,29,renewed
+acc_0530,Smith-Roth,Douglas Vasquez,douglas.vasquez@example.com,Professional,34,29,0,6915,13,50,60,0,0,0.952,4,2026-08-21,99,renewed
+acc_0531,"Cohen, Compton and Perez",Patrick Schroeder,patrick.schroeder@example.com,Enterprise,103,87,1,59627,65,92,107,2,2,0.722,5,2026-08-24,299,downgraded
+acc_0532,Adams-Butler,Chelsea Lewis,chelsea.lewis@example.com,Starter,6,3,0,342,0,4,7,2,1,0.019,40,2026-08-16,29,downgraded
+acc_0533,Figueroa-Malone,Samantha Robertson,samantha.robertson@example.com,Enterprise,111,79,1,42871,195,166,173,0,0,0.821,3,2026-11-27,299,renewed
+acc_0534,Jones Ltd,Brandy York,brandy.york@example.com,Professional,23,18,0,2825,15,41,38,0,0,0.804,3,2026-11-04,99,renewed
+acc_0535,"Johnson, Lee and Whitaker",Danielle Bryant,danielle.bryant@example.com,Professional,38,20,0,2798,8,9,16,2,2,0.182,45,2026-08-07,99,downgraded
+acc_0536,Bush-Hill,Kathy Reid,kathy.reid@example.com,Professional,26,14,0,5654,15,11,15,3,0,0.5,13,2026-11-01,99,renewed
+acc_0537,Maldonado and Sons,Kirk Thompson,kirk.thompson@example.com,Starter,9,6,0,339,1,4,4,0,0,0.809,1,2026-11-10,29,renewed
+acc_0538,Matthews-Bailey 538,Steven Curry,steven.curry@example.com,Starter,12,2,1,106,3,3,6,3,2,0.279,17,2026-08-14,29,downgraded
+acc_0539,"Davis, Johnson and Williams",Penny Lewis,penny.lewis@example.com,Enterprise,110,31,0,9139,50,38,95,6,3,0.11,26,2026-08-17,299,churned
+acc_0540,Holland Ltd,Matthew Palmer,matthew.palmer@example.com,Professional,33,31,0,5060,30,41,37,0,0,0.761,3,2026-12-02,99,downgraded
+acc_0541,"Smith, Buck and Holland",Alejandra King,alejandra.king@example.com,Enterprise,129,111,1,46759,226,337,338,1,1,0.878,0,2026-10-14,299,downgraded
+acc_0542,Marquez-Fletcher,Steven York,steven.york@example.com,Enterprise,160,140,0,46627,393,266,246,0,0,0.727,4,2026-12-10,299,downgraded
+acc_0543,King-Owens,Samantha Sanders,samantha.sanders@example.com,Enterprise,122,119,1,63908,346,196,185,1,0,0.816,0,2026-09-15,299,renewed
+acc_0544,Smith Ltd 544,Sara Hoffman,sara.hoffman@example.com,Starter,7,4,0,301,4,10,14,3,2,0.507,11,2026-07-31,29,churned
+acc_0545,"Lynch, Evans and Rodriguez",William Davidson,william.davidson@example.com,Starter,13,7,0,339,6,12,15,3,1,0.748,6,2026-10-02,29,renewed
+acc_0546,Green-Dawson,Elizabeth Hernandez,elizabeth.hernandez@example.com,Professional,22,16,0,7326,26,36,38,1,1,0.81,1,2026-10-04,99,renewed
+acc_0547,Yoder PLC,Francisco Taylor,francisco.taylor@example.com,Starter,13,12,0,441,3,3,5,0,0,0.764,2,2026-10-16,29,downgraded
+acc_0548,Rios LLC,Jason Price,jason.price@example.com,Enterprise,151,120,1,81550,154,159,150,0,0,0.826,4,2026-09-21,299,downgraded
+acc_0549,Aguilar PLC,Grace Reeves,grace.reeves@example.com,Starter,6,4,0,7,0,6,7,0,0,0.893,0,2026-11-24,29,churned
+acc_0550,"Nichols, Glover and Knox",Katie Bruce,katie.bruce@example.com,Professional,33,10,0,3771,7,28,43,4,1,0.52,23,2026-07-30,99,renewed
+acc_0551,"Walter, White and Davis",David Stokes,david.stokes@example.com,Enterprise,108,52,0,65833,224,170,260,1,0,0.417,13,2026-09-25,299,downgraded
+acc_0552,Arroyo LLC,Courtney Walker,courtney.walker@example.com,Professional,30,21,0,7964,26,21,24,1,1,0.972,2,2026-10-16,99,renewed
+acc_0553,Fisher-Eaton,Kevin Ford,kevin.ford@example.com,Professional,23,22,0,3487,19,43,42,0,0,0.757,4,2026-11-24,99,downgraded
+acc_0554,Ruiz Ltd,Terry Jones,terry.jones@example.com,Enterprise,107,49,1,11383,120,217,294,2,1,0.173,13,2026-07-26,299,downgraded
+acc_0555,Mason Ltd,Edwin Brown,edwin.brown@example.com,Enterprise,160,43,0,35111,119,109,167,2,0,0.359,39,2026-08-20,299,renewed
+acc_0556,Taylor and Sons,William Orozco,william.orozco@example.com,Professional,43,32,0,6691,27,32,36,1,1,0.806,8,2026-09-01,99,downgraded
+acc_0557,Thomas-Huffman,Bobby Cook,bobby.cook@example.com,Starter,10,8,0,389,3,8,7,1,1,0.87,0,2026-10-22,29,downgraded
+acc_0558,Edwards Inc,Donald Juarez,donald.juarez@example.com,Starter,8,5,0,551,1,17,14,0,0,0.942,2,2026-10-17,29,renewed
+acc_0559,Johnston and Sons,Phillip Miller DDS,phillip.miller.dds@example.com,Starter,13,9,0,587,1,14,15,1,0,0.844,1,2026-10-02,29,downgraded
+acc_0560,"Jordan, Patterson and Woods",Joseph Cross,joseph.cross@example.com,Enterprise,155,122,1,70008,326,178,170,0,0,0.798,1,2026-10-08,299,renewed
+acc_0561,Mcclain PLC,Michael Sims,michael.sims@example.com,Enterprise,159,88,1,45209,253,250,325,3,3,0.441,7,2026-10-28,299,renewed
+acc_0562,Perez LLC,Brian Gordon,brian.gordon@example.com,Professional,26,21,1,2260,29,40,42,0,0,0.909,4,2026-10-08,99,renewed
+acc_0563,Jackson-Colon,Earl Luna,earl.luna@example.com,Starter,13,11,1,152,2,9,11,0,0,0.883,3,2026-09-14,29,renewed
+acc_0564,"Warren, Hamilton and Mcdaniel",Zachary Henry,zachary.henry@example.com,Starter,6,5,0,782,8,10,15,2,1,0.416,12,2026-07-31,29,churned
+acc_0565,Martin Group,Danny Mercer,danny.mercer@example.com,Starter,12,10,0,96,2,11,12,1,0,0.927,1,2026-11-12,29,renewed
+acc_0566,Gross PLC,Barbara Dawson,barbara.dawson@example.com,Professional,42,30,0,7595,19,54,62,1,1,0.924,4,2026-11-30,99,renewed
+acc_0567,Brooks Ltd,Joseph Williams,joseph.williams@example.com,Professional,23,13,0,6040,30,40,60,2,2,0.302,9,2026-08-04,99,churned
+acc_0568,Stanley Ltd,Amber Wilson,amber.wilson@example.com,Starter,9,8,0,175,3,2,4,0,0,0.83,0,2026-10-20,29,renewed
+acc_0569,James-Kelley,Christian Neal,christian.neal@example.com,Starter,10,8,0,45,2,11,11,0,0,0.782,1,2026-09-11,29,renewed
+acc_0570,"Smith, Fisher and Garcia",Lisa Haynes,lisa.haynes@example.com,Professional,37,30,0,6488,15,20,20,0,0,0.762,3,2026-10-08,99,renewed
+acc_0571,Rivas-Garcia,Autumn Wilson,autumn.wilson@example.com,Starter,8,7,0,523,2,10,8,0,0,0.877,3,2026-10-09,29,renewed
+acc_0572,Jimenez PLC,Dennis Mills,dennis.mills@example.com,Enterprise,104,84,1,45946,266,300,327,0,0,0.807,2,2026-08-16,299,downgraded
+acc_0573,Howard Group,Andrew Crawford,andrew.crawford@example.com,Enterprise,119,116,1,45027,131,129,118,1,1,0.869,2,2026-09-05,299,renewed
+acc_0574,Watts Group,Aaron Powers,aaron.powers@example.com,Professional,39,34,0,3041,23,61,55,0,0,0.722,4,2026-10-02,99,renewed
+acc_0575,Conley Ltd,Travis Chan Jr.,travis.chan.jr.@example.com,Starter,11,6,0,898,2,6,9,6,4,0.514,37,2026-09-15,29,downgraded
+acc_0576,"Garcia, Scott and Hall",Elizabeth Marshall MD,elizabeth.marshall.md@example.com,Professional,33,17,0,651,7,22,52,2,2,0.035,23,2026-07-30,99,churned
+acc_0577,Sawyer LLC,Michael Simmons,michael.simmons@example.com,Starter,13,7,0,1019,0,5,4,2,1,0.307,42,2026-08-16,29,renewed
+acc_0578,Davis Inc 578,Charles Holland,charles.holland@example.com,Professional,41,20,0,7993,22,50,59,3,2,0.683,14,2026-08-21,99,downgraded
+acc_0579,Howard-Kim,Sherry Davis,sherry.davis@example.com,Enterprise,107,87,1,38484,348,300,271,1,0,0.86,0,2026-09-21,299,renewed
+acc_0580,White-Morales,Denise Cruz,denise.cruz@example.com,Starter,13,6,0,999,6,8,8,3,0,0.424,2,2026-09-10,29,renewed
+acc_0581,Marsh-Banks,Ashley Horton,ashley.horton@example.com,Starter,12,9,0,526,1,10,10,0,0,0.954,3,2026-09-03,29,renewed
+acc_0582,Jarvis and Sons,Thomas Webb,thomas.webb@example.com,Starter,9,6,0,449,3,8,9,1,1,0.762,2,2026-12-06,29,renewed
+acc_0583,"Gregory, White and James",Allen Cohen,allen.cohen@example.com,Starter,5,3,0,490,2,8,10,0,0,0.97,2,2026-10-24,29,renewed
+acc_0584,"Mcpherson, Anderson and Knapp",Jason Williams,jason.williams@example.com,Professional,43,43,0,3067,39,66,61,0,0,0.969,0,2026-10-18,99,churned
+acc_0585,Pena-Smith,Kelly Manning,kelly.manning@example.com,Professional,33,30,0,5407,18,44,39,0,0,0.918,1,2026-09-19,99,renewed
+acc_0586,"Cunningham, Levine and Santiago",Joseph Haynes,joseph.haynes@example.com,Enterprise,151,33,0,20481,124,111,274,3,2,0.08,45,2026-08-08,299,churned
+acc_0587,Reynolds Ltd,Gregory Rhodes,gregory.rhodes@example.com,Starter,5,4,0,313,1,4,4,0,0,0.902,1,2026-10-15,29,downgraded
+acc_0588,Hernandez-Serrano,Lisa Smith,lisa.smith@example.com,Starter,11,8,0,48,1,7,9,0,0,0.767,0,2026-09-20,29,renewed
+acc_0589,Wagner Group,Sheila Jones,sheila.jones@example.com,Enterprise,106,97,1,58416,96,275,306,1,0,0.944,2,2026-11-22,299,renewed
+acc_0590,Flores-Rivera,Jonathon Pierce,jonathon.pierce@example.com,Professional,24,18,0,8590,9,45,49,0,0,0.95,1,2026-08-24,99,renewed
+acc_0591,Powell-Young,Robert West,robert.west@example.com,Professional,21,16,0,5833,13,57,60,1,0,0.786,4,2026-11-03,99,renewed
+acc_0592,West-Wilson,Matthew Garcia MD,matthew.garcia.md@example.com,Enterprise,117,92,1,85082,163,302,312,1,0,0.736,1,2026-10-22,299,renewed
+acc_0593,"Dunn, Petersen and Conner",Marcia Wu,marcia.wu@example.com,Enterprise,138,116,1,22237,146,264,251,0,0,0.869,4,2026-11-13,299,renewed
+acc_0594,"Clark, Powers and Clements",Anthony Walker,anthony.walker@example.com,Starter,5,1,0,1309,1,4,8,3,1,0.065,25,2026-07-29,29,churned
+acc_0595,Rivera-Saunders,Michelle Cox,michelle.cox@example.com,Starter,10,6,0,1124,1,4,4,2,0,0.511,4,2026-09-05,29,renewed
+acc_0596,Wilson-Malone,Glenn Gallegos,glenn.gallegos@example.com,Starter,9,4,0,1194,4,7,7,3,0,0.445,13,2026-10-21,29,renewed
+acc_0597,Kelley-Brooks,Steven Vasquez,steven.vasquez@example.com,Professional,38,28,0,6458,32,27,40,3,0,0.365,5,2026-09-15,99,churned
+acc_0598,"Newton, Ortiz and King",Bryan Phelps,bryan.phelps@example.com,Professional,35,27,1,2338,26,64,64,1,1,0.762,1,2026-09-02,99,downgraded
+acc_0599,Bryant and Sons,Ashley Perry,ashley.perry@example.com,Starter,5,1,0,42,1,5,5,2,2,0.128,8,2026-08-02,29,downgraded
+acc_0600,"Monroe, Chapman and Barton",Matthew Blanchard,matthew.blanchard@example.com,Enterprise,147,122,1,55454,188,54,59,3,0,0.485,9,2026-11-11,299,downgraded
+acc_0601,Maynard Inc,Amber Mcconnell,amber.mcconnell@example.com,Starter,5,3,0,303,1,12,15,0,0,0.747,3,2026-08-18,29,renewed
+acc_0602,"Webb, Romero and Morse",Kenneth Cross,kenneth.cross@example.com,Starter,6,5,0,112,1,13,14,1,1,0.778,2,2026-09-26,29,downgraded
+acc_0603,Garcia Ltd 603,Sonya Gordon,sonya.gordon@example.com,Enterprise,138,35,0,8227,121,92,132,6,0,0.374,27,2026-09-05,299,renewed
+acc_0604,Barnes-Lynch,Danielle Sanders,danielle.sanders@example.com,Starter,6,4,0,152,3,9,8,1,1,0.922,1,2026-10-11,29,renewed
+acc_0605,Waller-Chavez,Jason Graves,jason.graves@example.com,Professional,24,18,0,3041,17,41,48,1,0,0.92,2,2026-10-15,99,renewed
+acc_0606,"Hunt, Cameron and Kelley",Norman Spencer,norman.spencer@example.com,Starter,13,9,0,1008,4,12,14,2,2,0.624,5,2026-10-12,29,renewed
+acc_0607,Harris PLC,Melissa Morse,melissa.morse@example.com,Professional,20,12,1,1124,33,24,26,1,1,0.635,4,2026-09-12,99,renewed
+acc_0608,Zavala Ltd,Cassandra Daniels,cassandra.daniels@example.com,Enterprise,159,134,0,23539,222,199,290,1,1,0.394,13,2026-10-27,299,renewed
+acc_0609,"Morris, Wilson and Bell",Mr. Michael Butler,mr..michael.butler@example.com,Starter,6,5,0,161,3,8,9,0,0,0.728,2,2026-08-24,29,churned
+acc_0610,"English, Ferguson and Rich",Adam Rodriguez,adam.rodriguez@example.com,Enterprise,144,122,1,69688,228,313,295,1,1,0.835,0,2026-08-22,299,renewed
+acc_0611,Thomas-Santiago,Paul Martin,paul.martin@example.com,Starter,12,9,0,528,6,3,4,2,0,0.786,10,2026-08-28,29,renewed
+acc_0612,Vega-Thomas,Richard Harris,richard.harris@example.com,Starter,5,1,0,1684,1,4,6,6,0,0.328,43,2026-09-20,29,downgraded
+acc_0613,"Johnson, Cervantes and Garcia",Nancy Hancock,nancy.hancock@example.com,Professional,26,22,0,2713,11,16,15,0,0,0.877,2,2026-09-04,99,renewed
+acc_0614,"Holland, Price and Dixon",Melissa Schwartz,melissa.schwartz@example.com,Starter,5,2,0,1167,2,6,8,2,2,0.637,11,2026-08-05,29,downgraded
+acc_0615,House Group,Richard Jennings,richard.jennings@example.com,Enterprise,120,111,1,86274,334,190,199,1,0,0.903,0,2026-10-18,299,downgraded
+acc_0616,"Brown, Manning and Harris",Shannon Ramos,shannon.ramos@example.com,Enterprise,102,82,0,67036,127,252,250,0,0,0.62,0,2026-11-10,299,renewed
+acc_0617,Pruitt Ltd,Holly Chapman,holly.chapman@example.com,Professional,36,30,0,3065,21,52,45,1,1,0.796,4,2026-11-22,99,renewed
+acc_0618,"Morrison, Parsons and Brandt",Christopher Fleming,christopher.fleming@example.com,Starter,6,1,0,1782,0,4,6,5,5,0.216,13,2026-09-01,29,churned
+acc_0619,Rivers Ltd,Jamie Patterson,jamie.patterson@example.com,Starter,12,10,0,262,3,7,9,0,0,0.918,3,2026-10-16,29,churned
+acc_0620,"Baker, Martin and Singleton",John Pineda,john.pineda@example.com,Enterprise,139,120,1,67025,202,131,121,0,0,0.852,2,2026-11-24,299,renewed
+acc_0621,Hernandez LLC,Patricia Garrett,patricia.garrett@example.com,Enterprise,154,114,1,79694,144,219,203,1,0,0.894,2,2026-10-22,299,renewed
+acc_0622,"Turner, Tyler and Pierce",Michael Fox,michael.fox@example.com,Professional,30,22,1,8776,17,40,37,0,0,0.846,3,2026-08-19,99,renewed
+acc_0623,Meyer PLC,Joshua Powell,joshua.powell@example.com,Enterprise,124,92,1,45858,349,311,345,0,0,0.832,3,2026-12-04,299,churned
+acc_0624,Walker-Lewis,Isaac Robinson,isaac.robinson@example.com,Professional,32,24,1,6900,16,19,23,0,0,0.947,4,2026-11-29,99,downgraded
+acc_0625,"Moreno, Barajas and Colon",Mrs. Maureen Griffin,mrs..maureen.griffin@example.com,Enterprise,126,120,1,67462,258,228,207,1,0,0.762,3,2026-08-16,299,renewed
+acc_0626,"Austin, Oliver and Haley",Erica Moon,erica.moon@example.com,Enterprise,152,129,1,81169,89,367,351,1,1,0.963,3,2026-11-09,299,renewed
+acc_0627,Cruz PLC,Allison Black,allison.black@example.com,Professional,40,37,0,3642,12,65,65,0,0,0.975,3,2026-09-28,99,downgraded
+acc_0628,Robertson-Hicks,Mr. Matthew Flores,mr..matthew.flores@example.com,Starter,9,4,1,933,5,10,9,2,0,0.574,7,2026-09-22,29,renewed
+acc_0629,Vaughan and Sons,Patricia Ferguson,patricia.ferguson@example.com,Professional,25,24,0,7777,22,34,39,1,1,0.899,3,2026-11-26,99,renewed
+acc_0630,"Jones, Santiago and Ayala",Jessica Garcia,jessica.garcia@example.com,Starter,13,9,0,515,2,5,5,1,0,0.871,0,2026-09-12,29,renewed
+acc_0631,"Poole, Johns and Figueroa",Robert Jones,robert.jones@example.com,Professional,34,30,0,6456,37,20,19,0,0,0.924,3,2026-09-12,99,renewed
+acc_0632,"Hernandez, Stevens and Rivera",Anthony Bauer,anthony.bauer@example.com,Starter,11,5,1,314,0,8,10,3,1,0.632,10,2026-09-10,29,downgraded
+acc_0633,"Jones, Underwood and Bartlett",Jerry Sullivan,jerry.sullivan@example.com,Professional,21,21,0,5032,43,36,37,0,0,0.964,3,2026-10-20,99,downgraded
+acc_0634,Smith-Nunez,Margaret Montgomery,margaret.montgomery@example.com,Starter,9,5,0,417,6,4,5,2,2,0.339,2,2026-10-18,29,renewed
+acc_0635,"Richards, Haynes and Jones",Ashley Buchanan,ashley.buchanan@example.com,Starter,7,4,1,733,4,4,5,1,0,0.478,12,2026-08-23,29,renewed
+acc_0636,Obrien-Campbell,Jane Short,jane.short@example.com,Starter,7,5,0,1186,0,8,8,2,0,0.764,3,2026-08-14,29,downgraded
+acc_0637,Wells PLC,Paul Robles,paul.robles@example.com,Starter,8,4,0,1629,0,5,11,5,0,0.01,12,2026-08-18,29,downgraded
+acc_0638,"Phillips, Walters and Evans",Traci Camacho,traci.camacho@example.com,Starter,7,7,1,32,3,5,6,1,0,0.75,2,2026-10-30,29,renewed
+acc_0639,"Brooks, Herring and Spencer",Barbara Smith,barbara.smith@example.com,Starter,13,10,0,442,6,7,7,1,1,0.764,3,2026-09-09,29,downgraded
+acc_0640,"Long, Kelley and Miller",Patrick Swanson,patrick.swanson@example.com,Starter,10,8,0,956,6,5,8,2,0,0.613,9,2026-09-19,29,renewed
+acc_0641,Gutierrez Ltd,Brenda White,brenda.white@example.com,Starter,9,7,0,499,3,15,15,1,0,0.833,3,2026-09-24,29,renewed
+acc_0642,"Davenport, Lee and White",Sarah York,sarah.york@example.com,Professional,34,26,0,8523,33,37,35,1,0,0.786,3,2026-08-18,99,downgraded
+acc_0643,"Murray, Dunn and Roberts",Brett Swanson,brett.swanson@example.com,Enterprise,123,97,1,30072,304,160,180,1,1,0.803,0,2026-10-26,299,renewed
+acc_0644,Lynn-Howard,Cynthia Mitchell,cynthia.mitchell@example.com,Enterprise,117,88,1,64653,245,156,163,1,0,0.897,3,2026-09-09,299,churned
+acc_0645,Mccullough LLC,Mr. Matthew Steele,mr..matthew.steele@example.com,Professional,30,30,1,6004,23,16,19,0,0,0.794,4,2026-08-31,99,renewed
+acc_0646,Cunningham LLC,Tina Jackson,tina.jackson@example.com,Starter,12,2,1,850,3,2,4,4,2,0.398,25,2026-08-02,29,downgraded
+acc_0647,Sanchez-Walker,Jessica Larsen,jessica.larsen@example.com,Starter,6,4,0,210,7,13,15,1,1,0.412,2,2026-08-12,29,renewed
+acc_0648,Frazier LLC,Julie Howard,julie.howard@example.com,Enterprise,123,93,0,70016,393,71,100,1,1,0.665,6,2026-08-05,299,renewed
+acc_0649,Tucker-Rodriguez,Angela Ramirez,angela.ramirez@example.com,Starter,7,7,0,129,2,9,10,1,0,0.803,1,2026-08-30,29,renewed
+acc_0650,Vance and Sons,Stephen Jones,stephen.jones@example.com,Starter,8,5,0,303,1,7,8,0,0,0.905,2,2026-08-24,29,downgraded
+acc_0651,Mcclain PLC 651,Robin Riley,robin.riley@example.com,Professional,23,21,1,6097,15,44,41,1,0,0.857,2,2026-09-03,99,renewed
+acc_0652,"Lewis, Johnson and Green",Kimberly Valdez,kimberly.valdez@example.com,Starter,13,10,0,192,3,13,10,0,0,0.738,3,2026-11-05,29,downgraded
+acc_0653,Diaz and Sons,Leah Vincent,leah.vincent@example.com,Professional,20,17,1,5187,28,13,13,0,0,0.789,4,2026-09-11,99,downgraded
+acc_0654,Marshall PLC,Jack Smith,jack.smith@example.com,Professional,32,29,1,3450,15,25,29,1,0,0.766,2,2026-11-10,99,churned
+acc_0655,Charles PLC,Nicole Taylor,nicole.taylor@example.com,Starter,13,9,0,414,1,4,4,0,0,0.822,0,2026-09-10,29,downgraded
+acc_0656,White PLC 656,Tracy Fitzgerald,tracy.fitzgerald@example.com,Starter,13,11,0,625,6,8,8,1,1,0.758,13,2026-09-08,29,renewed
+acc_0657,Crosby-Williams,Crystal Baker,crystal.baker@example.com,Starter,5,3,0,78,3,5,4,1,0,0.764,0,2026-08-15,29,renewed
+acc_0658,Williams and Sons,Rebecca Hughes,rebecca.hughes@example.com,Starter,8,6,0,96,2,15,13,1,0,0.746,2,2026-09-28,29,renewed
+acc_0659,Keith-Williams,Ashley Schmitt,ashley.schmitt@example.com,Starter,10,10,0,531,1,5,4,0,0,0.909,0,2026-11-07,29,renewed
+acc_0660,"Gallegos, Davenport and Baker",Carrie Valdez,carrie.valdez@example.com,Starter,6,4,0,386,3,17,15,1,1,0.886,2,2026-12-09,29,renewed
+acc_0661,Matthews-Villanueva,David Kaufman,david.kaufman@example.com,Enterprise,133,116,1,30115,349,188,196,1,0,0.927,4,2026-08-16,299,renewed
+acc_0662,Black LLC,Haley Sparks,haley.sparks@example.com,Professional,29,27,0,7478,18,27,30,0,0,0.724,0,2026-10-29,99,downgraded
+acc_0663,"Smith, Macias and Gonzales",Jose Campbell,jose.campbell@example.com,Professional,31,26,0,5513,32,59,65,0,0,0.969,4,2026-09-18,99,downgraded
+acc_0664,Lopez LLC,Ruth Guerrero,ruth.guerrero@example.com,Professional,31,25,0,6404,31,32,30,1,0,0.83,0,2026-09-23,99,downgraded
+acc_0665,Shepherd-Cortez,Mr. Daniel Martin,mr..daniel.martin@example.com,Starter,7,4,0,616,2,5,6,6,1,0.214,27,2026-08-15,29,downgraded
+acc_0666,Johnson-Williams,Candace Soto,candace.soto@example.com,Enterprise,143,124,1,50226,232,250,281,1,1,0.829,3,2026-08-18,299,renewed
+acc_0667,Macdonald and Sons,David White,david.white@example.com,Starter,10,5,0,1158,4,8,8,2,2,0.769,2,2026-09-19,29,renewed
+acc_0668,Greene-Elliott,Nathan Stanley,nathan.stanley@example.com,Professional,40,22,1,1706,14,51,65,3,1,0.522,9,2026-08-06,99,downgraded
+acc_0669,Valentine-Robinson,Kaitlin Olson,kaitlin.olson@example.com,Professional,43,37,1,8107,12,57,56,1,0,0.886,1,2026-12-12,99,churned
+acc_0670,Greer PLC,Kevin Saunders,kevin.saunders@example.com,Professional,36,18,0,1751,12,7,12,2,1,0.31,10,2026-08-06,99,renewed
+acc_0671,"Keller, Baker and Ramsey",Jesse Garza,jesse.garza@example.com,Starter,12,12,0,149,1,8,7,0,0,0.885,1,2026-10-19,29,renewed
+acc_0672,Gray and Sons,Dale Heath,dale.heath@example.com,Professional,31,26,0,6804,20,49,54,1,1,0.748,3,2026-09-20,99,renewed
+acc_0673,"Cohen, Serrano and Jacobs",Steven Greene,steven.greene@example.com,Professional,34,24,0,4541,34,50,53,1,1,0.756,3,2026-09-29,99,renewed
+acc_0674,"Gordon, Wilson and Olson",Larry Carey,larry.carey@example.com,Enterprise,141,110,1,69467,181,353,323,1,0,0.808,1,2026-08-23,299,renewed
+acc_0675,"Banks, Boyd and Wood",Joseph Perez,joseph.perez@example.com,Professional,36,35,0,3054,28,51,54,1,0,0.804,4,2026-08-20,99,churned
+acc_0676,Clarke-James,Natalie Juarez,natalie.juarez@example.com,Professional,44,34,0,7536,36,46,43,0,0,0.91,1,2026-12-07,99,renewed
+acc_0677,"Johnston, Coleman and Scott",Susan Miller,susan.miller@example.com,Enterprise,104,46,0,24107,134,58,183,4,4,0.37,19,2026-09-18,299,downgraded
+acc_0678,"Mcdowell, Ortiz and Lopez",Rachel Lane,rachel.lane@example.com,Enterprise,114,94,1,50648,302,166,184,0,0,0.857,1,2026-11-08,299,downgraded
+acc_0679,Meyer Group,Melissa Stewart,melissa.stewart@example.com,Starter,10,8,0,540,2,9,10,1,0,0.849,1,2026-11-02,29,renewed
+acc_0680,Rodriguez-Simmons,Deborah Herrera,deborah.herrera@example.com,Enterprise,108,84,1,17576,162,195,247,3,1,0.497,11,2026-08-01,299,renewed
+acc_0681,"Diaz, Hill and Becker",Jennifer Bowers,jennifer.bowers@example.com,Enterprise,118,25,0,11400,97,97,238,4,1,0.228,40,2026-07-30,299,churned
+acc_0682,White-Hansen,Dr. Kenneth Schroeder,dr..kenneth.schroeder@example.com,Enterprise,126,76,1,67055,107,177,189,3,1,0.425,5,2026-11-03,299,renewed
+acc_0683,Fitzgerald-Wyatt,Nicole Griffin,nicole.griffin@example.com,Enterprise,148,108,1,26670,179,300,343,0,0,0.828,4,2026-09-18,299,renewed
+acc_0684,"Avery, Garcia and Romero",Rebecca Mendez,rebecca.mendez@example.com,Starter,8,5,0,26,3,8,9,1,1,0.921,1,2026-10-15,29,downgraded
+acc_0685,"Mann, Martin and Oconnell",Brandon Thomas,brandon.thomas@example.com,Professional,23,16,1,3487,16,31,39,1,1,0.786,5,2026-10-13,99,churned
+acc_0686,"Graham, Brown and Walker",Andrew Cruz,andrew.cruz@example.com,Starter,5,4,0,116,2,11,12,2,2,0.432,4,2026-09-04,29,churned
+acc_0687,Mendez-Meyer,Linda Bautista,linda.bautista@example.com,Starter,6,2,0,1113,1,4,8,3,1,0.386,13,2026-08-27,29,downgraded
+acc_0688,Bowman Group,Samuel Galvan,samuel.galvan@example.com,Starter,10,7,0,420,0,13,14,1,0,0.903,4,2026-09-10,29,renewed
+acc_0689,"Mitchell, Johnson and Greene",Crystal Jackson,crystal.jackson@example.com,Enterprise,152,118,1,37516,90,314,338,0,0,0.834,3,2026-11-30,299,churned
+acc_0690,Ward Ltd,Christopher Shea,christopher.shea@example.com,Starter,11,10,0,391,0,4,5,0,0,0.82,0,2026-09-07,29,renewed
+acc_0691,Gomez-Foster,Kelly Mclaughlin,kelly.mclaughlin@example.com,Professional,39,28,0,7579,35,39,60,1,1,0.64,11,2026-09-11,99,renewed
+acc_0692,Calhoun PLC,Ronald Herman,ronald.herman@example.com,Professional,37,18,0,3936,17,39,59,5,2,0.206,42,2026-08-25,99,churned
+acc_0693,Bailey-Ochoa,Victor Gibson,victor.gibson@example.com,Starter,9,4,0,1111,7,7,6,2,2,0.524,11,2026-10-16,29,renewed
+acc_0694,Andrews-Green,Brian Jones,brian.jones@example.com,Starter,10,9,0,454,3,11,13,0,0,0.84,3,2026-09-29,29,renewed
+acc_0695,Morgan-Wilson,Deanna Medina,deanna.medina@example.com,Enterprise,120,90,1,39028,206,81,95,1,1,0.925,2,2026-11-03,299,downgraded
+acc_0696,"Wright, Ramos and Bennett",Mr. Gerald Rowe,mr..gerald.rowe@example.com,Enterprise,128,98,1,45556,166,52,74,2,1,0.396,13,2026-08-01,299,renewed
+acc_0697,"Murray, Matthews and Johnson",Austin Schultz,austin.schultz@example.com,Enterprise,128,99,1,37640,227,182,175,1,1,0.805,2,2026-10-08,299,renewed
+acc_0698,Rhodes and Sons,Jennifer Gomez,jennifer.gomez@example.com,Starter,10,10,0,301,4,11,9,1,1,0.882,1,2026-12-12,29,downgraded
+acc_0699,"Smith, Collier and Wright",Michael Nicholson,michael.nicholson@example.com,Professional,36,34,0,8403,33,29,32,0,0,0.818,4,2026-11-20,99,renewed
+acc_0700,Spencer and Sons,Hayden Shannon,hayden.shannon@example.com,Starter,13,12,0,124,2,8,7,0,0,0.94,4,2026-10-21,29,renewed
+acc_0701,White-Reese,Cheryl Mclaughlin,cheryl.mclaughlin@example.com,Starter,10,8,0,118,2,6,7,1,0,0.9,3,2026-09-29,29,renewed
+acc_0702,Moss LLC,Dale Wright,dale.wright@example.com,Starter,7,7,0,417,1,7,7,1,0,0.895,1,2026-09-24,29,downgraded
+acc_0703,"Kelly, Maxwell and Wilson",Tyler Vasquez,tyler.vasquez@example.com,Starter,7,6,0,123,0,10,11,1,1,0.829,4,2026-12-04,29,churned
+acc_0704,Duran PLC,Sarah Watson,sarah.watson@example.com,Starter,11,8,0,823,3,6,6,3,1,0.693,5,2026-08-14,29,renewed
+acc_0705,Vasquez-Galloway,Sheila Henry,sheila.henry@example.com,Enterprise,147,127,1,82104,381,114,110,1,0,0.884,3,2026-09-01,299,renewed
+acc_0706,"Ramirez, Walker and Ray",Robert Mendoza,robert.mendoza@example.com,Professional,38,27,0,5708,17,38,44,1,0,0.559,9,2026-11-05,99,downgraded
+acc_0707,"Johnson, Reed and Dalton",Joyce Martinez,joyce.martinez@example.com,Starter,11,9,0,326,1,12,12,0,0,0.917,1,2026-10-20,29,renewed
+acc_0708,"Stevens, Norris and Smith",Kevin Nguyen,kevin.nguyen@example.com,Enterprise,128,106,1,41039,346,130,139,0,0,0.959,4,2026-09-19,299,downgraded
+acc_0709,"Hensley, Lopez and Baker",Tyler Cooper,tyler.cooper@example.com,Starter,13,10,1,13,7,4,4,2,2,0.605,2,2026-09-04,29,renewed
+acc_0710,Jimenez and Sons,Paul Diaz,paul.diaz@example.com,Professional,42,23,0,4133,17,52,65,2,0,0.51,4,2026-10-23,99,downgraded
+acc_0711,Ramirez-White,Kenneth Perez,kenneth.perez@example.com,Starter,10,9,0,525,2,14,15,1,1,0.895,0,2026-08-27,29,renewed
+acc_0712,Le and Sons,Selena Gonzalez,selena.gonzalez@example.com,Professional,40,38,0,3103,9,60,54,0,0,0.818,1,2026-09-03,99,renewed
+acc_0713,"Hernandez, Shaffer and Thompson",Dr. Samuel Holmes DDS,dr..samuel.holmes.dds@example.com,Starter,8,5,0,502,2,14,14,0,0,0.865,1,2026-11-11,29,renewed
+acc_0714,Evans-Hart,Jennifer Vaughn,jennifer.vaughn@example.com,Starter,9,5,0,993,6,9,11,2,0,0.606,12,2026-09-13,29,renewed
+acc_0715,Lewis LLC 715,Mark Cole,mark.cole@example.com,Starter,8,8,0,475,1,9,8,1,0,0.969,0,2026-08-31,29,renewed
+acc_0716,Green-Ward,Rhonda Cooper,rhonda.cooper@example.com,Professional,28,21,1,7169,12,31,38,2,1,0.572,10,2026-10-24,99,renewed
+acc_0717,Martinez-Dillon,Christina Johnston,christina.johnston@example.com,Starter,10,7,0,419,1,3,4,0,0,0.778,1,2026-11-01,29,renewed
+acc_0718,"Ryan, Krause and Mitchell",Jordan Hampton,jordan.hampton@example.com,Professional,30,26,0,5849,32,65,63,0,0,0.89,4,2026-09-09,99,renewed
+acc_0719,Preston-James,Mark Thomas,mark.thomas@example.com,Enterprise,121,113,0,70400,165,213,203,0,0,0.844,0,2026-10-04,299,renewed
+acc_0720,Davidson LLC,Logan Sullivan,logan.sullivan@example.com,Starter,9,6,0,386,3,13,14,1,1,0.89,1,2026-08-24,29,renewed
+acc_0721,Miller LLC,Evan Carter,evan.carter@example.com,Professional,24,12,0,6746,26,40,59,2,1,0.382,11,2026-09-22,99,downgraded
+acc_0722,Jacobs-Foster,Priscilla Mcmillan,priscilla.mcmillan@example.com,Starter,11,9,0,227,2,9,8,1,0,0.971,4,2026-12-09,29,renewed
+acc_0723,"Matthews, Sheppard and Gutierrez",Alexander Luna,alexander.luna@example.com,Professional,37,37,0,3678,13,64,58,0,0,0.974,3,2026-10-15,99,renewed
+acc_0724,"King, Manning and Brady",James Davis,james.davis@example.com,Professional,35,34,1,3132,18,17,17,0,0,0.88,3,2026-10-17,99,renewed
+acc_0725,Kelley-Johnson,Phillip Miller,phillip.miller@example.com,Starter,5,4,0,575,2,9,9,1,0,0.927,4,2026-09-14,29,renewed
+acc_0726,Montgomery-Miller,Jean Perez,jean.perez@example.com,Professional,42,31,1,7195,18,61,58,0,0,0.762,0,2026-12-04,99,renewed
+acc_0727,"Mitchell, Sims and Anderson",Alyssa Alvarado,alyssa.alvarado@example.com,Starter,13,12,0,303,2,11,12,1,0,0.751,2,2026-12-06,29,renewed
+acc_0728,Lin-Mcdonald,Taylor Dunn,taylor.dunn@example.com,Professional,31,30,0,5315,30,26,25,0,0,0.775,2,2026-11-14,99,renewed
+acc_0729,Montes Ltd,Leslie Bryant,leslie.bryant@example.com,Starter,8,6,1,550,2,6,5,0,0,0.839,0,2026-09-04,29,downgraded
+acc_0730,"Fields, Elliott and Mills",Emily Reed,emily.reed@example.com,Professional,33,14,0,1732,12,7,12,6,2,0.337,24,2026-08-17,99,churned
+acc_0731,"Perez, Davis and Parker",Christopher Smith,christopher.smith@example.com,Starter,13,10,0,784,5,6,8,3,1,0.439,14,2026-11-10,29,renewed
+acc_0732,"Ochoa, Charles and Cooper",Adam Weeks,adam.weeks@example.com,Professional,22,12,0,942,4,6,12,2,2,0.385,28,2026-09-17,99,downgraded
+acc_0733,Evans-Cannon,Linda Robles,linda.robles@example.com,Professional,32,30,0,7735,21,29,27,0,0,0.802,0,2026-11-29,99,renewed
+acc_0734,"Brooks, Jenkins and Castro",Christopher Mclaughlin,christopher.mclaughlin@example.com,Starter,13,12,0,182,3,16,15,1,0,0.727,2,2026-10-08,29,renewed
+acc_0735,Clayton-Walker,Mario Black,mario.black@example.com,Professional,20,6,0,2351,8,26,36,4,4,0.082,27,2026-08-24,99,downgraded
+acc_0736,"Aguirre, Cohen and Mitchell",Rhonda Gutierrez,rhonda.gutierrez@example.com,Starter,9,8,1,585,2,14,14,1,0,0.934,3,2026-10-14,29,renewed
+acc_0737,White LLC 737,Jesse Chavez,jesse.chavez@example.com,Professional,24,19,0,3068,33,29,35,0,0,0.829,0,2026-11-13,99,downgraded
+acc_0738,"Dean, Lopez and Smith",Joseph Lopez,joseph.lopez@example.com,Starter,10,9,0,173,3,8,7,1,1,0.955,4,2026-10-05,29,renewed
+acc_0739,Campbell and Sons,Monica Hall,monica.hall@example.com,Professional,22,17,0,4018,20,54,60,1,1,0.772,4,2026-11-18,99,renewed
+acc_0740,Smith and Sons,Eric Lloyd,eric.lloyd@example.com,Enterprise,144,108,1,52558,243,115,115,0,0,0.75,0,2026-09-24,299,renewed
+acc_0741,Ford-Moody,Ryan Lynn,ryan.lynn@example.com,Enterprise,156,120,1,29775,384,148,166,3,2,0.686,5,2026-09-07,299,downgraded
+acc_0742,Adams Group,John Lee,john.lee@example.com,Professional,28,23,0,4146,13,28,32,0,0,0.901,2,2026-10-28,99,renewed
+acc_0743,Roth-Clayton,Randy Wright,randy.wright@example.com,Professional,38,33,1,5953,13,60,55,1,0,0.978,3,2026-09-27,99,renewed
+acc_0744,Wright-Vang,Nicolas Davis,nicolas.davis@example.com,Professional,26,19,1,7683,14,15,17,1,0,0.617,12,2026-08-16,99,renewed
+acc_0745,"Hendrix, Kennedy and Maldonado",Frank Soto,frank.soto@example.com,Starter,10,7,0,486,1,3,4,0,0,0.807,0,2026-09-04,29,renewed
+acc_0746,Garner PLC,Dawn Little,dawn.little@example.com,Starter,11,10,0,258,3,12,11,1,0,0.908,4,2026-10-05,29,renewed
+acc_0747,Ward Inc,Claudia Rodriguez,claudia.rodriguez@example.com,Enterprise,117,57,0,3993,82,200,314,6,1,0.305,27,2026-08-17,299,renewed
+acc_0748,"Hamilton, Smith and Bauer",Jennifer Sanchez,jennifer.sanchez@example.com,Professional,29,22,0,5227,31,66,62,0,0,0.763,0,2026-09-22,99,renewed
+acc_0749,Perkins Ltd,Kyle Watson,kyle.watson@example.com,Starter,10,1,0,705,1,6,15,5,0,0.044,43,2026-09-21,29,churned
+acc_0750,Wright Group,Luke Galvan,luke.galvan@example.com,Enterprise,159,84,1,31016,165,91,104,3,0,0.519,12,2026-10-14,299,renewed
+acc_0751,"Brown, Kelly and Moore",Ashley Freeman,ashley.freeman@example.com,Starter,7,5,0,348,1,12,13,1,1,0.85,0,2026-09-13,29,downgraded
+acc_0752,Holden-Kramer,Renee Gonzales,renee.gonzales@example.com,Starter,7,6,0,492,1,8,9,0,0,0.729,3,2026-11-10,29,renewed
+acc_0753,Smith Group,Chad Roach,chad.roach@example.com,Starter,5,2,0,1176,2,10,15,2,2,0.613,12,2026-09-30,29,downgraded
+acc_0754,Mann-Hansen,Katherine Knight,katherine.knight@example.com,Professional,39,35,0,7354,25,33,39,1,1,0.905,4,2026-09-06,99,renewed
+acc_0755,"Bailey, Oconnor and Hill",Suzanne Spencer,suzanne.spencer@example.com,Professional,42,39,0,5598,17,20,21,1,1,0.88,3,2026-09-20,99,churned
+acc_0756,Schmidt Group,Dennis Richardson,dennis.richardson@example.com,Enterprise,118,85,1,33796,236,210,244,1,0,0.813,0,2026-11-04,299,churned
+acc_0757,Parsons PLC,Cody Smith,cody.smith@example.com,Starter,6,3,0,1010,5,7,10,2,1,0.581,6,2026-10-26,29,downgraded
+acc_0758,Parsons-Allen,Mary Ryan,mary.ryan@example.com,Enterprise,120,44,1,24205,17,233,323,5,1,0.398,14,2026-08-02,299,renewed
+acc_0759,Lee-Vega,Brittany Campbell,brittany.campbell@example.com,Professional,40,39,0,7723,40,24,23,0,0,0.833,0,2026-11-01,99,renewed
+acc_0760,Davidson-Rodriguez,Andrea Conley,andrea.conley@example.com,Enterprise,159,141,1,67464,176,262,246,0,0,0.768,4,2026-11-09,299,renewed
+acc_0761,White Inc,John Garcia,john.garcia@example.com,Starter,10,7,0,18,1,13,14,0,0,0.904,1,2026-11-14,29,renewed
+acc_0762,"May, Price and Burns",Leslie Williams,leslie.williams@example.com,Professional,20,16,0,4486,17,46,46,1,1,0.836,3,2026-11-12,99,downgraded
+acc_0763,Obrien Inc,Thomas Rios,thomas.rios@example.com,Starter,13,11,0,542,1,15,13,1,0,0.816,2,2026-10-13,29,churned
+acc_0764,Mcdonald Ltd,Justin Hurley,justin.hurley@example.com,Professional,44,35,0,5438,24,37,39,0,0,0.781,4,2026-12-01,99,downgraded
+acc_0765,Short-Bauer,Luis Rice,luis.rice@example.com,Starter,11,11,0,222,2,6,8,1,0,0.829,4,2026-09-30,29,renewed
+acc_0766,"Jones, Torres and Blackburn",Anne Hardy,anne.hardy@example.com,Professional,32,18,0,4587,30,43,52,1,1,0.595,9,2026-09-19,99,renewed
+acc_0767,"Cruz, Lee and Sandoval",Theresa Hansen,theresa.hansen@example.com,Professional,38,37,1,4960,24,23,23,0,0,0.769,0,2026-11-02,99,renewed
+acc_0768,"Perry, Garcia and Fowler",Jimmy Ortega,jimmy.ortega@example.com,Starter,12,8,0,23,3,3,4,0,0,0.913,3,2026-10-01,29,renewed
+acc_0769,Jackson and Sons,Kathy Sandoval,kathy.sandoval@example.com,Starter,5,3,0,470,2,7,7,1,1,0.784,4,2026-09-06,29,renewed
+acc_0770,"Murillo, Ramos and Gomez",William Nguyen,william.nguyen@example.com,Professional,27,26,0,2660,34,35,33,1,0,0.915,3,2026-11-23,99,renewed
+acc_0771,Gutierrez-Schultz,Erica Allen,erica.allen@example.com,Starter,5,3,0,122,3,10,13,3,3,0.423,8,2026-09-14,29,downgraded
+acc_0772,"Lewis, Cannon and Howe",Tyrone West,tyrone.west@example.com,Enterprise,148,123,0,60861,279,91,118,2,0,0.703,7,2026-09-11,299,downgraded
+acc_0773,Smith-Johnson,Alan Taylor,alan.taylor@example.com,Starter,12,9,0,350,2,9,9,1,0,0.797,3,2026-09-17,29,renewed
+acc_0774,Smith-Joyce,Ethan Ingram,ethan.ingram@example.com,Professional,38,23,0,3223,25,19,30,3,1,0.601,11,2026-09-28,99,renewed
+acc_0775,"Short, Ellison and Dixon",Laura Davis,laura.davis@example.com,Professional,32,27,0,2384,27,20,20,0,0,0.775,2,2026-09-30,99,renewed
+acc_0776,Kelly-Taylor,Kevin Hall,kevin.hall@example.com,Professional,40,11,0,2254,10,26,51,5,0,0.23,32,2026-09-22,99,churned
+acc_0777,Davis-Ross,Morgan Cummings,morgan.cummings@example.com,Enterprise,109,95,1,70098,278,253,230,1,0,0.751,1,2026-10-26,299,renewed
+acc_0778,Thompson-Petersen,Laura Velez,laura.velez@example.com,Enterprise,123,101,1,50246,73,293,323,1,0,0.8,10,2026-10-08,299,renewed
+acc_0779,"May, Johnson and Stokes",Richard Weeks,richard.weeks@example.com,Enterprise,115,98,1,34057,329,72,83,0,0,0.963,1,2026-08-20,299,renewed
+acc_0780,Bailey-Montoya,Sean Kane,sean.kane@example.com,Starter,7,7,0,212,2,17,15,1,0,0.779,4,2026-10-22,29,renewed
+acc_0781,Adkins PLC,Madison Chen,madison.chen@example.com,Starter,8,3,0,440,4,6,11,3,3,0.551,6,2026-10-12,29,downgraded
+acc_0782,Torres Inc,Karl Murphy,karl.murphy@example.com,Enterprise,148,100,1,26174,352,121,154,2,0,0.571,6,2026-08-21,299,renewed
+acc_0783,"Walker, Williams and Dennis",Jeremy Larson,jeremy.larson@example.com,Professional,28,28,0,6331,28,30,28,1,1,0.749,1,2026-12-07,99,renewed
+acc_0784,"Davis, Reynolds and Hartman",George Alvarez,george.alvarez@example.com,Professional,34,29,1,5754,28,35,39,0,0,0.767,0,2026-10-18,99,renewed
+acc_0785,"Williams, Ross and Miller",Patricia Anderson,patricia.anderson@example.com,Professional,30,23,0,4815,13,52,51,0,0,0.765,1,2026-10-14,99,renewed
+acc_0786,Castillo and Sons,Matthew Gonzalez DDS,matthew.gonzalez.dds@example.com,Professional,29,18,0,3419,9,20,28,2,1,0.449,13,2026-09-07,99,downgraded
+acc_0787,"Warren, Allen and Adams",Michael Johnston,michael.johnston@example.com,Starter,7,6,0,19,3,9,10,0,0,0.933,1,2026-11-29,29,renewed
+acc_0788,Powers Group,Connor Cooper,connor.cooper@example.com,Starter,13,9,0,218,6,10,12,2,0,0.331,4,2026-09-29,29,renewed
+acc_0789,"Johnson, Torres and Huerta",Wanda Ramos,wanda.ramos@example.com,Professional,42,22,0,4149,6,45,61,2,2,0.338,11,2026-09-04,99,downgraded
+acc_0790,Alexander and Sons,James Todd,james.todd@example.com,Starter,11,2,0,1207,3,4,6,6,6,0.131,20,2026-08-23,29,downgraded
+acc_0791,Rodriguez Inc 791,Marc Hernandez,marc.hernandez@example.com,Professional,44,23,1,6069,30,51,64,2,0,0.71,7,2026-08-26,99,downgraded
+acc_0792,Smith-Benson,Jerry Johnson,jerry.johnson@example.com,Professional,39,39,0,3125,43,54,55,1,0,0.887,3,2026-08-21,99,renewed
+acc_0793,Singh and Sons,Joseph Green,joseph.green@example.com,Starter,13,4,0,1007,2,6,13,2,0,0.124,29,2026-08-03,29,renewed
+acc_0794,Dean-Gay,Mary Bennett,mary.bennett@example.com,Professional,34,33,0,3459,32,72,66,1,0,0.739,3,2026-12-06,99,renewed
+acc_0795,"Rose, Scott and Brown",Michael Nelson,michael.nelson@example.com,Professional,44,34,0,3910,36,36,53,2,2,0.423,11,2026-07-31,99,churned
+acc_0796,Pena-Smith 796,Devon Christian,devon.christian@example.com,Starter,8,7,0,590,3,14,14,0,0,0.76,1,2026-08-27,29,churned
+acc_0797,"Ward, Rodriguez and Carter",Jasmine Whitney,jasmine.whitney@example.com,Professional,30,8,0,1086,11,29,46,3,2,0.152,25,2026-09-06,99,churned
+acc_0798,"Bray, Garcia and Stewart",Kim Lopez,kim.lopez@example.com,Enterprise,154,74,0,4712,48,86,247,3,0,0.193,20,2026-08-07,299,churned
+acc_0799,"Rasmussen, Castro and Marquez",Thomas Torres,thomas.torres@example.com,Starter,12,6,0,648,1,2,5,2,0,0.263,21,2026-09-22,29,downgraded
+acc_0800,Long-Moore,Harold Garrett,harold.garrett@example.com,Starter,10,9,0,66,3,8,10,0,0,0.833,2,2026-11-05,29,renewed

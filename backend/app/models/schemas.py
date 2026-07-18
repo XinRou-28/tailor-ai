@@ -21,11 +21,16 @@ CurrentPlan = Literal["Starter", "Professional", "Enterprise"]
 class Account(BaseModel):
     customer_id: str
     company_name: str
+    customer_contact:string | null;
+    contact_email:string | null;
+
     current_plan: CurrentPlan
     seats_purchased: int
     seats_active: int
+
     monthly_revenue: float
     contract_renewal_date: str
+    renewal_in_days: int | None = None
 
 
 class ScoreResult(BaseModel):
@@ -33,8 +38,12 @@ class ScoreResult(BaseModel):
     health_score: float
     confidence: float
     risk_level: RiskLevel
+
     top_reasons: list[str]
     reason_code: ReasonCode
+
+    reason_explanations: list[str] = []
+
     investigated: bool
     scored_at: str
 
@@ -56,8 +65,14 @@ class Decision(BaseModel):
 
 class Notification(BaseModel):
     customer_id: str
+
     headline: str
+    subject: str | None = None
+
+    recipient_name: str | None = None
+
     body: str
+
     cta_label: str
 
 

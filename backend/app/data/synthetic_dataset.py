@@ -60,6 +60,8 @@ class AccountFeatures:
     contract_renewal_date: str
     monthly_revenue: int
     actual_outcome: str
+    customer_contact: str
+    contact_email: str
 
 
 def weighted_choice(items: list[tuple[str, float]]) -> str:
@@ -133,7 +135,12 @@ def generate_account(customer_index: int, fake: Faker, used_names: set[str]) -> 
 
     company_name = build_company_name(fake, used_names, str(customer_index))
     customer_id = f"acc_{customer_index:04d}"
-
+    customer_contact = fake.name()
+    contact_email = (
+        customer_contact.lower()
+        .replace(" ", ".")
+        + "@example.com"
+    )
     plan_seed = {
         "Starter": (0.70, 1.05),
         "Professional": (0.60, 1.10),
@@ -235,6 +242,8 @@ def generate_account(customer_index: int, fake: Faker, used_names: set[str]) -> 
     return {
         "customer_id": customer_id,
         "company_name": company_name,
+        "customer_contact": customer_contact,
+        "contact_email": contact_email,
         "current_plan": current_plan,
         "seats_purchased": seats_purchased,
         "seats_active": seats_active,
@@ -257,6 +266,8 @@ def add_abc_company() -> dict[str, object]:
     return {
         "customer_id": "acc_0001",
         "company_name": "ABC Company",
+        "customer_contact": "Sarah Jenkins",
+        "contact_email": "sarah.jenkins@abccompany.com",
         "current_plan": "Enterprise",
         "seats_purchased": 100,
         "seats_active": 38,
@@ -291,6 +302,8 @@ def generate_dataset(total_accounts: int = TOTAL_ACCOUNTS) -> pd.DataFrame:
     column_order = [
         "customer_id",
         "company_name",
+        "customer_contact",
+        "contact_email",
         "current_plan",
         "seats_purchased",
         "seats_active",

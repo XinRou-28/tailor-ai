@@ -22,6 +22,8 @@ class Account(Base):
 
     customer_id = Column(String, primary_key=True, index=True)
     company_name = Column(String, nullable=True)
+    customer_contact = Column(String, nullable=True)
+    contact_email = Column(String, nullable=True)
     current_plan = Column(String, nullable=True)
     seats_purchased = Column(Integer, nullable=True)
     seats_active = Column(Integer, nullable=True)

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import {getAccounts} from "../api/accounts";
+import {useEffect} from "react";
 
 interface Customer {
   id: string;
@@ -8,7 +10,7 @@ interface Customer {
   initial: string;
   plan: string;
   health: number;
-  risk: "Low" | "Medium" | "High Risk";
+  risk: "Low" | "Medium" | "High";
   automation: "Full Auto" | "Review Req." | "Manual";
   lastActivityTime: string;
   lastActivityDesc: string;
@@ -19,7 +21,7 @@ interface CustomersProps {
   onNavigate?: (view: string) => void;
 }
 
-type SortField = "name" | "plan" | "health" | "risk" | "automation" | "activity";
+type SortField = "name" | "plan" | "health" | "risk" | "automation" | "lastActivityTime";
 type SortOrder = "none" | "asc" | "desc";
 
 export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
@@ -28,21 +30,50 @@ export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
   const [sortField, setSortField] = useState<SortField>("name");
   const [sortOrder, setSortOrder] = useState<SortOrder>("none");
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(true);
   const itemsPerPage = 4;
 
   // ... (保持原有的 customers 数据状态和逻辑不变)
-  const [customers, setCustomers] = useState<Customer[]>([
-      { id: "vortex", name: "Vortex Media", domain: "vortex-media.io", initial: "V", plan: "Enterprise Plus", health: 92, risk: "Low", automation: "Full Auto", lastActivityTime: "2 mins ago", lastActivityDesc: "Price Optimization" },
-      { id: "acme", name: "Acme Corp", domain: "acme.sh", initial: "A", plan: "Professional", health: 34, risk: "High Risk", automation: "Review Req.", lastActivityTime: "1 hour ago", lastActivityDesc: "Payment Failure" },
-      { id: "lumina", name: "Lumina Lab", domain: "lumina.io", initial: "L", plan: "Custom Scale", health: 62, risk: "Medium", automation: "Full Auto", lastActivityTime: "4 hours ago", lastActivityDesc: "Seat Cleanup" },
-      { id: "dataflow", name: "DataFlow", domain: "dataflow.com", initial: "D", plan: "Professional", health: 85, risk: "Low", automation: "Manual", lastActivityTime: "Yesterday", lastActivityDesc: "User Login" },
-      { id: "pixel", name: "Pixel Perfect", domain: "pixelperfect.co", initial: "P", plan: "Business", health: 75, risk: "Medium", automation: "Full Auto", lastActivityTime: "3 hours ago", lastActivityDesc: "Invoiced" },
-      { id: "cloudscale", name: "Cloud Scale", domain: "cloudscale.net", initial: "C", plan: "Standard", health: 64, risk: "Medium", automation: "Review Req.", lastActivityTime: "Yesterday", lastActivityDesc: "Plan Upgraded" },
-      { id: "venture", name: "Venture Labs", domain: "venturelabs.io", initial: "V", plan: "Pro Growth", health: 20, risk: "High Risk", automation: "Review Req.", lastActivityTime: "2 hours ago", lastActivityDesc: "Credit Card Fail" },
-      { id: "novatech", name: "Nova Tech", domain: "novatech.com", initial: "N", plan: "Enterprise Plus", health: 96, risk: "Low", automation: "Full Auto", lastActivityTime: "5 mins ago", lastActivityDesc: "Seat Cleanup" },
-      { id: "quantum", name: "Quantum Labs", domain: "quantum.sh", initial: "Q", plan: "Professional", health: 45, risk: "High Risk", automation: "Manual", lastActivityTime: "12 hours ago", lastActivityDesc: "User Login" },
-      { id: "echo", name: "Echo Digital", domain: "echodigital.io", initial: "E", plan: "Custom Scale", health: 88, risk: "Low", automation: "Full Auto", lastActivityTime: "1 day ago", lastActivityDesc: "Price Optimization" }
-  ]);
+  const [customers,setCustomers]=useState<Customer[]>([]);
+
+
+useEffect(()=>{
+
+ async function loadCustomers(){
+
+    try{
+
+       const data = await getAccounts();
+
+       setCustomers(
+          data.accounts.map(account=>({
+             id:account.customer_id,
+             name:account.company_name,
+             plan:account.current_plan,
+             health:account.health_score,
+             risk:account.risk_level,
+             initial:account.company_name[0],
+             domain:"",
+             automation:"Review Req.",
+             lastActivityTime:"",
+             lastActivityDesc:""
+          }))
+       );
+
+    }catch(error){
+       console.error(error);
+
+    }finally{
+
+       setLoading(false);
+
+    }
+
+ }
+
+ loadCustomers();
+
+},[]);
 
   const triggerToast = (msg: string) => { setToastMessage(msg); setTimeout(() => setToastMessage(null), 4000); };
   
@@ -66,14 +97,14 @@ export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
     let valB: any = b[sortField];
     
     if (sortField === "risk") {
-      const riskWeight = { "High Risk": 3, "Medium": 2, "Low": 1 };
+      const riskWeight = { "High": 3, "Medium": 2, "Low": 1 };
       valA = riskWeight[a.risk] || 0;
       valB = riskWeight[b.risk] || 0;
     } else if (sortField === "automation") {
       const autoWeight = { "Full Auto": 3, "Review Req.": 2, "Manual": 1 };
       valA = autoWeight[a.automation] || 0;
       valB = autoWeight[b.automation] || 0;
-    } else if (sortField === "activity") {
+    } else if (sortField === "lastActivityTime") {
       valA = a.lastActivityTime;
       valB = b.lastActivityTime;
     }
@@ -352,13 +383,13 @@ export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
                      </td>
                      <td className="px-6 py-5">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border ${
-                          cust.risk === 'High Risk' 
+                          cust.risk === 'High' 
                             ? 'bg-rose-500/15 text-rose-200 border-rose-500/25 shadow-[0_0_12px_rgba(244,63,94,0.15)]' 
                             : cust.risk === 'Medium' 
                             ? 'bg-amber-500/15 text-amber-200 border-amber-500/25 shadow-[0_0_12px_rgba(245,158,11,0.15)]' 
                             : 'bg-emerald-500/15 text-emerald-200 border-emerald-500/25 shadow-[0_0_12px_rgba(16,185,129,0.15)]'
                         }`}>
-                          {cust.risk === 'High Risk' ? '⚠️ High Risk' : cust.risk === 'Medium' ? '⚡ Medium' : '✓ Low Risk'}
+                          {cust.risk === 'High' ? '⚠️ High Risk' : cust.risk === 'Medium' ? '⚡ Medium' : '✓ Low Risk'}
                         </span>
                      </td>
                      <td className="px-6 py-5 text-xs font-medium text-slate-300 tracking-wide">

@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import HealthRing from "../components/HealthRing";
+
+import { getAccounts, Account } from "../api/accounts";
+import { getDigest, DigestItem } from "../api/digest";
 
 interface DashboardProps {
   searchQuery: string;
@@ -8,8 +11,38 @@ interface DashboardProps {
 }
 
 export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) {
+
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-  const [highRiskCount, setHighRiskCount] = useState(1);
+
+  const [accounts, setAccounts] = useState<Account[]>([]);
+
+  const [digestItems, setDigestItems] = useState<DigestItem[]>([]);  
+  
+  useEffect(() => {
+
+    async function loadDashboard(){
+
+      try{
+
+        const accountData = await getAccounts();
+        const digestData = await getDigest();
+
+        console.log("ACCOUNT SAMPLE:", accountData.accounts[0]);
+
+        setAccounts(accountData.accounts);
+        setDigestItems(digestData.items);
+
+      }catch(error){
+
+        console.error(error);
+
+      }
+
+    }
+
+    loadDashboard();
+
+    },[]);
 
   const triggerToast = (msg: string) => {
     setToastMessage(msg);
@@ -23,6 +56,31 @@ export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) 
       triggerToast("Opening full insight view…");
     }
   };
+
+  const highRiskCount =
+    accounts.filter(
+      account => account.risk_level === "High"
+    ).length;
+
+  const avgHealth =
+    accounts.length === 0
+      ? 0
+      : Math.round(
+          accounts.reduce(
+            (sum, account) => sum + account.health_score,
+            0
+          ) / accounts.length
+        );
+
+  const getHealthScore = (customerId:string)=>{
+
+  const account = accounts.find(
+    acc => acc.customer_id === customerId
+  );
+
+  return account?.health_score ?? 0;
+
+};
 
   return (
     // 全局深邃渐变底色
@@ -71,7 +129,9 @@ export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) 
               </div>
               <div>
                 <span className="text-[13px] sm:text-[14px] font-semibold uppercase tracking-[0.05em] text-[#E2E8F0] block mb-1">All Customers</span>
-                <span className="text-2xl font-bold text-white">10</span>
+                <span className="text-2xl font-bold text-white">
+                  {accounts.length}
+                </span>
               </div>
             </div>
           </div>
@@ -86,8 +146,16 @@ export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) 
               <div>
                 <span className="text-[13px] sm:text-[14px] font-semibold uppercase tracking-[0.05em] text-[#E2E8F0] block mb-1">Portfolio Health</span>
                 <div className="flex items-center gap-3">
-                  <HealthRing score={78} size={24} strokeWidth={5} showScore={false} />
-                  <span className="text-2xl font-bold text-white">78/100</span>
+                  <HealthRing 
+                    score={avgHealth}
+                    size={24}
+                    strokeWidth={5}
+                    showScore={false}
+                  />
+
+                  <span className="text-2xl font-bold text-white">
+                    {avgHealth}/100
+                  </span>
                 </div>
               </div>
             </div>
@@ -107,29 +175,32 @@ export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) 
             </button>
           </div>
 
-          {[
-            { name: "ABC Company", health: 35, tag1: "Manual Review", tag2: "Enterprise", color: "amber" },
-            { name: "XYZ Corp", health: 14, tag1: "Critical", tag2: "Business", color: "red" },
-            { name: "Global Tech Solutions", health: 78, tag1: "Opportunity", tag2: "Pro Growth", color: "emerald" }
-          ].map((item, i) => (
+          {digestItems.slice(0,3).map((item, i) => (
             <div key={i} className="relative overflow-hidden flex items-center gap-4 p-4 rounded-xl bg-gradient-to-br from-[#1c123c] via-[#0d0921] to-[#140e2b] border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.3)] hover:border-purple-400/45 hover:from-[#2a1752] hover:to-[#1a113d] hover:shadow-[0_12px_36px_rgba(168,85,247,0.18)] transition-all duration-300 mb-3 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[3px] before:bg-gradient-to-b before:from-pink-400/80 before:to-purple-600 before:rounded-r-full">
               {/* Soft ambient glows inside the dark theme cards */}
               <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-purple-500/5 rounded-full blur-2xl pointer-events-none" />
               <div className="absolute -left-6 -top-6 w-20 h-20 bg-pink-500/5 rounded-full blur-2xl pointer-events-none" />
               
               <div className="relative z-10">
-                <HealthRing score={item.health} size={48} strokeWidth={6} />
+                <HealthRing
+                  score={getHealthScore(item.customer_id)}
+                  size={48}
+                  strokeWidth={6}
+                />
               </div>
               
               <div className="flex-1 relative z-10 pl-1">
-                <h3 className="text-sm font-bold text-white mb-1 tracking-tight">{item.name}</h3>
-                <p className="text-[13px] text-purple-100/90 font-medium">Plan • Health: {item.health}/100</p>
+                <h3 className="text-sm font-bold text-white mb-1 tracking-tight">{item.company_name}</h3>
+                <p className="text-[13px] text-purple-100/90 font-medium">
+                  Plan • Health: {getHealthScore(item.customer_id)}/100
+                </p>
                 <div className="mt-2.5 flex gap-1.5 flex-wrap">
-                  <span className={`bg-${item.color}-500/15 text-${item.color}-200 border border-${item.color}-500/25 px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider`}>
-                    {item.tag1}
+                  <span className="bg-indigo-500/15 text-indigo-200 border border-indigo-500/25 px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider">
+                    {item.decision_tier}
                   </span>
+
                   <span className="bg-white/5 text-purple-200/95 border border-white/10 px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider">
-                    {item.tag2}
+                    {item.recommendation}
                   </span>
                 </div>
               </div>
