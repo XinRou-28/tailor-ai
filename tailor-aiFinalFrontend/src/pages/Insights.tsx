@@ -66,13 +66,12 @@ const dataByRange: Record<string, RangeData> = {
   }
 };
 
-export default function Insights({ cachedInsights }: { cachedInsights: { total_accounts: number; top_reasons: any[]; ai_pulse?: string; ai_strategy?: string } | null }) {
+export default function Insights({ cachedInsights }: { cachedInsights: { total_accounts: number; top_reasons: any[]; ai_pulse?: string; ai_strategy?: string; affected_tier?: string; avg_confidence?: number } | null }) {
   const [timeRange, setTimeRange] = useState<"7d" | "30d" | "90d">("30d");
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isExporting, setIsExporting] = useState(false);
   const [selectedPattern, setSelectedPattern] = useState<string | null>(null);
-  const insightsData = cachedInsights ?? { total_accounts: 0, top_reasons: [], ai_pulse: "", ai_strategy: "" };
-
+  const insightsData = cachedInsights ?? { total_accounts: 0, top_reasons: [], ai_pulse: "", ai_strategy: "", affected_tier: "N/A", avg_confidence: 0 };
   const activeData = dataByRange[timeRange];
 
   const triggerToast = (msg: string) => {
@@ -274,13 +273,13 @@ export default function Insights({ cachedInsights }: { cachedInsights: { total_a
               <div className="py-2.5 flex justify-between items-center">
                 <span className="text-slate-400 text-xs font-medium">Affected tier</span>
                 <span className="px-2.5 py-0.5 bg-amber-400/10 border border-amber-400/20 text-amber-200 rounded-full text-[10px] font-semibold tracking-wider uppercase backdrop-blur-md">
-                  {activeData.affectedTier}
+                  {insightsData.affected_tier}
                 </span>
               </div>
               <div className="py-2.5 flex justify-between items-center">
                 <span className="text-slate-400 text-xs font-medium">Confidence</span>
                 <span className="px-2.5 py-0.5 bg-cyan-400/10 border border-cyan-400/20 text-cyan-200 rounded-full text-[10px] font-semibold tracking-wider uppercase backdrop-blur-md">
-                  {activeData.confidence}
+                  {Math.round((insightsData.avg_confidence ?? 0) * 100)}%
                 </span>
               </div>
               <div className="py-2.5 flex justify-between items-center">

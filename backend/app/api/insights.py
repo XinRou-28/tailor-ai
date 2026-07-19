@@ -21,14 +21,19 @@ def get_insights() -> dict[str, object]:
         )
 
         reason_counter = Counter()
+        tier_counter = Counter()
+        confidence_sum = 0.0
 
         for account in accounts:
             detail = process_account_lite(account.customer_id)
-            reason_counter[
-                detail.score.reason_code
-            ] += 1
+            reason_counter[detail.score.reason_code] += 1
+            confidence_sum += detail.score.confidence
+            if detail.score.risk_level in ("Medium", "High"):
+                tier_counter[account.current_plan] += 1
 
         total = len(accounts)
+        affected_tier = tier_counter.most_common(1)[0][0] if tier_counter else "N/A"
+        avg_confidence = round(confidence_sum / total, 4) if total else 0.0
 
         reasons = []
 
@@ -53,6 +58,8 @@ def get_insights() -> dict[str, object]:
             "top_reasons": reasons,
             "ai_pulse": ai_copy["pulse"],
             "ai_strategy": ai_copy["strategy"],
+            "affected_tier": affected_tier,
+            "avg_confidence": avg_confidence,
         }
 
     finally:
