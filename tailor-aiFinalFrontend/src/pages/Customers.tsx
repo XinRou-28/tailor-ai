@@ -23,6 +23,21 @@ interface CustomersProps {
 type SortField = "name" | "plan" | "health" | "risk" | "automation" | "activity";
 type SortOrder = "none" | "asc" | "desc";
 
+const HARDCODED_ACTIVITY = [
+  { lastActivityTime: "2 hours ago", lastActivityDesc: "Logged in, viewed Analytics dashboard" },
+  { lastActivityTime: "5 hours ago", lastActivityDesc: "Downloaded Q3 usage report" },
+  { lastActivityTime: "1 day ago", lastActivityDesc: "Opened support ticket #10292" },
+  { lastActivityTime: "1 day ago", lastActivityDesc: "Invited 2 new team members" },
+  { lastActivityTime: "2 days ago", lastActivityDesc: "Upgraded API integration settings" },
+  { lastActivityTime: "3 days ago", lastActivityDesc: "Viewed billing and invoices" },
+  { lastActivityTime: "4 days ago", lastActivityDesc: "Reached out via live chat support" },
+  { lastActivityTime: "6 days ago", lastActivityDesc: "Exported account activity logs" },
+];
+
+function getLastActivity(index: number) {
+  return HARDCODED_ACTIVITY[index] ?? { lastActivityTime: "2 weeks ago", lastActivityDesc: "No recent activity recorded" };
+}
+
 export default function Customers({ searchQuery, onNavigate, cachedCustomers}: CustomersProps) {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [riskFilter, setRiskFilter] = useState<"All" | "High Risk" | "Medium Risk" | "Low Risk">("All");
@@ -320,7 +335,7 @@ export default function Customers({ searchQuery, onNavigate, cachedCustomers}: C
                  </tr>
                </thead>
                <tbody className="divide-y divide-white/[0.04]">
-                 {currentItems.map((cust) => (
+                 {currentItems.map((cust, idx) => (
                    <tr 
                      key={cust.id} 
                      onClick={() => onNavigate?.("details", cust.id)}
@@ -380,8 +395,8 @@ export default function Customers({ searchQuery, onNavigate, cachedCustomers}: C
                        {getAutomationBadge(cust.automation)}
                      </td>
                      <td className="px-6 py-5">
-                        <p className="text-xs font-semibold text-slate-200">{cust.lastActivityTime}</p>
-                        <p className="text-[11px] text-slate-400 mt-0.5">{cust.lastActivityDesc}</p>
+                        <p className="text-xs font-semibold text-slate-200">{getLastActivity((currentPage - 1) * itemsPerPage + idx).lastActivityTime}</p>
+                        <p className="text-[11px] text-slate-400 mt-0.5">{getLastActivity((currentPage - 1) * itemsPerPage + idx).lastActivityDesc}</p>
                      </td>
                      <td className="px-6 py-5 text-right w-10">
                        <span className="material-symbols-outlined text-slate-500 group-hover:text-indigo-400 transition-all duration-300 translate-x-[-4px] group-hover:translate-x-0 opacity-0 group-hover:opacity-100 !text-[18px]">

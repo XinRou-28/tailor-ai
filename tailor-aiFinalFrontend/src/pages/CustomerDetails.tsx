@@ -3,6 +3,75 @@ import type { AccountDetail } from "../api/types";
 import { motion, AnimatePresence } from "motion/react";
 import { apiGet, apiPost } from "../api/client";
 
+function getReasonExplanation(reason: string): string {
+  if (reason.startsWith("Advanced Analytics unused")) {
+    return "Customers who never activate a core feature are significantly more likely to churn — this often reflects a stalled onboarding rather than a lack of interest.";
+  }
+  if (reason.startsWith("Advanced Analytics in use")) {
+    return "Active engagement with premium features is one of the strongest positive signals for renewal.";
+  }
+  if (reason.startsWith("Login frequency down")) {
+    const match = reason.match(/(\d+)%/);
+    const pct = match ? match[1] : "a significant";
+    return `A ${pct}% drop in login activity between the last two periods is one of the earliest and most reliable signals of disengagement before churn.`;
+  }
+  if (reason.startsWith("Login frequency trend is weak")) {
+    return "There isn't enough login history yet to establish a clear engagement trend.";
+  }
+  if (reason.startsWith("Support sentiment is low")) {
+    return "A sentiment score below 0.5 typically reflects unresolved frustration — if left unaddressed, this tends to precede cancellation.";
+  }
+  if (reason.includes("open support tickets")) {
+    return "Multiple unresolved tickets can signal a support backlog that erodes trust, especially the longer they stay open.";
+  }
+  if (reason.startsWith("Payment delay")) {
+    return "Delayed payments are one of the earliest and most reliable predictors of financial strain or dissatisfaction.";
+  }
+  if (reason.startsWith("Seats active at")) {
+    return "Low seat utilization relative to what was purchased often means the team never fully rolled the product out internally.";
+  }
+  if (reason.startsWith("API calls used")) {
+    return "Usage approaching or exceeding the plan's API limit signals a customer who has outgrown their current tier — an upsell signal, not a risk one.";
+  }
+  if (reason.startsWith("Storage used")) {
+    return "Storage usage nearing the plan limit indicates growing reliance on the product — typically an upsell signal rather than a churn risk.";
+  }
+  if (reason.startsWith("Support tickets resolved")) {
+    return "A high resolution count shows the support team is keeping pace, which helps offset dissatisfaction from tickets being raised.";
+  }
+  if (reason.startsWith("Seats purchased")) {
+    return "Seat count purchased at signup, shown here as context for the account's overall usage pattern.";
+  }
+  return "";
+}
+
+const REASON_CODE_COPY: Record<string, { title: string; description: string }> = {
+  feature_unused_not_needed: {
+    title: "Downgrade Plan",
+    description: "This customer isn't using features included in their current plan — we're recommending a plan that matches their actual usage.",
+  },
+  feature_unused_onboarding_gap: {
+    title: "Offer Onboarding Support",
+    description: "This customer hasn't started using a key feature yet — before changing their plan, we're offering a guided session to help them get value from it.",
+  },
+  feature_unused_support_issue: {
+    title: "Route to Support",
+    description: "This customer's low usage is tied to unresolved support tickets, not a lack of need — routing to support to resolve the issue first.",
+  },
+  usage_exceeds_limit_seats: {
+    title: "Upgrade Seats",
+    description: "This customer is consistently using more seats than their plan includes — recommending additional seat capacity.",
+  },
+  usage_exceeds_limit_api: {
+    title: "Upgrade API Capacity",
+    description: "This customer is exceeding their monthly API call limit — recommending additional API capacity.",
+  },
+  usage_exceeds_limit_storage: {
+    title: "Upgrade Storage",
+    description: "This customer is exceeding their storage limit — recommending additional storage capacity.",
+  },
+};
+
 export default function CustomerDetails({ customerId }: { customerId: string | null }) {
 
   // Interactive variables
@@ -28,6 +97,13 @@ export default function CustomerDetails({ customerId }: { customerId: string | n
 if (!detail) {
   return null;
 }
+
+  const riskLevel = detail.score.risk_level;
+  const riskColors = {
+    High: { badge: "from-red-500 via-rose-600 to-pink-600 shadow-[0_0_16px_rgba(244,63,94,0.85)] border-rose-400", ring: "text-rose-500", label: "HIGH RISK" },
+    Medium: { badge: "from-amber-500 via-orange-500 to-amber-600 shadow-[0_0_16px_rgba(245,158,11,0.6)] border-amber-400", ring: "text-amber-500", label: "MEDIUM RISK" },
+    Low: { badge: "from-emerald-500 via-teal-500 to-emerald-600 shadow-[0_0_16px_rgba(16,185,129,0.6)] border-emerald-400", ring: "text-emerald-500", label: "LOW RISK" },
+  }[riskLevel];
 
   const customerData = {
     name: detail.account.company_name,
@@ -121,9 +197,11 @@ const handleDecline = () => {
             <div>
               <div className="flex flex-wrap items-center gap-2.5">
                 <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight">{customerData.name}</h2>
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-gradient-to-r from-rose-500 to-pink-600 text-white border border-rose-300 shadow-[0_0_12px_rgba(244,63,94,0.6)]">
-                  Action Required
-                </span>
+                {riskLevel === "High" && (
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-gradient-to-r from-rose-500 to-pink-600 text-white border border-rose-300 shadow-[0_0_12px_rgba(244,63,94,0.6)]">
+                    Action Required
+                  </span>
+                )}
               </div>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[#CBD5E1] text-xs font-medium mt-1.5">
                 <span className="flex items-center gap-1 hover:text-white transition-colors">
@@ -208,8 +286,8 @@ const handleDecline = () => {
                 <span className="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.8)]"></span>
                 Customer Health Score
               </h3>
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest bg-gradient-to-r from-red-500 via-rose-600 to-pink-600 text-white shadow-[0_0_16px_rgba(244,63,94,0.85)] border border-rose-400">
-                HIGH RISK
+              <span className={`inline-flex items-center px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest bg-gradient-to-r text-white border ${riskColors.badge}`}>
+                {riskColors.label}
               </span>
             </div>
             
@@ -293,12 +371,16 @@ const handleDecline = () => {
                   
                   <div className="flex justify-between items-center mb-3 relative z-10">
                     <span className="text-sm font-extrabold bg-gradient-to-r from-pink-300 to-indigo-200 text-transparent bg-clip-text tracking-wide">01</span>
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest bg-gradient-to-r from-rose-600 to-red-600 text-white border border-red-400 shadow-[0_0_14px_rgba(220,38,38,0.7)]">
-                      CRITICAL
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest text-white border ${
+                      riskLevel === "High" ? "bg-gradient-to-r from-rose-600 to-red-600 border-red-400 shadow-[0_0_14px_rgba(220,38,38,0.7)]"
+                      : riskLevel === "Medium" ? "bg-gradient-to-r from-amber-500 to-orange-600 border-amber-400 shadow-[0_0_14px_rgba(245,158,11,0.5)]"
+                      : "bg-gradient-to-r from-emerald-500 to-teal-600 border-emerald-400 shadow-[0_0_14px_rgba(16,185,129,0.5)]"
+                    }`}>
+                      {riskLevel === "High" ? "CRITICAL" : riskLevel === "Medium" ? "CRITICAL" : "STRENGTH"}
                     </span>
                   </div>
                   <h4 className="text-sm font-bold text-white tracking-tight mb-1 relative z-10">{detail.score.top_reasons[0] ?? ""}</h4>
-                </div>
+                  <p className="text-xs text-indigo-100/75 leading-relaxed font-normal relative z-10">{getReasonExplanation(detail.score.top_reasons[0] ?? "")}</p>                </div>
               </div>
               
               {/* Causal Sub-item 2 */}
@@ -310,12 +392,17 @@ const handleDecline = () => {
                   
                   <div className="flex justify-between items-center mb-3 relative z-10">
                     <span className="text-sm font-extrabold bg-gradient-to-r from-amber-300 to-indigo-200 text-transparent bg-clip-text tracking-wide">02</span>
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest bg-gradient-to-r from-amber-500/20 to-orange-500/20 text-amber-300 border border-amber-500/30 shadow-[0_0_8px_rgba(245,158,11,0.2)]">
-                      WARNING
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest border ${
+                      riskLevel === "High" ? "bg-amber-500/20 text-amber-300 border-amber-500/30 shadow-[0_0_8px_rgba(245,158,11,0.2)]"
+                      : riskLevel === "Medium" ? "bg-amber-500/15 text-amber-300 border-amber-500/25 shadow-[0_0_8px_rgba(245,158,11,0.15)]"
+                      : "bg-emerald-500/15 text-emerald-300 border-emerald-500/25 shadow-[0_0_8px_rgba(16,185,129,0.15)]"
+                    }`}>
+                      {riskLevel === "High" ? "WARNING" : riskLevel === "Medium" ? "WARNING" : "POSITIVE SIGNAL"}
                     </span>
                   </div>
                   <h4 className="text-sm font-bold text-white tracking-tight mb-1 relative z-10">{detail.score.top_reasons[1] ?? ""}</h4>
-                </div>
+                  <p className="text-xs text-indigo-100/75 leading-relaxed font-normal relative z-10">{getReasonExplanation(detail.score.top_reasons[1] ?? "")}</p>                
+                  </div>
               </div>
               
               {/* Sub-item 3: Investigation Agent Refinement */}
@@ -371,8 +458,8 @@ const handleDecline = () => {
             </div>
             
             <div className="relative bg-white/80 backdrop-blur-md border border-white/60 rounded-xl p-3.5 sm:p-4 shadow-[0_4px_16px_rgba(139,92,246,0.04),_0_1px_2px_rgba(0,0,0,0.02)] before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[3.5px] before:bg-gradient-to-b before:from-amber-400 before:to-amber-600 before:rounded-r-full relative z-10">
-             <p className="pl-3 text-sm sm:text-base font-extrabold leading-snug text-slate-900 tracking-tight mb-2">
-                {detail.recommendation.action_type.replace(/_/g, " ")}
+            <p className="pl-3 text-sm sm:text-base font-extrabold leading-snug text-slate-900 tracking-tight mb-2">
+                {REASON_CODE_COPY[detail.recommendation.reason_code].title}
                 {detail.recommendation.price_delta !== 0 && (
                   <span className="text-amber-600 font-black"> ({detail.recommendation.price_delta > 0 ? "+" : ""}${detail.recommendation.price_delta}/mo)</span>
                 )}
@@ -380,7 +467,7 @@ const handleDecline = () => {
               
               <div className="pl-3 border-t border-purple-100/55 pt-2 mt-2">
                 <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed font-medium">
-                  {detail.recommendation.line_items.join(", ")}
+                  {REASON_CODE_COPY[detail.recommendation.reason_code].description}
                 </p>
               </div>
             </div>
