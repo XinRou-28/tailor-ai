@@ -1,4 +1,4 @@
-# Tailor AI
+# Tailor AI Animated Presentation
 "An AI that tailors your subscription to fit."
 
 Case Study 2: Smart Subscription & Customer Experience Optimization
