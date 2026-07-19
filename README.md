@@ -1,42 +1,128 @@
-# Tailor AI
-"An AI that tailors your subscription to fit."
+# Tailor AI — Subscription Intelligence
+<div align="center">
+  
+## “An AI that tailors your subscription to fit.”
 
 Case Study 2: Smart Subscription & Customer Experience Optimization
 
-See /docs for full project specs: product.md, contract.md, frontend.md, backend.md, workflow.md
+Team **hoo lee not sheet** — Soo Xin Rou, Tan Pei Shing, Tee Wen Yun, Yong Yee Win
 
-## Setup
+</div>
 
-### Backend
+---
+
+### Demo Link: [Trailor AI](https://tailor-ai-swart.vercel.app/)
+Note: The demo may take 10 seconds to load on the first visit as the server wakes up.Thank you for your patience!
+
+---
+
+
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [Installation & Usage](#installation-and-usage)
+
+---
+
+## Overview
+Tailor AI is an AI-powered smart subscription and customer experience optimisation platform. It helps businesses identify customers whose subscriptions no longer match their needs, understand the underlying reasons, and recommend the right intervention before they churn. By consolidating scattered customer data into a unified profile and analysing behaviour, Tailor AI proactively recommends personalised actions—such as onboarding support, better-fitting subscription plans, or upgrades. Furthermore, it provides portfolio-level business intelligence by analysing aggregated customer data to identify recurring churn drivers, supporting strategic decision-making.
+
+---
+
+## Key Features
+
+### 🧠 AI Customer Intelligence Engine
+Analyses customer behaviour to generate an **explainable Customer Health Score**. Borderline cases trigger an Investigation Agent that digs into support/usage data to find the real root cause before recommending anything.
+
+### 🎯 Right-Size Recommendation Engine
+Recommends the most appropriate subscription plan or intervention by recombining the business's **own existing pricing catalogue** — never inventing a price.
+
+### 🛡️ Trust-Based Decision Layer
+Decides whether a recommendation auto-sends, needs one-click approval, or requires full manual review, based on AI confidence and business impact.
+
+### ✉️ AI Communication Layer
+Drafts personalised customer messages after a decision is finalised — structurally unable to alter price, plan, or the decision itself.
+
+### 📊 Business Insight Dashboard
+Aggregates root causes across the whole portfolio to surface recurring churn drivers (e.g. *"42% of at-risk accounts: unused Advanced Analytics"*) and turns them into company-wide strategy.
+
+---
+
+## Tech Stack
+
+**Frontend:** React 19 · TypeScript · Vite · Tailwind CSS 4 · Motion · Lucide React
+
+**Backend:** FastAPI · Uvicorn · SQLAlchemy · Pydantic · python-dotenv
+
+**AI / ML:** Scikit-learn · XGBoost · Pandas · NumPy · Mistral AI API (customer communication)
+
+**Database:** SQLite
+
+**Deployment:** Vercel (frontend) · Render (backend)
+
+---
+
+## Installation and Usage
+
+### Prerequisites
+- Node.js
+- Python 3.10+
+- A [Mistral AI](https://mistral.ai) API key *(optional — see note below)*
+
+### 1. Backend
+
+```bash
 cd backend
 pip install -r requirements.txt --break-system-packages
+```
 
-Create `.env` in `backend/` (see `.env.example`):
+Create `backend/.env`:
+
+```env
 MISTRAL_API_KEY=your_mistral_key_here
 CORS_ORIGIN=http://localhost:3000,http://localhost:5173
+```
 
-Train model (first time only):
+Train the model (first time only):
+
+```bash
 python app/ml/train.py
+```
 
-Run:
+Run the backend:
+
+```bash
 python -m uvicorn app.main:app --reload
+```
 
-→ http://localhost:8000
+→ Runs at `http://localhost:8000`
 
-### Frontend
+### 2. Frontend
+
+```bash
 cd tailor-aiFinalFrontend
 npm install
+```
 
-Create `.env` (see `.env.example`):
+Create `.env`:
+
+```env
 VITE_API_BASE_URL=http://localhost:8000/api
+```
 
-Run:
+Run the frontend:
+
+```bash
 npm run dev
+```
 
-→ http://localhost:3000
+→ Runs at `http://localhost:3000`
 
-## Notes
+> ⚠️ Start the backend **before** the frontend. Without `MISTRAL_API_KEY`, AI-generated messages fall back to templates automatically — the app still works fully for demo purposes.
 
-- Start backend before frontend.
-- Without `MISTRAL_API_KEY`, AI-generated text falls back to templates automatically.
-- First `/accounts` call is slower (warms up ML cache); after that it's fast.
+---
+
+
