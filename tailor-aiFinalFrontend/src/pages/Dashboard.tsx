@@ -5,24 +5,33 @@ import HealthRing from "../components/HealthRing";
 interface DashboardProps {
   searchQuery: string;
   onTabChange?: (tab: string) => void;
+  cachedCustomers: any[] | null;
+  cachedDigest: any[] | null;
+  cachedInsights: { total_accounts: number; top_reasons: any[] } | null;
 }
 
-export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) {
+export default function Dashboard({ searchQuery, onTabChange, cachedCustomers, cachedDigest, cachedInsights }: DashboardProps) {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-  const [highRiskCount, setHighRiskCount] = useState(1);
 
-  const triggerToast = (msg: string) => {
-    setToastMessage(msg);
-    setTimeout(() => setToastMessage(null), 4000);
-  };
+  const digestItems = cachedDigest ?? [];
+  const topReason = cachedInsights?.top_reasons[0] ?? null;
 
-  const handleQuickInsightClick = () => {
-    if (onTabChange) {
-      onTabChange("insights");
-    } else {
-      triggerToast("Opening full insight view…");
-    }
-  };
+  const accounts = cachedCustomers ?? [];
+  const highRiskAccounts = accounts.filter((a) => a.risk === "High Risk");
+  const totalCustomers = accounts.length;
+  const avgPortfolioHealth = accounts.length ? Math.round(accounts.reduce((s, a) => s + a.health, 0) / accounts.length) : 0;
+
+const triggerToast = (msg: string) => {
+  setToastMessage(msg);
+  setTimeout(() => setToastMessage(null), 4000);
+};
+const handleQuickInsightClick = () => {
+  if (onTabChange) {
+    onTabChange("insights");
+  } else {
+    triggerToast("Opening full insight view…");
+  }
+};
 
   return (
     // 全局深邃渐变底色
@@ -36,7 +45,7 @@ export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) 
         <div className="mb-2">
           <h1 className="text-3xl font-bold tracking-tight mb-2">Good morning, Mei</h1>
           <p className="text-[#CBD5E1] text-[15px] leading-[1.5]">
-            Tailor AI has identified <span className="font-bold text-red-400">{highRiskCount}</span> high‑risk subscriptions that require your immediate attention.
+            Tailor AI has identified <span className="font-bold text-red-400">{highRiskAccounts.length}</span> high‑risk subscriptions that require your immediate attention.
           </p>
         </div>
 
@@ -54,7 +63,7 @@ export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) 
               </div>
               <div>
                 <span className="text-[13px] sm:text-[14px] font-semibold uppercase tracking-[0.05em] text-[#E2E8F0] block mb-1">High-Risk Churning Accounts</span>
-                <span className="text-2xl font-bold text-red-400">{highRiskCount}</span>
+                <span className="text-2xl font-bold text-red-400">{highRiskAccounts.length}</span>
               </div>
             </div>
           </div>
@@ -71,7 +80,7 @@ export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) 
               </div>
               <div>
                 <span className="text-[13px] sm:text-[14px] font-semibold uppercase tracking-[0.05em] text-[#E2E8F0] block mb-1">All Customers</span>
-                <span className="text-2xl font-bold text-white">10</span>
+                <span className="text-2xl font-bold text-white">{totalCustomers}</span>
               </div>
             </div>
           </div>
@@ -86,8 +95,8 @@ export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) 
               <div>
                 <span className="text-[13px] sm:text-[14px] font-semibold uppercase tracking-[0.05em] text-[#E2E8F0] block mb-1">Portfolio Health</span>
                 <div className="flex items-center gap-3">
-                  <HealthRing score={78} size={24} strokeWidth={5} showScore={false} />
-                  <span className="text-2xl font-bold text-white">78/100</span>
+                  <HealthRing score={avgPortfolioHealth} size={24} strokeWidth={5} showScore={false} />
+                  <span className="text-2xl font-bold text-white">{avgPortfolioHealth}/100</span>
                 </div>
               </div>
             </div>
@@ -107,34 +116,33 @@ export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) 
             </button>
           </div>
 
-          {[
-            { name: "ABC Company", health: 35, tag1: "Manual Review", tag2: "Enterprise", color: "amber" },
-            { name: "XYZ Corp", health: 14, tag1: "Critical", tag2: "Business", color: "red" },
-            { name: "Global Tech Solutions", health: 78, tag1: "Opportunity", tag2: "Pro Growth", color: "emerald" }
-          ].map((item, i) => (
+          {digestItems.slice(0, 3).map((item, i) => {
+            const acc = accounts.find((a) => a.id === item.customer_id);
+            return (
             <div key={i} className="relative overflow-hidden flex items-center gap-4 p-4 rounded-xl bg-gradient-to-br from-[#1c123c] via-[#0d0921] to-[#140e2b] border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.3)] hover:border-purple-400/45 hover:from-[#2a1752] hover:to-[#1a113d] hover:shadow-[0_12px_36px_rgba(168,85,247,0.18)] transition-all duration-300 mb-3 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[3px] before:bg-gradient-to-b before:from-pink-400/80 before:to-purple-600 before:rounded-r-full">
               {/* Soft ambient glows inside the dark theme cards */}
               <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-purple-500/5 rounded-full blur-2xl pointer-events-none" />
               <div className="absolute -left-6 -top-6 w-20 h-20 bg-pink-500/5 rounded-full blur-2xl pointer-events-none" />
               
               <div className="relative z-10">
-                <HealthRing score={item.health} size={48} strokeWidth={6} />
+                <HealthRing score={acc?.health ?? 0} size={48} strokeWidth={6} />
               </div>
               
               <div className="flex-1 relative z-10 pl-1">
-                <h3 className="text-sm font-bold text-white mb-1 tracking-tight">{item.name}</h3>
-                <p className="text-[13px] text-purple-100/90 font-medium">Plan • Health: {item.health}/100</p>
+                <h3 className="text-sm font-bold text-white mb-1 tracking-tight">{item.company_name}</h3>
+                <p className="text-[13px] text-purple-100/90 font-medium">{acc?.plan ?? ""} • Health: {acc?.health ?? 0}/100</p>
                 <div className="mt-2.5 flex gap-1.5 flex-wrap">
-                  <span className={`bg-${item.color}-500/15 text-${item.color}-200 border border-${item.color}-500/25 px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider`}>
-                    {item.tag1}
+                  <span className="bg-amber-500/15 text-amber-200 border border-amber-500/25 px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider">
+                    {item.decision_tier}
                   </span>
                   <span className="bg-white/5 text-purple-200/95 border border-white/10 px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider">
-                    {item.tag2}
+                    {acc?.plan ?? ""}
                   </span>
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </section>
 
         {/* QUICK INSIGHT TILE */}
@@ -148,11 +156,11 @@ export default function Dashboard({ searchQuery, onTabChange }: DashboardProps) 
           </div>
           <div className="flex items-center gap-4">
             <div className="flex-1 h-3 bg-slate-800 rounded-full overflow-hidden border border-white/5">
-              <div className="h-full bg-indigo-500 w-[42%] rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)]"></div>
+              <div className="h-full bg-indigo-500 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)]" style={{ width: `${topReason?.pct ?? 0}%` }}></div>
             </div>
-            <span className="text-sm font-bold text-white">42%</span>
+            <span className="text-sm font-bold text-white">{topReason?.pct ?? 0}%</span>
           </div>
-          <p className="text-[11px] text-slate-400 mt-2">Customer churn due to insufficient feature adoption</p>
+          <p className="text-[11px] text-slate-400 mt-2">{topReason?.label ?? ""}</p>
         </section>
       </div>
 

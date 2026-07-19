@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 interface Customer {
@@ -16,13 +16,14 @@ interface Customer {
 
 interface CustomersProps {
   searchQuery: string;
-  onNavigate?: (view: string) => void;
+  onNavigate?: (view: string, id?: string) => void;
+  cachedCustomers: any[] | null;
 }
 
 type SortField = "name" | "plan" | "health" | "risk" | "automation" | "activity";
 type SortOrder = "none" | "asc" | "desc";
 
-export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
+export default function Customers({ searchQuery, onNavigate, cachedCustomers}: CustomersProps) {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [riskFilter, setRiskFilter] = useState<"All" | "High Risk" | "Medium Risk" | "Low Risk">("All");
   const [sortField, setSortField] = useState<SortField>("name");
@@ -31,21 +32,35 @@ export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
   const itemsPerPage = 4;
 
   // ... (保持原有的 customers 数据状态和逻辑不变)
-  const [customers, setCustomers] = useState<Customer[]>([
-      { id: "vortex", name: "Vortex Media", domain: "vortex-media.io", initial: "V", plan: "Enterprise Plus", health: 92, risk: "Low", automation: "Full Auto", lastActivityTime: "2 mins ago", lastActivityDesc: "Price Optimization" },
-      { id: "acme", name: "Acme Corp", domain: "acme.sh", initial: "A", plan: "Professional", health: 34, risk: "High Risk", automation: "Review Req.", lastActivityTime: "1 hour ago", lastActivityDesc: "Payment Failure" },
-      { id: "lumina", name: "Lumina Lab", domain: "lumina.io", initial: "L", plan: "Custom Scale", health: 62, risk: "Medium", automation: "Full Auto", lastActivityTime: "4 hours ago", lastActivityDesc: "Seat Cleanup" },
-      { id: "dataflow", name: "DataFlow", domain: "dataflow.com", initial: "D", plan: "Professional", health: 85, risk: "Low", automation: "Manual", lastActivityTime: "Yesterday", lastActivityDesc: "User Login" },
-      { id: "pixel", name: "Pixel Perfect", domain: "pixelperfect.co", initial: "P", plan: "Business", health: 75, risk: "Medium", automation: "Full Auto", lastActivityTime: "3 hours ago", lastActivityDesc: "Invoiced" },
-      { id: "cloudscale", name: "Cloud Scale", domain: "cloudscale.net", initial: "C", plan: "Standard", health: 64, risk: "Medium", automation: "Review Req.", lastActivityTime: "Yesterday", lastActivityDesc: "Plan Upgraded" },
-      { id: "venture", name: "Venture Labs", domain: "venturelabs.io", initial: "V", plan: "Pro Growth", health: 20, risk: "High Risk", automation: "Review Req.", lastActivityTime: "2 hours ago", lastActivityDesc: "Credit Card Fail" },
-      { id: "novatech", name: "Nova Tech", domain: "novatech.com", initial: "N", plan: "Enterprise Plus", health: 96, risk: "Low", automation: "Full Auto", lastActivityTime: "5 mins ago", lastActivityDesc: "Seat Cleanup" },
-      { id: "quantum", name: "Quantum Labs", domain: "quantum.sh", initial: "Q", plan: "Professional", health: 45, risk: "High Risk", automation: "Manual", lastActivityTime: "12 hours ago", lastActivityDesc: "User Login" },
-      { id: "echo", name: "Echo Digital", domain: "echodigital.io", initial: "E", plan: "Custom Scale", health: 88, risk: "Low", automation: "Full Auto", lastActivityTime: "1 day ago", lastActivityDesc: "Price Optimization" }
-  ]);
+  const [customers, setCustomers] = useState<any[]>([]);
+
+  // useEffect(() => {
+  //   apiGet("/accounts", { accounts: [], total: 0 }).then((res) => {
+  //     setCustomers(res.accounts.map((a: Account & { health_score: number; risk_level: string; tier: string }) => ({
+  //       id: a.customer_id,
+  //       name: a.company_name,
+  //       domain: "",
+  //       initial: a.company_name[0],
+  //       plan: a.current_plan,
+  //       health: a.health_score,
+  //       risk: a.risk_level === "High" ? "High Risk" : a.risk_level,
+  //       automation: a.tier === "auto_send" ? "Full Auto" : a.tier === "csm_review" ? "Review Req." : "Manual",
+  //       lastActivityTime: "",
+  //       lastActivityDesc: "",
+  //     })));
+  //   });
+  // }, []);
+
+    useEffect(() => {
+      setCustomers(cachedCustomers ?? []);
+    }, [cachedCustomers]);
 
   const triggerToast = (msg: string) => { setToastMessage(msg); setTimeout(() => setToastMessage(null), 4000); };
-  
+  const totalMRR = customers.reduce((sum, c) => sum + (c.revenue || 0), 0);
+  const avgHealth = customers.length ? (customers.reduce((sum, c) => sum + c.health, 0) / customers.length).toFixed(1) : "0";
+  const atRiskARR = customers.filter(c => c.risk === "High Risk").reduce((sum, c) => sum + (c.revenue || 0), 0);
+  const autoOptimizedPct = customers.length ? Math.round((customers.filter(c => c.automation === "Full Auto").length / customers.length) * 100) : 0;
+
   // Comprehensive search and risk filtering logic
   const filteredCustomers = customers.filter(cust => {
     const matchesSearch = cust.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
@@ -66,11 +81,11 @@ export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
     let valB: any = b[sortField];
     
     if (sortField === "risk") {
-      const riskWeight = { "High Risk": 3, "Medium": 2, "Low": 1 };
+      const riskWeight: Record<string, number> = { "High Risk": 3, "Medium": 2, "Low": 1 };
       valA = riskWeight[a.risk] || 0;
       valB = riskWeight[b.risk] || 0;
     } else if (sortField === "automation") {
-      const autoWeight = { "Full Auto": 3, "Review Req.": 2, "Manual": 1 };
+      const autoWeight: Record<string, number> = { "Full Auto": 3, "Review Req.": 2, "Manual": 1 };
       valA = autoWeight[a.automation] || 0;
       valB = autoWeight[b.automation] || 0;
     } else if (sortField === "activity") {
@@ -156,10 +171,10 @@ export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
-            { label: "Active MRR", val: "$2.4M", trend: "+12%", color: "emerald" },
-            { label: "Avg Health Score", val: "78.4", trend: "-2.1", color: "rose" },
-            { label: "At Risk (ARR)", val: "$412k", trend: "Alert", color: "rose" },
-            { label: "Auto-Optimized", val: "84%", trend: "Stable", color: "emerald" }
+            { label: "Active MRR", val: `$${totalMRR.toLocaleString()}`, trend: "", color: "emerald" },
+  { label: "Avg Health Score", val: avgHealth, trend: "", color: "emerald" },
+  { label: "At Risk (ARR)", val: `$${atRiskARR.toLocaleString()}`, trend: "Alert", color: "rose" },
+  { label: "Auto-Optimized", val: `${autoOptimizedPct}%`, trend: "", color: "emerald" }
           ].map((stat, i) => (
             <div key={i} className="relative overflow-hidden bg-gradient-to-br from-[#141233] via-[#09081a] to-[#1a1133] backdrop-blur-xl border border-indigo-500/15 border-t-indigo-400/25 border-b-indigo-950/60 p-5 rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:border-indigo-500/30 transition-all duration-300">
               <span className="text-[13px] sm:text-[14px] font-semibold uppercase tracking-[0.05em] text-[#E2E8F0]">{stat.label}</span>
@@ -308,7 +323,7 @@ export default function Customers({ searchQuery, onNavigate }: CustomersProps) {
                  {currentItems.map((cust) => (
                    <tr 
                      key={cust.id} 
-                     onClick={() => onNavigate?.("details")}
+                     onClick={() => onNavigate?.("details", cust.id)}
                      className="hover:bg-white/[0.03] active:bg-white/[0.05] transition-all duration-200 cursor-pointer group"
                    >
                      <td className="px-6 py-5">

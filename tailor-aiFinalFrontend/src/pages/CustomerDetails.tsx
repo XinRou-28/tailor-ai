@@ -1,39 +1,48 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import type { AccountDetail } from "../api/types";
 import { motion, AnimatePresence } from "motion/react";
+import { apiGet, apiPost } from "../api/client";
 
-export default function CustomerDetails() {
-  // Page Action state
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
+export default function CustomerDetails({ customerId }: { customerId: string | null }) {
 
   // Interactive variables
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isApproved, setIsApproved] = useState(false);
   const [isDeclined, setIsDeclined] = useState(false);
   const [showLogs, setShowLogs] = useState(false);
-
+  const [editedEmail, setEditedEmail] = useState<string | null>(null);
   // Editable customer data fields
-  const [customerData, setCustomerData] = useState({
-    name: "ABC Company",
-    plan: "Enterprise Plan",
-    price: "$299/mo",
-    renewalInDays: 12,
-    healthScore: 35,
-    aiConfidence: 68,
-    automationTier: "csm_review", // Can be: "auto_send", "csm_review", or "manual_investigation"
+  const [detail, setDetail] = useState<AccountDetail | null>(null);
+
+  useEffect(() => {
+  console.log("customerId:", customerId);
+  if (!customerId) return;
+  apiGet(`/accounts/${customerId}`, null as unknown as AccountDetail)
+    .then((res) => {
+      console.log("detail response:", res);
+      setDetail(res);
+    })
+    .catch((err) => console.error("detail fetch failed:", err));
+}, [customerId]);
+
+if (!detail) {
+  return null;
+}
+
+  const customerData = {
+    name: detail.account.company_name,
+    plan: detail.account.current_plan,
+    price: `$${detail.account.monthly_revenue}/mo`,
+    renewalInDays: Math.max(0, Math.ceil((new Date(detail.account.contract_renewal_date).getTime() - Date.now()) / (1000 * 60 * 60 * 24))),
+    healthScore: Math.round(detail.score.health_score),
+    aiConfidence: Math.round(detail.score.confidence * 100),
+    automationTier: detail.decision.tier as string,
     decision: {
-      rationale: "High revenue account with renewal approaching, but low feature adoption detected",
-      decided_at: "2026-07-16T09:30:00Z" // This field may not exist in current mock data
+      rationale: detail.decision.rationale,
+      decided_at: detail.decision.decided_at,
     },
-    outreachEmail: `Hi Sarah,
-
-I noticed you haven't been able to fully dive into the Advanced Analytics module since your upgrade.
-
-I've cleared some time for our lead engineer to walk your team through the SSO setup and dashboard customization personally. We want to ensure you're seeing the full ROI of the Enterprise tier.
-
-Are you free Tuesday at 10 AM?
-
-Best,
-Mei Chen`,
-  });
+    outreachEmail: editedEmail ?? (detail.notification?.body ?? ""),
+  };
 
   const triggerToast = (msg: string) => {
     setToastMessage(msg);
@@ -43,17 +52,26 @@ Mei Chen`,
   };
 
   const handleApprove = () => {
-    if (isApproved) return;
-    setIsApproved(true);
-    setIsDeclined(false);
-    triggerToast(`Success: Custom outreach sent to Sarah Jenkins (Sarah.Jenkins@abccompany.com)!`);
-  };
+  if (isApproved || !customerId) return;
+  apiPost(`/accounts/${customerId}/decision`, { outcome: "approved" })
+    .then(() => {
+      setIsApproved(true);
+      setIsDeclined(false);
+      triggerToast(`Success: Custom outreach sent to Sarah Jenkins (Sarah.Jenkins@abccompany.com)!`);
+    })
+    .catch((err) => triggerToast(`Failed to record decision: ${err.message}`));
+};
 
-  const handleDecline = () => {
-    setIsDeclined(true);
-    setIsApproved(false);
-    triggerToast(`Recommendation declined. Internal audit status updated to Ignored.`);
-  };
+const handleDecline = () => {
+  if (!customerId) return;
+  apiPost(`/accounts/${customerId}/decision`, { outcome: "declined" })
+    .then(() => {
+      setIsDeclined(true);
+      setIsApproved(false);
+      triggerToast(`Recommendation declined. Internal audit status updated to Ignored.`);
+    })
+    .catch((err) => triggerToast(`Failed to record decision: ${err.message}`));
+};
 
   // Log simulation records
   const logEntries = [
@@ -279,10 +297,7 @@ Mei Chen`,
                       CRITICAL
                     </span>
                   </div>
-                  <h4 className="text-sm font-bold text-white tracking-tight mb-1 relative z-10">Advanced Analytics unused</h4>
-                  <p className="text-[13px] text-indigo-100/90 leading-relaxed italic relative z-10">
-                    User has not interacted with the dashboard in 14 days, despite the enterprise tier upgrade.
-                  </p>
+                  <h4 className="text-sm font-bold text-white tracking-tight mb-1 relative z-10">{detail.score.top_reasons[0] ?? ""}</h4>
                 </div>
               </div>
               
@@ -299,14 +314,12 @@ Mei Chen`,
                       WARNING
                     </span>
                   </div>
-                  <h4 className="text-sm font-bold text-white tracking-tight mb-1 relative z-10">Login frequency down</h4>
-                  <p className="text-[13px] text-indigo-100/90 leading-relaxed italic relative z-10">
-                    Monthly login volume decreased by 74% compared to the previous cycle.
-                  </p>
+                  <h4 className="text-sm font-bold text-white tracking-tight mb-1 relative z-10">{detail.score.top_reasons[1] ?? ""}</h4>
                 </div>
               </div>
               
               {/* Sub-item 3: Investigation Agent Refinement */}
+              {detail.score.investigated && (
               <div className="relative">
                 <div className="absolute -left-[31px] top-[18px] w-3.5 h-3.5 bg-indigo-500 rounded-full border-2 border-[#0B1026] shadow-[0_0_8px_rgba(99,102,241,0.8)] z-10"></div>
                 <div className="relative overflow-hidden bg-gradient-to-br from-[#12102e] via-[#08081a] to-[#1c113e] backdrop-blur-xl border border-indigo-500/30 border-t-indigo-400/50 border-b-indigo-950 p-5 rounded-2xl flex gap-4 transition-all duration-300 hover:border-indigo-400/50 hover:shadow-[0_12px_36px_rgba(99,102,241,0.25)] before:absolute before:left-0 before:top-3 before:bottom-3 before:w-[3px] before:bg-gradient-to-b before:from-indigo-400 before:to-purple-600 before:rounded-r-full">
@@ -324,16 +337,15 @@ Mei Chen`,
                       <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
                     </p>
                     <div className="p-3.5 rounded-xl bg-indigo-950/40 border border-indigo-500/10 text-[13px] text-indigo-100/90 leading-relaxed font-normal">
-                      Original status: <span className="text-slate-400 line-through">"Abandoned"</span> <br className="mb-1" />
-                      <span className="text-indigo-300 font-semibold">Refinement:</span> "Never Onboarded". Deeper analysis reveals the key decision-maker never completed the initial SSO setup.
+                      Reason code: <span className="text-indigo-300 font-semibold">{detail.score.reason_code}</span>
                     </div>
                   </div>
                 </div>
               </div>
+              )}
             </div>
           </div>
         </div>
-
         {/* Timeline Item 3: AI Recommendation */}
         <div className="relative pl-8 border-l border-white/10 pb-2">
           {/* Timeline Bullet */}
@@ -359,13 +371,16 @@ Mei Chen`,
             </div>
             
             <div className="relative bg-white/80 backdrop-blur-md border border-white/60 rounded-xl p-3.5 sm:p-4 shadow-[0_4px_16px_rgba(139,92,246,0.04),_0_1px_2px_rgba(0,0,0,0.02)] before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[3.5px] before:bg-gradient-to-b before:from-amber-400 before:to-amber-600 before:rounded-r-full relative z-10">
-              <p className="pl-3 text-sm sm:text-base font-extrabold leading-snug text-slate-900 tracking-tight mb-2">
-                Offer onboarding support — <span className="text-amber-600 font-black">no plan change</span>.
+             <p className="pl-3 text-sm sm:text-base font-extrabold leading-snug text-slate-900 tracking-tight mb-2">
+                {detail.recommendation.action_type.replace(/_/g, " ")}
+                {detail.recommendation.price_delta !== 0 && (
+                  <span className="text-amber-600 font-black"> ({detail.recommendation.price_delta > 0 ? "+" : ""}${detail.recommendation.price_delta}/mo)</span>
+                )}
               </p>
               
               <div className="pl-3 border-t border-purple-100/55 pt-2 mt-2">
                 <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed font-medium">
-                  The customer is high risk due to technical friction, not budget constraints. A downgrade offer would likely trigger an exit. Focus on integration success.
+                  {detail.recommendation.line_items.join(", ")}
                 </p>
               </div>
             </div>
@@ -516,7 +531,7 @@ Mei Chen`,
                     <textarea
                       className="w-full h-44 bg-indigo-950/35 border border-indigo-500/15 rounded-xl focus:border-indigo-400/40 p-3.5 text-xs leading-relaxed text-indigo-100 resize-none outline-none font-sans transition-all duration-200 focus:shadow-[0_0_16px_rgba(99,102,241,0.2)]"
                       value={customerData.outreachEmail}
-                      onChange={(e) => setCustomerData({ ...customerData, outreachEmail: e.target.value })}
+                      onChange={(e) => setEditedEmail(e.target.value)}
                       placeholder="Review automatic communication draft..."
                       disabled={customerData.automationTier === "auto_send"}
                     />

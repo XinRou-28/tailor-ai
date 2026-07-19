@@ -14,9 +14,46 @@ from app.engine.recommendation_engine import recommend  # noqa: E402
 from app.models.db import Account as AccountRecord, SessionLocal  # noqa: E402
 from app.models.schemas import Account as AccountSchema  # noqa: E402
 from app.models.schemas import AccountDetail, ScoreResult  # noqa: E402
-from app.models.scoring_model import score  # noqa: E402
+from app.models.scoring_model import score, score_batch  # noqa: E402
 from app.features.copy_generation import generate_customer_copy
 
+_process_cache: dict[str, AccountDetail] = {}
+_full_detail_cache: dict[str, AccountDetail] = {}
+
+
+def warm_cache(session=None) -> None:
+    close_session = False
+    if session is None:
+        session = SessionLocal()
+        close_session = True
+    try:
+        accounts = session.query(AccountRecord).all()
+        scores = score_batch(accounts)
+        for account in accounts:
+            if account.customer_id in _process_cache:
+                continue
+            base_score = scores[account.customer_id]
+            if should_investigate(base_score.confidence):
+                reason_override = investigate(account, base_score)
+                score_payload = base_score.model_dump()
+                score_payload.update({
+                    "reason_code": reason_override.reason_code,
+                    "investigated": reason_override.investigated,
+                })
+                base_score = ScoreResult(**score_payload)
+            account_schema = _to_account_schema(account)
+            recommendation = recommend(account, base_score)
+            decision = decide(account, base_score)
+            _process_cache[account.customer_id] = AccountDetail(
+                account=account_schema,
+                score=base_score,
+                recommendation=recommendation,
+                decision=decision,
+                notification=None,
+            )
+    finally:
+        if close_session:
+            session.close()
 
 def load_account(customer_id: str) -> AccountRecord:
     session = SessionLocal()
@@ -58,26 +95,42 @@ def _to_account_schema(account: AccountRecord) -> AccountSchema:
     )
 
 
-def process_account(customer_id: str) -> AccountDetail:
+def process_account_lite(customer_id: str) -> AccountDetail:
+    if customer_id in _process_cache:
+        return _process_cache[customer_id]
+
     account = load_account(customer_id)
     account_schema = _to_account_schema(account)
     scored_account = _score_with_optional_investigation(account)
     recommendation = recommend(account, scored_account)
     decision = decide(account, scored_account)
 
-    notification = generate_customer_copy(
-        customer_id=account.customer_id,
-        customer_name=account.company_name,
-        current_plan=account.current_plan,
-        recommended_action=recommendation.action_type,
-        reason=scored_account.reason_code,
-        price_delta=recommendation.price_delta,
-    )
-
-    return AccountDetail(
+    detail = AccountDetail(
         account=account_schema,
         score=scored_account,
         recommendation=recommendation,
         decision=decision,
-        notification=notification,
+        notification=None,
     )
+    _process_cache[customer_id] = detail
+    return detail
+
+
+def process_account(customer_id: str) -> AccountDetail:
+    if customer_id in _full_detail_cache:
+        return _full_detail_cache[customer_id]
+
+    detail = process_account_lite(customer_id)
+
+    notification = generate_customer_copy(
+        customer_id=detail.account.customer_id,
+        customer_name=detail.account.company_name,
+        current_plan=detail.account.current_plan,
+        recommended_action=detail.recommendation.action_type,
+        reason=detail.score.reason_code,
+        price_delta=detail.recommendation.price_delta,
+    )
+
+    detail.notification = notification
+    _full_detail_cache[customer_id] = detail
+    return detail

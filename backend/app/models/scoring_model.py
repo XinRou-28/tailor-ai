@@ -45,7 +45,6 @@ def load_artifact() -> dict[str, Any]:
     with ARTIFACT_PATH.open("rb") as artifact_file:
         return pickle.load(artifact_file)
 
-
 def _feature_frame(account: Account) -> pd.DataFrame:
     return pd.DataFrame(
         [
@@ -62,6 +61,27 @@ def _feature_frame(account: Account) -> pd.DataFrame:
                 "support_sentiment_score": account.support_sentiment_score,
                 "payment_delay_days": account.payment_delay_days,
             }
+        ],
+        columns=FEATURE_COLUMNS,
+    )
+
+def _feature_frame_batch(accounts: list[Account]) -> pd.DataFrame:
+    return pd.DataFrame(
+        [
+            {
+                "seats_purchased": a.seats_purchased,
+                "seats_active": a.seats_active,
+                "advanced_analytics_used": a.advanced_analytics_used,
+                "api_calls_used": a.api_calls_used,
+                "storage_used_gb": a.storage_used_gb,
+                "login_frequency_30d": a.login_frequency_30d,
+                "login_frequency_60d": a.login_frequency_60d,
+                "support_tickets_open": a.support_tickets_open,
+                "support_tickets_resolved": a.support_tickets_resolved,
+                "support_sentiment_score": a.support_sentiment_score,
+                "payment_delay_days": a.payment_delay_days,
+            }
+            for a in accounts
         ],
         columns=FEATURE_COLUMNS,
     )
@@ -209,3 +229,47 @@ def score(account: Account) -> ScoreResult:
         investigated=False,
         scored_at=scored_at,
     )
+
+def score_batch(accounts: list[Account]) -> dict[str, ScoreResult]:
+    artifact = load_artifact()
+    model = artifact["calibrated_model"]
+    frame = _feature_frame_batch(accounts)
+    probabilities = model.predict_proba(frame)
+    class_labels = list(model.classes_)
+
+    results: dict[str, ScoreResult] = {}
+    for i, account in enumerate(accounts):
+        probability_by_class = dict(zip(class_labels, probabilities[i]))
+        predicted_class = class_labels[int(np.argmax(probabilities[i]))]
+        artifact["predicted_class"] = predicted_class
+
+        renewed_probability = float(probability_by_class.get("renewed", 0.0))
+        downgraded_probability = float(probability_by_class.get("downgraded", 0.0))
+        churned_probability = float(probability_by_class.get("churned", 0.0))
+
+        health_score = round(100.0 * (renewed_probability + 0.5 * downgraded_probability), 2)
+        confidence = round(float(np.max(probabilities[i])), 4)
+
+        risk_index = churned_probability + 0.5 * downgraded_probability
+        if risk_index >= 0.65:
+            risk_level = "High"
+        elif risk_index >= 0.35:
+            risk_level = "Medium"
+        else:
+            risk_level = "Low"
+
+        top_reasons = _top_reasons(account, artifact)
+        reason_code = _reason_code(account, artifact.get("top_feature_names", []), artifact)
+
+        scored_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+        results[account.customer_id] = ScoreResult(
+            customer_id=account.customer_id,
+            health_score=health_score,
+            confidence=confidence,
+            risk_level=risk_level,
+            top_reasons=top_reasons,
+            reason_code=reason_code,
+            investigated=False,
+            scored_at=scored_at,
+        )
+    return results

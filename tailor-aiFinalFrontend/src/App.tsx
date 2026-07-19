@@ -2,8 +2,8 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-
-import { useState } from "react";
+import { apiGet } from "./api/client";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
@@ -26,6 +26,10 @@ export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalType, setModalType] = useState<"login" | "get_started" | "demo">("login");
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCustomerId, setSelectedCustomerId] = useState<string | null>(null);
+  const [accountsCache, setAccountsCache] = useState<any[] | null>(null);
+  const [digestCache, setDigestCache] = useState<any[] | null>(null);
+  const [insightsCache, setInsightsCache] = useState<{ total_accounts: number; top_reasons: any[] } | null>(null);
 
   const handleOpenModal = (type: "login" | "get_started" | "demo") => {
     setModalType(type);
@@ -42,26 +46,59 @@ export default function App() {
     setCurrentView("dashboard");
   };
 
+  useEffect(() => {
+  if (currentView === "homepage") return;
+  if (!accountsCache) {
+    apiGet("/accounts", { accounts: [], total: 0 }).then((res) => {
+      const mapped = res.accounts.map((a: any) => ({
+        id: a.customer_id,
+        name: a.company_name,
+        domain: "",
+        initial: a.company_name[0],
+        plan: a.current_plan,
+        health: a.health_score,
+        risk: a.risk_level === "High" ? "High Risk" : a.risk_level,
+        automation: a.tier === "auto_send" ? "Full Auto" : a.tier === "csm_review" ? "Review Req." : "Manual",
+        lastActivityTime: "",
+        lastActivityDesc: "",
+        revenue: a.monthly_revenue,
+      }));
+      setAccountsCache(mapped);
+    });
+  }
+  if (!digestCache) {
+    apiGet("/digest", { date: "", count: 0, items: [] }).then((res) => setDigestCache(res.items));
+  }
+  if (!insightsCache) {
+    apiGet("/insights", { total_accounts: 0, top_reasons: [] }).then(setInsightsCache);
+  }
+}, [currentView, accountsCache, digestCache, insightsCache]);
   // Helper to render active view when inside Dashboard Workspace
   const renderDashboardContent = () => {
     switch (currentView) {
       case "dashboard":
-        return <Dashboard searchQuery={searchQuery} onTabChange={(tab) => {
-          setSearchQuery("");
-          setCurrentView(tab as ActiveView);
-        }} />;
+  return <Dashboard searchQuery={searchQuery} cachedCustomers={accountsCache} cachedDigest={digestCache} cachedInsights={insightsCache} onTabChange={(tab) => {
+    setSearchQuery("");
+    setCurrentView(tab as ActiveView);
+  }} />;
       case "customers":
-        return <Customers searchQuery={searchQuery} onNavigate={(view) => setCurrentView(view as ActiveView)} />;
+        return <Customers
+          searchQuery={searchQuery}
+          onNavigate={(view, id) => {
+            if (id) setSelectedCustomerId(id);
+            setCurrentView(view as ActiveView);
+          }}
+          cachedCustomers={accountsCache}
+        />;
       case "details":
-        return <CustomerDetails />;
+        return <CustomerDetails customerId={selectedCustomerId} />;
       case "insights":
-        return <Insights />;
+        return <Insights cachedInsights={insightsCache} />;
       case "settings":
         return <Settings />;
       default:
-        return <Dashboard searchQuery={searchQuery} />;
-    }
-  };
+      return <Dashboard searchQuery={searchQuery} cachedCustomers={accountsCache} cachedDigest={digestCache} cachedInsights={insightsCache} />;    }
+      };
 
   // If we are in homepage, render static marketing site
   if (currentView === "homepage") {

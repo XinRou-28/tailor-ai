@@ -1,4 +1,5 @@
-import { useState, FormEvent } from "react";
+import { useEffect, useState } from "react";
+import { apiGet } from "../api/client";
 import { motion, AnimatePresence } from "motion/react";
 
 interface RangeData {
@@ -65,11 +66,12 @@ const dataByRange: Record<string, RangeData> = {
   }
 };
 
-export default function Insights() {
+export default function Insights({ cachedInsights }: { cachedInsights: { total_accounts: number; top_reasons: any[]; ai_pulse?: string; ai_strategy?: string } | null }) {
   const [timeRange, setTimeRange] = useState<"7d" | "30d" | "90d">("30d");
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isExporting, setIsExporting] = useState(false);
   const [selectedPattern, setSelectedPattern] = useState<string | null>(null);
+  const insightsData = cachedInsights ?? { total_accounts: 0, top_reasons: [], ai_pulse: "", ai_strategy: "" };
 
   const activeData = dataByRange[timeRange];
 
@@ -221,82 +223,35 @@ export default function Insights() {
             
             <div className="space-y-4 relative z-10">
               
-              {/* Item 1 */}
-              <div className="flex items-center justify-between gap-5 bg-white/[0.03] backdrop-blur-md border border-white/10 p-4 rounded-2xl hover:bg-white/[0.06] hover:border-purple-500/30 hover:-translate-y-[1.5px] transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_24px_rgba(139,92,246,0.15)]">
-                <div className="flex-1 space-y-2">
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-100 tracking-tight">Advanced Analytics unused</h4>
-                    <p className="text-[11px] text-purple-100/75 font-medium leading-normal mt-0.5">{activeData.analyticsUnusedSub}</p>
-                  </div>
-                  <div className="h-1.5 w-full bg-slate-950/80 rounded-full overflow-hidden border border-white/5 shadow-inner">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${activeData.analyticsUnused}%` }}
-                      transition={{ duration: 0.6, ease: "easeOut" }}
-                      className="h-full bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-500 rounded-full shadow-[0_0_8px_rgba(34,211,238,0.4)]"
-                    ></motion.div>
-                  </div>
-                </div>
-                <span className="text-2xl font-black text-white flex-shrink-0 min-w-[60px] text-right font-mono drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]">{activeData.analyticsUnused}%</span>
-              </div>
-
-              {/* Item 2 */}
-              <div className="flex items-center justify-between gap-5 bg-white/[0.03] backdrop-blur-md border border-white/10 p-4 rounded-2xl hover:bg-white/[0.06] hover:border-purple-500/30 hover:-translate-y-[1.5px] transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_24px_rgba(139,92,246,0.15)]">
-                <div className="flex-1 space-y-2">
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-100 tracking-tight">Poor onboarding completion</h4>
-                    <p className="text-[11px] text-purple-100/75 font-medium leading-normal mt-0.5">Most common single cause the Investigation Agent surfaces on medium-confidence cases.</p>
-                  </div>
-                  <div className="h-1.5 w-full bg-slate-950/80 rounded-full overflow-hidden border border-white/5 shadow-inner">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${activeData.poorOnboarding}%` }}
-                      transition={{ duration: 0.6, ease: "easeOut" }}
-                      className="h-full bg-gradient-to-r from-violet-400 via-purple-500 to-pink-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.4)]"
-                    ></motion.div>
-                  </div>
-                </div>
-                <span className="text-2xl font-black text-white flex-shrink-0 min-w-[60px] text-right font-mono drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]">{activeData.poorOnboarding}%</span>
-              </div>
-
-              {/* Item 3 */}
-              <div className="flex items-center justify-between gap-5 bg-white/[0.03] backdrop-blur-md border border-white/10 p-4 rounded-2xl hover:bg-white/[0.06] hover:border-purple-500/30 hover:-translate-y-[1.5px] transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_24px_rgba(139,92,246,0.15)]">
-                <div className="flex-1 space-y-2">
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-100 tracking-tight">Missing integrations (Stripe / Salesforce)</h4>
-                    <p className="text-[11px] text-purple-100/75 font-medium leading-normal mt-0.5">Accounts that never connected a core data source in their first 14 days.</p>
-                  </div>
-                  <div className="h-1.5 w-full bg-slate-950/80 rounded-full overflow-hidden border border-white/5 shadow-inner">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${activeData.missingIntegrations}%` }}
-                      transition={{ duration: 0.6, ease: "easeOut" }}
-                      className="h-full bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-500 rounded-full shadow-[0_0_8px_rgba(56,189,248,0.4)]"
-                    ></motion.div>
-                  </div>
-                </div>
-                <span className="text-2xl font-black text-white flex-shrink-0 min-w-[60px] text-right font-mono drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]">{activeData.missingIntegrations}%</span>
-              </div>
-
-              {/* Item 4 */}
-              <div className="flex items-center justify-between gap-5 bg-white/[0.03] backdrop-blur-md border border-white/10 p-4 rounded-2xl hover:bg-white/[0.06] hover:border-purple-500/30 hover:-translate-y-[1.5px] transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_24px_rgba(139,92,246,0.15)]">
-                <div className="flex-1 space-y-2">
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-100 tracking-tight">Payment friction</h4>
-                    <p className="text-[11px] text-purple-100/75 font-medium leading-normal mt-0.5">Repeated failed charges — routed to support, not treated as a churn signal.</p>
-                  </div>
-                  <div className="h-1.5 w-full bg-slate-950/80 rounded-full overflow-hidden border border-white/5 shadow-inner">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${activeData.paymentFriction}%` }}
-                      transition={{ duration: 0.6, ease: "easeOut" }}
-                      className="h-full bg-gradient-to-r from-emerald-400 via-teal-400 to-indigo-500 rounded-full shadow-[0_0_8px_rgba(52,211,153,0.4)]"
-                    ></motion.div>
-                  </div>
-                </div>
-                <span className="text-2xl font-black text-white flex-shrink-0 min-w-[60px] text-right font-mono drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]">{activeData.paymentFriction}%</span>
-              </div>
-
+             {insightsData.top_reasons.map((reason, idx) => {
+  const colors = [
+    "from-cyan-400 via-indigo-400 to-purple-500 shadow-[0_0_8px_rgba(34,211,238,0.4)]",
+    "from-violet-400 via-purple-500 to-pink-500 shadow-[0_0_8px_rgba(168,85,247,0.4)]",
+    "from-sky-400 via-indigo-400 to-purple-500 shadow-[0_0_8px_rgba(56,189,248,0.4)]",
+    "from-emerald-400 via-teal-400 to-indigo-500 shadow-[0_0_8px_rgba(52,211,153,0.4)]",
+    "from-amber-400 via-orange-400 to-rose-500 shadow-[0_0_8px_rgba(245,158,11,0.4)]",
+    "from-rose-400 via-pink-500 to-purple-500 shadow-[0_0_8px_rgba(244,63,94,0.4)]",
+  ];
+  return (
+    <div key={reason.reason_code} className="flex items-center justify-between gap-5 bg-white/[0.03] backdrop-blur-md border border-white/10 p-4 rounded-2xl hover:bg-white/[0.06] hover:border-purple-500/30 hover:-translate-y-[1.5px] transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_24px_rgba(139,92,246,0.15)]">
+      <div className="flex-1 space-y-2">
+        <div>
+          <h4 className="text-sm font-bold text-slate-100 tracking-tight">{reason.label}</h4>
+          <p className="text-[11px] text-purple-100/75 font-medium leading-normal mt-0.5">{reason.count} accounts affected</p>
+        </div>
+        <div className="h-1.5 w-full bg-slate-950/80 rounded-full overflow-hidden border border-white/5 shadow-inner">
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: `${reason.pct}%` }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className={`h-full bg-gradient-to-r ${colors[idx % colors.length]} rounded-full`}
+          ></motion.div>
+        </div>
+      </div>
+      <span className="text-2xl font-black text-white flex-shrink-0 min-w-[60px] text-right font-mono drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]">{reason.pct}%</span>
+    </div>
+  );
+})}
             </div>
           </div>
         </div>
@@ -314,7 +269,7 @@ export default function Insights() {
             <div className="divide-y divide-white/10">
               <div className="py-2.5 flex justify-between items-center">
                 <span className="text-slate-400 text-xs font-medium">Accounts</span>
-                <span className="text-sm font-semibold bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">{activeData.accountsCount}</span>
+                <span className="text-sm font-semibold bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">{insightsData.total_accounts}</span>
               </div>
               <div className="py-2.5 flex justify-between items-center">
                 <span className="text-slate-400 text-xs font-medium">Affected tier</span>
@@ -353,7 +308,7 @@ export default function Insights() {
               </div>
               <h4 className="text-[11px] font-bold text-cyan-200 tracking-wider uppercase mb-1.5">AI Pulse</h4>
               <p className="text-xs text-slate-300 leading-relaxed font-normal">
-                Pattern detected: Advanced Analytics adoption is the strongest signal across at-risk Enterprise accounts. Recommended focus area for retention strategy.
+                {insightsData.ai_pulse || "Not enough data yet to detect a pattern."}
               </p>
             </div>
           </div>
@@ -377,9 +332,9 @@ export default function Insights() {
                 <span className="material-symbols-outlined !text-[13px]">bolt</span>
                 PATTERN → STRATEGY
               </div>
-              <h3 className="text-lg font-semibold text-white tracking-tight mb-2.5">Enterprise Onboarding Insights</h3>
+              <h3 className="text-lg font-semibold text-white tracking-tight mb-2.5">Retention Strategy</h3>
               <p className="text-xs text-slate-300 leading-relaxed font-normal">
-                Based on account behavior in the last {timeRange === "7d" ? "7" : timeRange === "30d" ? "30" : "90"} days, focusing on Advanced Analytics adoption and onboarding completion shows the highest correlation with retention and expansion.
+                {insightsData.ai_strategy || "Once more accounts are scored, this section will surface a recommended action."}
               </p>
             </div>
             <div className="flex-shrink-0">

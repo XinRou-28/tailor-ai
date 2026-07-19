@@ -2,8 +2,8 @@ from fastapi import APIRouter
 from collections import Counter
 
 from app.models.db import Account, SessionLocal
-from app.orchestrator import process_account
-
+from app.orchestrator import process_account_lite
+from app.features.insights_copy import get_ai_pulse
 
 router = APIRouter(prefix="/api")
 
@@ -23,20 +23,16 @@ def get_insights() -> dict[str, object]:
         reason_counter = Counter()
 
         for account in accounts:
-            detail = process_account(account.customer_id)
-
+            detail = process_account_lite(account.customer_id)
             reason_counter[
                 detail.score.reason_code
             ] += 1
 
-
         total = len(accounts)
-
 
         reasons = []
 
         for reason, count in reason_counter.most_common():
-
             reasons.append(
                 {
                     "reason_code": reason,
@@ -49,11 +45,14 @@ def get_insights() -> dict[str, object]:
                 }
             )
 
+        ai_copy = get_ai_pulse(reasons)
 
         return {
             "generated_at": "2026-07-17T00:00:00Z",
             "total_accounts": total,
             "top_reasons": reasons,
+            "ai_pulse": ai_copy["pulse"],
+            "ai_strategy": ai_copy["strategy"],
         }
 
     finally:

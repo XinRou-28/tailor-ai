@@ -1,8 +1,7 @@
 from fastapi import APIRouter
 
 from app.models.db import Account, SessionLocal
-from app.orchestrator import process_account
-
+from app.orchestrator import process_account_lite
 
 router = APIRouter(prefix="/api")
 
@@ -23,7 +22,7 @@ def get_digest() -> dict[str, object]:
 
         for account in accounts:
 
-            detail = process_account(account.customer_id)
+            detail = process_account_lite(account.customer_id)
 
             # only show accounts needing attention
             if detail.decision.tier != "auto_send":

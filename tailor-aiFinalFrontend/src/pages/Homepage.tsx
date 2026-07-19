@@ -487,31 +487,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
                     Tailor AI doesn't just predict churn; it recovers value. By analyzing customer usage drops against your existing plan catalog, our engine recommends the precise intervention needed—whether that's onboarding support, a capacity upgrade, or safely right-sizing an account.
                   </p>
                 </div>
-                
-                <div>
-                  {/* Feature list */}
-                  <div className="flex flex-col items-start gap-2.5 mb-6">
-                    <div className="flex items-center gap-2 text-xs text-slate-200">
-                      <span className="w-4.5 h-4.5 rounded-full bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 text-emerald-400">
-                        <Check className="w-3 h-3" />
-                      </span>
-                      <span>Advanced Analytics Unused</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-slate-200">
-                      <span className="w-4.5 h-4.5 rounded-full bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 text-emerald-400">
-                        <Check className="w-3 h-3" />
-                      </span>
-                      <span>Onboarding Difficulty</span>
-                    </div>
-                  </div>
-
-                  <button 
-                    onClick={() => setCurrentView("dashboard")}
-                    className="w-full py-3 px-4 rounded-lg bg-gradient-to-r from-[#8B4CFF] to-[#7033FF] hover:from-[#9c66ff] hover:to-[#8247ff] text-white text-xs font-bold transition-all hover:shadow-[0_0_15px_rgba(139,76,255,0.25)] cursor-pointer border border-[#a475ff]/20"
-                  >
-                    Offer Onboarding Support
-                  </button>
-                </div>
               </div>
             </InteractiveGlowCard>
           </motion.div>
@@ -545,31 +520,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
                     Tailor AI constructs automated communication using your real product tiers, guaranteeing a zero-hallucination guardrail. It never invents or claims unsupported prices.
                   </p>
                 </div>
-                
-                <div>
-                  {/* Feature list */}
-                  <div className="flex flex-col items-start gap-2.5 mb-6">
-                    <div className="flex items-center gap-2 text-xs text-slate-200">
-                      <span className="w-4.5 h-4.5 rounded-full bg-[#8B4CFF]/15 flex items-center justify-center border border-[#8B4CFF]/30 text-[#b68cff]">
-                        <Check className="w-3 h-3" />
-                      </span>
-                      <span>Single Product Tiers</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-slate-200">
-                      <span className="w-4.5 h-4.5 rounded-full bg-[#8B4CFF]/15 flex items-center justify-center border border-[#8B4CFF]/30 text-[#b68cff]">
-                        <Check className="w-3 h-3" />
-                      </span>
-                      <span>Automated Communication</span>
-                    </div>
-                  </div>
-
-                  <button 
-                    onClick={() => setCurrentView("dashboard")}
-                    className="w-full py-3 px-4 rounded-lg bg-gradient-to-r from-[#8B4CFF] to-[#7033FF] hover:from-[#9c66ff] hover:to-[#8247ff] text-white text-xs font-bold transition-all hover:shadow-[0_0_15px_rgba(139,76,255,0.25)] cursor-pointer border border-[#a475ff]/20"
-                  >
-                    No Hallucinations Guarantee
-                  </button>
-                </div>
               </div>
             </InteractiveGlowCard>
           </motion.div>
@@ -601,75 +551,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
                 <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
                   Automation should support operators, not overwhelm them. Tailor AI performs actions automatically only when confidence thresholds are met. When confidence drops below target parameters, a workflow is instantly generated for a human operator to review and approve.
                 </p>
-                
-                {/* Clean card containing stats, gauges, and statuses */}
-                <div className="bg-slate-950/50 border border-white/5 rounded-lg p-4 space-y-3.5">
-                  
-                  {/* Header info with circular index gauge on top right */}
-                  <div className="flex justify-between items-start gap-2 border-b border-white/5 pb-2">
-                    <div>
-                      <span className="text-[8px] font-bold text-emerald-400 tracking-wider uppercase block">STATUS LEVEL</span>
-                      <span className="text-[11px] text-white font-bold block mt-0.5">High certainty threshold met</span>
-                    </div>
-                    
-                    {/* Gauge */}
-                    <div className="flex flex-col items-center flex-shrink-0">
-                      <div className="relative w-8 h-8 flex items-center justify-center">
-                        <svg className="w-full h-full transform -rotate-90">
-                          <circle cx="16" cy="16" r="13" stroke="rgba(255,255,255,0.05)" strokeWidth="2" fill="transparent" />
-                          <motion.circle 
-                            cx="16" 
-                            cy="16" 
-                            r="13" 
-                            stroke="#10b981" 
-                            strokeWidth="2" 
-                            fill="transparent" 
-                            strokeDasharray="81" 
-                            initial={{ strokeDashoffset: 81 }}
-                            whileInView={{ strokeDashoffset: 6 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-                            strokeLinecap="round" 
-                          />
-                        </svg>
-                        <span className="absolute text-[9px] font-black text-white">
-                          <CountUp end={92} />
-                        </span>
-                      </div>
-                      <span className="text-[7px] text-emerald-400 font-mono font-semibold mt-1">
-                        <CountUp end={92} /> Confidence
-                      </span>
-                    </div>
-                  </div>
-
-                  <p className="text-[10px] text-slate-300 leading-relaxed font-mono">
-                    Reason: Confidence high (<CountUp end={92} />%) with no negative billing telemetry. Executing action protocol.
-                  </p>
-
-                  {/* Status indicators */}
-                  <div className="space-y-1.5 pt-2 border-t border-white/5 text-[9px] font-mono">
-                    <div className="flex items-center gap-1.5 text-slate-200">
-                      <span className="w-1 h-1 rounded-full bg-emerald-500"></span>
-                      <span className="font-bold">CONFIDENCE DEMONSTRATION: HIGH</span>
-                      <span className="text-slate-400 font-medium">(Auto-Apply)</span>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-slate-400">
-                      <span className="w-1 h-1 rounded-full bg-purple-500"></span>
-                      <span>Low Confidence</span>
-                      <span className="font-medium">(Operator Verification)</span>
-                    </div>
-                  </div>
-
-                  {/* Action box at the bottom */}
-                  <div className="bg-emerald-500/5 border border-emerald-500/10 rounded p-2.5 text-[9px] text-emerald-400 font-mono">
-                    <div className="flex items-center gap-1.5 font-bold uppercase mb-0.5">
-                      <span className="w-1 h-1 rounded-full bg-emerald-400 animate-pulse"></span>
-                      ACTION: AUTO APPLIED
-                    </div>
-                    Right-sizing proposal dispatched automatically to customer.
-                  </div>
-
-                </div>
               </div>
             </InteractiveGlowCard>
           </motion.div>

@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from fastapi.responses import JSONResponse
-
-from app.orchestrator import process_account
+from datetime import datetime
+from app.orchestrator import process_account, process_account_lite, warm_cache
 from app.models.db import Account, Decision, SessionLocal
 from app.models.schemas import AccountDetail
 
@@ -31,14 +31,14 @@ def _account_summary_from_detail(detail: AccountDetail) -> dict[str, object]:
         "tier": detail.decision.tier,
     }
 
-
 @router.get("/accounts")
 def get_accounts() -> dict[str, object]:
+    warm_cache()
     session = SessionLocal()
     try:
         accounts = session.query(Account).order_by(Account.customer_id).all()
         summaries = [
-            _account_summary_from_detail(process_account(account.customer_id))
+            _account_summary_from_detail(process_account_lite(account.customer_id))
             for account in accounts
         ]
         return {
@@ -100,8 +100,8 @@ def record_decision(
         outcome = payload.get("outcome")
 
         if outcome not in [
-            "approve",
-            "decline",
+            "approved",
+            "declined",
         ]:
             return JSONResponse(
                 status_code=400,
@@ -114,13 +114,14 @@ def record_decision(
             )
 
 
+        detail = process_account(customer_id)
         decision = Decision(
             customer_id=customer_id,
-            tier="manual_review",
-            rationale=f"CSM selected {outcome}",
+            tier=detail.decision.tier,
+            rationale=detail.decision.rationale,
             outcome=outcome,
-            decided_at="2026-07-17T00:00:00Z",
-            recorded_at="2026-07-17T00:00:00Z",
+            decided_at=detail.decision.decided_at,
+            recorded_at=datetime.utcnow().isoformat() + "Z",
         )
 
 
