@@ -20,6 +20,7 @@ import {
   ChevronLeft,
   ChevronRight
 } from "lucide-react";
+import LandingLogo from "../components/LandingLogo";
 
 interface CountUpProps {
   end: number;
@@ -117,33 +118,25 @@ interface HomepageProps {
   setCurrentView: (view: string) => void;
 }
 
-// GLOBAL CUSTOM CURSOR (Transparent Glass Ring)
+// GLOBAL CUSTOM CURSOR (Fully Black Dot)
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
-  const [isMouseDown, setIsMouseDown] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    const handleMouseDown = () => setIsMouseDown(true);
-    const handleMouseUp = () => setIsMouseDown(false);
-
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mousedown', handleMouseDown);
-    window.addEventListener('mouseup', handleMouseUp);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mousedown', handleMouseDown);
-      window.removeEventListener('mouseup', handleMouseUp);
     };
   }, []);
 
   return (
     <div
-      className={`fixed pointer-events-none z-[9999] w-6 h-6 bg-transparent border-[1.5px] border-white/60 backdrop-blur-sm rounded-full -translate-x-1/2 -translate-y-1/2 transition-transform duration-75 ease-out ${isMouseDown ? 'scale-125' : ''}`}
+      className="fixed pointer-events-none z-[9999] w-4 h-4 bg-black rounded-full -translate-x-1/2 -translate-y-1/2 transition-transform duration-75 ease-out"
       style={{ left: `${position.x}px`, top: `${position.y}px` }}
     />
   );
@@ -568,6 +561,39 @@ const InteractiveTechStack = () => {
   );
 };
 
+// NEW BRAND BANNER SECTION
+const BrandBannerSection = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.8 }}
+      className="bg-[#0B0F19] py-24 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="max-w-4xl mx-auto flex flex-col items-center justify-center text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h2 className="text-7xl md:text-9xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600 mb-4 leading-tight">
+            Tailor AI
+          </h2>
+          <h3 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600 pb-2 drop-shadow-[0_0_20px_rgba(124,58,237,0.6)] mb-6">
+            Subscription Intelligence
+          </h3>
+        </motion.div>
+        <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium">
+          Tailor Every Subscription with <span className="text-cyan-300 font-medium drop-shadow-[0_0_8px_rgba(6,182,212,0.4)]">Intelligent, Data-Driven Insights</span><br />
+          to Fit Your Business.
+        </p>
+      </div>
+    </motion.div>
+  );
+};
+
 // POTENTIAL IMPACT (Sleek Data Panel Layout with Hover Glow)
 const PotentialImpactSection = () => {
   return (
@@ -667,7 +693,12 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
       {/* NAVBAR STRIP-DOWN */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0B0F19]/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <span className="text-xl font-bold text-white">Tailor AI</span>
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center">
+              <LandingLogo size="2rem" />
+            </div>
+            <span className="text-xl font-bold text-white">Tailor AI</span>
+          </div>
           <button
             onClick={() => setCurrentView("dashboard")}
             className="bg-gradient-to-r from-[#8B4CFF] to-cyan-400 hover:from-[#9c66ff] hover:to-cyan-300 text-white font-bold px-6 py-2 rounded-lg text-sm transition-all hover:shadow-[0_0_15px_rgba(139,76,255,0.3)] cursor-pointer border border-white/20"
@@ -985,6 +1016,9 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
 
       {/* INTERACTIVE TECH STACK (Carousel-style Interaction) */}
       <InteractiveTechStack />
+
+      {/* NEW BRAND BANNER SECTION */}
+      <BrandBannerSection />
 
       {/* Call to Action Section */}
       <section className="py-16 sm:py-20 bg-[#0d0e1b] relative overflow-hidden border-t border-white/5" id="pricing">
