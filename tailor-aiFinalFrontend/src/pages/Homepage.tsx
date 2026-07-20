@@ -7,6 +7,7 @@ import {
   ShieldAlert,
   Sparkles,
   ArrowRight,
+  ArrowDown, // 修复白屏的关键：引入了 ArrowDown
   Cpu,
   Activity,
   ShieldCheck,
@@ -43,7 +44,6 @@ function CountUp({ end, duration = 1.2, suffix = "" }: CountUpProps) {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
 
-      // Silk-smooth easeOutQuad easing
       const easeOutQuad = (t: number) => t * (2 - t);
       const currentVal = Math.floor(easeOutQuad(progress) * (end - startValue) + startValue);
       setCount(currentVal);
@@ -90,7 +90,6 @@ function InteractiveGlowCard({ children, className = "", glowColor = "rgba(139, 
       className={`relative overflow-hidden rounded-xl border border-white/5 bg-[#15172c]/50 backdrop-blur-xl shadow-lg transition-colors duration-300 hover:border-white/10 ${className}`}
       {...props}
     >
-      {/* Dynamic spot light glow */}
       {isHovered && (
         <>
           <div
@@ -99,7 +98,6 @@ function InteractiveGlowCard({ children, className = "", glowColor = "rgba(139, 
               background: `radial-gradient(350px circle at ${coords.x}px ${coords.y}px, ${glowColor}, transparent 80%)`
             }}
           />
-          {/* Glass reflection sheen */}
           <div
             className="pointer-events-none absolute inset-0 -z-10 transition-opacity duration-500"
             style={{
@@ -118,7 +116,6 @@ interface HomepageProps {
   setCurrentView: (view: string) => void;
 }
 
-// GLOBAL CUSTOM CURSOR (Fully Black Dot)
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
 
@@ -142,7 +139,6 @@ const CustomCursor = () => {
   );
 };
 
-// UPGRADED PROBLEM SECTION (Interactive Focus Modal)
 const ProblemSection = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
@@ -172,7 +168,6 @@ const ProblemSection = () => {
     setExpandedIndex(null);
   };
 
-  // KEYBOARD NAVIGATION (only when expanded)
   useEffect(() => {
     if (expandedIndex === null) return;
 
@@ -208,7 +203,6 @@ const ProblemSection = () => {
           </p>
         </motion.div>
 
-        {/* INITIAL STATE: 3 cards side-by-side */}
         {!expandedIndex && (
           <div className="grid gap-6 md:grid-cols-3">
             {problems.map((problem, index) => (
@@ -234,10 +228,8 @@ const ProblemSection = () => {
           </div>
         )}
 
-        {/* EXPANDED STATE: Focus Modal with overlay */}
         {expandedIndex !== null && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-            {/* Background overlay with blur effect */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -246,7 +238,6 @@ const ProblemSection = () => {
               className="absolute inset-0 bg-black/70 backdrop-blur-md"
             />
 
-            {/* Expanded card in center - click advances to next */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -279,7 +270,6 @@ const ProblemSection = () => {
   );
 };
 
-// UPGRADED BEYOND CHURN PREDICTION (Interactive Carousel with Keyboard Support)
 const CoreObjectivesCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -311,7 +301,6 @@ const CoreObjectivesCarousel = () => {
     );
   };
 
-  // NEW KEYBOARD FEATURE
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight') {
@@ -349,7 +338,6 @@ const CoreObjectivesCarousel = () => {
           </p>
         </motion.div>
 
-        {/* Carousel Container with Flex Layout */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -357,7 +345,6 @@ const CoreObjectivesCarousel = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-row items-center justify-center gap-4 md:gap-12 w-full"
         >
-          {/* Left Navigation Button - Now Outside Card */}
           <button
             onClick={prevObjective}
             className="w-14 h-14 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 flex-shrink-0"
@@ -365,7 +352,6 @@ const CoreObjectivesCarousel = () => {
             <ChevronLeft className="w-6 h-6 text-white" />
           </button>
 
-          {/* Active Card with Liquid Glass Effect */}
           <motion.div
             key={activeIndex}
             initial={{ opacity: 0, y: 20 }}
@@ -394,7 +380,6 @@ const CoreObjectivesCarousel = () => {
             </div>
           </motion.div>
 
-          {/* Right Navigation Button - Now Outside Card */}
           <button
             onClick={nextObjective}
             className="w-14 h-14 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 flex-shrink-0"
@@ -403,7 +388,6 @@ const CoreObjectivesCarousel = () => {
           </button>
         </motion.div>
 
-        {/* Dot Indicators */}
         <div className="flex justify-center space-x-2 mt-12">
           {objectives.map((_, index) => (
             <button
@@ -420,17 +404,93 @@ const CoreObjectivesCarousel = () => {
   );
 };
 
-// INTERACTIVE TECH STACK (Glowing 4-Card Grid)
 const InteractiveTechStack = () => {
+  const pipelineSteps = [
+    {
+      title: "Customer Data",
+      subtitle: "(Usage • Billing • Feature Adoption • Support)",
+      icon: <Database className="w-6 h-6 text-cyan-400" />,
+      borderClass: "border-cyan-500/30",
+      bgClass: "bg-cyan-500/10",
+      iconBorderClass: "border-cyan-500/20",
+      titleClass: "text-cyan-400",
+      shadowClass: "shadow-[0_0_20px_rgba(6,182,212,0.15)]",
+      hoverShadowClass: "hover:shadow-[0_0_30px_rgba(6,182,212,0.3)]"
+    },
+    {
+      title: "Logistic Regression",
+      subtitle: "Health Score Prediction",
+      icon: <Brain className="w-6 h-6 text-purple-400" />,
+      borderClass: "border-purple-500/30",
+      bgClass: "bg-purple-500/10",
+      iconBorderClass: "border-purple-500/20",
+      titleClass: "text-purple-400",
+      shadowClass: "shadow-[0_0_20px_rgba(124,58,237,0.15)]",
+      hoverShadowClass: "hover:shadow-[0_0_30px_rgba(124,58,237,0.3)]"
+    },
+    {
+      title: "Recommendation Engine",
+      subtitle: "Root Cause Analysis",
+      icon: <Sparkles className="w-6 h-6 text-cyan-400" />,
+      borderClass: "border-cyan-500/30",
+      bgClass: "bg-cyan-500/10",
+      iconBorderClass: "border-cyan-500/20",
+      titleClass: "text-cyan-400",
+      shadowClass: "shadow-[0_0_20px_rgba(6,182,212,0.15)]",
+      hoverShadowClass: "hover:shadow-[0_0_30px_rgba(6,182,212,0.3)]"
+    },
+    {
+      title: "Trust Layer",
+      subtitle: "Human-in-the-loop",
+      icon: <ShieldCheck className="w-6 h-6 text-purple-400" />,
+      borderClass: "border-purple-500/30",
+      bgClass: "bg-purple-500/10",
+      iconBorderClass: "border-purple-500/20",
+      titleClass: "text-purple-400",
+      shadowClass: "shadow-[0_0_20px_rgba(124,58,237,0.15)]",
+      hoverShadowClass: "hover:shadow-[0_0_30px_rgba(124,58,237,0.3)]"
+    },
+    {
+      title: "Mistral AI",
+      subtitle: "Customer Communication",
+      icon: <Bot className="w-6 h-6 text-cyan-400" />,
+      borderClass: "border-cyan-500/30",
+      bgClass: "bg-cyan-500/10",
+      iconBorderClass: "border-cyan-500/20",
+      titleClass: "text-cyan-400",
+      shadowClass: "shadow-[0_0_20px_rgba(6,182,212,0.15)]",
+      hoverShadowClass: "hover:shadow-[0_0_30px_rgba(6,182,212,0.3)]"
+    },
+    {
+      title: "React Dashboard",
+      subtitle: "Business Insights",
+      icon: <Activity className="w-6 h-6 text-purple-400" />,
+      borderClass: "border-purple-500/30",
+      bgClass: "bg-purple-500/10",
+      iconBorderClass: "border-purple-500/20",
+      titleClass: "text-purple-400",
+      shadowClass: "shadow-[0_0_20px_rgba(124,58,237,0.15)]",
+      hoverShadowClass: "hover:shadow-[0_0_30px_rgba(124,58,237,0.3)]"
+    }
+  ];
+
+  const technologies = [
+    { layer: "Frontend", tech: "React • TypeScript • Tailwind CSS • Framer Motion", color: "text-cyan-400" },
+    { layer: "Backend", tech: "FastAPI • SQLAlchemy • SQLite • REST API", color: "text-purple-400" },
+    { layer: "Machine Learning", tech: "Logistic Regression • Scikit-learn • Pandas • NumPy", color: "text-cyan-400" },
+    { layer: "AI Components", tech: "Recommendation Engine • Trust Layer • Mistral AI • Custom Agents", color: "text-purple-400" },
+    { layer: "Deployment", tech: "Vercel • Render", color: "text-cyan-400" }
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: false, amount: 0.1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-8"
+      className="bg-[#0B0F19] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-4xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -459,109 +519,82 @@ const InteractiveTechStack = () => {
               ease: "easeInOut"
             }}
           >
-            Our Tech Stack
+            Technology Architecture
           </motion.h2>
         </motion.div>
 
-        {/* 4 Tech Stack Cards in Grid - NO MASCOT */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Frontend & UI */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            whileHover={{ y: -4, scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 400, damping: 25 }}
-            className="bg-slate-900/50 backdrop-blur-md border border-slate-800 p-8 rounded-2xl hover:shadow-[0_0_40px_rgba(124,58,237,0.4)] hover:border-purple-500/50 transition-all duration-300"
-          >
-            <div className="w-16 h-16 bg-cyan-500/10 border border-cyan-500/20 rounded-lg flex items-center justify-center mb-6 mx-auto">
-              <Terminal className="w-8 h-8 text-cyan-400" />
+        <div className="flex flex-col items-center justify-center mb-24 relative w-full">
+          <div className="absolute top-10 bottom-10 w-0.5 bg-gradient-to-b from-cyan-500/20 via-purple-500/20 to-cyan-500/20 -z-10"></div>
+          
+          {pipelineSteps.map((step, index) => (
+            <div key={index} className="flex flex-col items-center w-full">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.4 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25, delay: index * 0.1 }}
+                className={`bg-slate-900/60 backdrop-blur-md border ${step.borderClass} p-5 rounded-2xl ${step.shadowClass} ${step.hoverShadowClass} transition-all duration-300 w-[90%] sm:w-[450px] flex flex-col items-center text-center z-10 cursor-default`}
+              >
+                <div className={`w-12 h-12 ${step.bgClass} border ${step.iconBorderClass} rounded-lg flex items-center justify-center mb-3`}>
+                  {step.icon}
+                </div>
+                <h4 className={`text-xl font-bold ${step.titleClass} mb-1`}>{step.title}</h4>
+                <p className="text-slate-300 text-sm font-medium">{step.subtitle}</p>
+              </motion.div>
+              
+              {index < pipelineSteps.length - 1 && (
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  className="py-4 z-10 text-slate-500 drop-shadow-[0_0_8px_rgba(255,255,255,0.1)]"
+                >
+                  <ArrowDown className="w-7 h-7" />
+                </motion.div>
+              )}
             </div>
-            <h4 className="text-xl font-bold text-cyan-400 mb-4 text-center">Frontend & UI</h4>
-            <div className="flex flex-col items-center justify-center">
-              <ul className="text-slate-400 text-sm space-y-2 w-fit text-left">
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>React</li>
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>TypeScript</li>
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>Tailwind CSS</li>
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>Framer Motion</li>
-              </ul>
-            </div>
-          </motion.div>
-
-          {/* Backend Engine */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            whileHover={{ y: -4, scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 400, damping: 25, delay: 0.1 }}
-            className="bg-slate-900/50 backdrop-blur-md border border-slate-800 p-8 rounded-2xl hover:shadow-[0_0_40px_rgba(124,58,237,0.4)] hover:border-purple-500/50 transition-all duration-300"
-          >
-            <div className="w-16 h-16 bg-purple-500/10 border border-purple-500/20 rounded-lg flex items-center justify-center mb-6 mx-auto">
-              <Database className="w-8 h-8 text-purple-400" />
-            </div>
-            <h4 className="text-xl font-bold text-purple-400 mb-4 text-center">Backend Engine</h4>
-            <div className="flex flex-col items-center justify-center">
-              <ul className="text-slate-400 text-sm space-y-2 w-fit text-left">
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>FastAPI</li>
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>SQLAlchemy</li>
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>SQLite</li>
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>REST API</li>
-              </ul>
-            </div>
-          </motion.div>
-
-          {/* Machine Learning */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            whileHover={{ y: -4, scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 400, damping: 25, delay: 0.2 }}
-            className="bg-slate-900/50 backdrop-blur-md border border-slate-800 p-8 rounded-2xl hover:shadow-[0_0_40px_rgba(124,58,237,0.4)] hover:border-purple-500/50 transition-all duration-300"
-          >
-            <div className="w-16 h-16 bg-cyan-500/10 border border-cyan-500/20 rounded-lg flex items-center justify-center mb-6 mx-auto">
-              <Brain className="w-8 h-8 text-cyan-400" />
-            </div>
-            <h4 className="text-xl font-bold text-cyan-400 mb-4 text-center">Machine Learning</h4>
-            <div className="flex flex-col items-center justify-center">
-              <ul className="text-slate-400 text-sm space-y-2 w-fit text-left">
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>XGBoost</li>
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>Scikit-learn</li>
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>Pandas</li>
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>NumPy</li>
-              </ul>
-            </div>
-          </motion.div>
-
-          {/* Decision Intelligence */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            whileHover={{ y: -4, scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 400, damping: 25, delay: 0.3 }}
-            className="bg-slate-900/50 backdrop-blur-md border border-slate-800 p-8 rounded-2xl hover:shadow-[0_0_40px_rgba(124,58,237,0.4)] hover:border-purple-500/50 transition-all duration-300"
-          >
-            <div className="w-16 h-16 bg-purple-500/10 border border-purple-500/20 rounded-lg flex items-center justify-center mb-6 mx-auto">
-              <Sparkles className="w-8 h-8 text-purple-400" />
-            </div>
-            <h4 className="text-xl font-bold text-purple-400 mb-4 text-center">Decision Intelligence</h4>
-            <div className="flex flex-col items-center justify-center">
-              <ul className="text-slate-400 text-sm space-y-2 w-fit text-left">
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>LLM Recommendation</li>
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>Trust Layer</li>
-                <li className="flex items-start"><span className="mr-2 mt-1">•</span>Custom Agents</li>
-              </ul>
-            </div>
-          </motion.div>
+          ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="bg-slate-900/50 backdrop-blur-md border border-slate-800 rounded-3xl p-8 lg:p-10 shadow-[0_0_40px_rgba(124,58,237,0.1)] hover:shadow-[0_0_40px_rgba(124,58,237,0.2)] transition-shadow duration-500 w-full"
+        >
+          <h3 className="text-2xl font-bold text-center text-white mb-8 tracking-wide">
+            Technology
+          </h3>
+          <div className="flex flex-col space-y-1">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 pb-3 border-b border-white/10 text-slate-400 font-semibold text-xs md:text-sm uppercase tracking-wider px-4">
+              <div className="md:col-span-1">Layer</div>
+              <div className="md:col-span-3">Technology</div>
+            </div>
+            
+            {technologies.map((tech, idx) => (
+              <motion.div 
+                key={idx}
+                whileHover={{ backgroundColor: "rgba(255,255,255,0.03)", scale: 1.01 }}
+                className="grid grid-cols-1 md:grid-cols-4 gap-4 py-4 px-4 border-b border-white/5 last:border-0 rounded-xl transition-all duration-300 items-center cursor-default"
+              >
+                <div className={`font-bold text-base md:text-lg ${tech.color} md:col-span-1 drop-shadow-md`}>
+                  {tech.layer}
+                </div>
+                <div className="text-slate-200 font-medium md:col-span-3 text-sm md:text-base tracking-wide">
+                   {tech.tech}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
       </div>
     </motion.div>
   );
 };
 
-// NEW BRAND BANNER SECTION
 const BrandBannerSection = () => {
   return (
     <motion.div
@@ -594,7 +627,6 @@ const BrandBannerSection = () => {
   );
 };
 
-// POTENTIAL IMPACT (Sleek Data Panel Layout with Hover Glow)
 const PotentialImpactSection = () => {
   return (
     <motion.div
@@ -617,14 +649,12 @@ const PotentialImpactSection = () => {
           </h2>
         </motion.div>
 
-        {/* Stacking / Fan-Out Card Entrance Animation */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          {/* Card 1: Revenue Protection */}
           <motion.div
             variants={{
               hidden: { opacity: 0, x: 150, rotate: 5 },
@@ -639,7 +669,6 @@ const PotentialImpactSection = () => {
             </p>
           </motion.div>
 
-          {/* Card 2: Revenue Expansion */}
           <motion.div
             variants={{
               hidden: { opacity: 0, x: 150, rotate: -3 },
@@ -654,7 +683,6 @@ const PotentialImpactSection = () => {
             </p>
           </motion.div>
 
-          {/* Card 3: Operational Intelligence */}
           <motion.div
             variants={{
               hidden: { opacity: 0, x: 150, rotate: 3 },
@@ -687,10 +715,8 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
 
   return (
     <div id="homepage-container" className="bg-[#111224] text-slate-100 overflow-hidden relative min-h-screen font-sans antialiased cursor-none">
-      {/* GLOBAL CUSTOM CURSOR (Pure Black Dot) */}
       <CustomCursor />
 
-      {/* NAVBAR STRIP-DOWN */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0B0F19]/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
@@ -708,22 +734,19 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
         </div>
       </nav>
 
-      {/* HERO SECTION (Repeating Scroll Animation) */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.2 }} // CRITICAL: Triggers every time
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         onMouseMove={handleHeroMouseMove}
         className="relative pt-24 pb-20 lg:pt-32 lg:pb-24 border-b border-white/5"
       >
-        {/* Subtle high-tech grid background with mouse parallax */}
         <div
           className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:40px_40px] transition-transform duration-300 ease-out pointer-events-none"
           style={{ transform: `translate(${parallaxOffset.x * 0.4}px, ${parallaxOffset.y * 0.4}px)` }}
         ></div>
 
-        {/* Floating glass blobs with parallax and slow hover */}
         <motion.div
           animate={{
             x: [0, 40, -20, 0],
@@ -755,7 +778,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-          {/* Left Column: Text Content & CTA */}
           <motion.div
             initial={{ opacity: 0, x: -20, filter: "blur(8px)" }}
             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
@@ -793,7 +815,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
             </button>
           </motion.div>
 
-          {/* Right Column: Floating Interactive UI Preview */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -801,7 +822,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
             className="w-full max-w-[500px] mx-auto lg:ml-auto relative flex flex-col lg:block lg:h-[500px] py-4 lg:py-0"
             style={{ perspective: "1500px", transformStyle: "preserve-3d" }}
           >
-            {/* Top Card: "Top reasons for value loss" */}
             <InteractiveGlowCard
               id="top-value-loss-card"
               className="w-full lg:absolute lg:top-0 lg:left-0 lg:w-[90%] z-20"
@@ -840,9 +860,7 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
                 </button>
               </div>
 
-              {/* Progress Bar Rows */}
               <div className="space-y-2.5">
-                {/* List item 1 */}
                 <div>
                   <div className="flex justify-between text-[11px] font-semibold text-slate-200 mb-0.5">
                     <span>Advanced Analytics unused</span>
@@ -861,7 +879,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
                   </div>
                 </div>
 
-                {/* List item 2 */}
                 <div>
                   <div className="flex justify-between text-[11px] font-semibold text-slate-200 mb-0.5">
                     <span>Poor onboarding completion</span>
@@ -880,7 +897,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
                   </div>
                 </div>
 
-                {/* List item 3 */}
                 <div>
                   <div className="flex justify-between text-[11px] font-semibold text-slate-200 mb-0.5">
                     <span>Missing integrations</span>
@@ -899,7 +915,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
                   </div>
                 </div>
 
-                {/* List item 4 */}
                 <div>
                   <div className="flex justify-between text-[11px] font-semibold text-slate-200 mb-0.5">
                     <span>Payment friction</span>
@@ -920,7 +935,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
               </div>
             </InteractiveGlowCard>
 
-            {/* Bottom Card: "AI Causal Analysis" */}
             <InteractiveGlowCard
               id="bottom-causal-card"
               className="w-full -mt-10 lg:mt-0 lg:absolute lg:top-[170px] lg:right-0 lg:w-[90%] z-10"
@@ -955,11 +969,9 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
                 <span className="ml-auto text-[8px] font-mono text-cyan-400 uppercase tracking-widest bg-cyan-400/10 px-2 py-0.5 rounded-full border border-cyan-400/30 font-bold">Active Refiner</span>
               </div>
 
-              {/* Left timeline vertical node line */}
               <div className="relative pl-5 space-y-3">
                 <div className="absolute left-[3px] top-1 bottom-1 w-[1px] bg-gradient-to-b from-rose-500 via-[#8B4CFF] to-cyan-500"></div>
 
-                {/* Item 01 */}
                 <div className="relative">
                   <span className="absolute -left-[24px] top-1 w-1.5 h-1.5 rounded-full bg-rose-500 shadow-[0_0_6px_#f43f5e] ring-4 ring-[#1a1c36]"></span>
                   <div className="flex flex-wrap items-center gap-1.5 mb-0.5">
@@ -972,7 +984,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
                   </p>
                 </div>
 
-                {/* Item 02 */}
                 <div className="relative">
                   <span className="absolute -left-[24px] top-1 w-1.5 h-1.5 rounded-full bg-purple-500 shadow-[0_0_6px_#8b4cff] ring-4 ring-[#1a1c36]"></span>
                   <div className="flex flex-wrap items-center gap-1.5 mb-0.5">
@@ -985,7 +996,6 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
                 </div>
               </div>
 
-              {/* Bottom Box [INVESTIGATION AGENT REFINEMENT] */}
               <div className="mt-3.5 p-3 rounded-lg bg-slate-950/40 border border-cyan-500/10 text-[10px] font-mono leading-relaxed text-slate-300">
                 <div className="flex items-center gap-1 text-cyan-400 font-bold uppercase tracking-wider mb-1.5 text-[8px]">
                   <Terminal className="w-3 h-3 text-cyan-400" />
@@ -1005,24 +1015,17 @@ export default function Homepage({ setCurrentView }: HomepageProps) {
         </div>
       </motion.div>
 
-      {/* UPGRADED PROBLEM SECTION */}
       <ProblemSection />
 
-      {/* UPGRADED BEYOND CHURN PREDICTION */}
       <CoreObjectivesCarousel />
 
-      {/* POTENTIAL IMPACT */}
       <PotentialImpactSection />
 
-      {/* INTERACTIVE TECH STACK (Carousel-style Interaction) */}
       <InteractiveTechStack />
 
-      {/* NEW BRAND BANNER SECTION */}
       <BrandBannerSection />
 
-      {/* Call to Action Section */}
       <section className="py-16 sm:py-20 bg-[#0d0e1b] relative overflow-hidden border-t border-white/5" id="pricing">
-        {/* Slowly floating ambient background blobs */}
         <div className="absolute inset-0 opacity-10 select-none pointer-events-none">
           <motion.div
             animate={{
