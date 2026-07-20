@@ -1,4 +1,4 @@
-# Tailor AI — Subscription Intelligence
+<h1 align="center">Tailor AI — Subscription Intelligence</h1>
 <div align="center">
   
 ## “Tailor Every Subscription to Fit Your Business.”
