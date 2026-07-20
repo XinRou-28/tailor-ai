@@ -1,5 +1,5 @@
 # Tailor AI
-"An AI that tailors your subscription to fit."
+"Tailor Every Subscription to Fit Your Business."
 
 Case Study 2: Smart Subscription & Customer Experience Optimization
 

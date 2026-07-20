@@ -149,8 +149,8 @@ const ProblemSection = () => {
   const problems = [
     {
       icon: <Database className="w-8 h-8 text-cyan-400" />,
-      title: "Scattered Customer Data",
-      description: "Usage records, payment history, and support tickets live in separate systems, hiding the root cause of customer disengagement."
+      title: "Scattered Data & Missed Patterns",
+      description: "Fragmented data hides the real reasons users leave, causing businesses to miss portfolio-wide trends. As a result, they react case-by-case, allowing the same underlying problems to repeatedly affect other customers."
     },
     {
       icon: <Scale className="w-8 h-8 text-purple-400" />,
@@ -298,6 +298,11 @@ const CoreObjectivesCarousel = () => {
       title: "Trust Layer & Operations Hub",
       description: "Implements a confidence guardrail determining whether actions are automated or human-reviewed, fed directly into an interactive command dashboard with personalized communications.",
       bullets: ["✓ Guardrailed Automation", "✓ Full Analytics Dashboard"]
+    },
+    {
+      title: "Business Insight Dashboard",
+      description: "Aggregates customer portfolio data over dynamic timeframes to identify recurring churn drivers. This comprehensive view supports organization-wide, data-driven product and operational improvements.",
+      bullets: ["✓ Dynamic Timeframe Analysis", "✓ Root Cause Identification"]
     }
   ];
 
@@ -311,12 +316,12 @@ const CoreObjectivesCarousel = () => {
     );
   };
 
-  // NEW KEYBOARD FEATURE
+  // ENHANCED KEYBOARD FEATURE
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight') {
+      if (e.key === 'ArrowRight' || e.key === '>') {
         nextObjective();
-      } else if (e.key === 'ArrowLeft') {
+      } else if (e.key === 'ArrowLeft' || e.key === '<') {
         prevObjective();
       }
     };
