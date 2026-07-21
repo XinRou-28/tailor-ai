@@ -7,12 +7,14 @@ Case Study 2: Smart Subscription & Customer Experience Optimisation
 
 Team **hoo lee not sheet** — Soo Xin Rou, Tan Pei Shing, Tee Wen Yun, Yong Yee Wing
 
-</div>
+
 
 ---
 
 ### Demo Link: [Tailor AI](https://tailor-ai-hlns.vercel.app/)
 Note: The demo may take 10 seconds to load on the first visit as the server wakes up.Thank you for your patience!
+
+</div>
 
 ---
 
