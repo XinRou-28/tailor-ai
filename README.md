@@ -11,7 +11,7 @@ Team **hoo lee not sheet** — Soo Xin Rou, Tan Pei Shing, Tee Wen Yun, Yong Yee
 
 ---
 
-### Demo Link: [Tailor AI][(https://tailor-ai-hlns.vercel.app/)
+### Demo Link: [Tailor AI](https://tailor-ai-hlns.vercel.app/)
 Note: The demo may take 10 seconds to load on the first visit as the server wakes up.Thank you for your patience!
 
 ---
